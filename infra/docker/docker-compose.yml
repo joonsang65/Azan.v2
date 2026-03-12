@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   postgres:
-    image: postgres:16-alpine
+    image: pgvector/pgvector:pg16
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
@@ -10,15 +10,18 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
+    # Keep init SQL out of /docker-entrypoint-initdb.d so it is not re-run on restarts.
 
   api:
     build:
-      context: ../../apps/api
+      context: ../../backend
       dockerfile: Dockerfile
     environment:
       DATABASE_URL: ${DATABASE_URL:-postgresql://postgres:postgres@postgres:5432/azan}
+      JWT_SECRET: ${JWT_SECRET:-change-me}
       PORT: ${PORT:-8000}
+      SEED_DATA: ${SEED_DATA:-true}
     ports:
       - "8000:8000"
     depends_on:
@@ -26,12 +29,17 @@ services:
 
   worker:
     build:
-      context: ../../apps/worker
+      context: ../../workers
       dockerfile: Dockerfile
     environment:
       DATABASE_URL: ${DATABASE_URL:-postgresql://postgres:postgres@postgres:5432/azan}
+      ALERT_POLL_SECONDS: ${ALERT_POLL_SECONDS:-5}
+      ALERT_BATCH_SIZE: ${ALERT_BATCH_SIZE:-50}
     depends_on:
       - postgres
 
 volumes:
-  postgres_data:
+  # Service volume key is pgdata; underlying Docker volume name stays postgres_data
+  # so existing data can continue to be used without reset.
+  pgdata:
+    name: postgres_data

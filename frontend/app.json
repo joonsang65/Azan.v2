@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "azan-mobile",
+    "slug": "azan-mobile",
+    "version": "0.1.0",
+    "plugins": [
+      "expo-asset",
+      "expo-secure-store"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f2f63160-d5d5-4b45-922e-5e0fb8a15671"
+      }
+    },
+    "owner": "mattbaa",
+    "ios": {
+      "bundleIdentifier": "com.ajouinternational.app",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+name: DB Migration
+
+on:
+  push:
+    branches:
+      - feat/dev
+      - main
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Select database URL by branch
+        run: |
+          if [ "${GITHUB_REF_NAME}" = "feat/dev" ]; then
+            echo "DATABASE_URL=${{ secrets.NEON_DEV_DATABASE_URL }}" >> "$GITHUB_ENV"
+          elif [ "${GITHUB_REF_NAME}" = "main" ]; then
+            echo "DATABASE_URL=${{ secrets.NEON_PROD_DATABASE_URL }}" >> "$GITHUB_ENV"
+          else
+            echo "Unsupported branch: ${GITHUB_REF_NAME}"
+            exit 1
+          fi
+
+      - name: Install dependencies
+        working-directory: backend
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Alembic migrations
+        working-directory: backend
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+        run: alembic upgrade head

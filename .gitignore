@@ -1,31 +1,14 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.so
+.DS_Store
+__MACOSX/
+._*
+node_modules/
 .venv/
 venv/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
-
-# Node
-node_modules/
-.npm/
-.expo/
-.expo-shared/
+__pycache__/
+*.pyc
+*.egg-info/
 dist/
 build/
-
-# Environment
-.env
-.env.*
-!.env.example
-
-# OS / editors
-.DS_Store
-.vscode/
-.idea/
+.pytest_cache/
+.expo/
+.next/
