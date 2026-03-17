@@ -17,6 +17,7 @@ from sqlalchemy import (
     func,
 )
 from sqlalchemy.dialects.postgresql import UUID
+from pgvector.sqlalchemy import Vector
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from .database import Base
@@ -67,6 +68,8 @@ class Notice(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )
+    # RAG용: Gemini embedding 3072차원 (nullable, 기존 행과 호환)
+    embedding: Mapped[Optional[list]] = mapped_column(Vector(3072), nullable=True)
     keyword: Mapped["Keyword"] = relationship("Keyword", back_populates="notices")
 
 

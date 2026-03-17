@@ -12,3 +12,4 @@ build/
 .pytest_cache/
 .expo/
 .next/
+workers/rag/benchmark_result/
