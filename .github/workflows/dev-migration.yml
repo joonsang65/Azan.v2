@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - develop
-      - main
 
 jobs:
   migrate:
@@ -22,16 +21,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Select database URL by target branch
-        run: |
-          if [ "${GITHUB_REF_NAME}" = "develop" ]; then
-            echo "DATABASE_URL=${{ secrets.NEON_DEV_DATABASE_URL }}" >> "$GITHUB_ENV"
-          elif [ "${GITHUB_REF_NAME}" = "main" ]; then
-            echo "DATABASE_URL=${{ secrets.NEON_PROD_DATABASE_URL }}" >> "$GITHUB_ENV"
-          else
-            echo "Unsupported target branch: ${GITHUB_REF_NAME}"
-            exit 1
-          fi
+      - name: Set database URL (develop -> neon dev only)
+        run: echo "DATABASE_URL=${{ secrets.NEON_DEV_DATABASE_URL }}" >> "$GITHUB_ENV"
 
       - name: Install dependencies
         working-directory: backend

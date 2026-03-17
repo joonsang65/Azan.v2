@@ -1,0 +1,55 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  AZAN — 로컬 개발용 Docker Compose
+#
+#  사전 준비:
+#    cp .env.example .env   # 그 다음 .env 에 Neon DB URL 과 JWT_SECRET 입력
+#
+#  실행:
+#    docker compose up --build          # 빌드 + 포그라운드
+#    docker compose up --build -d       # 빌드 + 백그라운드
+#
+#  참고:
+#    - 로컬 PostgreSQL 을 띄우지 않습니다. DB 는 Neon(클라우드)에 연결합니다.
+#    - 프론트엔드(Expo)는 Docker 에 포함되지 않습니다.
+#      별도 터미널에서: cd frontend && npx expo start
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ── 1. DB 마이그레이션 ─────────────────────────────────────────────────────
+  #   Alembic 을 실행하고 종료합니다. api/worker 는 이 작업이 끝난 뒤 시작됩니다.
+  migrate:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: python -m alembic upgrade head
+    env_file:
+      - .env
+    restart: "no"
+
+  # ── 2. FastAPI 백엔드 ──────────────────────────────────────────────────────
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-8000}:${PORT:-8000}"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  # ── 3. 백그라운드 워커 (크롤러·알림·RAG) ─────────────────────────────────
+  #   현재 스텁 단계입니다. 구현 전까지는 주석 처리해도 됩니다.
+  # worker:
+  #   build:
+  #     context: ./workers
+  #     dockerfile: Dockerfile
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     migrate:
+  #       condition: service_completed_successfully
+  #   restart: unless-stopped

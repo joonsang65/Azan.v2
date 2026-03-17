@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
@@ -16,8 +16,10 @@ export default function SettingsScreen() {
   const [keywords, setKeywords] = useState([]);
   const [enabledSet, setEnabledSet] = useState(new Set());
   const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
+  const [syncing, setSyncing] = useState(false);
   const [error, setError] = useState("");
+  const syncQueueRef = useRef(Promise.resolve());
+  const pendingSyncCountRef = useRef(0);
 
   const sortedKeywords = useMemo(() => {
     return [...keywords].sort((a, b) => {
@@ -54,6 +56,8 @@ export default function SettingsScreen() {
   }, [loadData]);
 
   const onToggleKeyword = useCallback((keyId) => {
+    setError("");
+    let nextEnabled = [];
     setEnabledSet((prev) => {
       const next = new Set(prev);
       if (next.has(keyId)) {
@@ -61,28 +65,32 @@ export default function SettingsScreen() {
       } else {
         next.add(keyId);
       }
+      nextEnabled = Array.from(next).sort((a, b) => a - b);
       return next;
     });
-  }, []);
 
-  const onSave = useCallback(async () => {
-    setError("");
-    setSaving(true);
-    try {
-      const token = await getToken();
-      const enabled = Array.from(enabledSet).sort((a, b) => a - b);
-      const updated = await updateMyKeywords(token, enabled);
-      const normalized = Array.isArray(updated?.enabled) ? updated.enabled : enabled;
-      setEnabledSet(new Set(normalized.map((value) => Number(value))));
-      Alert.alert("Saved", "Keyword preferences updated.");
-    } catch (e) {
-      const message = e?.message || "Failed to save settings.";
-      setError(message);
-      Alert.alert("Save failed", message);
-    } finally {
-      setSaving(false);
-    }
-  }, [enabledSet]);
+    pendingSyncCountRef.current += 1;
+    setSyncing(true);
+
+    syncQueueRef.current = syncQueueRef.current
+      .then(async () => {
+        const token = await getToken();
+        const updated = await updateMyKeywords(token, nextEnabled);
+        const normalized = Array.isArray(updated?.enabled) ? updated.enabled : nextEnabled;
+        setEnabledSet(new Set(normalized.map((value) => Number(value))));
+      })
+      .catch((e) => {
+        const message = e?.message || "Failed to sync keyword preference.";
+        setError(message);
+        Alert.alert("Sync failed", message);
+      })
+      .finally(() => {
+        pendingSyncCountRef.current = Math.max(0, pendingSyncCountRef.current - 1);
+        if (pendingSyncCountRef.current === 0) {
+          setSyncing(false);
+        }
+      });
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -119,16 +127,7 @@ export default function SettingsScreen() {
       )}
 
       {error ? <Text style={styles.errorText}>{error}</Text> : null}
-
-      <TouchableOpacity
-        style={[styles.saveButton, saving || loading ? styles.saveButtonDisabled : null]}
-        onPress={onSave}
-        disabled={saving || loading}
-        activeOpacity={0.9}
-      >
-        {saving ? <ActivityIndicator size="small" color="#ffffff" /> : null}
-        <Text style={styles.saveButtonText}>{saving ? "Saving..." : "Save"}</Text>
-      </TouchableOpacity>
+      {syncing ? <Text style={styles.syncText}>Syncing changes...</Text> : null}
     </View>
   );
 }
@@ -196,24 +195,12 @@ const styles = StyleSheet.create({
     color: "#b91c1c",
     fontWeight: "600",
     marginTop: 6,
-    marginBottom: 10,
+    marginBottom: 6,
   },
-  saveButton: {
+  syncText: {
     marginTop: "auto",
-    backgroundColor: "#2f6df6",
-    borderRadius: 12,
-    minHeight: 46,
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "row",
-    gap: 8,
-  },
-  saveButtonDisabled: {
-    opacity: 0.7,
-  },
-  saveButtonText: {
-    color: "#ffffff",
-    fontSize: 16,
-    fontWeight: "700",
+    color: "#475569",
+    fontSize: 13,
+    fontWeight: "600",
   },
 });
