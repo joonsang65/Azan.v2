@@ -3,8 +3,7 @@ name: DB Migration
 on:
   push:
     branches:
-      - feat/dev
-      - main
+      - develop
 
 jobs:
   migrate:
@@ -22,22 +21,14 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Select database URL by branch
-        run: |
-          if [ "${GITHUB_REF_NAME}" = "feat/dev" ]; then
-            echo "DATABASE_URL=${{ secrets.NEON_DEV_DATABASE_URL }}" >> "$GITHUB_ENV"
-          elif [ "${GITHUB_REF_NAME}" = "main" ]; then
-            echo "DATABASE_URL=${{ secrets.NEON_PROD_DATABASE_URL }}" >> "$GITHUB_ENV"
-          else
-            echo "Unsupported branch: ${GITHUB_REF_NAME}"
-            exit 1
-          fi
+      - name: Set database URL (develop -> neon dev only)
+        run: echo "DATABASE_URL=${{ secrets.NEON_DEV_DATABASE_URL }}" >> "$GITHUB_ENV"
 
       - name: Install dependencies
         working-directory: backend
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -e .
 
       - name: Run Alembic migrations
         working-directory: backend

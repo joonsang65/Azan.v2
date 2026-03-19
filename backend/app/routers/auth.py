@@ -92,8 +92,10 @@ def _parse_user_id(user_id: str = Depends(_decode_bearer_token)) -> UUIDType:
 
 
 @router.post("/register", status_code=status.HTTP_201_CREATED)
+
 # 입력: RegisterRequest, DB 세션
 # 출력: dict (생성된 사용자 요약)
+# db: Session = Depends(get_db) 는 database.py 의 get_db() 에서 세션을 받아옴
 def register(body: RegisterRequest, db: Session = Depends(get_db)):
     email = _validate_email(body.email)
     full_name = body.full_name.strip()
@@ -104,6 +106,7 @@ def register(body: RegisterRequest, db: Session = Depends(get_db)):
     if len(password) < 6:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="password too short")
 
+    # ORM 객체 생성 (backend/app/models.py)
     user = User(
         email=email,
         full_name=full_name,
@@ -111,15 +114,17 @@ def register(body: RegisterRequest, db: Session = Depends(get_db)):
     )
 
     try:
-        db.add(user)
-        db.commit()
-        db.refresh(user)
+        db.add(user)        # SQLAlchemy 세션에 user 객체를 등록 (아직 DB에 저장되지는 않음)
+        db.commit()         # 트랜잭션을 확정하여 PostgreSQL users 테이블에 INSERT 실행
+        db.refresh(user)    # DB에 저장된 최신 상태(id, created_at 등)를 다시 user 객체에 반영
+    
     except IntegrityError as exc:
         db.rollback()
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT, detail="Email already exists. Use another email."
         ) from exc
 
+    # 회원가입 성공 -> 클라이언트에게 user.id, user.email 반환
     return {"id": str(user.id), "email": user.email}
 
 
