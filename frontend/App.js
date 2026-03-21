@@ -1,9 +1,18 @@
 import { StatusBar } from "expo-status-bar";
+import Constants from "expo-constants";
 import * as Notifications from "expo-notifications";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import { getToken, savePushToken } from "./src/api";
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: true,
+  }),
+});
 
 async function registerForPushNotifications() {
   try {
@@ -16,7 +25,8 @@ async function registerForPushNotifications() {
     if (finalStatus !== "granted") {
       return;
     }
-    const tokenData = await Notifications.getExpoPushTokenAsync();
+    const projectId = Constants.expoConfig?.extra?.eas?.projectId;
+    const tokenData = await Notifications.getExpoPushTokenAsync({ projectId });
     await savePushToken(tokenData.data);
   } catch (_e) {
     // Non-critical — silently ignore if push registration fails
