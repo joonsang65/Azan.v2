@@ -19,6 +19,9 @@
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
+    },
+    "android": {
+      "package": "com.ajouinternational.app"
     }
   }
 }

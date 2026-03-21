@@ -9,7 +9,7 @@ import {
   View,
 } from "react-native";
 
-import { apiRequest, pingApi, saveToken } from "../api";
+import { apiRequest, saveToken } from "../api";
 
 export default function LoginScreen({ onLoginSuccess, onGoSignup, onGoNoticeTest }) {
   const [email, setEmail] = useState("");
@@ -23,7 +23,6 @@ export default function LoginScreen({ onLoginSuccess, onGoSignup, onGoNoticeTest
     }
     setLoading(true);
     try {
-      await pingApi();
       const data = await apiRequest("/auth/login", {
         method: "POST",
         body: JSON.stringify({ email, password }),

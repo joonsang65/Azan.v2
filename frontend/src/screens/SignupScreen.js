@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Alert, Button, StyleSheet, Text, TextInput, View } from "react-native";
 
-import { apiRequest, pingApi, saveToken } from "../api";
+import { apiRequest, saveToken } from "../api";
 
 export default function SignupScreen({ onGoLogin, onSignupSuccess }) {
   const [email, setEmail] = useState("");
@@ -17,7 +17,6 @@ export default function SignupScreen({ onGoLogin, onSignupSuccess }) {
 
     setLoading(true);
     try {
-      await pingApi();
       // backend: /auth/register 호출
       await apiRequest("/auth/register", {
         method: "POST",
