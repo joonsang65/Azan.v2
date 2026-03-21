@@ -191,6 +191,7 @@ export default function NoticeScreen({ onSelectNotice, onOpenSettings }) {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.chipRow}
         style={styles.chipScroll}
+        alwaysBounceVertical={false}
       >
         {keywords.map((keyword) => {
           const selected =
@@ -215,6 +216,7 @@ export default function NoticeScreen({ onSelectNotice, onOpenSettings }) {
       <FlatList
         data={notices}
         keyExtractor={(item) => item.id}
+        style={styles.list}
         contentContainerStyle={styles.listContent}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
         renderItem={({ item }) => (
@@ -295,6 +297,8 @@ const styles = StyleSheet.create({
   },
   chipScroll: {
     marginBottom: 10,
+    flexGrow: 0,
+    flexShrink: 0,
   },
   chipRow: {
     paddingHorizontal: 16,
@@ -326,6 +330,9 @@ const styles = StyleSheet.create({
   },
   chipTextUnselected: {
     color: "#41516b",
+  },
+  list: {
+    flex: 1,
   },
   listContent: {
     paddingHorizontal: 16,
