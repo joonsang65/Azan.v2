@@ -117,6 +117,13 @@ export async function fetchMe() {
   return apiRequest("/auth/me");
 }
 
+export async function savePushToken(token) {
+  return apiRequest("/auth/push-token", {
+    method: "PUT",
+    body: JSON.stringify({ token }),
+  });
+}
+
 export async function fetchKeywords() {
   return apiRequest("/keywords");
 }

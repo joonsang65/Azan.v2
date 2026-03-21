@@ -31,6 +31,7 @@ class User(Base):
     email: Mapped[str] = mapped_column(String, unique=True, nullable=False)
     full_name: Mapped[str] = mapped_column(String, nullable=False)
     password_hash: Mapped[str] = mapped_column(String, nullable=False)
+    expo_push_token: Mapped[Optional[str]] = mapped_column(String, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )
