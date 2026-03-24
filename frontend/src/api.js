@@ -166,3 +166,10 @@ export async function saveMyKeywordsCache(enabledIds) {
   const payload = JSON.stringify(Array.isArray(enabledIds) ? enabledIds : []);
   await SecureStore.setItemAsync(MY_KEYWORDS_CACHE_KEY, payload);
 }
+
+export async function sendChatbotMessage(question) {
+  return apiRequest("/chatbot", {
+    method: "POST",
+    body: JSON.stringify({ question }),
+  });
+}

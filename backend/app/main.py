@@ -1,4 +1,11 @@
 # 파일 기능: FastAPI 애플리케이션 엔트리포인트로 라우터 등록, 미들웨어, 헬스체크, 시작 시 DB 초기화를 담당한다.
+import sys
+from pathlib import Path
+
+# 현재 파일의 부모 디렉토리 (app)의 부모 디렉토리 (backend)의 부모 디렉토리 (Ajou-International)를 찾음
+# 이 경로를 sys.path에 추가하여 프로젝트 root를 기준으로 모듈을 찾을 수 있도록 함
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
 import os
 import logging
 
@@ -14,6 +21,7 @@ from .database import SessionLocal
 from .routers.auth import router as auth_router
 from .routers.keywords import router as keywords_router
 from .routers.notices import router as notices_router
+from .routers.chatbot import router as chatbot_router
 
 logger = logging.getLogger("azan.main")
 app = FastAPI(title="azan-api")
@@ -75,6 +83,7 @@ def health_db():
 app.include_router(auth_router)
 app.include_router(keywords_router)
 app.include_router(notices_router)
+app.include_router(chatbot_router)
 
 
 if __name__ == "__main__":

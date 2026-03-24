@@ -8,9 +8,9 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.prompts import ChatPromptTemplate
 
-from src.chatbot.prompts import CONDENSE_QUESTION_PROMPT, SYSTEM_PROMPT, USER_PROMPT_TEMPLATE
-from src.rag.RAG_config import settings
-from src.rag.vectorstore import VectorStore
+from .prompts import CONDENSE_QUESTION_PROMPT, SYSTEM_PROMPT, USER_PROMPT_TEMPLATE
+from ..rag.RAG_config import settings
+from ..rag.vectorstore import VectorStore
 
 logger = logging.getLogger("AzanService")
 
