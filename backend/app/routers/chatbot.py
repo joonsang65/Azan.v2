@@ -16,7 +16,7 @@ logger = logging.getLogger("azan.chatbot")
 # For simplicity, initializing globally here. Consider dependency injection for more complex scenarios.
 chatbot_service = AzanChatbotService()
 
-@router.post("/chatbot", response_model=ChatbotResponse)
+@router.post("", response_model=ChatbotResponse)
 async def get_chatbot_response(request: ChatbotRequest):
     """
     챗봇에게 질문하고 답변을 받습니다.
