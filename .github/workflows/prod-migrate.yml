@@ -1,0 +1,75 @@
+name: Production DB Migration (Manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      revision:
+        description: "Target Alembic revision (default: head)"
+        required: true
+        default: "head"
+      dry_run:
+        description: "Generate SQL only without applying changes"
+        required: true
+        type: boolean
+        default: false
+
+concurrency:
+  group: prod-db-migration
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  migrate:
+    name: Migrate Neon Production
+    runs-on: ubuntu-latest
+    environment: production
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Export production database URL
+        run: echo "DATABASE_URL=${{ secrets.NEON_PROD_DATABASE_URL }}" >> "$GITHUB_ENV"
+
+      - name: Show current revision (prod)
+        working-directory: backend
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+        run: alembic current
+
+      - name: Dry run SQL (no apply)
+        if: ${{ inputs.dry_run }}
+        working-directory: backend
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+        run: alembic upgrade "${{ inputs.revision }}" --sql
+
+      - name: Apply migration
+        if: ${{ !inputs.dry_run }}
+        working-directory: backend
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+        run: alembic upgrade "${{ inputs.revision }}"
+
+      - name: Show final revision (prod)
+        if: ${{ !inputs.dry_run }}
+        working-directory: backend
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+        run: alembic current

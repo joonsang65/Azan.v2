@@ -1,31 +1,19 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.so
+# 환경변수 파일 (절대 커밋하지 말 것)
+.env
+.env.local
+
+.DS_Store
+__MACOSX/
+._*
+node_modules/
 .venv/
 venv/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
-
-# Node
-node_modules/
-.npm/
-.expo/
-.expo-shared/
+__pycache__/
+*.pyc
+*.egg-info/
 dist/
 build/
-
-# Environment
-.env
-.env.*
-!.env.example
-
-# OS / editors
-.DS_Store
-.vscode/
-.idea/
+.pytest_cache/
+.expo/
+.next/
+workers/rag/benchmark_result/
