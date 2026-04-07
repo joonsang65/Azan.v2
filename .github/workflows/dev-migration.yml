@@ -1,4 +1,4 @@
-name: DB Migration
+name: Develop DB Migration (Automation)
 
 on:
   push:

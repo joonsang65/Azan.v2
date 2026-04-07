@@ -4,7 +4,7 @@ import { API_BASE_URL } from "./config";
 
 const TOKEN_KEY = "auth_token";
 const MY_KEYWORDS_CACHE_KEY = "my_enabled_keyword_ids_cache_v2";
-const REQUEST_TIMEOUT_MS = 8000;
+const REQUEST_TIMEOUT_MS = 60000; // Render free tier needs up to 50s to wake up
 
 export async function saveToken(token) {
   await SecureStore.setItemAsync(TOKEN_KEY, token);
@@ -23,10 +23,11 @@ export async function clearToken() {
 }
 
 export async function apiRequest(path, options = {}) {
+  const { suppressErrorLog = false, ...requestOptions } = options;
   const token = await getToken();
   const headers = {
     "Content-Type": "application/json",
-    ...(options.headers || {}),
+    ...(requestOptions.headers || {}),
   };
 
   if (token) {
@@ -39,7 +40,7 @@ export async function apiRequest(path, options = {}) {
   const requestUrl = `${API_BASE_URL}${path}`;
   try {
     res = await fetch(requestUrl, {
-      ...options,
+      ...requestOptions,
       headers,
       signal: controller.signal,
     });
@@ -63,11 +64,16 @@ export async function apiRequest(path, options = {}) {
   }
 
   if (!res.ok) {
-    console.error("[apiRequest] request failed", {
+    const errorPayload = {
       url: requestUrl,
       status: res.status,
       body: data,
-    });
+    };
+    if (suppressErrorLog) {
+      console.warn("[apiRequest] request failed", errorPayload);
+    } else {
+      console.error("[apiRequest] request failed", errorPayload);
+    }
     if (data && typeof data === "object") {
       if ("detail" in data) {
         throw new Error(String(data.detail));
@@ -107,13 +113,24 @@ export async function fetchNoticeDetail(id) {
   return apiRequest(`/notices/${id}`);
 }
 
+export async function fetchMe() {
+  return apiRequest("/auth/me");
+}
+
+export async function savePushToken(token) {
+  return apiRequest("/auth/push-token", {
+    method: "PUT",
+    body: JSON.stringify({ token }),
+  });
+}
+
 export async function fetchKeywords() {
   return apiRequest("/keywords");
 }
 
 export async function fetchMyKeywords(token) {
   const headers = token ? { Authorization: `Bearer ${token}` } : undefined;
-  return apiRequest("/users/me/keywords", { headers });
+  return apiRequest("/users/me/keywords", { headers, suppressErrorLog: true });
 }
 
 export async function updateMyKeywords(token, enabledIds) {
@@ -148,4 +165,11 @@ export async function getMyKeywordsCache() {
 export async function saveMyKeywordsCache(enabledIds) {
   const payload = JSON.stringify(Array.isArray(enabledIds) ? enabledIds : []);
   await SecureStore.setItemAsync(MY_KEYWORDS_CACHE_KEY, payload);
+}
+
+export async function sendChatbotMessage(question) {
+  return apiRequest("/chatbot", {
+    method: "POST",
+    body: JSON.stringify({ question }),
+  });
 }

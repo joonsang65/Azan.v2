@@ -9,10 +9,11 @@ import {
   View,
 } from "react-native";
 
-import { fetchKeywords, fetchMyKeywords, getToken, updateMyKeywords } from "../api";
+import { fetchKeywords, fetchMe, fetchMyKeywords, getToken, updateMyKeywords } from "../api";
 import { getMyKeywordsCache } from "../api";
 
 export default function SettingsScreen() {
+  const [username, setUsername] = useState("");
   const [keywords, setKeywords] = useState([]);
   const [enabledSet, setEnabledSet] = useState(new Set());
   const [loading, setLoading] = useState(true);
@@ -36,14 +37,32 @@ export default function SettingsScreen() {
       if (Array.isArray(cachedEnabled) && cachedEnabled.length) {
         setEnabledSet(new Set(cachedEnabled.map((value) => Number(value))));
       }
-      const [allKeywordsRes, myKeywordsRes] = await Promise.all([
-        fetchKeywords(),
-        fetchMyKeywords(token),
-      ]);
+
+      const allKeywordsRes = await fetchKeywords();
       const nextKeywords = Array.isArray(allKeywordsRes) ? allKeywordsRes : [];
-      const nextEnabled = Array.isArray(myKeywordsRes?.enabled) ? myKeywordsRes.enabled : [];
       setKeywords(nextKeywords);
-      setEnabledSet(new Set(nextEnabled.map((value) => Number(value))));
+
+      if (!token) {
+        setEnabledSet(new Set());
+        setError("로그인이 필요합니다. 다시 로그인해 주세요.");
+        return;
+      }
+
+      try {
+        const me = await fetchMe();
+        setUsername(me?.full_name || me?.email || "");
+      } catch (_e) {
+        // non-critical — greeting is optional
+      }
+
+      try {
+        const myKeywordsRes = await fetchMyKeywords(token);
+        const nextEnabled = Array.isArray(myKeywordsRes?.enabled) ? myKeywordsRes.enabled : [];
+        setEnabledSet(new Set(nextEnabled.map((value) => Number(value))));
+      } catch (e) {
+        setEnabledSet(new Set());
+        setError(e?.message || "키워드 구독 상태를 불러오지 못했습니다.");
+      }
     } catch (e) {
       setError(e?.message || "Failed to load settings.");
     } finally {
@@ -94,8 +113,14 @@ export default function SettingsScreen() {
 
   return (
     <View style={styles.container}>
+      {username ? (
+        <Text style={styles.greeting}>Hi, {username} 👋</Text>
+      ) : null}
       <Text style={styles.title}>Settings</Text>
       <Text style={styles.sectionTitle}>Keyword Preferences</Text>
+      <Text style={styles.description}>
+        해당 카테고리를 클릭하시면 관련된 공지사항을 주기적인 푸쉬 알람으로 수신하실 수 있습니다.
+      </Text>
 
       {loading ? (
         <View style={styles.centerBox}>
@@ -123,6 +148,7 @@ export default function SettingsScreen() {
               </TouchableOpacity>
             );
           })}
+          {!sortedKeywords.length ? <Text style={styles.hintText}>등록된 키워드가 없습니다.</Text> : null}
         </ScrollView>
       )}
 
@@ -140,6 +166,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 16,
   },
+  greeting: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#2f6df6",
+    marginBottom: 4,
+  },
   title: {
     fontSize: 30,
     fontWeight: "700",
@@ -150,7 +182,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "700",
     color: "#1e293b",
-    marginBottom: 12,
+    marginBottom: 6,
+  },
+  description: {
+    fontSize: 13,
+    color: "#64748b",
+    lineHeight: 20,
+    marginBottom: 16,
   },
   centerBox: {
     alignItems: "center",

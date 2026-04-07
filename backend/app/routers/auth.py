@@ -154,3 +154,22 @@ def me(user_uuid: UUIDType = Depends(_parse_user_id), db: Session = Depends(get_
     if current_user is None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
     return {"id": str(current_user.id), "email": current_user.email, "full_name": current_user.full_name}
+
+
+class PushTokenRequest(BaseModel):
+    token: str
+
+
+@router.put("/push-token", status_code=status.HTTP_204_NO_CONTENT)
+# 입력: 인증된 사용자 UUID, Expo push token, DB 세션
+# 출력: 204 No Content
+def update_push_token(
+    body: PushTokenRequest,
+    user_uuid: UUIDType = Depends(_parse_user_id),
+    db: Session = Depends(get_db),
+):
+    current_user = db.get(User, user_uuid)
+    if current_user is None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
+    current_user.expo_push_token = body.token.strip() or None
+    db.commit()

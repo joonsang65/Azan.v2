@@ -22,7 +22,7 @@ function formatKoreanDate(value) {
 
 export default function NoticeScreen({ onSelectNotice, onOpenSettings }) {
   const [keywords, setKeywords] = useState([]);
-  const [selectedKeywordId, setSelectedKeywordId] = useState(null);
+  const [selectedKeywordIds, setSelectedKeywordIds] = useState(new Set());
   const [notices, setNotices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -44,9 +44,51 @@ export default function NoticeScreen({ onSelectNotice, onOpenSettings }) {
     setKeywords(next);
   }, []);
 
-  const loadNotices = useCallback(async (keywordId) => {
-    const data = await fetchNotices(keywordId);
-    setNotices(Array.isArray(data?.items) ? data.items : []);
+  const loadNotices = useCallback(async (keywordIds) => {
+    let items;
+
+    if (!keywordIds || keywordIds.size === 0) {
+      // No filter — fetch all notices
+      const data = await fetchNotices(null);
+      items = Array.isArray(data?.items) ? data.items : [];
+    } else {
+      // Fetch each selected keyword in parallel, then merge + deduplicate
+      const requests = Array.from(keywordIds).map((id) => fetchNotices(id));
+      const results = await Promise.all(requests);
+      const seen = new Set();
+      items = [];
+      for (const data of results) {
+        for (const item of Array.isArray(data?.items) ? data.items : []) {
+          if (!seen.has(item.id)) {
+            seen.add(item.id);
+            items.push(item);
+          }
+        }
+      }
+      items.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+    }
+
+    setNotices(items);
+
+    // Fallback: if /keywords returned empty, derive chips from notice payload
+    setKeywords((prev) => {
+      const nonAllCount = prev.filter((item) => !item?.isAll).length;
+      if (nonAllCount > 0) {
+        return prev;
+      }
+      const derivedMap = new Map();
+      for (const item of items) {
+        const keywordIdValue = Number(item?.keyword_id);
+        const keywordLabel = String(item?.keyword || "").trim();
+        if (Number.isFinite(keywordIdValue) && keywordLabel) {
+          derivedMap.set(keywordIdValue, { id: keywordIdValue, keyword: keywordLabel });
+        }
+      }
+      if (!derivedMap.size) {
+        return prev;
+      }
+      return [{ id: null, keyword: "전체", isAll: true }, ...Array.from(derivedMap.values())];
+    });
   }, []);
 
   const loadInitial = useCallback(async () => {
@@ -80,7 +122,7 @@ export default function NoticeScreen({ onSelectNotice, onOpenSettings }) {
       setError("");
       setLoading(true);
       try {
-        await loadNotices(selectedKeywordId);
+        await loadNotices(selectedKeywordIds);
       } catch (e) {
         if (!alive) {
           return;
@@ -100,7 +142,7 @@ export default function NoticeScreen({ onSelectNotice, onOpenSettings }) {
     return () => {
       alive = false;
     };
-  }, [keywords.length, dbUnavailable, loadNotices, selectedKeywordId, toFriendlyMessage]);
+  }, [keywords.length, dbUnavailable, loadNotices, selectedKeywordIds, toFriendlyMessage]);
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -109,7 +151,7 @@ export default function NoticeScreen({ onSelectNotice, onOpenSettings }) {
       if (dbUnavailable) {
         await loadInitial();
       } else {
-        await loadNotices(selectedKeywordId);
+        await loadNotices(selectedKeywordIds);
       }
     } catch (e) {
       const nextMessage = toFriendlyMessage(e?.message || "새로고침에 실패했습니다.");
@@ -117,14 +159,23 @@ export default function NoticeScreen({ onSelectNotice, onOpenSettings }) {
     } finally {
       setRefreshing(false);
     }
-  }, [dbUnavailable, loadInitial, loadNotices, selectedKeywordId, toFriendlyMessage]);
+  }, [dbUnavailable, loadInitial, loadNotices, selectedKeywordIds, toFriendlyMessage]);
 
-  const onPressKeyword = useCallback(
-    (id) => {
-      setSelectedKeywordId(id);
-    },
-    []
-  );
+  const onPressKeyword = useCallback((id) => {
+    setSelectedKeywordIds((prev) => {
+      if (id === null) {
+        // "전체" — clear all selections
+        return new Set();
+      }
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -140,9 +191,13 @@ export default function NoticeScreen({ onSelectNotice, onOpenSettings }) {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.chipRow}
         style={styles.chipScroll}
+        alwaysBounceVertical={false}
       >
         {keywords.map((keyword) => {
-          const selected = keyword.id === selectedKeywordId;
+          const selected =
+            keyword.id === null
+              ? selectedKeywordIds.size === 0
+              : selectedKeywordIds.has(keyword.id);
           return (
             <TouchableOpacity
               key={keyword.id ?? "all"}
@@ -158,51 +213,53 @@ export default function NoticeScreen({ onSelectNotice, onOpenSettings }) {
         })}
       </ScrollView>
 
-      {loading ? (
-        <View style={styles.centerBox}>
-          <ActivityIndicator size="small" color="#2f6df6" />
-          <Text style={styles.hintText}>공지사항을 불러오는 중...</Text>
-        </View>
-      ) : null}
-
-      {!loading && error ? (
-        <View style={styles.centerBox}>
-          <Text style={styles.errorText}>{error}</Text>
-          <TouchableOpacity style={styles.retryButton} onPress={loadInitial} activeOpacity={0.9}>
-            <Text style={styles.retryButtonText}>다시 시도</Text>
+      <FlatList
+        data={notices}
+        keyExtractor={(item) => item.id}
+        style={styles.list}
+        contentContainerStyle={styles.listContent}
+        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
+        renderItem={({ item }) => (
+          <TouchableOpacity style={styles.card} activeOpacity={0.92} onPress={() => onSelectNotice(item.id)}>
+            <View style={styles.cardTopRow}>
+              <View style={styles.badge}>
+                <Text style={styles.badgeText}>{item.keyword || ""}</Text>
+              </View>
+              <Text style={styles.dateText}>{formatKoreanDate(item.published_at)}</Text>
+            </View>
+            <View style={styles.cardBodyRow}>
+              <View style={styles.cardBodyTextWrap}>
+                <Text style={styles.cardTitle} numberOfLines={2}>
+                  {item.title}
+                </Text>
+                <Text style={styles.cardPreview} numberOfLines={2}>
+                  {item.preview}
+                </Text>
+              </View>
+              <Text style={styles.chevron}>{">"}</Text>
+            </View>
           </TouchableOpacity>
-        </View>
-      ) : null}
-
-      {!loading && !error ? (
-        <FlatList
-          data={notices}
-          keyExtractor={(item) => item.id}
-          contentContainerStyle={styles.listContent}
-          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
-          renderItem={({ item }) => (
-            <TouchableOpacity style={styles.card} activeOpacity={0.92} onPress={() => onSelectNotice(item.id)}>
-              <View style={styles.cardTopRow}>
-                <View style={styles.badge}>
-                  <Text style={styles.badgeText}>{item.keyword || ""}</Text>
-                </View>
-                <Text style={styles.dateText}>{formatKoreanDate(item.published_at)}</Text>
-              </View>
-              <View style={styles.cardBodyRow}>
-                <View style={styles.cardBodyTextWrap}>
-                  <Text style={styles.cardTitle} numberOfLines={2}>
-                    {item.title}
-                  </Text>
-                  <Text style={styles.cardPreview} numberOfLines={2}>
-                    {item.preview}
-                  </Text>
-                </View>
-                <Text style={styles.chevron}>{">"}</Text>
-              </View>
-            </TouchableOpacity>
-          )}
-        />
-      ) : null}
+        )}
+        ListEmptyComponent={
+          loading ? (
+            <View style={styles.centerBox}>
+              <ActivityIndicator size="small" color="#2f6df6" />
+              <Text style={styles.hintText}>공지사항을 불러오는 중...</Text>
+            </View>
+          ) : error ? (
+            <View style={styles.centerBox}>
+              <Text style={styles.errorText}>{error}</Text>
+              <TouchableOpacity style={styles.retryButton} onPress={loadInitial} activeOpacity={0.9}>
+                <Text style={styles.retryButtonText}>다시 시도</Text>
+              </TouchableOpacity>
+            </View>
+          ) : (
+            <View style={styles.centerBox}>
+              <Text style={styles.hintText}>표시할 공지사항이 없습니다.</Text>
+            </View>
+          )
+        }
+      />
     </View>
   );
 }
@@ -240,17 +297,21 @@ const styles = StyleSheet.create({
   },
   chipScroll: {
     marginBottom: 10,
+    flexGrow: 0,
+    flexShrink: 0,
   },
   chipRow: {
     paddingHorizontal: 16,
     paddingBottom: 8,
     gap: 8,
+    alignItems: "center",
   },
   chip: {
     borderRadius: 18,
     paddingHorizontal: 14,
     paddingVertical: 8,
     borderWidth: 1,
+    alignSelf: "flex-start",
   },
   chipSelected: {
     backgroundColor: "#2f6df6",
@@ -269,6 +330,9 @@ const styles = StyleSheet.create({
   },
   chipTextUnselected: {
     color: "#41516b",
+  },
+  list: {
+    flex: 1,
   },
   listContent: {
     paddingHorizontal: 16,

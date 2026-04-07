@@ -1,8 +1,37 @@
 import { StatusBar } from "expo-status-bar";
+import Constants from "expo-constants";
+import * as Notifications from "expo-notifications";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-import { getToken } from "./src/api";
+import { getToken, savePushToken } from "./src/api";
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: true,
+  }),
+});
+
+async function registerForPushNotifications() {
+  try {
+    const { status: existing } = await Notifications.getPermissionsAsync();
+    let finalStatus = existing;
+    if (existing !== "granted") {
+      const { status } = await Notifications.requestPermissionsAsync();
+      finalStatus = status;
+    }
+    if (finalStatus !== "granted") {
+      return;
+    }
+    const projectId = Constants.expoConfig?.extra?.eas?.projectId;
+    const tokenData = await Notifications.getExpoPushTokenAsync({ projectId });
+    await savePushToken(tokenData.data);
+  } catch (_e) {
+    // Non-critical — silently ignore if push registration fails
+  }
+}
 import ChatbotScreen from "./src/screens/ChatbotScreen";
 import HomeScreen from "./src/screens/HomeScreen";
 import LoginScreen from "./src/screens/LoginScreen";
@@ -21,6 +50,9 @@ export default function App() {
   useEffect(() => {
     async function bootstrap() {
       const token = await getToken();
+      if (token) {
+        registerForPushNotifications();
+      }
       setScreen(token ? "app" : "login");
       setTab("notice");
       setNoticeView("list");
@@ -85,6 +117,7 @@ export default function App() {
       {screen === "login" && (
         <LoginScreen
           onLoginSuccess={() => {
+            registerForPushNotifications();
             setScreen("app");
             setTab("notice");
             setNoticeView("list");
@@ -103,6 +136,7 @@ export default function App() {
         <SignupScreen
           onGoLogin={() => setScreen("login")}
           onSignupSuccess={() => {
+            registerForPushNotifications();
             setScreen("app");
             setTab("notice");
             setNoticeView("list");
