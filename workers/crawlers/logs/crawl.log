@@ -1,0 +1,2257 @@
+[2026-02-19 16:53:22,969] INFO - Run started (KST): 2026-02-19T16:53:22+09:00
+[2026-02-19 16:53:22,969] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-02-19 16:53:23,192] INFO - List parsed: 13 items
+[2026-02-19 16:53:25,067] INFO - CSV updated: added=13, total=13, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-02-19 16:53:25,067] INFO - Run finished.
+[2026-02-19 16:55:39,677] INFO - Run started (KST): 2026-02-19T16:55:39+09:00
+[2026-02-19 16:55:39,677] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-02-19 16:55:39,897] INFO - List parsed: 13 items
+[2026-02-19 16:55:41,849] INFO - CSV updated: added=0, total=13, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-02-19 16:55:41,849] INFO - Run finished.
+[2026-02-19 17:16:11,089] INFO - Run started (KST): 2026-02-19T17:16:11+09:00
+[2026-02-19 17:16:11,089] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-02-19 17:16:11,307] INFO - List parsed: 13 items
+[2026-02-19 17:18:48,406] INFO - Run started (KST): 2026-02-19T17:18:48+09:00
+[2026-02-19 17:18:48,406] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-02-19 17:18:48,598] INFO - List parsed: 13 items
+[2026-02-19 17:18:50,494] INFO - CSV updated: added=0, total=13, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-02-19 17:18:50,494] INFO - Run finished.
+[2026-02-19 17:42:16,821] INFO - Run started (KST): 2026-02-19T17:42:16+09:00
+[2026-02-19 17:42:16,821] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-02-19 17:42:17,698] INFO - List parsed: 13 items
+[2026-02-19 17:45:11,851] INFO - Run started (KST): 2026-02-19T17:45:11+09:00
+[2026-02-19 17:45:11,851] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-02-19 17:45:12,000] INFO - List parsed: 13 items
+[2026-02-19 17:45:13,730] INFO - CSV updated: added=0, total=13, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-02-19 17:45:13,730] INFO - Run finished.
+[2026-02-19 18:02:14,283] INFO - Run started (KST): 2026-02-19T18:02:14+09:00
+[2026-02-19 18:02:14,283] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-02-19 18:02:14,456] INFO - List parsed: 13 items
+[2026-02-19 18:02:16,128] INFO - CSV updated: added=0, total=13, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-02-19 18:02:16,128] INFO - Run finished.
+[2026-02-19 18:21:26,239] INFO - Run started (KST): 2026-02-19T18:21:26+09:00
+[2026-02-19 18:21:26,239] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-02-19 18:21:26,462] INFO - List parsed: 13 items
+[2026-02-19 18:21:28,274] INFO - CSV updated: inserted=0, updated=13, total=13, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-02-19 18:21:28,276] INFO - Run finished.
+[2026-02-21 11:13:09,606] INFO - Run started (KST): 2026-02-21T11:13:09+09:00
+[2026-02-21 11:13:09,606] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-02-21 11:13:09,869] INFO - List parsed: 13 items
+[2026-02-21 11:13:12,330] INFO - CSV updated: inserted=0, updated=13, total=13, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-02-21 11:13:12,330] INFO - Run finished.
+[2026-02-21 11:20:50,960] INFO - Run started (KST): 2026-02-21T11:20:50+09:00
+[2026-02-21 11:20:50,960] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-02-21 11:20:51,223] INFO - List parsed: 13 items
+[2026-02-21 11:20:53,787] INFO - CSV updated: inserted=0, updated=13, total=13, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-02-21 11:20:53,789] INFO - Run finished.
+[2026-03-17 02:55:38,574] INFO - Run started (KST): 2026-03-17T02:55:38+09:00
+[2026-03-17 02:55:38,576] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 02:55:39,832] INFO - List parsed: 14 items
+[2026-03-17 02:55:42,319] INFO - CSV updated: inserted=9, updated=5, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 02:55:42,319] INFO - Run finished.
+[2026-03-17 03:18:35,081] INFO - Run started (KST): 2026-03-17T03:18:35+09:00
+[2026-03-17 03:18:35,081] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 03:18:35,336] INFO - List parsed: 14 items
+[2026-03-17 03:18:37,365] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 03:18:39,567] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 03:18:39,567] WARNING - TOPIK speaking crawl failed: [Errno 2] No such file or directory: 'C:\\Users\\nayeo\\Desktop\\캡디 코드\\Ajou-International\\apps\\worker\\crawl\\data\\speaking_structure.html'
+[2026-03-17 03:18:39,567] INFO - Run finished.
+[2026-03-17 03:24:00,762] INFO - Run started (KST): 2026-03-17T03:24:00+09:00
+[2026-03-17 03:24:00,762] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 03:24:01,008] INFO - List parsed: 14 items
+[2026-03-17 03:24:03,020] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 03:24:03,149] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 03:24:03,188] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_speaking.json
+[2026-03-17 03:24:03,188] INFO - Run finished.
+[2026-03-17 18:22:21,574] INFO - Run started (KST): 2026-03-17T18:22:21+09:00
+[2026-03-17 18:22:21,574] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 18:22:21,915] INFO - List parsed: 14 items
+[2026-03-17 18:22:23,851] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 18:22:25,887] WARNING - Neon DB upsert failed: column "published_at_raw" of relation "notices" does not exist
+LINE 7:       published_at_raw, published_at_inferred, published_at_...
+              ^
+[2026-03-17 18:22:25,887] WARNING - TOPIK schedule pipeline failed: name 'TOPIK_SCHEDULE_URL' is not defined
+[2026-03-17 18:22:32,194] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 18:22:32,249] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_speaking.json
+[2026-03-17 18:22:32,249] INFO - Run finished.
+[2026-03-17 18:25:19,403] INFO - Run started (KST): 2026-03-17T18:25:19+09:00
+[2026-03-17 18:25:19,403] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 18:25:19,634] INFO - List parsed: 14 items
+[2026-03-17 18:25:21,559] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 18:25:22,935] INFO - Neon DB upserted: processed=14, success=14
+[2026-03-17 18:25:23,074] INFO - TOPIK schedule parsed: 0 rows
+[2026-03-17 18:25:23,074] INFO - TOPIK schedule DB saved
+[2026-03-17 18:25:23,196] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 18:25:23,217] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_speaking.json
+[2026-03-17 18:25:23,218] INFO - Run finished.
+[2026-03-17 18:29:05,960] INFO - Run started (KST): 2026-03-17T18:29:05+09:00
+[2026-03-17 18:29:05,960] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 18:29:06,224] INFO - List parsed: 14 items
+[2026-03-17 18:29:08,402] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 18:29:09,844] INFO - Neon DB upserted: processed=14, success=14
+[2026-03-17 18:29:09,995] INFO - TOPIK schedule debug HTML saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_schedule_debug.html
+[2026-03-17 18:29:09,996] INFO - TOPIK schedule parsed: 0 rows
+[2026-03-17 18:29:09,996] INFO - TOPIK schedule DB saved
+[2026-03-17 18:29:10,166] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 18:29:10,180] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_speaking.json
+[2026-03-17 18:29:10,181] INFO - Run finished.
+[2026-03-17 18:33:34,326] INFO - Run started (KST): 2026-03-17T18:33:34+09:00
+[2026-03-17 18:33:34,326] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 18:33:34,601] INFO - List parsed: 14 items
+[2026-03-17 18:33:36,659] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 18:33:38,187] INFO - Neon DB upserted: processed=14, success=14
+[2026-03-17 18:33:38,318] INFO - TOPIK schedule debug HTML saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_schedule_debug.html
+[2026-03-17 18:33:38,318] INFO - TOPIK schedule parsed: 0 rows
+[2026-03-17 18:33:38,318] INFO - TOPIK schedule DB saved
+[2026-03-17 18:33:38,466] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 18:33:38,486] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_speaking.json
+[2026-03-17 18:33:38,487] INFO - Run finished.
+[2026-03-17 18:36:47,679] INFO - Run started (KST): 2026-03-17T18:36:47+09:00
+[2026-03-17 18:36:47,679] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 18:36:47,950] INFO - List parsed: 14 items
+[2026-03-17 18:36:50,137] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 18:36:51,549] INFO - Neon DB upserted: processed=14, success=14
+[2026-03-17 18:36:51,684] INFO - TOPIK schedule debug HTML saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_schedule_debug.html
+[2026-03-17 18:36:51,685] INFO - TOPIK schedule parsed: 0 rows
+[2026-03-17 18:36:51,685] INFO - TOPIK schedule DB saved
+[2026-03-17 18:36:51,839] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 18:36:51,859] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_speaking.json
+[2026-03-17 18:36:51,859] INFO - Run finished.
+[2026-03-17 18:44:10,762] INFO - Run started (KST): 2026-03-17T18:44:10+09:00
+[2026-03-17 18:44:10,762] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 18:44:10,993] INFO - List parsed: 14 items
+[2026-03-17 18:44:12,949] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 18:44:14,764] INFO - Neon DB upserted: processed=14, success=14
+[2026-03-17 18:44:14,764] INFO - TOPIK schedule sample HTML loaded: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_schedule_sample.html
+[2026-03-17 18:44:14,764] INFO - 'table_list' in html: True
+[2026-03-17 18:44:14,796] INFO - TOPIK schedule parsed: 15 rows
+[2026-03-17 18:44:14,797] INFO - TOPIK first row: TopikScheduleRow(category='토픽 IBT', round_label='제16회', apply_start='2026.09.15', apply_end='2026.09.21', apply_status='접수예정', exam_date_kr='11.28 (토)', exam_date_global=None, exam_date_asia='11.28 (토)', exam_level='TOPIK Ⅰ TOPIK Ⅱ', result_announce_at='12.18 (금) 15:00', notice_link=None, source_url='https://www.topik.go.kr/TWGUID/TWGUID0020.do')
+[2026-03-17 18:44:18,223] INFO - TOPIK schedule DB saved
+[2026-03-17 18:44:20,402] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 18:44:20,422] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_speaking.json
+[2026-03-17 18:44:20,422] INFO - Run finished.
+[2026-03-17 19:05:01,011] INFO - Run started (KST): 2026-03-17T19:05:01+09:00
+[2026-03-17 19:05:01,011] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 19:05:01,312] INFO - List parsed: 14 items
+[2026-03-17 19:05:03,482] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 19:05:04,257] WARNING - Neon DB upsert failed: column "source_type" of relation "notices" does not exist
+LINE 3:       source_type, source_name, source_url, source_notice_id...
+              ^
+[2026-03-17 19:05:04,257] INFO - TOPIK schedule sample HTML loaded: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_schedule_sample.html
+[2026-03-17 19:05:04,257] INFO - 'table_list' in html: True
+[2026-03-17 19:05:04,273] INFO - TOPIK schedule parsed: 15 rows
+[2026-03-17 19:05:04,273] INFO - TOPIK first row: TopikScheduleRow(category='토픽 IBT', round_label='제16회', apply_start='2026.09.15', apply_end='2026.09.21', apply_status='접수예정', exam_date_kr='11.28 (토)', exam_date_global=None, exam_date_asia='11.28 (토)', exam_level='TOPIK Ⅰ TOPIK Ⅱ', result_announce_at='12.18 (금) 15:00', notice_link=None, source_url='https://www.topik.go.kr/TWGUID/TWGUID0020.do')
+[2026-03-17 19:05:06,044] INFO - TOPIK schedule DB saved
+[2026-03-17 19:05:12,290] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 19:05:12,305] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_speaking.json
+[2026-03-17 19:05:12,307] INFO - Run finished.
+[2026-03-17 19:19:32,090] INFO - Run started (KST): 2026-03-17T19:19:32+09:00
+[2026-03-17 19:19:32,090] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 19:19:32,367] INFO - List parsed: 14 items
+[2026-03-17 19:19:34,326] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 19:19:35,107] WARNING - Neon DB upsert failed: column "source_type" of relation "notices" does not exist
+LINE 3:       source_type, source_name, source_url, source_notice_id...
+              ^
+[2026-03-17 19:19:35,107] INFO - TOPIK schedule sample HTML loaded: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_schedule_sample.html
+[2026-03-17 19:19:35,107] INFO - 'table_list' in html: True
+[2026-03-17 19:19:35,133] INFO - TOPIK schedule parsed: 15 rows
+[2026-03-17 19:19:35,134] INFO - TOPIK first row: TopikScheduleRow(category='토픽 IBT', round_label='제16회', apply_start='2026.09.15', apply_end='2026.09.21', apply_status='접수예정', exam_date_kr='11.28 (토)', exam_date_global=None, exam_date_asia='11.28 (토)', exam_level='TOPIK Ⅰ TOPIK Ⅱ', result_announce_at='12.18 (금) 15:00', notice_link=None, source_url='https://www.topik.go.kr/TWGUID/TWGUID0020.do')
+[2026-03-17 19:19:36,925] INFO - TOPIK schedule DB saved
+[2026-03-17 19:19:43,211] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 19:19:43,226] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_speaking.json
+[2026-03-17 19:19:43,226] INFO - Run finished.
+[2026-03-17 19:24:19,943] INFO - Run started (KST): 2026-03-17T19:24:19+09:00
+[2026-03-17 19:24:19,943] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 19:24:20,193] INFO - List parsed: 14 items
+[2026-03-17 19:24:22,582] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\notices.csv
+[2026-03-17 19:24:23,316] WARNING - Neon DB upsert failed: column "source_type" of relation "notices" does not exist
+LINE 3:       source_type, source_name, source_url, source_notice_id...
+              ^
+[2026-03-17 19:24:23,316] INFO - TOPIK schedule sample HTML loaded: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_schedule_sample.html
+[2026-03-17 19:24:23,316] INFO - 'table_list' in html: True
+[2026-03-17 19:24:23,337] INFO - TOPIK schedule parsed: 15 rows
+[2026-03-17 19:24:23,337] INFO - TOPIK first row: TopikScheduleRow(category='토픽 IBT', round_label='제16회', apply_start='2026.09.15', apply_end='2026.09.21', apply_status='접수예정', exam_date_kr='11.28 (토)', exam_date_global=None, exam_date_asia='11.28 (토)', exam_level='TOPIK Ⅰ TOPIK Ⅱ', result_announce_at='12.18 (금) 15:00', notice_link=None, source_url='https://www.topik.go.kr/TWGUID/TWGUID0020.do')
+[2026-03-17 19:24:25,120] INFO - TOPIK schedule DB saved
+[2026-03-17 19:24:25,223] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 19:24:25,245] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\apps\worker\crawl\data\topik_speaking.json
+[2026-03-17 19:24:25,245] INFO - Run finished.
+[2026-03-17 21:08:12,447] INFO - Run started (KST): 2026-03-17T21:08:12+09:00
+[2026-03-17 21:08:12,447] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 21:08:12,726] INFO - List parsed: 14 items
+[2026-03-17 21:08:14,919] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\workers\crawlers\data\notices.csv
+[2026-03-17 21:08:16,144] WARNING - Neon DB upsert failed: column "updated_at" of relation "notices" does not exist
+LINE 6:       created_at, updated_at,
+                          ^
+[2026-03-17 21:08:16,145] INFO - TOPIK schedule sample HTML loaded: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\workers\crawlers\data\topik_schedule_sample.html
+[2026-03-17 21:08:16,145] INFO - 'table_list' in html: True
+[2026-03-17 21:08:16,162] INFO - TOPIK schedule parsed: 15 rows
+[2026-03-17 21:08:16,163] INFO - TOPIK first row: TopikScheduleRow(category='토픽 IBT', round_label='제16회', apply_start='2026.09.15', apply_end='2026.09.21', apply_status='접수예정', exam_date_kr='11.28 (토)', exam_date_global=None, exam_date_asia='11.28 (토)', exam_level='TOPIK Ⅰ TOPIK Ⅱ', result_announce_at='12.18 (금) 15:00', notice_link=None, source_url='https://www.topik.go.kr/TWGUID/TWGUID0020.do')
+[2026-03-17 21:08:16,849] WARNING - TOPIK schedule pipeline failed: relation "topik_schedules" does not exist
+LINE 2:     INSERT INTO topik_schedules (
+                        ^
+[2026-03-17 21:08:23,165] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 21:08:23,190] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\workers\crawlers\data\topik_speaking.json
+[2026-03-17 21:08:23,190] INFO - Run finished.
+[2026-03-17 21:11:35,913] INFO - Run started (KST): 2026-03-17T21:11:35+09:00
+[2026-03-17 21:11:35,914] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-17 21:11:36,160] INFO - List parsed: 14 items
+[2026-03-17 21:11:38,662] INFO - CSV updated: inserted=0, updated=14, total=22, path=C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\workers\crawlers\data\notices.csv
+[2026-03-17 21:11:39,435] WARNING - Neon DB upsert failed: null value in column "id" of relation "notices" violates not-null constraint
+DETAIL:  Failing row contains (null, null, [공지][국제교류팀] 2026-2학기 파견 학부·석사 연..., null, [국제교류팀] 2026-2학기 파견 학부·석사 연계과..., null, null, f, null, null, 2027-12-01 00:00:00+00, 2026-03-17 12:11:36+00, null, university_portal, ajou_oia, https://www.ajou.ac.kr/oia/notice/notice.do?mode=view&articleNo=..., 364896, null, 525bcd8e6fc3558de3c4df2947a13d871f718f2993856975bb0f4df152fa8c53, f, f, 2027-12-01, 2026-03-12, 2027-12-01 00:00:00+00, high, 공지, exchange, 교환, null, 488a9da48bd0788062f243473e79989f1a1d28c79c5801c572e57b15900d9cf8, 2026-03-17 12:11:36+00).
+[2026-03-17 21:11:39,435] INFO - TOPIK schedule sample HTML loaded: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\workers\crawlers\data\topik_schedule_sample.html
+[2026-03-17 21:11:39,435] INFO - 'table_list' in html: True
+[2026-03-17 21:11:39,463] INFO - TOPIK schedule parsed: 15 rows
+[2026-03-17 21:11:39,463] INFO - TOPIK first row: TopikScheduleRow(category='토픽 IBT', round_label='제16회', apply_start='2026.09.15', apply_end='2026.09.21', apply_status='접수예정', exam_date_kr='11.28 (토)', exam_date_global=None, exam_date_asia='11.28 (토)', exam_level='TOPIK Ⅰ TOPIK Ⅱ', result_announce_at='12.18 (금) 15:00', notice_link=None, source_url='https://www.topik.go.kr/TWGUID/TWGUID0020.do')
+[2026-03-17 21:11:41,351] INFO - TOPIK schedule DB saved
+[2026-03-17 21:11:41,551] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-03-17 21:11:41,567] INFO - TOPIK speaking JSON saved: C:\Users\nayeo\Desktop\캡디 코드\Ajou-International\workers\crawlers\data\topik_speaking.json
+[2026-03-17 21:11:41,567] INFO - Run finished.
+[2026-03-23 15:31:05,448] INFO - Run started (KST): 2026-03-23T15:31:05+09:00
+[2026-03-23 15:31:05,448] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 15:31:05,727] INFO - List parsed: 15 items
+[2026-03-23 15:31:09,817] INFO - JSON saved: 15 items
+[2026-03-23 15:31:09,817] INFO - Run finished.
+[2026-03-23 15:45:23,250] INFO - Run started (KST): 2026-03-23T15:45:23+09:00
+[2026-03-23 15:45:23,269] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 15:45:23,602] INFO - List parsed: 15 items
+[2026-03-23 15:45:27,856] INFO - JSON saved: 15 items
+[2026-03-23 15:45:27,856] INFO - Run finished.
+[2026-03-23 15:54:59,711] INFO - Run started (KST): 2026-03-23T15:54:59+09:00
+[2026-03-23 15:54:59,711] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 15:55:00,224] INFO - List parsed: 15 items
+[2026-03-23 15:55:04,937] INFO - JSON saved: 15 items
+[2026-03-23 15:55:04,937] INFO - Run finished.
+[2026-03-23 15:57:56,256] INFO - Run started (KST): 2026-03-23T15:57:56+09:00
+[2026-03-23 15:57:56,258] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 15:57:56,549] INFO - List parsed: 15 items
+[2026-03-23 15:58:00,667] INFO - JSON saved: 15 items
+[2026-03-23 15:58:00,671] INFO - Run finished.
+[2026-03-23 16:00:34,569] INFO - Run started (KST): 2026-03-23T16:00:34+09:00
+[2026-03-23 16:00:34,569] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 16:00:34,900] INFO - List parsed: 15 items
+[2026-03-23 16:00:35,127] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 16:00:35,132] INFO - period_texts=['* 장학 선발 대상자 중 무료복학생인 경우 3차 등록기간 이후 4월 이내 별도 지급됩니다.']
+[2026-03-23 16:00:35,136] INFO - deadline=None
+[2026-03-23 16:00:35,609] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 16:00:35,609] INFO - period_texts=['[일정]', '1. AIMS 포털 신청', '2. 구글폼 지원서 제출:']
+[2026-03-23 16:00:35,609] INFO - deadline=None
+[2026-03-23 16:00:35,881] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:00:35,885] INFO - period_texts=['3차모집 지원서 접수기간:']
+[2026-03-23 16:00:35,885] INFO - deadline=None
+[2026-03-23 16:00:36,360] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:00:36,360] INFO - period_texts=['- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 16:00:36,364] INFO - deadline=None
+[2026-03-23 16:00:36,576] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 16:00:36,576] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)', '학점이관 신청서 제출 FORM(클릭)', '1) 전 과목에 대한 과목개요번역문 필수 제출', '2) Checklist, 시간표, 추가 증빙서류 제출 불필요']
+[2026-03-23 16:00:36,576] INFO - deadline=None
+[2026-03-23 16:00:36,862] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 16:00:36,862] INFO - period_texts=['참가 신청서:']
+[2026-03-23 16:00:36,862] INFO - deadline=None
+[2026-03-23 16:00:37,145] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:00:37,147] INFO - period_texts=['1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가', '지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.', '의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유의 바랍니다. (제출 링크:']
+[2026-03-23 16:00:37,149] INFO - deadline=None
+[2026-03-23 16:00:37,453] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 16:00:37,453] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:00:37,453] INFO - deadline=None
+[2026-03-23 16:00:37,700] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 16:00:37,700] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:00:37,700] INFO - deadline=None
+[2026-03-23 16:00:38,302] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:00:38,302] INFO - period_texts=['○ 활동기간', '모집기간', '- 센터 홈페이지에서 신청서 양식을 다운로드 후, 작성하여 담당자 이메일로 제출', '(접수 이메일 : yeha25@swcic.or.kr)', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:00:38,302] INFO - deadline=None
+[2026-03-23 16:00:38,517] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:00:38,519] INFO - period_texts=['찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내', '신청서 제출 (클릭)']
+[2026-03-23 16:00:38,519] INFO - deadline=None
+[2026-03-23 16:00:38,751] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:00:38,751] INFO - period_texts=['2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.', '- 어학시험 증명서 파일명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출', '- 지원서 제출 시 이메일주소는 본교 도메인(@ajou.ac.kr) 계정으로 기재하여 제출', '교환신청 대학의 자격요건(어학/전공/학점/파견학년) 검토의 책임은 지원자', '- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:00:38,751] INFO - deadline=None
+[2026-03-23 16:00:38,964] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 16:00:38,964] INFO - period_texts=['첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.', '서류 제출 희망자는', '국제교류팀 접수 기한을 준수', '하여 제출 할 것. (', '첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)', '1. 온라인 지원서 작성 및 제출 :', '2. 아주대학교 국제교류팀 관련 서류 제출 :', '까지 국제교류팀 사무실(율곡관 152호) 내방 제출 및 이메일(', ') 제출', '(택1이 아닌 방문/이메일 모두 제출)', '3. 소득분위 확인 신청(한국장학재단 WEST 어학연수비대출 신청):', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함", '에게 있음을 반드시 유의 바라며, 붙임의 모집 공고를 꼼꼼하게 참고하시어 누락하지 않도록 각별히 주의 바랍니다. (특히 학생 신분에 따른 제출서류가 상이하므로 반드시 모집공고를 참고할 것. EX) 재학생/졸업생/편입생/취업취약계층 등)']
+[2026-03-23 16:00:38,964] INFO - deadline=None
+[2026-03-23 16:00:39,200] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:00:39,201] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.']
+[2026-03-23 16:00:39,201] INFO - deadline=2026-02-09
+[2026-03-23 16:00:39,517] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 16:00:39,517] INFO - period_texts=['본교 국제교류팀 접수 기한:', '붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수 기한 반드시 엄수할 것', '(파견 기간 중 재학 등록 필수)', '접수 마감일 기준으로 모교의 교환학생 파견 자득을 취득해야 함', '아. 제출 방법:', '원본 서류 일체 구비하여 국제교류팀 사무실 방문 제출 및 사본 일체 이메일(exch@ajou.ac.kr) 제출', '택1이 아닌, 방문/이메일 모두 제출', '자. 제출 서류 (붙임의 선발 공고문 필히 참조)', '- 문서확인번호(진위확인용), 학교 직인, 학기 및 전체 성적이 모두 표기된 제출용 성적증명서를 정식 발급한 서류만 인정', '제출 시 미인정', '- 다른 시험 성적표가 있을 경우 응시자에게 유리한 성적 1건만 제출', '* 제출 서류는', '공고 마감일 기준 최근 3개월 이내', '발급분에 한하며, 주민등록번호 뒷자리 비공개 출력 제출', '* (접수 관련 문의) 각 소속대학 국제부서(교환학생 업무 담당):']
+[2026-03-23 16:00:39,517] INFO - deadline=None
+[2026-03-23 16:00:39,525] INFO - JSON saved: 15 items
+[2026-03-23 16:00:39,525] INFO - Run finished.
+[2026-03-23 16:02:54,949] INFO - Run started (KST): 2026-03-23T16:02:54+09:00
+[2026-03-23 16:02:54,949] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 16:02:55,226] INFO - List parsed: 15 items
+[2026-03-23 16:02:55,428] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 16:02:55,428] INFO - period_texts=['* 장학 선발 대상자 중 무료복학생인 경우 3차 등록기간 이후 4월 이내 별도 지급됩니다.']
+[2026-03-23 16:02:55,428] INFO - deadline=None
+[2026-03-23 16:02:55,648] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 16:02:55,648] INFO - period_texts=['[일정]', '1. AIMS 포털 신청', '2. 구글폼 지원서 제출:']
+[2026-03-23 16:02:55,648] INFO - deadline=None
+[2026-03-23 16:02:55,821] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:02:55,821] INFO - period_texts=['3차모집 지원서 접수기간:']
+[2026-03-23 16:02:55,821] INFO - deadline=None
+[2026-03-23 16:02:56,255] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:02:56,255] INFO - period_texts=['- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 16:02:56,257] INFO - deadline=None
+[2026-03-23 16:02:56,454] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 16:02:56,454] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)', '학점이관 신청서 제출 FORM(클릭)', '1) 전 과목에 대한 과목개요번역문 필수 제출', '2) Checklist, 시간표, 추가 증빙서류 제출 불필요']
+[2026-03-23 16:02:56,456] INFO - deadline=None
+[2026-03-23 16:02:56,658] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 16:02:56,658] INFO - period_texts=['참가 신청서:']
+[2026-03-23 16:02:56,658] INFO - deadline=None
+[2026-03-23 16:02:56,919] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:02:56,919] INFO - period_texts=['1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가', '지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.', '의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유의 바랍니다. (제출 링크:']
+[2026-03-23 16:02:56,920] INFO - deadline=None
+[2026-03-23 16:02:57,098] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 16:02:57,098] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:02:57,098] INFO - deadline=None
+[2026-03-23 16:02:57,356] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 16:02:57,359] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:02:57,359] INFO - deadline=None
+[2026-03-23 16:02:57,565] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:02:57,573] INFO - period_texts=['○ 활동기간', '모집기간', '- 센터 홈페이지에서 신청서 양식을 다운로드 후, 작성하여 담당자 이메일로 제출', '(접수 이메일 : yeha25@swcic.or.kr)', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:02:57,573] INFO - deadline=None
+[2026-03-23 16:02:57,805] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:02:57,805] INFO - period_texts=['찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내', '신청서 제출 (클릭)']
+[2026-03-23 16:02:57,805] INFO - deadline=None
+[2026-03-23 16:02:58,110] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:02:58,110] INFO - period_texts=['2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.', '- 어학시험 증명서 파일명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출', '- 지원서 제출 시 이메일주소는 본교 도메인(@ajou.ac.kr) 계정으로 기재하여 제출', '교환신청 대학의 자격요건(어학/전공/학점/파견학년) 검토의 책임은 지원자', '- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:02:58,110] INFO - deadline=None
+[2026-03-23 16:02:58,589] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 16:02:58,589] INFO - period_texts=['첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.', '서류 제출 희망자는', '국제교류팀 접수 기한을 준수', '하여 제출 할 것. (', '첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)', '1. 온라인 지원서 작성 및 제출 :', '2. 아주대학교 국제교류팀 관련 서류 제출 :', '까지 국제교류팀 사무실(율곡관 152호) 내방 제출 및 이메일(', ') 제출', '(택1이 아닌 방문/이메일 모두 제출)', '3. 소득분위 확인 신청(한국장학재단 WEST 어학연수비대출 신청):', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함", '에게 있음을 반드시 유의 바라며, 붙임의 모집 공고를 꼼꼼하게 참고하시어 누락하지 않도록 각별히 주의 바랍니다. (특히 학생 신분에 따른 제출서류가 상이하므로 반드시 모집공고를 참고할 것. EX) 재학생/졸업생/편입생/취업취약계층 등)']
+[2026-03-23 16:02:58,600] INFO - deadline=None
+[2026-03-23 16:02:58,837] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:02:58,837] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.']
+[2026-03-23 16:02:58,837] INFO - deadline=None
+[2026-03-23 16:02:59,174] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 16:02:59,174] INFO - period_texts=['본교 국제교류팀 접수 기한:', '붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수 기한 반드시 엄수할 것', '(파견 기간 중 재학 등록 필수)', '접수 마감일 기준으로 모교의 교환학생 파견 자득을 취득해야 함', '아. 제출 방법:', '원본 서류 일체 구비하여 국제교류팀 사무실 방문 제출 및 사본 일체 이메일(exch@ajou.ac.kr) 제출', '택1이 아닌, 방문/이메일 모두 제출', '자. 제출 서류 (붙임의 선발 공고문 필히 참조)', '- 문서확인번호(진위확인용), 학교 직인, 학기 및 전체 성적이 모두 표기된 제출용 성적증명서를 정식 발급한 서류만 인정', '제출 시 미인정', '- 다른 시험 성적표가 있을 경우 응시자에게 유리한 성적 1건만 제출', '* 제출 서류는', '공고 마감일 기준 최근 3개월 이내', '발급분에 한하며, 주민등록번호 뒷자리 비공개 출력 제출', '* (접수 관련 문의) 각 소속대학 국제부서(교환학생 업무 담당):']
+[2026-03-23 16:02:59,174] INFO - deadline=None
+[2026-03-23 16:02:59,174] INFO - JSON saved: 15 items
+[2026-03-23 16:02:59,174] INFO - Run finished.
+[2026-03-23 16:27:11,495] INFO - Run started (KST): 2026-03-23T16:27:11+09:00
+[2026-03-23 16:27:11,495] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 16:27:11,941] INFO - List parsed: 15 items
+[2026-03-23 16:27:12,223] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 16:27:12,225] INFO - period_texts=['* 장학 선발 대상자 중 무료복학생인 경우 3차 등록기간 이후 4월 이내 별도 지급됩니다.']
+[2026-03-23 16:27:12,226] INFO - normalized_period=* 장학 선발 대상자 중 무료복학생인 경우 3차 등록기간 이후 4. 이내 별도 지급됩니다.
+[2026-03-23 16:27:12,226] INFO - normalized_title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표 TE, GE, GC
+[2026-03-23 16:27:12,226] INFO - deadline=2026-03-25
+[2026-03-23 16:27:12,542] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 16:27:12,542] INFO - period_texts=['[일정]', '1. AIMS 포털 신청', '2. 구글폼 지원서 제출:']
+[2026-03-23 16:27:12,542] INFO - normalized_period=[정]
+[2026-03-23 16:27:12,542] INFO - normalized_period=1. AIMS 포털 신청
+[2026-03-23 16:27:12,542] INFO - normalized_period=2. 구글폼 지원서 제출:
+[2026-03-23 16:27:12,542] INFO - normalized_title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:27:12,542] INFO - deadline=2026-03-25
+[2026-03-23 16:27:12,778] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:27:12,780] INFO - period_texts=['3차모집 지원서 접수기간:']
+[2026-03-23 16:27:12,780] INFO - normalized_period=3차모집 지원서 접수기간:
+[2026-03-23 16:27:12,781] INFO - normalized_title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:27:12,781] INFO - deadline=2026-04-07
+[2026-03-23 16:27:13,252] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:27:13,252] INFO - period_texts=['- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.', '- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 16:27:13,252] INFO - normalized_period=- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의 exch@ajou.ac.kr 후 지원 가능합니다.
+[2026-03-23 16:27:13,252] INFO - normalized_period=- 지원 마감 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+[2026-03-23 16:27:13,252] INFO - normalized_period=모두 제출
+[2026-03-23 16:27:13,252] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:27:13,252] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:27:13,256] INFO - normalized_title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:27:13,256] INFO - deadline=2026-26-03
+[2026-03-23 16:27:13,517] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 16:27:13,517] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)', '몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?', '학점이관 신청서 제출 FORM(클릭)', '1) 전 과목에 대한 과목개요번역문 필수 제출', '2) Checklist, 시간표, 추가 증빙서류 제출 불필요']
+[2026-03-23 16:27:13,517] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:27:13,517] INFO - normalized_period=몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?
+[2026-03-23 16:27:13,517] INFO - normalized_period=학점이관 신청서 제출 FORM 클릭
+[2026-03-23 16:27:13,517] INFO - normalized_period=1 전 과목에 대한 과목개요번역문 필수 제출
+[2026-03-23 16:27:13,517] INFO - normalized_period=2 Checklist, 시간표, 추가 증빙서류 제출 불필요
+[2026-03-23 16:27:13,517] INFO - normalized_title=[공지][필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:27:13,517] INFO - deadline=2026-26-03
+[2026-03-23 16:27:13,746] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 16:27:13,746] INFO - period_texts=['참가 신청서:']
+[2026-03-23 16:27:13,746] INFO - normalized_period=참가 신청서:
+[2026-03-23 16:27:13,747] INFO - normalized_title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내 미국 Purdue University
+[2026-03-23 16:27:13,748] INFO - deadline=2026-03-19
+[2026-03-23 16:27:14,088] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:27:14,092] INFO - period_texts=['1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가', '지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.', '의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유의 바랍니다. (제출 링크:']
+[2026-03-23 16:27:14,092] INFO - normalized_period=1 면접 대상자들에게는 면접 정 및 ZOOM 링크가
+[2026-03-23 16:27:14,092] INFO - normalized_period=지원서 제출 시 기입했던 이메로 괄 발송 될 예정입니다.
+[2026-03-23 16:27:14,092] INFO - normalized_period=의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유의 바랍니다. 제출 링크:
+[2026-03-23 16:27:14,092] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:27:14,092] INFO - deadline=2026-03-16
+[2026-03-23 16:27:14,410] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 16:27:14,410] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:27:14,410] INFO - normalized_period=현재 접수 진행 중인
+[2026-03-23 16:27:14,415] INFO - normalized_title=2026-1학기 Global Creator GC 장학 대상자 모집
+[2026-03-23 16:27:14,417] INFO - deadline=2026-02-27
+[2026-03-23 16:27:14,759] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 16:27:14,759] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:27:14,759] INFO - normalized_period=현재 접수 진행 중인
+[2026-03-23 16:27:14,759] INFO - normalized_title=2026-1학기 Global Exchange GE 장학 대상자 모집
+[2026-03-23 16:27:14,759] INFO - deadline=2026-02-27
+[2026-03-23 16:27:15,043] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:27:15,043] INFO - period_texts=['○ 활동기간', '모집기간', '- 센터 홈페이지에서 신청서 양식을 다운로드 후, 작성하여 담당자 이메일로 제출', '(접수 이메일 : yeha25@swcic.or.kr)', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:27:15,043] INFO - normalized_period=○ 활동기간
+[2026-03-23 16:27:15,043] INFO - normalized_period=모집기간
+[2026-03-23 16:27:15,043] INFO - normalized_period=- 센터 홈페이지에서 신청서 양식을 다운로드 후, 작성하여 담당자 이메로 제출
+[2026-03-23 16:27:15,047] INFO - normalized_period=접수 이메 : yeha25@swcic.or.kr
+[2026-03-23 16:27:15,049] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:27:15,051] INFO - normalized_title=「2026 수원-뚜르 청.대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:27:15,051] INFO - deadline=2026-02-25
+[2026-03-23 16:27:15,298] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:27:15,298] INFO - period_texts=['찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내', '신청서 제출 (클릭)']
+[2026-03-23 16:27:15,298] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:27:15,298] INFO - normalized_period=신청서 제출 클릭
+[2026-03-23 16:27:15,298] INFO - normalized_title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:27:15,298] INFO - deadline=2026-02-23
+[2026-03-23 16:27:15,548] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:27:15,548] INFO - period_texts=['2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.', '- 어학시험 증명서 파일명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출', '- 지원서 제출 시 이메일주소는 본교 도메인(@ajou.ac.kr) 계정으로 기재하여 제출', '- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.', '교환신청 대학의 자격요건(어학/전공/학점/파견학년) 검토의 책임은 지원자', '- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:27:15,548] INFO - normalized_period=2/25 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.
+[2026-03-23 16:27:15,555] INFO - normalized_period=- 어학시험 증명서 파명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출
+[2026-03-23 16:27:15,556] INFO - normalized_period=- 지원서 제출 시 이메주소는 본교 도메인 @ajou.ac.kr 계정으로 기재하여 제출
+[2026-03-23 16:27:15,558] INFO - normalized_period=- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의 exch@ajou.ac.kr 후 지원 가능합니다.
+[2026-03-23 16:27:15,558] INFO - normalized_period=교환신청 대학의 자격요건 어학/전공/학점/파견학. 검토의 책임은 지원자
+[2026-03-23 16:27:15,558] INFO - normalized_period=- 지원 마감 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+[2026-03-23 16:27:15,558] INFO - normalized_period=모두 제출
+[2026-03-23 16:27:15,558] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:27:15,558] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:27:15,558] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:27:15,558] INFO - deadline=2026-02-25
+[2026-03-23 16:27:15,889] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 16:27:15,897] INFO - period_texts=['첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.', '서류 제출 희망자는', '국제교류팀 접수 기한을 준수', '하여 제출 할 것. (', '첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)', '1. 온라인 지원서 작성 및 제출 :', '2. 아주대학교 국제교류팀 관련 서류 제출 :', '까지 국제교류팀 사무실(율곡관 152호) 내방 제출 및 이메일(', ') 제출', '(택1이 아닌 방문/이메일 모두 제출)', '3. 소득분위 확인 신청(한국장학재단 WEST 어학연수비대출 신청):', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함", '에게 있음을 반드시 유의 바라며, 붙임의 모집 공고를 꼼꼼하게 참고하시어 누락하지 않도록 각별히 주의 바랍니다. (특히 학생 신분에 따른 제출서류가 상이하므로 반드시 모집공고를 참고할 것. EX) 재학생/졸업생/편입생/취업취약계층 등)']
+[2026-03-23 16:27:15,898] INFO - normalized_period=첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.
+[2026-03-23 16:27:15,898] INFO - normalized_period=서류 제출 희망자는
+[2026-03-23 16:27:15,899] INFO - normalized_period=국제교류팀 접수 기한을 준수
+[2026-03-23 16:27:15,899] INFO - normalized_period=하여 제출 할 것.
+[2026-03-23 16:27:15,899] INFO - normalized_period=첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함
+[2026-03-23 16:27:15,899] INFO - normalized_period=1. 온라인 지원서 작성 및 제출 :
+[2026-03-23 16:27:15,899] INFO - normalized_period=2. 아주대학교 국제교류팀 관련 서류 제출 :
+[2026-03-23 16:27:15,899] INFO - normalized_period=까지 국제교류팀 사무실 율곡관 152호 내방 제출 및 이메
+[2026-03-23 16:27:15,899] INFO - normalized_period=제출
+[2026-03-23 16:27:15,899] INFO - normalized_period=택1이 아닌 방문/이메 모두 제출
+[2026-03-23 16:27:15,905] INFO - normalized_period=3. 소득분위 확인 신청 한국장학재단 WEST 어학연수비대출 신청 :
+[2026-03-23 16:27:15,905] INFO - normalized_period=- 제출 증빙자료는 모집공고 '26.2.11 이후 발급 서류여야 함
+[2026-03-23 16:27:15,908] INFO - normalized_period=에게 있음을 반드시 유의 바라며, 붙임의 모집 공고를 꼼꼼하게 참고하시어 누락하지 않도록 각별히 주의 바랍니다. 특히 학생 신분에 따른 제출서류가 상이하므로 반드시 모집공고를 참고할 것. EX 재학생/졸업생/편입생/취업취약계층 등
+[2026-03-23 16:27:15,908] INFO - normalized_title=2026. 상반기 한미대학생연수 WEST 참가자 모집 안내 중기/단기
+[2026-03-23 16:27:15,908] INFO - deadline=2026-26-02
+[2026-03-23 16:27:16,197] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:27:16,197] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.']
+[2026-03-23 16:27:16,197] INFO - normalized_period=- 지원서 제출 기간: 2026.02.06~2026.02.09.
+[2026-03-23 16:27:16,197] INFO - normalized_period=모두 제출
+[2026-03-23 16:27:16,197] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:27:16,197] INFO - normalized_title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:27:16,197] INFO - deadline=2026-02-09
+[2026-03-23 16:27:16,468] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 16:27:16,472] INFO - period_texts=['본교 국제교류팀 접수 기한:', '(*기한 엄수)', '붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수 기한 반드시 엄수할 것', '(파견 기간 중 재학 등록 필수)', '접수 마감일 기준으로 모교의 교환학생 파견 자득을 취득해야 함', '아. 제출 방법:', '원본 서류 일체 구비하여 국제교류팀 사무실 방문 제출 및 사본 일체 이메일(exch@ajou.ac.kr) 제출', '택1이 아닌, 방문/이메일 모두 제출', '자. 제출 서류 (붙임의 선발 공고문 필히 참조)', '- 문서확인번호(진위확인용), 학교 직인, 학기 및 전체 성적이 모두 표기된 제출용 성적증명서를 정식 발급한 서류만 인정', '제출 시 미인정', '- 다른 시험 성적표가 있을 경우 응시자에게 유리한 성적 1건만 제출', '* 제출 서류는', '공고 마감일 기준 최근 3개월 이내', '발급분에 한하며, 주민등록번호 뒷자리 비공개 출력 제출', '* (접수 관련 문의) 각 소속대학 국제부서(교환학생 업무 담당):']
+[2026-03-23 16:27:16,472] INFO - normalized_period=본교 국제교류팀 접수 기한:
+[2026-03-23 16:27:16,472] INFO - normalized_period=*기한 엄수
+[2026-03-23 16:27:16,472] INFO - normalized_period=붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수 기한 반드시 엄수할 것
+[2026-03-23 16:27:16,472] INFO - normalized_period=파견 기간 중 재학 등록 필수
+[2026-03-23 16:27:16,472] INFO - normalized_period=접수 마감 기준으로 모교의 교환학생 파견 자득을 취득해야 함
+[2026-03-23 16:27:16,472] INFO - normalized_period=아. 제출 방법:
+[2026-03-23 16:27:16,472] INFO - normalized_period=원본 서류 체 구비하여 국제교류팀 사무실 방문 제출 및 사본 체 이메 exch@ajou.ac.kr 제출
+[2026-03-23 16:27:16,476] INFO - normalized_period=택1이 아닌, 방문/이메 모두 제출
+[2026-03-23 16:27:16,476] INFO - normalized_period=자. 제출 서류 붙임의 선발 공고문 필히 참조
+[2026-03-23 16:27:16,476] INFO - normalized_period=- 문서확인번호 진위확인용 , 학교 직인, 학기 및 전체 성적이 모두 표기된 제출용 성적증명서를 정식 발급한 서류만 인정
+[2026-03-23 16:27:16,476] INFO - normalized_period=제출 시 미인정
+[2026-03-23 16:27:16,476] INFO - normalized_period=- 다른 시험 성적표가 있을 경우 응시자에게 유리한 성적 1건만 제출
+[2026-03-23 16:27:16,476] INFO - normalized_period=* 제출 서류는
+[2026-03-23 16:27:16,481] INFO - normalized_period=공고 마감 기준 최근 3개. 이내
+[2026-03-23 16:27:16,481] INFO - normalized_period=발급분에 한하며, 주민등록번호 뒷자리 비공개 출력 제출
+[2026-03-23 16:27:16,481] INFO - normalized_period=* 접수 관련 문의 각 소속대학 국제부서 교환학생 업무 담당 :
+[2026-03-23 16:27:16,481] INFO - normalized_title=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 16:27:16,481] INFO - deadline=2026-03-06
+[2026-03-23 16:27:16,485] INFO - JSON saved: 15 items
+[2026-03-23 16:27:16,485] INFO - Run finished.
+[2026-03-23 16:27:16,485] INFO - raw_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+국제교류팀
+국제교류팀
+작성일
+2026-02-03
+조회수
+12343
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
+참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 
+[2026-03-23 16:33:24,768] INFO - Run started (KST): 2026-03-23T16:33:24+09:00
+[2026-03-23 16:33:24,770] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 16:33:25,220] INFO - List parsed: 15 items
+[2026-03-23 16:33:25,467] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 16:33:25,467] INFO - period_texts=['* 장학 선발 대상자 중 무료복학생인 경우 3차 등록기간 이후 4월 이내 별도 지급됩니다.']
+[2026-03-23 16:33:25,467] INFO - normalized_period=* 장학 선발 대상자 중 무료복학생인 경우 3차 등록기간 이후 4. 이내 별도 지급됩니다.
+[2026-03-23 16:33:25,467] INFO - normalized_title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표 TE, GE, GC
+[2026-03-23 16:33:25,467] INFO - deadline=2026-03-25
+[2026-03-23 16:33:25,764] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 16:33:25,766] INFO - period_texts=['[일정]', '1. AIMS 포털 신청', '2. 구글폼 지원서 제출:']
+[2026-03-23 16:33:25,766] INFO - normalized_period=[정]
+[2026-03-23 16:33:25,766] INFO - normalized_period=1. AIMS 포털 신청
+[2026-03-23 16:33:25,767] INFO - normalized_period=2. 구글폼 지원서 제출:
+[2026-03-23 16:33:25,767] INFO - normalized_title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:33:25,767] INFO - deadline=2026-03-25
+[2026-03-23 16:33:26,007] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:33:26,007] INFO - period_texts=['3차모집 지원서 접수기간:']
+[2026-03-23 16:33:26,010] INFO - normalized_period=3차모집 지원서 접수기간:
+[2026-03-23 16:33:26,011] INFO - normalized_title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:33:26,011] INFO - deadline=2026-03-25
+[2026-03-23 16:33:26,547] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:33:26,549] INFO - period_texts=['- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.', '- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 16:33:26,549] INFO - normalized_period=- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의 exch@ajou.ac.kr 후 지원 가능합니다.
+[2026-03-23 16:33:26,549] INFO - normalized_period=- 지원 마감 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+[2026-03-23 16:33:26,549] INFO - normalized_period=모두 제출
+[2026-03-23 16:33:26,549] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:33:26,549] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:33:26,549] INFO - normalized_title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:33:26,549] INFO - deadline=2026-03-16
+[2026-03-23 16:33:26,891] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 16:33:26,893] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)', '몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?', '학점이관 신청서 제출 FORM(클릭)', '1) 전 과목에 대한 과목개요번역문 필수 제출', '2) Checklist, 시간표, 추가 증빙서류 제출 불필요']
+[2026-03-23 16:33:26,893] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:33:26,895] INFO - normalized_period=몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?
+[2026-03-23 16:33:26,895] INFO - normalized_period=학점이관 신청서 제출 FORM 클릭
+[2026-03-23 16:33:26,895] INFO - normalized_period=1 전 과목에 대한 과목개요번역문 필수 제출
+[2026-03-23 16:33:26,895] INFO - normalized_period=2 Checklist, 시간표, 추가 증빙서류 제출 불필요
+[2026-03-23 16:33:26,895] INFO - normalized_title=[공지][필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:33:26,895] INFO - deadline=2024-06-27
+[2026-03-23 16:33:27,158] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 16:33:27,164] INFO - period_texts=['참가 신청서:']
+[2026-03-23 16:33:27,164] INFO - normalized_period=참가 신청서:
+[2026-03-23 16:33:27,164] INFO - normalized_title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내 미국 Purdue University
+[2026-03-23 16:33:27,164] INFO - deadline=2026-03-19
+[2026-03-23 16:33:27,379] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:33:27,379] INFO - period_texts=['1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가', '지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.', '의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유의 바랍니다. (제출 링크:']
+[2026-03-23 16:33:27,379] INFO - normalized_period=1 면접 대상자들에게는 면접 정 및 ZOOM 링크가
+[2026-03-23 16:33:27,387] INFO - normalized_period=지원서 제출 시 기입했던 이메로 괄 발송 될 예정입니다.
+[2026-03-23 16:33:27,387] INFO - normalized_period=의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유의 바랍니다. 제출 링크:
+[2026-03-23 16:33:27,387] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:33:27,387] INFO - deadline=2026-03-16
+[2026-03-23 16:33:27,696] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 16:33:27,696] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:33:27,701] INFO - normalized_period=현재 접수 진행 중인
+[2026-03-23 16:33:27,701] INFO - normalized_title=2026-1학기 Global Creator GC 장학 대상자 모집
+[2026-03-23 16:33:27,701] INFO - deadline=2026-02-27
+[2026-03-23 16:33:27,991] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 16:33:27,991] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:33:27,991] INFO - normalized_period=현재 접수 진행 중인
+[2026-03-23 16:33:27,991] INFO - normalized_title=2026-1학기 Global Exchange GE 장학 대상자 모집
+[2026-03-23 16:33:27,991] INFO - deadline=2026-02-27
+[2026-03-23 16:33:28,294] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:33:28,296] INFO - period_texts=['○ 활동기간', '모집기간', '- 센터 홈페이지에서 신청서 양식을 다운로드 후, 작성하여 담당자 이메일로 제출', '(접수 이메일 : yeha25@swcic.or.kr)', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:33:28,296] INFO - normalized_period=○ 활동기간
+[2026-03-23 16:33:28,297] INFO - normalized_period=모집기간
+[2026-03-23 16:33:28,298] INFO - normalized_period=- 센터 홈페이지에서 신청서 양식을 다운로드 후, 작성하여 담당자 이메로 제출
+[2026-03-23 16:33:28,298] INFO - normalized_period=접수 이메 : yeha25@swcic.or.kr
+[2026-03-23 16:33:28,299] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:33:28,299] INFO - normalized_title=「2026 수원-뚜르 청.대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:33:28,299] INFO - deadline=2026-02-25
+[2026-03-23 16:33:28,511] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:33:28,518] INFO - period_texts=['찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내', '신청서 제출 (클릭)']
+[2026-03-23 16:33:28,520] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:33:28,520] INFO - normalized_period=신청서 제출 클릭
+[2026-03-23 16:33:28,520] INFO - normalized_title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:33:28,520] INFO - deadline=2026-02-23
+[2026-03-23 16:33:28,814] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:33:28,814] INFO - period_texts=['2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.', '- 어학시험 증명서 파일명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출', '- 지원서 제출 시 이메일주소는 본교 도메인(@ajou.ac.kr) 계정으로 기재하여 제출', '- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.', '교환신청 대학의 자격요건(어학/전공/학점/파견학년) 검토의 책임은 지원자', '- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:33:28,814] INFO - normalized_period=2/25 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.
+[2026-03-23 16:33:28,814] INFO - normalized_period=- 어학시험 증명서 파명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출
+[2026-03-23 16:33:28,814] INFO - normalized_period=- 지원서 제출 시 이메주소는 본교 도메인 @ajou.ac.kr 계정으로 기재하여 제출
+[2026-03-23 16:33:28,814] INFO - normalized_period=- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의 exch@ajou.ac.kr 후 지원 가능합니다.
+[2026-03-23 16:33:28,814] INFO - normalized_period=교환신청 대학의 자격요건 어학/전공/학점/파견학. 검토의 책임은 지원자
+[2026-03-23 16:33:28,814] INFO - normalized_period=- 지원 마감 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+[2026-03-23 16:33:28,814] INFO - normalized_period=모두 제출
+[2026-03-23 16:33:28,821] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:33:28,822] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:33:28,822] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:33:28,822] INFO - deadline=2026-02-25
+[2026-03-23 16:33:29,050] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 16:33:29,050] INFO - period_texts=['첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.', '서류 제출 희망자는', '국제교류팀 접수 기한을 준수', '하여 제출 할 것. (', '첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)', '1. 온라인 지원서 작성 및 제출 :', '2. 아주대학교 국제교류팀 관련 서류 제출 :', '까지 국제교류팀 사무실(율곡관 152호) 내방 제출 및 이메일(', ') 제출', '(택1이 아닌 방문/이메일 모두 제출)', '3. 소득분위 확인 신청(한국장학재단 WEST 어학연수비대출 신청):', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함", '에게 있음을 반드시 유의 바라며, 붙임의 모집 공고를 꼼꼼하게 참고하시어 누락하지 않도록 각별히 주의 바랍니다. (특히 학생 신분에 따른 제출서류가 상이하므로 반드시 모집공고를 참고할 것. EX) 재학생/졸업생/편입생/취업취약계층 등)']
+[2026-03-23 16:33:29,050] INFO - normalized_period=첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.
+[2026-03-23 16:33:29,050] INFO - normalized_period=서류 제출 희망자는
+[2026-03-23 16:33:29,050] INFO - normalized_period=국제교류팀 접수 기한을 준수
+[2026-03-23 16:33:29,050] INFO - normalized_period=하여 제출 할 것.
+[2026-03-23 16:33:29,050] INFO - normalized_period=첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함
+[2026-03-23 16:33:29,050] INFO - normalized_period=1. 온라인 지원서 작성 및 제출 :
+[2026-03-23 16:33:29,050] INFO - normalized_period=2. 아주대학교 국제교류팀 관련 서류 제출 :
+[2026-03-23 16:33:29,058] INFO - normalized_period=까지 국제교류팀 사무실 율곡관 152호 내방 제출 및 이메
+[2026-03-23 16:33:29,058] INFO - normalized_period=제출
+[2026-03-23 16:33:29,058] INFO - normalized_period=택1이 아닌 방문/이메 모두 제출
+[2026-03-23 16:33:29,058] INFO - normalized_period=3. 소득분위 확인 신청 한국장학재단 WEST 어학연수비대출 신청 :
+[2026-03-23 16:33:29,058] INFO - normalized_period=- 제출 증빙자료는 모집공고 '26.2.11 이후 발급 서류여야 함
+[2026-03-23 16:33:29,058] INFO - normalized_period=에게 있음을 반드시 유의 바라며, 붙임의 모집 공고를 꼼꼼하게 참고하시어 누락하지 않도록 각별히 주의 바랍니다. 특히 학생 신분에 따른 제출서류가 상이하므로 반드시 모집공고를 참고할 것. EX 재학생/졸업생/편입생/취업취약계층 등
+[2026-03-23 16:33:29,058] INFO - normalized_title=2026. 상반기 한미대학생연수 WEST 참가자 모집 안내 중기/단기
+[2026-03-23 16:33:29,058] INFO - deadline=2026-03-18
+[2026-03-23 16:33:29,535] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:33:29,535] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.']
+[2026-03-23 16:33:29,560] INFO - normalized_period=- 지원서 제출 기간: 2026.02.06~2026.02.09.
+[2026-03-23 16:33:29,569] INFO - normalized_period=모두 제출
+[2026-03-23 16:33:29,569] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:33:29,569] INFO - normalized_title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:33:29,569] INFO - deadline=2026-02-09
+[2026-03-23 16:33:29,948] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 16:33:29,948] INFO - period_texts=['본교 국제교류팀 접수 기한:', '(*기한 엄수)', '붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수 기한 반드시 엄수할 것', '(파견 기간 중 재학 등록 필수)', '접수 마감일 기준으로 모교의 교환학생 파견 자득을 취득해야 함', '아. 제출 방법:', '원본 서류 일체 구비하여 국제교류팀 사무실 방문 제출 및 사본 일체 이메일(exch@ajou.ac.kr) 제출', '택1이 아닌, 방문/이메일 모두 제출', '자. 제출 서류 (붙임의 선발 공고문 필히 참조)', '- 문서확인번호(진위확인용), 학교 직인, 학기 및 전체 성적이 모두 표기된 제출용 성적증명서를 정식 발급한 서류만 인정', '제출 시 미인정', '- 다른 시험 성적표가 있을 경우 응시자에게 유리한 성적 1건만 제출', '* 제출 서류는', '공고 마감일 기준 최근 3개월 이내', '발급분에 한하며, 주민등록번호 뒷자리 비공개 출력 제출', '* (접수 관련 문의) 각 소속대학 국제부서(교환학생 업무 담당):']
+[2026-03-23 16:33:29,948] INFO - normalized_period=본교 국제교류팀 접수 기한:
+[2026-03-23 16:33:29,948] INFO - normalized_period=*기한 엄수
+[2026-03-23 16:33:29,948] INFO - normalized_period=붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수 기한 반드시 엄수할 것
+[2026-03-23 16:33:29,948] INFO - normalized_period=파견 기간 중 재학 등록 필수
+[2026-03-23 16:33:29,956] INFO - normalized_period=접수 마감 기준으로 모교의 교환학생 파견 자득을 취득해야 함
+[2026-03-23 16:33:29,956] INFO - normalized_period=아. 제출 방법:
+[2026-03-23 16:33:29,956] INFO - normalized_period=원본 서류 체 구비하여 국제교류팀 사무실 방문 제출 및 사본 체 이메 exch@ajou.ac.kr 제출
+[2026-03-23 16:33:29,956] INFO - normalized_period=택1이 아닌, 방문/이메 모두 제출
+[2026-03-23 16:33:29,956] INFO - normalized_period=자. 제출 서류 붙임의 선발 공고문 필히 참조
+[2026-03-23 16:33:29,956] INFO - normalized_period=- 문서확인번호 진위확인용 , 학교 직인, 학기 및 전체 성적이 모두 표기된 제출용 성적증명서를 정식 발급한 서류만 인정
+[2026-03-23 16:33:29,956] INFO - normalized_period=제출 시 미인정
+[2026-03-23 16:33:29,956] INFO - normalized_period=- 다른 시험 성적표가 있을 경우 응시자에게 유리한 성적 1건만 제출
+[2026-03-23 16:33:29,956] INFO - normalized_period=* 제출 서류는
+[2026-03-23 16:33:29,956] INFO - normalized_period=공고 마감 기준 최근 3개. 이내
+[2026-03-23 16:33:29,956] INFO - normalized_period=발급분에 한하며, 주민등록번호 뒷자리 비공개 출력 제출
+[2026-03-23 16:33:29,956] INFO - normalized_period=* 접수 관련 문의 각 소속대학 국제부서 교환학생 업무 담당 :
+[2026-03-23 16:33:29,956] INFO - normalized_title=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 16:33:29,956] INFO - deadline=2026-03-06
+[2026-03-23 16:33:29,965] INFO - JSON saved: 15 items
+[2026-03-23 16:33:29,965] INFO - Run finished.
+[2026-03-23 16:33:29,965] INFO - raw_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+국제교류팀
+국제교류팀
+작성일
+2026-02-03
+조회수
+12346
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
+참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 
+[2026-03-23 16:44:01,894] INFO - Run started (KST): 2026-03-23T16:44:01+09:00
+[2026-03-23 16:44:01,894] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 16:44:02,407] INFO - List parsed: 15 items
+[2026-03-23 16:44:02,684] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 16:44:02,686] INFO - period_texts=['* 장학 선발 대상자 중 무료복학생인 경우 3차 등록기간 이후 4월 이내 별도 지급됩니다.']
+[2026-03-23 16:44:02,687] INFO - normalized_period=* 장학 선발 대상자 중 무료복학생인 경우 3차 등록기간 이후 4. 이내 별도 지급됩니다.
+[2026-03-23 16:44:02,687] INFO - normalized_title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표 TE, GE, GC
+[2026-03-23 16:44:02,687] INFO - deadline=2026-03-25
+[2026-03-23 16:44:03,057] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 16:44:03,070] INFO - period_texts=['[일정]', '1. AIMS 포털 신청', '2. 구글폼 지원서 제출:']
+[2026-03-23 16:44:03,079] INFO - normalized_period=[정]
+[2026-03-23 16:44:03,090] INFO - normalized_period=1. AIMS 포털 신청
+[2026-03-23 16:44:03,104] INFO - normalized_period=2. 구글폼 지원서 제출:
+[2026-03-23 16:44:03,115] INFO - normalized_title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:44:03,118] INFO - deadline=2026-03-25
+[2026-03-23 16:44:03,335] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:44:03,335] INFO - period_texts=['3차모집 지원서 접수기간:']
+[2026-03-23 16:44:03,335] INFO - normalized_period=3차모집 지원서 접수기간:
+[2026-03-23 16:44:03,335] INFO - normalized_title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:44:03,335] INFO - deadline=2026-03-25
+[2026-03-23 16:44:03,887] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:44:03,896] INFO - period_texts=['- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.', '- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 16:44:03,896] INFO - normalized_period=- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의 exch@ajou.ac.kr 후 지원 가능합니다.
+[2026-03-23 16:44:03,896] INFO - normalized_period=- 지원 마감 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+[2026-03-23 16:44:03,896] INFO - normalized_period=모두 제출
+[2026-03-23 16:44:03,896] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:44:03,896] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:44:03,896] INFO - normalized_title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:44:03,896] INFO - deadline=2026-03-16
+[2026-03-23 16:44:04,202] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 16:44:04,205] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)', '몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?', '학점이관 신청서 제출 FORM(클릭)', '1) 전 과목에 대한 과목개요번역문 필수 제출', '2) Checklist, 시간표, 추가 증빙서류 제출 불필요']
+[2026-03-23 16:44:04,205] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:44:04,205] INFO - normalized_period=몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?
+[2026-03-23 16:44:04,205] INFO - normalized_period=학점이관 신청서 제출 FORM 클릭
+[2026-03-23 16:44:04,205] INFO - normalized_period=1 전 과목에 대한 과목개요번역문 필수 제출
+[2026-03-23 16:44:04,207] INFO - normalized_period=2 Checklist, 시간표, 추가 증빙서류 제출 불필요
+[2026-03-23 16:44:04,207] INFO - normalized_title=[공지][필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:44:04,209] INFO - deadline=2024-06-27
+[2026-03-23 16:44:04,471] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 16:44:04,471] INFO - period_texts=['참가 신청서:']
+[2026-03-23 16:44:04,480] INFO - normalized_period=참가 신청서:
+[2026-03-23 16:44:04,480] INFO - normalized_title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내 미국 Purdue University
+[2026-03-23 16:44:04,480] INFO - deadline=2026-03-19
+[2026-03-23 16:44:04,731] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:44:04,731] INFO - period_texts=['1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가', '지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.', '의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유의 바랍니다. (제출 링크:']
+[2026-03-23 16:44:04,731] INFO - normalized_period=1 면접 대상자들에게는 면접 정 및 ZOOM 링크가
+[2026-03-23 16:44:04,731] INFO - normalized_period=지원서 제출 시 기입했던 이메로 괄 발송 될 예정입니다.
+[2026-03-23 16:44:04,731] INFO - normalized_period=의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유의 바랍니다. 제출 링크:
+[2026-03-23 16:44:04,731] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:44:04,731] INFO - deadline=2026-03-16
+[2026-03-23 16:44:04,991] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 16:44:04,991] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:44:04,991] INFO - normalized_period=현재 접수 진행 중인
+[2026-03-23 16:44:04,991] INFO - normalized_title=2026-1학기 Global Creator GC 장학 대상자 모집
+[2026-03-23 16:44:04,991] INFO - deadline=2026-02-27
+[2026-03-23 16:44:05,257] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 16:44:05,257] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:44:05,257] INFO - normalized_period=현재 접수 진행 중인
+[2026-03-23 16:44:05,257] INFO - normalized_title=2026-1학기 Global Exchange GE 장학 대상자 모집
+[2026-03-23 16:44:05,257] INFO - deadline=2026-02-27
+[2026-03-23 16:44:05,531] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:44:05,531] INFO - period_texts=['○ 활동기간', '모집기간', '- 센터 홈페이지에서 신청서 양식을 다운로드 후, 작성하여 담당자 이메일로 제출', '(접수 이메일 : yeha25@swcic.or.kr)', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:44:05,531] INFO - normalized_period=○ 활동기간
+[2026-03-23 16:44:05,531] INFO - normalized_period=모집기간
+[2026-03-23 16:44:05,534] INFO - normalized_period=- 센터 홈페이지에서 신청서 양식을 다운로드 후, 작성하여 담당자 이메로 제출
+[2026-03-23 16:44:05,534] INFO - normalized_period=접수 이메 : yeha25@swcic.or.kr
+[2026-03-23 16:44:05,534] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:44:05,534] INFO - normalized_title=「2026 수원-뚜르 청.대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:44:05,534] INFO - deadline=2026-02-25
+[2026-03-23 16:44:05,757] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:44:05,757] INFO - period_texts=['찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내', '신청서 제출 (클릭)']
+[2026-03-23 16:44:05,759] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:44:05,759] INFO - normalized_period=신청서 제출 클릭
+[2026-03-23 16:44:05,761] INFO - normalized_title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:44:05,761] INFO - deadline=2026-02-23
+[2026-03-23 16:44:05,993] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:44:05,993] INFO - period_texts=['2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.', '- 어학시험 증명서 파일명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출', '- 지원서 제출 시 이메일주소는 본교 도메인(@ajou.ac.kr) 계정으로 기재하여 제출', '- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.', '교환신청 대학의 자격요건(어학/전공/학점/파견학년) 검토의 책임은 지원자', '- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:44:05,993] INFO - normalized_period=2/25 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.
+[2026-03-23 16:44:05,997] INFO - normalized_period=- 어학시험 증명서 파명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출
+[2026-03-23 16:44:05,997] INFO - normalized_period=- 지원서 제출 시 이메주소는 본교 도메인 @ajou.ac.kr 계정으로 기재하여 제출
+[2026-03-23 16:44:05,997] INFO - normalized_period=- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의 exch@ajou.ac.kr 후 지원 가능합니다.
+[2026-03-23 16:44:05,997] INFO - normalized_period=교환신청 대학의 자격요건 어학/전공/학점/파견학. 검토의 책임은 지원자
+[2026-03-23 16:44:05,997] INFO - normalized_period=- 지원 마감 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+[2026-03-23 16:44:05,997] INFO - normalized_period=모두 제출
+[2026-03-23 16:44:05,997] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:44:06,000] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:44:06,005] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:44:06,005] INFO - deadline=2026-02-25
+[2026-03-23 16:44:06,892] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 16:44:06,892] INFO - period_texts=['첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.', '서류 제출 희망자는', '국제교류팀 접수 기한을 준수', '하여 제출 할 것. (', '첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)', '1. 온라인 지원서 작성 및 제출 :', '2. 아주대학교 국제교류팀 관련 서류 제출 :', '까지 국제교류팀 사무실(율곡관 152호) 내방 제출 및 이메일(', ') 제출', '(택1이 아닌 방문/이메일 모두 제출)', '3. 소득분위 확인 신청(한국장학재단 WEST 어학연수비대출 신청):', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함", '에게 있음을 반드시 유의 바라며, 붙임의 모집 공고를 꼼꼼하게 참고하시어 누락하지 않도록 각별히 주의 바랍니다. (특히 학생 신분에 따른 제출서류가 상이하므로 반드시 모집공고를 참고할 것. EX) 재학생/졸업생/편입생/취업취약계층 등)']
+[2026-03-23 16:44:06,892] INFO - normalized_period=첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.
+[2026-03-23 16:44:06,892] INFO - normalized_period=서류 제출 희망자는
+[2026-03-23 16:44:06,892] INFO - normalized_period=국제교류팀 접수 기한을 준수
+[2026-03-23 16:44:06,892] INFO - normalized_period=하여 제출 할 것.
+[2026-03-23 16:44:06,892] INFO - normalized_period=첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함
+[2026-03-23 16:44:06,899] INFO - normalized_period=1. 온라인 지원서 작성 및 제출 :
+[2026-03-23 16:44:06,899] INFO - normalized_period=2. 아주대학교 국제교류팀 관련 서류 제출 :
+[2026-03-23 16:44:06,899] INFO - normalized_period=까지 국제교류팀 사무실 율곡관 152호 내방 제출 및 이메
+[2026-03-23 16:44:06,899] INFO - normalized_period=제출
+[2026-03-23 16:44:06,900] INFO - normalized_period=택1이 아닌 방문/이메 모두 제출
+[2026-03-23 16:44:06,900] INFO - normalized_period=3. 소득분위 확인 신청 한국장학재단 WEST 어학연수비대출 신청 :
+[2026-03-23 16:44:06,903] INFO - normalized_period=- 제출 증빙자료는 모집공고 '26.2.11 이후 발급 서류여야 함
+[2026-03-23 16:44:06,903] INFO - normalized_period=에게 있음을 반드시 유의 바라며, 붙임의 모집 공고를 꼼꼼하게 참고하시어 누락하지 않도록 각별히 주의 바랍니다. 특히 학생 신분에 따른 제출서류가 상이하므로 반드시 모집공고를 참고할 것. EX 재학생/졸업생/편입생/취업취약계층 등
+[2026-03-23 16:44:06,903] INFO - normalized_title=2026. 상반기 한미대학생연수 WEST 참가자 모집 안내 중기/단기
+[2026-03-23 16:44:06,903] INFO - deadline=2026-03-18
+[2026-03-23 16:44:07,138] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:44:07,144] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.']
+[2026-03-23 16:44:07,144] INFO - normalized_period=- 지원서 제출 기간: 2026.02.06~2026.02.09.
+[2026-03-23 16:44:07,144] INFO - normalized_period=모두 제출
+[2026-03-23 16:44:07,144] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:44:07,146] INFO - normalized_title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:44:07,146] INFO - deadline=2026-02-09
+[2026-03-23 16:44:07,403] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 16:44:07,403] INFO - period_texts=['본교 국제교류팀 접수 기한:', '(*기한 엄수)', '붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수 기한 반드시 엄수할 것', '(파견 기간 중 재학 등록 필수)', '접수 마감일 기준으로 모교의 교환학생 파견 자득을 취득해야 함', '아. 제출 방법:', '원본 서류 일체 구비하여 국제교류팀 사무실 방문 제출 및 사본 일체 이메일(exch@ajou.ac.kr) 제출', '택1이 아닌, 방문/이메일 모두 제출', '자. 제출 서류 (붙임의 선발 공고문 필히 참조)', '- 문서확인번호(진위확인용), 학교 직인, 학기 및 전체 성적이 모두 표기된 제출용 성적증명서를 정식 발급한 서류만 인정', '제출 시 미인정', '- 다른 시험 성적표가 있을 경우 응시자에게 유리한 성적 1건만 제출', '* 제출 서류는', '공고 마감일 기준 최근 3개월 이내', '발급분에 한하며, 주민등록번호 뒷자리 비공개 출력 제출', '* (접수 관련 문의) 각 소속대학 국제부서(교환학생 업무 담당):']
+[2026-03-23 16:44:07,403] INFO - normalized_period=본교 국제교류팀 접수 기한:
+[2026-03-23 16:44:07,403] INFO - normalized_period=*기한 엄수
+[2026-03-23 16:44:07,413] INFO - normalized_period=붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수 기한 반드시 엄수할 것
+[2026-03-23 16:44:07,413] INFO - normalized_period=파견 기간 중 재학 등록 필수
+[2026-03-23 16:44:07,413] INFO - normalized_period=접수 마감 기준으로 모교의 교환학생 파견 자득을 취득해야 함
+[2026-03-23 16:44:07,415] INFO - normalized_period=아. 제출 방법:
+[2026-03-23 16:44:07,415] INFO - normalized_period=원본 서류 체 구비하여 국제교류팀 사무실 방문 제출 및 사본 체 이메 exch@ajou.ac.kr 제출
+[2026-03-23 16:44:07,415] INFO - normalized_period=택1이 아닌, 방문/이메 모두 제출
+[2026-03-23 16:44:07,415] INFO - normalized_period=자. 제출 서류 붙임의 선발 공고문 필히 참조
+[2026-03-23 16:44:07,415] INFO - normalized_period=- 문서확인번호 진위확인용 , 학교 직인, 학기 및 전체 성적이 모두 표기된 제출용 성적증명서를 정식 발급한 서류만 인정
+[2026-03-23 16:44:07,418] INFO - normalized_period=제출 시 미인정
+[2026-03-23 16:44:07,418] INFO - normalized_period=- 다른 시험 성적표가 있을 경우 응시자에게 유리한 성적 1건만 제출
+[2026-03-23 16:44:07,418] INFO - normalized_period=* 제출 서류는
+[2026-03-23 16:44:07,418] INFO - normalized_period=공고 마감 기준 최근 3개. 이내
+[2026-03-23 16:44:07,418] INFO - normalized_period=발급분에 한하며, 주민등록번호 뒷자리 비공개 출력 제출
+[2026-03-23 16:44:07,418] INFO - normalized_period=* 접수 관련 문의 각 소속대학 국제부서 교환학생 업무 담당 :
+[2026-03-23 16:44:07,418] INFO - normalized_title=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 16:44:07,418] INFO - deadline=2026-03-06
+[2026-03-23 16:44:07,428] INFO - JSON saved: 15 items
+[2026-03-23 16:44:07,431] INFO - Run finished.
+[2026-03-23 16:44:07,432] INFO - raw_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+국제교류팀
+국제교류팀
+작성일
+2026-02-03
+조회수
+12347
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
+참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 
+[2026-03-23 16:47:12,270] INFO - Run started (KST): 2026-03-23T16:47:12+09:00
+[2026-03-23 16:47:12,272] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 16:47:12,670] INFO - List parsed: 15 items
+[2026-03-23 16:47:12,909] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 16:47:12,909] INFO - period_texts=['* 장학 선발 대상자 중 무료복학생인 경우 3차 등록기간 이후 4월 이내 별도 지급됩니다.']
+[2026-03-23 16:47:12,909] INFO - normalized_period=* 장학 선발 대상자 중 무료복학생인 경우 3차 등록기간 이후 4. 이내 별도 지급됩니다.
+[2026-03-23 16:47:12,918] INFO - normalized_title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표 TE, GE, GC
+[2026-03-23 16:47:12,918] INFO - deadline=2026-03-25
+[2026-03-23 16:47:13,193] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 16:47:13,197] INFO - period_texts=['[일정]', '1. AIMS 포털 신청', '2. 구글폼 지원서 제출:']
+[2026-03-23 16:47:13,197] INFO - normalized_period=[정]
+[2026-03-23 16:47:13,197] INFO - normalized_period=1. AIMS 포털 신청
+[2026-03-23 16:47:13,197] INFO - normalized_period=2. 구글폼 지원서 제출:
+[2026-03-23 16:47:13,197] INFO - normalized_title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:47:13,197] INFO - deadline=2026-03-25
+[2026-03-23 16:47:13,430] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:47:13,430] INFO - period_texts=['3차모집 지원서 접수기간:']
+[2026-03-23 16:47:13,432] INFO - normalized_period=3차모집 지원서 접수기간:
+[2026-03-23 16:47:13,432] INFO - normalized_title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:47:13,434] INFO - deadline=2026-03-25
+[2026-03-23 16:47:13,912] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:47:13,912] INFO - period_texts=['- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.', '- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 16:47:13,916] INFO - normalized_period=- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의 exch@ajou.ac.kr 후 지원 가능합니다.
+[2026-03-23 16:47:13,916] INFO - normalized_period=- 지원 마감 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+[2026-03-23 16:47:13,916] INFO - normalized_period=모두 제출
+[2026-03-23 16:47:13,916] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:47:13,916] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:47:13,916] INFO - normalized_title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:47:13,921] INFO - deadline=2026-03-16
+[2026-03-23 16:47:14,142] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 16:47:14,142] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)', '몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?', '학점이관 신청서 제출 FORM(클릭)', '1) 전 과목에 대한 과목개요번역문 필수 제출', '2) Checklist, 시간표, 추가 증빙서류 제출 불필요']
+[2026-03-23 16:47:14,142] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:47:14,142] INFO - normalized_period=몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?
+[2026-03-23 16:47:14,142] INFO - normalized_period=학점이관 신청서 제출 FORM 클릭
+[2026-03-23 16:47:14,142] INFO - normalized_period=1 전 과목에 대한 과목개요번역문 필수 제출
+[2026-03-23 16:47:14,142] INFO - normalized_period=2 Checklist, 시간표, 추가 증빙서류 제출 불필요
+[2026-03-23 16:47:14,142] INFO - normalized_title=[공지][필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:47:14,142] INFO - deadline=2024-06-27
+[2026-03-23 16:47:14,375] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 16:47:14,375] INFO - period_texts=['참가 신청서:']
+[2026-03-23 16:47:14,375] INFO - normalized_period=참가 신청서:
+[2026-03-23 16:47:14,375] INFO - normalized_title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내 미국 Purdue University
+[2026-03-23 16:47:14,375] INFO - deadline=2026-03-19
+[2026-03-23 16:47:14,625] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:47:14,625] INFO - period_texts=['1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가', '지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.', '의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유의 바랍니다. (제출 링크:']
+[2026-03-23 16:47:14,625] INFO - normalized_period=1 면접 대상자들에게는 면접 정 및 ZOOM 링크가
+[2026-03-23 16:47:14,625] INFO - normalized_period=지원서 제출 시 기입했던 이메로 괄 발송 될 예정입니다.
+[2026-03-23 16:47:14,625] INFO - normalized_period=의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유의 바랍니다. 제출 링크:
+[2026-03-23 16:47:14,627] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:47:14,627] INFO - deadline=2026-03-16
+[2026-03-23 16:47:14,849] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 16:47:14,849] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:47:14,849] INFO - normalized_period=현재 접수 진행 중인
+[2026-03-23 16:47:14,849] INFO - normalized_title=2026-1학기 Global Creator GC 장학 대상자 모집
+[2026-03-23 16:47:14,849] INFO - deadline=2026-02-27
+[2026-03-23 16:47:15,080] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 16:47:15,080] INFO - period_texts=['현재 접수 진행 중인']
+[2026-03-23 16:47:15,080] INFO - normalized_period=현재 접수 진행 중인
+[2026-03-23 16:47:15,087] INFO - normalized_title=2026-1학기 Global Exchange GE 장학 대상자 모집
+[2026-03-23 16:47:15,088] INFO - deadline=2026-02-27
+[2026-03-23 16:47:15,344] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:47:15,344] INFO - period_texts=['○ 활동기간', '모집기간', '- 센터 홈페이지에서 신청서 양식을 다운로드 후, 작성하여 담당자 이메일로 제출', '(접수 이메일 : yeha25@swcic.or.kr)', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:47:15,344] INFO - normalized_period=○ 활동기간
+[2026-03-23 16:47:15,344] INFO - normalized_period=모집기간
+[2026-03-23 16:47:15,344] INFO - normalized_period=- 센터 홈페이지에서 신청서 양식을 다운로드 후, 작성하여 담당자 이메로 제출
+[2026-03-23 16:47:15,344] INFO - normalized_period=접수 이메 : yeha25@swcic.or.kr
+[2026-03-23 16:47:15,344] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:47:15,344] INFO - normalized_title=「2026 수원-뚜르 청.대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:47:15,344] INFO - deadline=2026-02-25
+[2026-03-23 16:47:15,794] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:47:15,802] INFO - period_texts=['찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내', '신청서 제출 (클릭)']
+[2026-03-23 16:47:15,803] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:47:15,805] INFO - normalized_period=신청서 제출 클릭
+[2026-03-23 16:47:15,812] INFO - normalized_title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:47:15,821] INFO - deadline=2026-02-23
+[2026-03-23 16:47:16,219] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:47:16,220] INFO - period_texts=['2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.', '- 어학시험 증명서 파일명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출', '- 지원서 제출 시 이메일주소는 본교 도메인(@ajou.ac.kr) 계정으로 기재하여 제출', '- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.', '교환신청 대학의 자격요건(어학/전공/학점/파견학년) 검토의 책임은 지원자', '- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.', '찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내']
+[2026-03-23 16:47:16,220] INFO - normalized_period=2/25 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.
+[2026-03-23 16:47:16,220] INFO - normalized_period=- 어학시험 증명서 파명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출
+[2026-03-23 16:47:16,220] INFO - normalized_period=- 지원서 제출 시 이메주소는 본교 도메인 @ajou.ac.kr 계정으로 기재하여 제출
+[2026-03-23 16:47:16,220] INFO - normalized_period=- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의 exch@ajou.ac.kr 후 지원 가능합니다.
+[2026-03-23 16:47:16,220] INFO - normalized_period=교환신청 대학의 자격요건 어학/전공/학점/파견학. 검토의 책임은 지원자
+[2026-03-23 16:47:16,220] INFO - normalized_period=- 지원 마감 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+[2026-03-23 16:47:16,220] INFO - normalized_period=모두 제출
+[2026-03-23 16:47:16,220] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:47:16,220] INFO - normalized_period=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:47:16,220] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:47:16,220] INFO - deadline=2026-02-25
+[2026-03-23 16:47:16,475] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 16:47:16,476] INFO - period_texts=['첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.', '서류 제출 희망자는', '국제교류팀 접수 기한을 준수', '하여 제출 할 것. (', '첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)', '1. 온라인 지원서 작성 및 제출 :', '2. 아주대학교 국제교류팀 관련 서류 제출 :', '까지 국제교류팀 사무실(율곡관 152호) 내방 제출 및 이메일(', ') 제출', '(택1이 아닌 방문/이메일 모두 제출)', '3. 소득분위 확인 신청(한국장학재단 WEST 어학연수비대출 신청):', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함", '에게 있음을 반드시 유의 바라며, 붙임의 모집 공고를 꼼꼼하게 참고하시어 누락하지 않도록 각별히 주의 바랍니다. (특히 학생 신분에 따른 제출서류가 상이하므로 반드시 모집공고를 참고할 것. EX) 재학생/졸업생/편입생/취업취약계층 등)']
+[2026-03-23 16:47:16,477] INFO - normalized_period=첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.
+[2026-03-23 16:47:16,477] INFO - normalized_period=서류 제출 희망자는
+[2026-03-23 16:47:16,479] INFO - normalized_period=국제교류팀 접수 기한을 준수
+[2026-03-23 16:47:16,479] INFO - normalized_period=하여 제출 할 것.
+[2026-03-23 16:47:16,480] INFO - normalized_period=첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함
+[2026-03-23 16:47:16,480] INFO - normalized_period=1. 온라인 지원서 작성 및 제출 :
+[2026-03-23 16:47:16,480] INFO - normalized_period=2. 아주대학교 국제교류팀 관련 서류 제출 :
+[2026-03-23 16:47:16,482] INFO - normalized_period=까지 국제교류팀 사무실 율곡관 152호 내방 제출 및 이메
+[2026-03-23 16:47:16,482] INFO - normalized_period=제출
+[2026-03-23 16:47:16,482] INFO - normalized_period=택1이 아닌 방문/이메 모두 제출
+[2026-03-23 16:47:16,482] INFO - normalized_period=3. 소득분위 확인 신청 한국장학재단 WEST 어학연수비대출 신청 :
+[2026-03-23 16:47:16,482] INFO - normalized_period=- 제출 증빙자료는 모집공고 '26.2.11 이후 발급 서류여야 함
+[2026-03-23 16:47:16,482] INFO - normalized_period=에게 있음을 반드시 유의 바라며, 붙임의 모집 공고를 꼼꼼하게 참고하시어 누락하지 않도록 각별히 주의 바랍니다. 특히 학생 신분에 따른 제출서류가 상이하므로 반드시 모집공고를 참고할 것. EX 재학생/졸업생/편입생/취업취약계층 등
+[2026-03-23 16:47:16,498] INFO - normalized_title=2026. 상반기 한미대학생연수 WEST 참가자 모집 안내 중기/단기
+[2026-03-23 16:47:16,506] INFO - deadline=2026-03-18
+[2026-03-23 16:47:16,704] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:47:16,704] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM', '모두 제출', '하여야 정상 접수되오니 이점 유의하시기 바랍니다.']
+[2026-03-23 16:47:16,706] INFO - normalized_period=- 지원서 제출 기간: 2026.02.06~2026.02.09.
+[2026-03-23 16:47:16,706] INFO - normalized_period=모두 제출
+[2026-03-23 16:47:16,706] INFO - normalized_period=하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+[2026-03-23 16:47:16,706] INFO - normalized_title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:47:16,706] INFO - deadline=2026-02-09
+[2026-03-23 16:47:16,939] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 16:47:16,939] INFO - period_texts=['본교 국제교류팀 접수 기한:', '(*기한 엄수)', '붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수 기한 반드시 엄수할 것', '(파견 기간 중 재학 등록 필수)', '접수 마감일 기준으로 모교의 교환학생 파견 자득을 취득해야 함', '아. 제출 방법:', '원본 서류 일체 구비하여 국제교류팀 사무실 방문 제출 및 사본 일체 이메일(exch@ajou.ac.kr) 제출', '택1이 아닌, 방문/이메일 모두 제출', '자. 제출 서류 (붙임의 선발 공고문 필히 참조)', '- 문서확인번호(진위확인용), 학교 직인, 학기 및 전체 성적이 모두 표기된 제출용 성적증명서를 정식 발급한 서류만 인정', '제출 시 미인정', '- 다른 시험 성적표가 있을 경우 응시자에게 유리한 성적 1건만 제출', '* 제출 서류는', '공고 마감일 기준 최근 3개월 이내', '발급분에 한하며, 주민등록번호 뒷자리 비공개 출력 제출', '* (접수 관련 문의) 각 소속대학 국제부서(교환학생 업무 담당):']
+[2026-03-23 16:47:16,946] INFO - normalized_period=본교 국제교류팀 접수 기한:
+[2026-03-23 16:47:16,947] INFO - normalized_period=*기한 엄수
+[2026-03-23 16:47:16,947] INFO - normalized_period=붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수 기한 반드시 엄수할 것
+[2026-03-23 16:47:16,947] INFO - normalized_period=파견 기간 중 재학 등록 필수
+[2026-03-23 16:47:16,947] INFO - normalized_period=접수 마감 기준으로 모교의 교환학생 파견 자득을 취득해야 함
+[2026-03-23 16:47:16,947] INFO - normalized_period=아. 제출 방법:
+[2026-03-23 16:47:16,947] INFO - normalized_period=원본 서류 체 구비하여 국제교류팀 사무실 방문 제출 및 사본 체 이메 exch@ajou.ac.kr 제출
+[2026-03-23 16:47:16,947] INFO - normalized_period=택1이 아닌, 방문/이메 모두 제출
+[2026-03-23 16:47:16,947] INFO - normalized_period=자. 제출 서류 붙임의 선발 공고문 필히 참조
+[2026-03-23 16:47:16,947] INFO - normalized_period=- 문서확인번호 진위확인용 , 학교 직인, 학기 및 전체 성적이 모두 표기된 제출용 성적증명서를 정식 발급한 서류만 인정
+[2026-03-23 16:47:16,947] INFO - normalized_period=제출 시 미인정
+[2026-03-23 16:47:16,947] INFO - normalized_period=- 다른 시험 성적표가 있을 경우 응시자에게 유리한 성적 1건만 제출
+[2026-03-23 16:47:16,947] INFO - normalized_period=* 제출 서류는
+[2026-03-23 16:47:16,947] INFO - normalized_period=공고 마감 기준 최근 3개. 이내
+[2026-03-23 16:47:16,947] INFO - normalized_period=발급분에 한하며, 주민등록번호 뒷자리 비공개 출력 제출
+[2026-03-23 16:47:16,947] INFO - normalized_period=* 접수 관련 문의 각 소속대학 국제부서 교환학생 업무 담당 :
+[2026-03-23 16:47:16,947] INFO - normalized_title=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 16:47:16,947] INFO - deadline=2026-03-06
+[2026-03-23 16:47:16,954] INFO - JSON saved: 15 items
+[2026-03-23 16:47:16,954] INFO - Run finished.
+[2026-03-23 16:47:16,954] INFO - raw_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+국제교류팀
+국제교류팀
+작성일
+2026-02-03
+조회수
+12348
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
+참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 
+[2026-03-23 16:54:53,916] INFO - Run started (KST): 2026-03-23T16:54:53+09:00
+[2026-03-23 16:54:53,916] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 16:54:54,200] INFO - List parsed: 15 items
+[2026-03-23 16:54:54,438] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 16:54:54,438] INFO - period_texts=['[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)']
+[2026-03-23 16:54:54,438] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:54:54,443] INFO - normalized_title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표 TE, GE, GC
+[2026-03-23 16:54:54,445] INFO - deadline=2026-03-25
+[2026-03-23 16:54:54,722] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 16:54:54,726] INFO - period_texts=['[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)', '2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지']
+[2026-03-23 16:54:54,726] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:54:54,727] INFO - normalized_period=2026.3.20 ~ 2026.3.25. 15:00까지
+[2026-03-23 16:54:54,727] INFO - normalized_title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:54:54,727] INFO - deadline=2026-03-25
+[2026-03-23 16:54:55,035] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:54:55,043] INFO - period_texts=['2026.03.30.(월)~04.07.(화) 14:00', '[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)']
+[2026-03-23 16:54:55,053] INFO - normalized_period=2026.03.30~04.07.
+[2026-03-23 16:54:55,071] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:54:55,072] INFO - normalized_title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:54:55,074] INFO - deadline=2026-03-30
+[2026-03-23 16:54:55,560] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:54:55,560] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 16:54:55,560] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:54:55,560] INFO - normalized_title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:54:55,560] INFO - deadline=2026-03-16
+[2026-03-23 16:54:55,824] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 16:54:55,824] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 16:54:55,824] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:54:55,824] INFO - normalized_title=[공지][필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:54:55,824] INFO - deadline=2024-06-27
+[2026-03-23 16:54:56,072] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 16:54:56,072] INFO - period_texts=[]
+[2026-03-23 16:54:56,073] INFO - normalized_title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내 미국 Purdue University
+[2026-03-23 16:54:56,073] INFO - deadline=2026-03-19
+[2026-03-23 16:54:56,349] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:54:56,349] INFO - period_texts=[]
+[2026-03-23 16:54:56,349] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:54:56,349] INFO - deadline=2026-03-16
+[2026-03-23 16:54:56,588] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 16:54:56,588] INFO - period_texts=[]
+[2026-03-23 16:54:56,588] INFO - normalized_title=2026-1학기 Global Creator GC 장학 대상자 모집
+[2026-03-23 16:54:56,588] INFO - deadline=2026-02-27
+[2026-03-23 16:54:56,862] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 16:54:56,862] INFO - period_texts=[]
+[2026-03-23 16:54:56,862] INFO - normalized_title=2026-1학기 Global Exchange GE 장학 대상자 모집
+[2026-03-23 16:54:56,869] INFO - deadline=2026-02-27
+[2026-03-23 16:54:57,241] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:54:57,241] INFO - period_texts=['- 수원시 청년 대사 뚜르시 방문 : 2026. 6. 26.(금) ~ 7. 5.(일)', '- 뚜르시 청년 대사 수원시 방문 : 2026. 10. 30.(금) ~ 11. 9.(월) ※변동 가능', '2026. 2. 19.(목) ~ 3. 18.(수) 18:00', ': 수원시 청년 2명 (만 19세 ~ 만 25세)', '- 2026. 6. 26.(금) ~ 7. 5.(일), 10일간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자']
+[2026-03-23 16:54:57,241] INFO - normalized_period=- 수원시 청. 대사 뚜르시 방문 : 2026. 6. 26 ~ 7. 5
+[2026-03-23 16:54:57,245] INFO - normalized_period=- 뚜르시 청. 대사 수원시 방문 : 2026. 10. 30 ~ 11. 9. ※변동 가능
+[2026-03-23 16:54:57,245] INFO - normalized_period=2026. 2. 19 ~ 3. 18.
+[2026-03-23 16:54:57,255] INFO - normalized_period=: 수원시 청. 2명 만 19세 ~ 만 25세
+[2026-03-23 16:54:57,255] INFO - normalized_period=- 2026. 6. 26 ~ 7. 5., 10간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자
+[2026-03-23 16:54:57,255] INFO - normalized_title=「2026 수원-뚜르 청.대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:54:57,258] INFO - deadline=2026-02-25
+[2026-03-23 16:54:57,469] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:54:57,469] INFO - period_texts=[]
+[2026-03-23 16:54:57,469] INFO - normalized_title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:54:57,469] INFO - deadline=2026-02-23
+[2026-03-23 16:54:57,695] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:54:57,695] INFO - period_texts=['2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.']
+[2026-03-23 16:54:57,695] INFO - normalized_period=2/25 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.
+[2026-03-23 16:54:57,695] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:54:57,697] INFO - deadline=2026-02-25
+[2026-03-23 16:54:57,910] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 16:54:57,910] INFO - period_texts=['2026.02.19.(목)~2026.03.18.(수) 17:00', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함"]
+[2026-03-23 16:54:57,910] INFO - normalized_period=2026.02.19~2026.03.18.
+[2026-03-23 16:54:57,910] INFO - normalized_period=- 제출 증빙자료는 모집공고 '26.2.11 이후 발급 서류여야 함
+[2026-03-23 16:54:57,910] INFO - normalized_title=2026. 상반기 한미대학생연수 WEST 참가자 모집 안내 중기/단기
+[2026-03-23 16:54:57,910] INFO - deadline=2026-03-18
+[2026-03-23 16:54:58,107] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:54:58,114] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM', '2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)']
+[2026-03-23 16:54:58,115] INFO - normalized_period=- 지원서 제출 기간: 2026.02.06~2026.02.09.
+[2026-03-23 16:54:58,116] INFO - normalized_period=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 16:54:58,118] INFO - normalized_title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:54:58,118] INFO - deadline=2026-02-09
+[2026-03-23 16:54:58,332] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 16:54:58,332] INFO - period_texts=['2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)', '2026.02.03.(화)~', '2026학년도 가을학기 또는 2026학년도 가을학기~2027학년도 봄학기 파견 예정인 자', '2026.02.03.(화)~2026.03.06.(금) 18:00']
+[2026-03-23 16:54:58,332] INFO - normalized_period=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 16:54:58,334] INFO - normalized_period=2026.02.03~
+[2026-03-23 16:54:58,334] INFO - normalized_period=2026학.도 가을학기 또는 2026학.도 가을학기~2027학.도 봄학기 파견 예정인 자
+[2026-03-23 16:54:58,334] INFO - normalized_period=2026.02.03~2026.03.06.
+[2026-03-23 16:54:58,334] INFO - normalized_title=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 16:54:58,334] INFO - deadline=2026-03-06
+[2026-03-23 16:54:58,345] INFO - JSON saved: 15 items
+[2026-03-23 16:54:58,345] INFO - Run finished.
+[2026-03-23 16:54:58,347] INFO - raw_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+국제교류팀
+국제교류팀
+작성일
+2026-02-03
+조회수
+12350
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
+참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 
+[2026-03-23 16:58:35,663] INFO - Run started (KST): 2026-03-23T16:58:35+09:00
+[2026-03-23 16:58:35,663] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 16:58:35,967] INFO - List parsed: 15 items
+[2026-03-23 16:58:36,199] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 16:58:36,199] INFO - period_texts=['[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)']
+[2026-03-23 16:58:36,199] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:58:36,199] INFO - normalized_title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표 TE, GE, GC
+[2026-03-23 16:58:36,199] INFO - deadline=2026-03-25
+[2026-03-23 16:58:36,199] INFO - clean_body_sample=[공지]
+2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+2026-1학기 파견 교환학생 장학(TE, GE, GC)최종합격자를 아래와 같이 공고합니다.
+*공통 유의사항
+1. 파견대학 입학허가가 확정되어 입학허가서를 수령한 후 2026학년도 1학기 장학금으로 지급될 예정
+2. 2026학년도 1학기 기준 교내 장학 수혜 자격에 결격사유가 없는 경우에 한하여 지급 가능(※ 교내장학 수혜 자격: 2026-1학기 재학, 직전학기 12학점 이상 취득, 평점평균 2.0이상인 자)
+3. 본 장학금 수령 후 부득이 파견을 포기하
+[2026-03-23 16:58:36,526] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 16:58:36,535] INFO - period_texts=['[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)', '2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지']
+[2026-03-23 16:58:36,542] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:58:36,558] INFO - normalized_period=2026.3.20 ~ 2026.3.25. 15:00까지
+[2026-03-23 16:58:36,576] INFO - normalized_title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:58:36,587] INFO - deadline=2026-03-25
+[2026-03-23 16:58:36,587] INFO - clean_body_sample=[공지]
+[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+2026년 하계 1차 해외단기파견 프로그램 참가자 모집
+▶[필독]
+학생 모집 공고문
+PDF
+파일
+을 꼭! 확인하여
+파견교별 과목, 어학성적 요건, 장학금 등에 대한 상세한 내용을 빠짐없이 읽어주세요.
+▶
+[일정]
+▷
+2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지
+| 지원서 작성 (★
+★
+★
+아주포털 및 구글폼(지원동기) 꼭
+2개 모두
+작성!
+★
+★
+★
+)
+▷ 2026.3.30.(월) 18:00 이후 | 합격자 
+[2026-03-23 16:58:36,822] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:58:36,824] INFO - period_texts=['2026.03.30.(월)~04.07.(화) 14:00', '[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)']
+[2026-03-23 16:58:36,824] INFO - normalized_period=2026.03.30~04.07.
+[2026-03-23 16:58:36,824] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 16:58:36,826] INFO - normalized_title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 16:58:36,826] INFO - deadline=2026-03-30
+[2026-03-23 16:58:36,828] INFO - clean_body_sample=[공지]
+2026-2학기 교환학생 및 복수학위 3차모집 예고
+2026-2학기 파견되는 교환학생 및 복수학위 3차모집
+을 아래와 같이 예고하오니
+관심 있는 학생들의 참고 바랍니다.
+3차모집 지원서 접수기간:
+2026.03.30.(월)~04.07.(화) 14:00
+[재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 16:58:37,320] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:58:37,320] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 16:58:37,320] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:58:37,320] INFO - normalized_title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:58:37,320] INFO - deadline=2026-03-16
+[2026-03-23 16:58:37,320] INFO - clean_body_sample=[공지]
+[재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+2026-2학기 파견 학·석사 연계과정 추가모집
+을 안내하오니, 붙임의 모집요강을 꼼꼼하게 참고하시어 관심 있는 학생들의 많은 지원 바랍니다.
+- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.
+- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+- 최종합격자 발표 이후에는 어떠한 서유로도 배정대학 변경이 불가합니다.
+- (학부 석사 연계과정)
+포털 지원 및 구글폼 작성
+모두 제출
+[2026-03-23 16:58:37,593] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 16:58:37,594] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 16:58:37,594] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:58:37,594] INFO - normalized_title=[공지][필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 16:58:37,594] INFO - deadline=2024-06-27
+[2026-03-23 16:58:37,594] INFO - clean_body_sample=[공지]
+[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+※이메일 문의 전 반드시 안내사항을 꼼꼼하게 숙지하시기 바랍니다.
+학점이관 안내자료를 숙지하고 않고 문의하는 경우 답변이 어려움을 유의 바랍니다.
+예)
+몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?
+▶
+학점이관 신청서 제출 FORM(클릭)
+안녕하세요, 국제교류팀 입니다.
+파견 프로그램을 이수함에 있어서 학점이관 절차와
+[2026-03-23 16:58:37,836] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 16:58:37,836] INFO - period_texts=[]
+[2026-03-23 16:58:37,836] INFO - normalized_title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내 미국 Purdue University
+[2026-03-23 16:58:37,836] INFO - deadline=2026-03-19
+[2026-03-23 16:58:37,836] INFO - clean_body_sample=[Outgoing]
+[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+일시:
+2026.03.19.(목) 20:00 KST
+, Online ZOOM 진행
+참가 신청서:
+https://forms.gle/Xh2moae1YjnNeTBM9
+2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+다음글이 없습니다.
+[2026-03-23 16:58:38,091] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:58:38,091] INFO - period_texts=[]
+[2026-03-23 16:58:38,091] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:58:38,091] INFO - deadline=2026-03-16
+[2026-03-23 16:58:38,091] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+*공통 유의사항(필독)
+1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가
+2026.03.10.(화) 18:00이내
+지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.
+면접대상자 명단에 포함되었으나
+2026.03.10.(화) 18:00이내
+면접 안내 이메일을 수신하지 못한 경우 국제교류팀으로 연락 바랍니다.
+가산점 관련 서류는
+2026.03.16.(월) 12:00이내
+의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유
+[2026-03-23 16:58:38,310] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 16:58:38,310] INFO - period_texts=[]
+[2026-03-23 16:58:38,310] INFO - normalized_title=2026-1학기 Global Creator GC 장학 대상자 모집
+[2026-03-23 16:58:38,316] INFO - deadline=2026-02-27
+[2026-03-23 16:58:38,316] INFO - clean_body_sample=[Outgoing]
+2026-1학기 Global Creator(GC) 장학 대상자 모집
+참고 사항:
+현재 접수 진행 중인
+Global Exchange(GE)
+장학과
+중복 지원 가능
+합니다.
+장학 금액이 더 큰 GE 장학을 우선 선발할 예정이며, 따라서 중복 지원자 중 GE 장학에 지원하였으나 미 선발된 학생들은 자동으로 본 GC 장학 심사 대상에 포함됨을 참고 바랍니다.
+2026-1학기 Global Exchange(GE) 장학 대상자 모집
+2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 16:58:38,566] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 16:58:38,566] INFO - period_texts=[]
+[2026-03-23 16:58:38,566] INFO - normalized_title=2026-1학기 Global Exchange GE 장학 대상자 모집
+[2026-03-23 16:58:38,569] INFO - deadline=2026-02-27
+[2026-03-23 16:58:38,569] INFO - clean_body_sample=[Outgoing]
+2026-1학기 Global Exchange(GE) 장학 대상자 모집
+참고사항:
+현재 접수 진행 중인
+Global Creator(GC)
+장학과
+중복 지원 가능
+합니다.
+장학 금액이 더 큰 GE 장학을 우선 선발할 예정이며, 따라서 중복 지원하였으나 GE장학에 선발된 학생들은 자동으로 GC 장학 심사 대상에 포함되지 않음을 참고 바랍니다.
+「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 16:58:38,814] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:58:38,814] INFO - period_texts=['- 수원시 청년 대사 뚜르시 방문 : 2026. 6. 26.(금) ~ 7. 5.(일)', '- 뚜르시 청년 대사 수원시 방문 : 2026. 10. 30.(금) ~ 11. 9.(월) ※변동 가능', '2026. 2. 19.(목) ~ 3. 18.(수) 18:00', ': 수원시 청년 2명 (만 19세 ~ 만 25세)', '- 2026. 6. 26.(금) ~ 7. 5.(일), 10일간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자']
+[2026-03-23 16:58:38,814] INFO - normalized_period=- 수원시 청. 대사 뚜르시 방문 : 2026. 6. 26 ~ 7. 5
+[2026-03-23 16:58:38,814] INFO - normalized_period=- 뚜르시 청. 대사 수원시 방문 : 2026. 10. 30 ~ 11. 9. ※변동 가능
+[2026-03-23 16:58:38,821] INFO - normalized_period=2026. 2. 19 ~ 3. 18.
+[2026-03-23 16:58:38,821] INFO - normalized_period=: 수원시 청. 2명 만 19세 ~ 만 25세
+[2026-03-23 16:58:38,821] INFO - normalized_period=- 2026. 6. 26 ~ 7. 5., 10간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자
+[2026-03-23 16:58:38,821] INFO - normalized_title=「2026 수원-뚜르 청.대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:58:38,821] INFO - deadline=2026-02-25
+[2026-03-23 16:58:38,821] INFO - clean_body_sample=[Student Life]
+「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+(재)수원시국제교류센터에서 아주대학교 및 대학원 재학생에게
+프랑스 뚜르
+청년과 교류할 수 있는 기회를 제공합니다.
+서로의 문화를 이해하며 국제적 감각과 소통능력을 기를 수 있는
+「2026 수원-뚜르 청년대사 교류 프로그램」
+에 많은 관심과 참여 바랍니다.
+<프로그램 개요>
+○ 프로그램명 : 2026 수원-뚜르 청년 대사 교류 프로그램 (Bilateral Youth Ambassador Exchange Program)
+○ 활동기간
+- 수원시 청년
+[2026-03-23 16:58:39,063] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:58:39,063] INFO - period_texts=[]
+[2026-03-23 16:58:39,063] INFO - normalized_title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 16:58:39,066] INFO - deadline=2026-02-23
+[2026-03-23 16:58:39,066] INFO - clean_body_sample=[Outgoing]
+찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+신청서 제출 (클릭)
+2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 16:58:39,286] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:58:39,295] INFO - period_texts=['2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.']
+[2026-03-23 16:58:39,295] INFO - normalized_period=2/25 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.
+[2026-03-23 16:58:39,295] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 16:58:39,295] INFO - deadline=2026-02-25
+[2026-03-23 16:58:39,295] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.
+2026-2학기 파견 교환학생 및 복수학위생 2차 모집 및 학·석사 연계과정 추가모집
+을 안내하오니, 붙임의 모집요강을 꼼꼼하게 참고하시어 관심 있는 학생들의 많은 지원 바랍니다.
+※유의사항
+- 어학시험 증명서 파일명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출
+- 지원서 제출 시 이메일주소는 본교 
+[2026-03-23 16:58:39,516] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 16:58:39,516] INFO - period_texts=['2026.02.19.(목)~2026.03.18.(수) 17:00', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함"]
+[2026-03-23 16:58:39,516] INFO - normalized_period=2026.02.19~2026.03.18.
+[2026-03-23 16:58:39,516] INFO - normalized_period=- 제출 증빙자료는 모집공고 '26.2.11 이후 발급 서류여야 함
+[2026-03-23 16:58:39,516] INFO - normalized_title=2026. 상반기 한미대학생연수 WEST 참가자 모집 안내 중기/단기
+[2026-03-23 16:58:39,516] INFO - deadline=2026-03-18
+[2026-03-23 16:58:39,516] INFO - clean_body_sample=[Outgoing]
+2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+국립국제교육원에서 제공하는
+한미대학생연수(WEST)에 참가할 지원자를 모집합니다.
+첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.
+서류 제출 희망자는
+국제교류팀 접수 기한을 준수
+하여 제출 할 것. (
+첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)
+1. 온라인 지원서 작성 및 제출 :
+2026.02.19.(목)~2026.03.18.(수) 17:00
+까지 원드잡플러스 홈페이지(
+
+[2026-03-23 16:58:39,732] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:58:39,732] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM', '2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)']
+[2026-03-23 16:58:39,732] INFO - normalized_period=- 지원서 제출 기간: 2026.02.06~2026.02.09.
+[2026-03-23 16:58:39,732] INFO - normalized_period=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 16:58:39,732] INFO - normalized_title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 16:58:39,732] INFO - deadline=2026-02-09
+[2026-03-23 16:58:39,739] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+2026-2학기 파견 해외 우수대학 학부 및 해외석사 연계 과정생 2차모집 안내 주요 사항
+- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM
+* 포털 지원 및 구글폼 작성
+모두 제출
+하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+- 구글폼 링크:
+https://forms.gle/9s6xSSbd1VvuALCq7
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+2026년 상반기
+[2026-03-23 16:58:39,970] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 16:58:39,970] INFO - period_texts=['2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)', '2026.02.03.(화)~', '2026학년도 가을학기 또는 2026학년도 가을학기~2027학년도 봄학기 파견 예정인 자', '2026.02.03.(화)~2026.03.06.(금) 18:00']
+[2026-03-23 16:58:39,970] INFO - normalized_period=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 16:58:39,970] INFO - normalized_period=2026.02.03~
+[2026-03-23 16:58:39,970] INFO - normalized_period=2026학.도 가을학기 또는 2026학.도 가을학기~2027학.도 봄학기 파견 예정인 자
+[2026-03-23 16:58:39,970] INFO - normalized_period=2026.02.03~2026.03.06.
+[2026-03-23 16:58:39,970] INFO - normalized_title=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 16:58:39,970] INFO - deadline=2026-03-06
+[2026-03-23 16:58:39,970] INFO - clean_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 습득 기회를 제공하고,
+글로벌 인재 육성을 위해 美 대학에 교환학생 파견 예정인 이공계 청년인재를 다음과 같이 모집합니다.
+아래 사항과 붙임의 선발 공고문을 참고하시어 관심 있는 학생분들의 많은 지원 바랍니다.
+본교 국제교류팀 접수 기한:
+2026.02.03.(화)~
+2026.03.06.(금) 18:00
+(*기한 엄수)
+**
+붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수
+[2026-03-23 16:58:39,979] INFO - JSON saved: 15 items
+[2026-03-23 16:58:39,979] INFO - Run finished.
+[2026-03-23 16:58:39,983] INFO - raw_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+국제교류팀
+국제교류팀
+작성일
+2026-02-03
+조회수
+12351
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
+참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 
+[2026-03-23 17:08:00,252] INFO - Run started (KST): 2026-03-23T17:08:00+09:00
+[2026-03-23 17:08:00,252] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 17:08:00,543] INFO - List parsed: 15 items
+[2026-03-23 17:08:00,808] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 17:08:00,808] INFO - period_texts=['[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)']
+[2026-03-23 17:08:00,808] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 17:08:00,808] INFO - normalized_title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표 TE, GE, GC
+[2026-03-23 17:08:00,808] INFO - deadline=2026-03-25
+[2026-03-23 17:08:00,808] INFO - clean_body_sample=[공지]
+2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+2026-1학기 파견 교환학생 장학(TE, GE, GC)최종합격자를 아래와 같이 공고합니다.
+*공통 유의사항
+1. 파견대학 입학허가가 확정되어 입학허가서를 수령한 후 2026학년도 1학기 장학금으로 지급될 예정
+2. 2026학년도 1학기 기준 교내 장학 수혜 자격에 결격사유가 없는 경우에 한하여 지급 가능(※ 교내장학 수혜 자격: 2026-1학기 재학, 직전학기 12학점 이상 취득, 평점평균 2.0이상인 자)
+3. 본 장학금 수령 후 부득이 파견을 포기하
+[2026-03-23 17:08:01,085] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 17:08:01,085] INFO - period_texts=['[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)', '2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지']
+[2026-03-23 17:08:01,087] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 17:08:01,087] INFO - normalized_period=2026.3.20 ~ 2026.3.25. 15:00까지
+[2026-03-23 17:08:01,088] INFO - normalized_title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 17:08:01,091] INFO - deadline=2026-03-25
+[2026-03-23 17:08:01,093] INFO - clean_body_sample=[공지]
+[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+2026년 하계 1차 해외단기파견 프로그램 참가자 모집
+▶[필독]
+학생 모집 공고문
+PDF
+파일
+을 꼭! 확인하여
+파견교별 과목, 어학성적 요건, 장학금 등에 대한 상세한 내용을 빠짐없이 읽어주세요.
+▶
+[일정]
+▷
+2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지
+| 지원서 작성 (★
+★
+★
+아주포털 및 구글폼(지원동기) 꼭
+2개 모두
+작성!
+★
+★
+★
+)
+▷ 2026.3.30.(월) 18:00 이후 | 합격자 
+[2026-03-23 17:08:01,309] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 17:08:01,309] INFO - period_texts=['2026.03.30.(월)~04.07.(화) 14:00', '[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)']
+[2026-03-23 17:08:01,309] INFO - normalized_period=2026.03.30~04.07.
+[2026-03-23 17:08:01,309] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 17:08:01,309] INFO - normalized_title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 17:08:01,309] INFO - deadline=2026-03-25
+[2026-03-23 17:08:01,313] INFO - clean_body_sample=[공지]
+2026-2학기 교환학생 및 복수학위 3차모집 예고
+2026-2학기 파견되는 교환학생 및 복수학위 3차모집
+을 아래와 같이 예고하오니
+관심 있는 학생들의 참고 바랍니다.
+3차모집 지원서 접수기간:
+2026.03.30.(월)~04.07.(화) 14:00
+[재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 17:08:01,794] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:08:01,797] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 17:08:01,797] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 17:08:01,799] INFO - normalized_title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:08:01,799] INFO - deadline=2026-03-16
+[2026-03-23 17:08:01,799] INFO - clean_body_sample=[공지]
+[재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+2026-2학기 파견 학·석사 연계과정 추가모집
+을 안내하오니, 붙임의 모집요강을 꼼꼼하게 참고하시어 관심 있는 학생들의 많은 지원 바랍니다.
+- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.
+- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+- 최종합격자 발표 이후에는 어떠한 서유로도 배정대학 변경이 불가합니다.
+- (학부 석사 연계과정)
+포털 지원 및 구글폼 작성
+모두 제출
+[2026-03-23 17:08:02,104] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 17:08:02,104] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 17:08:02,106] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 17:08:02,106] INFO - normalized_title=[공지][필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 17:08:02,106] INFO - deadline=2024-06-27
+[2026-03-23 17:08:02,106] INFO - clean_body_sample=[공지]
+[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+※이메일 문의 전 반드시 안내사항을 꼼꼼하게 숙지하시기 바랍니다.
+학점이관 안내자료를 숙지하고 않고 문의하는 경우 답변이 어려움을 유의 바랍니다.
+예)
+몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?
+▶
+학점이관 신청서 제출 FORM(클릭)
+안녕하세요, 국제교류팀 입니다.
+파견 프로그램을 이수함에 있어서 학점이관 절차와
+[2026-03-23 17:08:02,335] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 17:08:02,335] INFO - period_texts=[]
+[2026-03-23 17:08:02,335] INFO - normalized_title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내 미국 Purdue University
+[2026-03-23 17:08:02,342] INFO - deadline=2026-03-19
+[2026-03-23 17:08:02,342] INFO - clean_body_sample=[Outgoing]
+[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+일시:
+2026.03.19.(목) 20:00 KST
+, Online ZOOM 진행
+참가 신청서:
+https://forms.gle/Xh2moae1YjnNeTBM9
+2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+다음글이 없습니다.
+[2026-03-23 17:08:02,670] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 17:08:02,670] INFO - period_texts=[]
+[2026-03-23 17:08:02,670] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 17:08:02,670] INFO - deadline=2026-03-16
+[2026-03-23 17:08:02,670] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+*공통 유의사항(필독)
+1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가
+2026.03.10.(화) 18:00이내
+지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.
+면접대상자 명단에 포함되었으나
+2026.03.10.(화) 18:00이내
+면접 안내 이메일을 수신하지 못한 경우 국제교류팀으로 연락 바랍니다.
+가산점 관련 서류는
+2026.03.16.(월) 12:00이내
+의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유
+[2026-03-23 17:08:03,193] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 17:08:03,195] INFO - period_texts=[]
+[2026-03-23 17:08:03,195] INFO - normalized_title=2026-1학기 Global Creator GC 장학 대상자 모집
+[2026-03-23 17:08:03,195] INFO - deadline=2026-02-27
+[2026-03-23 17:08:03,195] INFO - clean_body_sample=[Outgoing]
+2026-1학기 Global Creator(GC) 장학 대상자 모집
+참고 사항:
+현재 접수 진행 중인
+Global Exchange(GE)
+장학과
+중복 지원 가능
+합니다.
+장학 금액이 더 큰 GE 장학을 우선 선발할 예정이며, 따라서 중복 지원자 중 GE 장학에 지원하였으나 미 선발된 학생들은 자동으로 본 GC 장학 심사 대상에 포함됨을 참고 바랍니다.
+2026-1학기 Global Exchange(GE) 장학 대상자 모집
+2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 17:08:03,466] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 17:08:03,466] INFO - period_texts=[]
+[2026-03-23 17:08:03,466] INFO - normalized_title=2026-1학기 Global Exchange GE 장학 대상자 모집
+[2026-03-23 17:08:03,466] INFO - deadline=2026-02-27
+[2026-03-23 17:08:03,466] INFO - clean_body_sample=[Outgoing]
+2026-1학기 Global Exchange(GE) 장학 대상자 모집
+참고사항:
+현재 접수 진행 중인
+Global Creator(GC)
+장학과
+중복 지원 가능
+합니다.
+장학 금액이 더 큰 GE 장학을 우선 선발할 예정이며, 따라서 중복 지원하였으나 GE장학에 선발된 학생들은 자동으로 GC 장학 심사 대상에 포함되지 않음을 참고 바랍니다.
+「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 17:08:03,766] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 17:08:03,766] INFO - period_texts=['- 수원시 청년 대사 뚜르시 방문 : 2026. 6. 26.(금) ~ 7. 5.(일)', '- 뚜르시 청년 대사 수원시 방문 : 2026. 10. 30.(금) ~ 11. 9.(월) ※변동 가능', '2026. 2. 19.(목) ~ 3. 18.(수) 18:00', ': 수원시 청년 2명 (만 19세 ~ 만 25세)', '- 2026. 6. 26.(금) ~ 7. 5.(일), 10일간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자']
+[2026-03-23 17:08:03,766] INFO - normalized_period=- 수원시 청. 대사 뚜르시 방문 : 2026. 6. 26 ~ 7. 5
+[2026-03-23 17:08:03,766] INFO - normalized_period=- 뚜르시 청. 대사 수원시 방문 : 2026. 10. 30 ~ 11. 9. ※변동 가능
+[2026-03-23 17:08:03,766] INFO - normalized_period=2026. 2. 19 ~ 3. 18.
+[2026-03-23 17:08:03,766] INFO - normalized_period=: 수원시 청. 2명 만 19세 ~ 만 25세
+[2026-03-23 17:08:03,766] INFO - normalized_period=- 2026. 6. 26 ~ 7. 5., 10간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자
+[2026-03-23 17:08:03,766] INFO - normalized_title=「2026 수원-뚜르 청.대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 17:08:03,766] INFO - deadline=2026-02-25
+[2026-03-23 17:08:03,766] INFO - clean_body_sample=[Student Life]
+「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+(재)수원시국제교류센터에서 아주대학교 및 대학원 재학생에게
+프랑스 뚜르
+청년과 교류할 수 있는 기회를 제공합니다.
+서로의 문화를 이해하며 국제적 감각과 소통능력을 기를 수 있는
+「2026 수원-뚜르 청년대사 교류 프로그램」
+에 많은 관심과 참여 바랍니다.
+<프로그램 개요>
+○ 프로그램명 : 2026 수원-뚜르 청년 대사 교류 프로그램 (Bilateral Youth Ambassador Exchange Program)
+○ 활동기간
+- 수원시 청년
+[2026-03-23 17:08:04,019] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 17:08:04,019] INFO - period_texts=[]
+[2026-03-23 17:08:04,019] INFO - normalized_title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 17:08:04,023] INFO - deadline=2026-02-23
+[2026-03-23 17:08:04,024] INFO - clean_body_sample=[Outgoing]
+찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+신청서 제출 (클릭)
+2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 17:08:04,281] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:08:04,287] INFO - period_texts=['2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.']
+[2026-03-23 17:08:04,288] INFO - normalized_period=2/25 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.
+[2026-03-23 17:08:04,288] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:08:04,288] INFO - deadline=2026-02-25
+[2026-03-23 17:08:04,288] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+2/25(수) 12:00 기준 지원서 정상 제출 되오니, 지원 희망자의 경우 마감 기한 내 제출하여 주시기 바랍니다.
+2026-2학기 파견 교환학생 및 복수학위생 2차 모집 및 학·석사 연계과정 추가모집
+을 안내하오니, 붙임의 모집요강을 꼼꼼하게 참고하시어 관심 있는 학생들의 많은 지원 바랍니다.
+※유의사항
+- 어학시험 증명서 파일명은 성명_학번_2차지원_어학시험종류 로 반드시 변경하여 제출
+- 지원서 제출 시 이메일주소는 본교 
+[2026-03-23 17:08:04,553] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 17:08:04,553] INFO - period_texts=['2026.02.19.(목)~2026.03.18.(수) 17:00', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함"]
+[2026-03-23 17:08:04,553] INFO - normalized_period=2026.02.19~2026.03.18.
+[2026-03-23 17:08:04,553] INFO - normalized_period=- 제출 증빙자료는 모집공고 '26.2.11 이후 발급 서류여야 함
+[2026-03-23 17:08:04,561] INFO - normalized_title=2026. 상반기 한미대학생연수 WEST 참가자 모집 안내 중기/단기
+[2026-03-23 17:08:04,562] INFO - deadline=2026-03-18
+[2026-03-23 17:08:04,562] INFO - clean_body_sample=[Outgoing]
+2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+국립국제교육원에서 제공하는
+한미대학생연수(WEST)에 참가할 지원자를 모집합니다.
+첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.
+서류 제출 희망자는
+국제교류팀 접수 기한을 준수
+하여 제출 할 것. (
+첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)
+1. 온라인 지원서 작성 및 제출 :
+2026.02.19.(목)~2026.03.18.(수) 17:00
+까지 원드잡플러스 홈페이지(
+
+[2026-03-23 17:08:04,820] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 17:08:04,820] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM', '2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)']
+[2026-03-23 17:08:04,820] INFO - normalized_period=- 지원서 제출 기간: 2026.02.06~2026.02.09.
+[2026-03-23 17:08:04,825] INFO - normalized_period=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 17:08:04,825] INFO - normalized_title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 17:08:04,825] INFO - deadline=2026-02-09
+[2026-03-23 17:08:04,825] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+2026-2학기 파견 해외 우수대학 학부 및 해외석사 연계 과정생 2차모집 안내 주요 사항
+- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM
+* 포털 지원 및 구글폼 작성
+모두 제출
+하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+- 구글폼 링크:
+https://forms.gle/9s6xSSbd1VvuALCq7
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+2026년 상반기
+[2026-03-23 17:08:05,128] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 17:08:05,128] INFO - period_texts=['2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)', '2026.02.03.(화)~', '2026학년도 가을학기 또는 2026학년도 가을학기~2027학년도 봄학기 파견 예정인 자', '2026.02.03.(화)~2026.03.06.(금) 18:00']
+[2026-03-23 17:08:05,128] INFO - normalized_period=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 17:08:05,130] INFO - normalized_period=2026.02.03~
+[2026-03-23 17:08:05,130] INFO - normalized_period=2026학.도 가을학기 또는 2026학.도 가을학기~2027학.도 봄학기 파견 예정인 자
+[2026-03-23 17:08:05,130] INFO - normalized_period=2026.02.03~2026.03.06.
+[2026-03-23 17:08:05,130] INFO - normalized_title=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 17:08:05,130] INFO - deadline=2026-03-06
+[2026-03-23 17:08:05,130] INFO - clean_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 습득 기회를 제공하고,
+글로벌 인재 육성을 위해 美 대학에 교환학생 파견 예정인 이공계 청년인재를 다음과 같이 모집합니다.
+아래 사항과 붙임의 선발 공고문을 참고하시어 관심 있는 학생분들의 많은 지원 바랍니다.
+본교 국제교류팀 접수 기한:
+2026.02.03.(화)~
+2026.03.06.(금) 18:00
+(*기한 엄수)
+**
+붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수
+[2026-03-23 17:08:05,136] INFO - JSON saved: 15 items
+[2026-03-23 17:08:05,136] INFO - Run finished.
+[2026-03-23 17:08:05,138] INFO - raw_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+국제교류팀
+국제교류팀
+작성일
+2026-02-03
+조회수
+12352
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
+참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 
+[2026-03-23 17:13:27,687] INFO - Run started (KST): 2026-03-23T17:13:27+09:00
+[2026-03-23 17:13:27,687] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 17:13:27,996] INFO - List parsed: 16 items
+[2026-03-23 17:13:28,213] INFO - title=[공지]2026-2학기 파견 교환 및 복수학위 2차 모집 최종합격자 공고
+[2026-03-23 17:13:28,213] INFO - period_texts=[]
+[2026-03-23 17:13:28,213] INFO - normalized_title=[공지]2026-2학기 파견 교환 및 복수학위 2차 모집 최종합격자 공고
+[2026-03-23 17:13:28,213] INFO - deadline=2026-03-23
+[2026-03-23 17:13:28,213] INFO - clean_body_sample=[공지]
+2026-2학기 파견 교환 및 복수학위 2차 모집 최종합격자 공고
+[2026-03-23 17:13:28,438] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 17:13:28,439] INFO - period_texts=[]
+[2026-03-23 17:13:28,439] INFO - normalized_title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표 TE, GE, GC
+[2026-03-23 17:13:28,439] INFO - deadline=2026-04-01
+[2026-03-23 17:13:28,439] INFO - clean_body_sample=[공지]
+2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+2026-1학기 파견 교환학생 장학(TE, GE, GC)최종합격자를 아래와 같이 공고합니다.
+*공통 유의사항
+1. 파견대학 입학허가가 확정되어 입학허가서를 수령한 후 2026학년도 1학기 장학금으로 지급될 예정
+2. 2026학년도 1학기 기준 교내 장학 수혜 자격에 결격사유가 없는 경우에 한하여 지급 가능(※ 교내장학 수혜 자격: 2026-1학기 재학, 직전학기 12학점 이상 취득, 평점평균 2.0이상인 자)
+3. 본 장학금 수령 후 부득이 파견을 포기하
+[2026-03-23 17:13:28,710] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 17:13:28,710] INFO - period_texts=['[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)', '2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지']
+[2026-03-23 17:13:28,712] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 17:13:28,712] INFO - normalized_period=2026.3.20 ~ 2026.3.25. 15:00까지
+[2026-03-23 17:13:28,712] INFO - normalized_title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 17:13:28,712] INFO - deadline=2026-03-25
+[2026-03-23 17:13:28,714] INFO - clean_body_sample=[공지]
+[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+2026년 하계 1차 해외단기파견 프로그램 참가자 모집
+▶[필독]
+학생 모집 공고문
+PDF
+파일
+을 꼭! 확인하여
+파견교별 과목, 어학성적 요건, 장학금 등에 대한 상세한 내용을 빠짐없이 읽어주세요.
+▶
+[일정]
+▷
+2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지
+| 지원서 작성 (★
+★
+★
+아주포털 및 구글폼(지원동기) 꼭
+2개 모두
+작성!
+★
+★
+★
+)
+▷ 2026.3.30.(월) 18:00 이후 | 합격자 
+[2026-03-23 17:13:28,943] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 17:13:28,944] INFO - period_texts=['2026.03.30.(월)~04.07.(화) 14:00']
+[2026-03-23 17:13:28,945] INFO - normalized_period=2026.03.30~04.07.
+[2026-03-23 17:13:28,945] INFO - normalized_title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 17:13:28,945] INFO - deadline=2026-03-30
+[2026-03-23 17:13:28,947] INFO - clean_body_sample=[공지]
+2026-2학기 교환학생 및 복수학위 3차모집 예고
+2026-2학기 파견되는 교환학생 및 복수학위 3차모집
+을 아래와 같이 예고하오니
+관심 있는 학생들의 참고 바랍니다.
+3차모집 지원서 접수기간:
+2026.03.30.(월)~04.07.(화) 14:00
+[2026-03-23 17:13:29,424] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:13:29,424] INFO - period_texts=[]
+[2026-03-23 17:13:29,432] INFO - normalized_title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:13:29,437] INFO - deadline=2026-03-16
+[2026-03-23 17:13:29,438] INFO - clean_body_sample=[공지]
+[재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+2026-2학기 파견 학·석사 연계과정 추가모집
+을 안내하오니, 붙임의 모집요강을 꼼꼼하게 참고하시어 관심 있는 학생들의 많은 지원 바랍니다.
+- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.
+- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+- 최종합격자 발표 이후에는 어떠한 서유로도 배정대학 변경이 불가합니다.
+- (학부 석사 연계과정)
+포털 지원 및 구글폼 작성
+모두 제출
+[2026-03-23 17:13:29,715] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 17:13:29,715] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 17:13:29,715] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 17:13:29,715] INFO - normalized_title=[공지][필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 17:13:29,715] INFO - deadline=2024-06-27
+[2026-03-23 17:13:29,715] INFO - clean_body_sample=[공지]
+[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+※이메일 문의 전 반드시 안내사항을 꼼꼼하게 숙지하시기 바랍니다.
+학점이관 안내자료를 숙지하고 않고 문의하는 경우 답변이 어려움을 유의 바랍니다.
+예)
+몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?
+▶
+학점이관 신청서 제출 FORM(클릭)
+안녕하세요, 국제교류팀 입니다.
+파견 프로그램을 이수함에 있어서 학점이관 절차와
+[2026-03-23 17:13:29,965] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 17:13:29,965] INFO - period_texts=[]
+[2026-03-23 17:13:29,965] INFO - normalized_title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내 미국 Purdue University
+[2026-03-23 17:13:29,965] INFO - deadline=2026-03-19
+[2026-03-23 17:13:29,965] INFO - clean_body_sample=[Outgoing]
+[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+일시:
+2026.03.19.(목) 20:00 KST
+, Online ZOOM 진행
+참가 신청서:
+https://forms.gle/Xh2moae1YjnNeTBM9
+[2026-03-23 17:13:30,186] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 17:13:30,186] INFO - period_texts=[]
+[2026-03-23 17:13:30,186] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 17:13:30,186] INFO - deadline=2026-03-16
+[2026-03-23 17:13:30,186] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+*공통 유의사항(필독)
+1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가
+2026.03.10.(화) 18:00이내
+지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.
+면접대상자 명단에 포함되었으나
+2026.03.10.(화) 18:00이내
+면접 안내 이메일을 수신하지 못한 경우 국제교류팀으로 연락 바랍니다.
+가산점 관련 서류는
+2026.03.16.(월) 12:00이내
+의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유
+[2026-03-23 17:13:30,438] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 17:13:30,438] INFO - period_texts=[]
+[2026-03-23 17:13:30,438] INFO - normalized_title=2026-1학기 Global Creator GC 장학 대상자 모집
+[2026-03-23 17:13:30,438] INFO - deadline=2026-02-27
+[2026-03-23 17:13:30,438] INFO - clean_body_sample=[Outgoing]
+2026-1학기 Global Creator(GC) 장학 대상자 모집
+참고 사항:
+현재 접수 진행 중인
+Global Exchange(GE)
+장학과
+중복 지원 가능
+합니다.
+장학 금액이 더 큰 GE 장학을 우선 선발할 예정이며, 따라서 중복 지원자 중 GE 장학에 지원하였으나 미 선발된 학생들은 자동으로 본 GC 장학 심사 대상에 포함됨을 참고 바랍니다.
+[2026-03-23 17:13:30,776] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 17:13:30,776] INFO - period_texts=[]
+[2026-03-23 17:13:30,776] INFO - normalized_title=2026-1학기 Global Exchange GE 장학 대상자 모집
+[2026-03-23 17:13:30,776] INFO - deadline=2026-02-27
+[2026-03-23 17:13:30,776] INFO - clean_body_sample=[Outgoing]
+2026-1학기 Global Exchange(GE) 장학 대상자 모집
+참고사항:
+현재 접수 진행 중인
+Global Creator(GC)
+장학과
+중복 지원 가능
+합니다.
+장학 금액이 더 큰 GE 장학을 우선 선발할 예정이며, 따라서 중복 지원하였으나 GE장학에 선발된 학생들은 자동으로 GC 장학 심사 대상에 포함되지 않음을 참고 바랍니다.
+[2026-03-23 17:13:31,024] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 17:13:31,024] INFO - period_texts=['- 수원시 청년 대사 뚜르시 방문 : 2026. 6. 26.(금) ~ 7. 5.(일)', '- 뚜르시 청년 대사 수원시 방문 : 2026. 10. 30.(금) ~ 11. 9.(월) ※변동 가능', '2026. 2. 19.(목) ~ 3. 18.(수) 18:00', ': 수원시 청년 2명 (만 19세 ~ 만 25세)', '- 2026. 6. 26.(금) ~ 7. 5.(일), 10일간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자']
+[2026-03-23 17:13:31,024] INFO - normalized_period=- 수원시 청. 대사 뚜르시 방문 : 2026. 6. 26 ~ 7. 5
+[2026-03-23 17:13:31,024] INFO - normalized_period=- 뚜르시 청. 대사 수원시 방문 : 2026. 10. 30 ~ 11. 9. ※변동 가능
+[2026-03-23 17:13:31,024] INFO - normalized_period=2026. 2. 19 ~ 3. 18.
+[2026-03-23 17:13:31,024] INFO - normalized_period=: 수원시 청. 2명 만 19세 ~ 만 25세
+[2026-03-23 17:13:31,024] INFO - normalized_period=- 2026. 6. 26 ~ 7. 5., 10간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자
+[2026-03-23 17:13:31,024] INFO - normalized_title=「2026 수원-뚜르 청.대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 17:13:31,024] INFO - deadline=2026-02-25
+[2026-03-23 17:13:31,024] INFO - clean_body_sample=[Student Life]
+「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+(재)수원시국제교류센터에서 아주대학교 및 대학원 재학생에게
+프랑스 뚜르
+청년과 교류할 수 있는 기회를 제공합니다.
+서로의 문화를 이해하며 국제적 감각과 소통능력을 기를 수 있는
+「2026 수원-뚜르 청년대사 교류 프로그램」
+에 많은 관심과 참여 바랍니다.
+<프로그램 개요>
+○ 프로그램명 : 2026 수원-뚜르 청년 대사 교류 프로그램 (Bilateral Youth Ambassador Exchange Program)
+○ 활동기간
+- 수원시 청년
+[2026-03-23 17:13:31,251] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 17:13:31,251] INFO - period_texts=[]
+[2026-03-23 17:13:31,251] INFO - normalized_title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 17:13:31,251] INFO - deadline=2026-02-23
+[2026-03-23 17:13:31,251] INFO - clean_body_sample=[Outgoing]
+찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+신청서 제출 (클릭)
+[2026-03-23 17:13:31,482] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:13:31,490] INFO - period_texts=[]
+[2026-03-23 17:13:31,490] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:13:31,490] INFO - deadline=2026-02-23
+[2026-03-23 17:13:31,493] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+(붙임1) (2차모집) 2026-2학기 파견 교환학생 및 복수학위 지원 대학
+[2026-03-23 17:13:31,761] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 17:13:31,761] INFO - period_texts=['2026.02.19.(목)~2026.03.18.(수) 17:00', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함"]
+[2026-03-23 17:13:31,763] INFO - normalized_period=2026.02.19~2026.03.18.
+[2026-03-23 17:13:31,763] INFO - normalized_period=- 제출 증빙자료는 모집공고 '26.2.11 이후 발급 서류여야 함
+[2026-03-23 17:13:31,764] INFO - normalized_title=2026. 상반기 한미대학생연수 WEST 참가자 모집 안내 중기/단기
+[2026-03-23 17:13:31,765] INFO - deadline=2026-03-18
+[2026-03-23 17:13:31,765] INFO - clean_body_sample=[Outgoing]
+2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+국립국제교육원에서 제공하는
+한미대학생연수(WEST)에 참가할 지원자를 모집합니다.
+첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.
+서류 제출 희망자는
+국제교류팀 접수 기한을 준수
+하여 제출 할 것. (
+첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)
+1. 온라인 지원서 작성 및 제출 :
+2026.02.19.(목)~2026.03.18.(수) 17:00
+까지 원드잡플러스 홈페이지(
+
+[2026-03-23 17:13:31,996] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 17:13:31,996] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM']
+[2026-03-23 17:13:31,996] INFO - normalized_period=- 지원서 제출 기간: 2026.02.06~2026.02.09.
+[2026-03-23 17:13:31,996] INFO - normalized_title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 17:13:31,996] INFO - deadline=2026-02-09
+[2026-03-23 17:13:31,998] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+2026-2학기 파견 해외 우수대학 학부 및 해외석사 연계 과정생 2차모집 안내 주요 사항
+- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM
+* 포털 지원 및 구글폼 작성
+모두 제출
+하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+- 구글폼 링크:
+https://forms.gle/9s6xSSbd1VvuALCq7
+[2026-03-23 17:13:32,246] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 17:13:32,246] INFO - period_texts=['2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)', '2026.02.03.(화)~', '2026학년도 가을학기 또는 2026학년도 가을학기~2027학년도 봄학기 파견 예정인 자', '2026.02.03.(화)~2026.03.06.(금) 18:00']
+[2026-03-23 17:13:32,246] INFO - normalized_period=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 17:13:32,246] INFO - normalized_period=2026.02.03~
+[2026-03-23 17:13:32,246] INFO - normalized_period=2026학.도 가을학기 또는 2026학.도 가을학기~2027학.도 봄학기 파견 예정인 자
+[2026-03-23 17:13:32,246] INFO - normalized_period=2026.02.03~2026.03.06.
+[2026-03-23 17:13:32,246] INFO - normalized_title=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 17:13:32,246] INFO - deadline=2026-03-06
+[2026-03-23 17:13:32,246] INFO - clean_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 습득 기회를 제공하고,
+글로벌 인재 육성을 위해 美 대학에 교환학생 파견 예정인 이공계 청년인재를 다음과 같이 모집합니다.
+아래 사항과 붙임의 선발 공고문을 참고하시어 관심 있는 학생분들의 많은 지원 바랍니다.
+본교 국제교류팀 접수 기한:
+2026.02.03.(화)~
+2026.03.06.(금) 18:00
+(*기한 엄수)
+**
+붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수
+[2026-03-23 17:13:32,255] INFO - JSON saved: 16 items
+[2026-03-23 17:13:32,255] INFO - Run finished.
+[2026-03-23 17:13:32,255] INFO - raw_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+국제교류팀
+국제교류팀
+작성일
+2026-02-03
+조회수
+12353
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
+참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 
+[2026-03-23 17:16:10,311] INFO - Run started (KST): 2026-03-23T17:16:10+09:00
+[2026-03-23 17:16:10,311] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 17:16:10,624] INFO - List parsed: 16 items
+[2026-03-23 17:16:10,883] INFO - title=[공지]2026-2학기 파견 교환 및 복수학위 2차 모집 최종합격자 공고
+[2026-03-23 17:16:10,883] INFO - period_texts=[]
+[2026-03-23 17:16:10,883] INFO - normalized_title=[공지]2026-2학기 파견 교환 및 복수학위 2차 모집 최종합격자 공고
+[2026-03-23 17:16:10,883] INFO - deadline=None
+[2026-03-23 17:16:10,890] INFO - clean_body_sample=[공지]
+2026-2학기 파견 교환 및 복수학위 2차 모집 최종합격자 공고
+[2026-03-23 17:16:11,113] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 17:16:11,113] INFO - period_texts=[]
+[2026-03-23 17:16:11,121] INFO - normalized_title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표 TE, GE, GC
+[2026-03-23 17:16:11,121] INFO - deadline=None
+[2026-03-23 17:16:11,121] INFO - clean_body_sample=[공지]
+2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+2026-1학기 파견 교환학생 장학(TE, GE, GC)최종합격자를 아래와 같이 공고합니다.
+*공통 유의사항
+1. 파견대학 입학허가가 확정되어 입학허가서를 수령한 후 2026학년도 1학기 장학금으로 지급될 예정
+2. 2026학년도 1학기 기준 교내 장학 수혜 자격에 결격사유가 없는 경우에 한하여 지급 가능(※ 교내장학 수혜 자격: 2026-1학기 재학, 직전학기 12학점 이상 취득, 평점평균 2.0이상인 자)
+3. 본 장학금 수령 후 부득이 파견을 포기하
+[2026-03-23 17:16:11,390] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 17:16:11,390] INFO - period_texts=['[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)', '2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지']
+[2026-03-23 17:16:11,390] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 17:16:11,390] INFO - normalized_period=2026.3.20 ~ 2026.3.25. 15:00까지
+[2026-03-23 17:16:11,390] INFO - normalized_title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 17:16:11,390] INFO - deadline=2026-03-25
+[2026-03-23 17:16:11,390] INFO - clean_body_sample=[공지]
+[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+2026년 하계 1차 해외단기파견 프로그램 참가자 모집
+▶[필독]
+학생 모집 공고문
+PDF
+파일
+을 꼭! 확인하여
+파견교별 과목, 어학성적 요건, 장학금 등에 대한 상세한 내용을 빠짐없이 읽어주세요.
+▶
+[일정]
+▷
+2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지
+| 지원서 작성 (★
+★
+★
+아주포털 및 구글폼(지원동기) 꼭
+2개 모두
+작성!
+★
+★
+★
+)
+▷ 2026.3.30.(월) 18:00 이후 | 합격자 
+[2026-03-23 17:16:11,619] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 17:16:11,619] INFO - period_texts=['2026.03.30.(월)~04.07.(화) 14:00']
+[2026-03-23 17:16:11,627] INFO - normalized_period=2026.03.30~04.07.
+[2026-03-23 17:16:11,627] INFO - normalized_title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 17:16:11,627] INFO - deadline=None
+[2026-03-23 17:16:11,627] INFO - clean_body_sample=[공지]
+2026-2학기 교환학생 및 복수학위 3차모집 예고
+2026-2학기 파견되는 교환학생 및 복수학위 3차모집
+을 아래와 같이 예고하오니
+관심 있는 학생들의 참고 바랍니다.
+3차모집 지원서 접수기간:
+2026.03.30.(월)~04.07.(화) 14:00
+[2026-03-23 17:16:12,156] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:16:12,156] INFO - period_texts=[]
+[2026-03-23 17:16:12,156] INFO - normalized_title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:16:12,156] INFO - deadline=None
+[2026-03-23 17:16:12,156] INFO - clean_body_sample=[공지]
+[재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+2026-2학기 파견 학·석사 연계과정 추가모집
+을 안내하오니, 붙임의 모집요강을 꼼꼼하게 참고하시어 관심 있는 학생들의 많은 지원 바랍니다.
+- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.
+- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+- 최종합격자 발표 이후에는 어떠한 서유로도 배정대학 변경이 불가합니다.
+- (학부 석사 연계과정)
+포털 지원 및 구글폼 작성
+모두 제출
+[2026-03-23 17:16:12,479] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 17:16:12,490] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 17:16:12,492] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 17:16:12,492] INFO - normalized_title=[공지][필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 17:16:12,493] INFO - deadline=None
+[2026-03-23 17:16:12,493] INFO - clean_body_sample=[공지]
+[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+※이메일 문의 전 반드시 안내사항을 꼼꼼하게 숙지하시기 바랍니다.
+학점이관 안내자료를 숙지하고 않고 문의하는 경우 답변이 어려움을 유의 바랍니다.
+예)
+몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?
+▶
+학점이관 신청서 제출 FORM(클릭)
+안녕하세요, 국제교류팀 입니다.
+파견 프로그램을 이수함에 있어서 학점이관 절차와
+[2026-03-23 17:16:12,726] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 17:16:12,726] INFO - period_texts=[]
+[2026-03-23 17:16:12,726] INFO - normalized_title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내 미국 Purdue University
+[2026-03-23 17:16:12,734] INFO - deadline=None
+[2026-03-23 17:16:12,734] INFO - clean_body_sample=[Outgoing]
+[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+일시:
+2026.03.19.(목) 20:00 KST
+, Online ZOOM 진행
+참가 신청서:
+https://forms.gle/Xh2moae1YjnNeTBM9
+[2026-03-23 17:16:12,974] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 17:16:12,974] INFO - period_texts=[]
+[2026-03-23 17:16:12,974] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 17:16:12,974] INFO - deadline=None
+[2026-03-23 17:16:12,974] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+*공통 유의사항(필독)
+1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가
+2026.03.10.(화) 18:00이내
+지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.
+면접대상자 명단에 포함되었으나
+2026.03.10.(화) 18:00이내
+면접 안내 이메일을 수신하지 못한 경우 국제교류팀으로 연락 바랍니다.
+가산점 관련 서류는
+2026.03.16.(월) 12:00이내
+의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유
+[2026-03-23 17:16:13,191] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 17:16:13,193] INFO - period_texts=[]
+[2026-03-23 17:16:13,193] INFO - normalized_title=2026-1학기 Global Creator GC 장학 대상자 모집
+[2026-03-23 17:16:13,193] INFO - deadline=None
+[2026-03-23 17:16:13,193] INFO - clean_body_sample=[Outgoing]
+2026-1학기 Global Creator(GC) 장학 대상자 모집
+참고 사항:
+현재 접수 진행 중인
+Global Exchange(GE)
+장학과
+중복 지원 가능
+합니다.
+장학 금액이 더 큰 GE 장학을 우선 선발할 예정이며, 따라서 중복 지원자 중 GE 장학에 지원하였으나 미 선발된 학생들은 자동으로 본 GC 장학 심사 대상에 포함됨을 참고 바랍니다.
+[2026-03-23 17:16:13,423] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 17:16:13,423] INFO - period_texts=[]
+[2026-03-23 17:16:13,423] INFO - normalized_title=2026-1학기 Global Exchange GE 장학 대상자 모집
+[2026-03-23 17:16:13,423] INFO - deadline=None
+[2026-03-23 17:16:13,423] INFO - clean_body_sample=[Outgoing]
+2026-1학기 Global Exchange(GE) 장학 대상자 모집
+참고사항:
+현재 접수 진행 중인
+Global Creator(GC)
+장학과
+중복 지원 가능
+합니다.
+장학 금액이 더 큰 GE 장학을 우선 선발할 예정이며, 따라서 중복 지원하였으나 GE장학에 선발된 학생들은 자동으로 GC 장학 심사 대상에 포함되지 않음을 참고 바랍니다.
+[2026-03-23 17:16:13,683] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 17:16:13,683] INFO - period_texts=['- 수원시 청년 대사 뚜르시 방문 : 2026. 6. 26.(금) ~ 7. 5.(일)', '- 뚜르시 청년 대사 수원시 방문 : 2026. 10. 30.(금) ~ 11. 9.(월) ※변동 가능', '2026. 2. 19.(목) ~ 3. 18.(수) 18:00', ': 수원시 청년 2명 (만 19세 ~ 만 25세)', '- 2026. 6. 26.(금) ~ 7. 5.(일), 10일간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자']
+[2026-03-23 17:16:13,683] INFO - normalized_period=- 수원시 청. 대사 뚜르시 방문 : 2026. 6. 26 ~ 7. 5
+[2026-03-23 17:16:13,685] INFO - normalized_period=- 뚜르시 청. 대사 수원시 방문 : 2026. 10. 30 ~ 11. 9. ※변동 가능
+[2026-03-23 17:16:13,686] INFO - normalized_period=2026. 2. 19 ~ 3. 18.
+[2026-03-23 17:16:13,686] INFO - normalized_period=: 수원시 청. 2명 만 19세 ~ 만 25세
+[2026-03-23 17:16:13,686] INFO - normalized_period=- 2026. 6. 26 ~ 7. 5., 10간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자
+[2026-03-23 17:16:13,686] INFO - normalized_title=「2026 수원-뚜르 청.대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 17:16:13,686] INFO - deadline=None
+[2026-03-23 17:16:13,686] INFO - clean_body_sample=[Student Life]
+「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+(재)수원시국제교류센터에서 아주대학교 및 대학원 재학생에게
+프랑스 뚜르
+청년과 교류할 수 있는 기회를 제공합니다.
+서로의 문화를 이해하며 국제적 감각과 소통능력을 기를 수 있는
+「2026 수원-뚜르 청년대사 교류 프로그램」
+에 많은 관심과 참여 바랍니다.
+<프로그램 개요>
+○ 프로그램명 : 2026 수원-뚜르 청년 대사 교류 프로그램 (Bilateral Youth Ambassador Exchange Program)
+○ 활동기간
+- 수원시 청년
+[2026-03-23 17:16:13,892] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 17:16:13,892] INFO - period_texts=[]
+[2026-03-23 17:16:13,892] INFO - normalized_title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 17:16:13,892] INFO - deadline=None
+[2026-03-23 17:16:13,892] INFO - clean_body_sample=[Outgoing]
+찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+신청서 제출 (클릭)
+[2026-03-23 17:16:14,131] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:16:14,134] INFO - period_texts=[]
+[2026-03-23 17:16:14,134] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:16:14,134] INFO - deadline=None
+[2026-03-23 17:16:14,134] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+(붙임1) (2차모집) 2026-2학기 파견 교환학생 및 복수학위 지원 대학
+[2026-03-23 17:16:14,528] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 17:16:14,528] INFO - period_texts=['2026.02.19.(목)~2026.03.18.(수) 17:00', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함"]
+[2026-03-23 17:16:14,528] INFO - normalized_period=2026.02.19~2026.03.18.
+[2026-03-23 17:16:14,536] INFO - normalized_period=- 제출 증빙자료는 모집공고 '26.2.11 이후 발급 서류여야 함
+[2026-03-23 17:16:14,561] INFO - normalized_title=2026. 상반기 한미대학생연수 WEST 참가자 모집 안내 중기/단기
+[2026-03-23 17:16:14,565] INFO - deadline=2026-03-18
+[2026-03-23 17:16:14,565] INFO - clean_body_sample=[Outgoing]
+2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+국립국제교육원에서 제공하는
+한미대학생연수(WEST)에 참가할 지원자를 모집합니다.
+첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.
+서류 제출 희망자는
+국제교류팀 접수 기한을 준수
+하여 제출 할 것. (
+첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)
+1. 온라인 지원서 작성 및 제출 :
+2026.02.19.(목)~2026.03.18.(수) 17:00
+까지 원드잡플러스 홈페이지(
+
+[2026-03-23 17:16:14,837] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 17:16:14,837] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM']
+[2026-03-23 17:16:14,837] INFO - normalized_period=- 지원서 제출 기간: 2026.02.06~2026.02.09.
+[2026-03-23 17:16:14,837] INFO - normalized_title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 17:16:14,838] INFO - deadline=2026-02-09
+[2026-03-23 17:16:14,838] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+2026-2학기 파견 해외 우수대학 학부 및 해외석사 연계 과정생 2차모집 안내 주요 사항
+- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM
+* 포털 지원 및 구글폼 작성
+모두 제출
+하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+- 구글폼 링크:
+https://forms.gle/9s6xSSbd1VvuALCq7
+[2026-03-23 17:16:15,172] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 17:16:15,172] INFO - period_texts=['2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)', '2026.02.03.(화)~', '2026학년도 가을학기 또는 2026학년도 가을학기~2027학년도 봄학기 파견 예정인 자', '2026.02.03.(화)~2026.03.06.(금) 18:00']
+[2026-03-23 17:16:15,172] INFO - normalized_period=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 17:16:15,172] INFO - normalized_period=2026.02.03~
+[2026-03-23 17:16:15,172] INFO - normalized_period=2026학.도 가을학기 또는 2026학.도 가을학기~2027학.도 봄학기 파견 예정인 자
+[2026-03-23 17:16:15,172] INFO - normalized_period=2026.02.03~2026.03.06.
+[2026-03-23 17:16:15,172] INFO - normalized_title=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 17:16:15,172] INFO - deadline=2026-03-06
+[2026-03-23 17:16:15,172] INFO - clean_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 습득 기회를 제공하고,
+글로벌 인재 육성을 위해 美 대학에 교환학생 파견 예정인 이공계 청년인재를 다음과 같이 모집합니다.
+아래 사항과 붙임의 선발 공고문을 참고하시어 관심 있는 학생분들의 많은 지원 바랍니다.
+본교 국제교류팀 접수 기한:
+2026.02.03.(화)~
+2026.03.06.(금) 18:00
+(*기한 엄수)
+**
+붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수
+[2026-03-23 17:16:15,180] INFO - JSON saved: 16 items
+[2026-03-23 17:16:15,180] INFO - Run finished.
+[2026-03-23 17:16:15,180] INFO - raw_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+국제교류팀
+국제교류팀
+작성일
+2026-02-03
+조회수
+12356
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
+참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 
+[2026-03-23 17:22:00,373] INFO - Run started (KST): 2026-03-23T17:22:00+09:00
+[2026-03-23 17:22:00,373] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-03-23 17:22:00,752] INFO - List parsed: 16 items
+[2026-03-23 17:22:01,014] INFO - title=[공지]2026-2학기 파견 교환 및 복수학위 2차 모집 최종합격자 공고
+[2026-03-23 17:22:01,014] INFO - period_texts=[]
+[2026-03-23 17:22:01,015] INFO - normalized_title=[공지]2026-2학기 파견 교환 및 복수학위 2차 모집 최종합격자 공고
+[2026-03-23 17:22:01,015] INFO - deadline=None
+[2026-03-23 17:22:01,015] INFO - clean_body_sample=[공지]
+2026-2학기 파견 교환 및 복수학위 2차 모집 최종합격자 공고
+[2026-03-23 17:22:01,236] INFO - title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+[2026-03-23 17:22:01,236] INFO - period_texts=[]
+[2026-03-23 17:22:01,236] INFO - normalized_title=[공지]2026-1학기 파견 교환학생 장학 선발자 발표 TE, GE, GC
+[2026-03-23 17:22:01,236] INFO - deadline=None
+[2026-03-23 17:22:01,236] INFO - clean_body_sample=[공지]
+2026-1학기 파견 교환학생 장학 선발자 발표(TE, GE, GC)
+2026-1학기 파견 교환학생 장학(TE, GE, GC)최종합격자를 아래와 같이 공고합니다.
+*공통 유의사항
+1. 파견대학 입학허가가 확정되어 입학허가서를 수령한 후 2026학년도 1학기 장학금으로 지급될 예정
+2. 2026학년도 1학기 기준 교내 장학 수혜 자격에 결격사유가 없는 경우에 한하여 지급 가능(※ 교내장학 수혜 자격: 2026-1학기 재학, 직전학기 12학점 이상 취득, 평점평균 2.0이상인 자)
+3. 본 장학금 수령 후 부득이 파견을 포기하
+[2026-03-23 17:22:01,602] INFO - title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+[2026-03-23 17:22:01,604] INFO - period_texts=['[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)', '2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지']
+[2026-03-23 17:22:01,606] INFO - normalized_period=[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 17:22:01,606] INFO - normalized_period=2026.3.20 ~ 2026.3.25. 15:00까지
+[2026-03-23 17:22:01,608] INFO - normalized_title=[공지][국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 3/20~3/25
+[2026-03-23 17:22:01,608] INFO - deadline=2026-03-25
+[2026-03-23 17:22:01,608] INFO - clean_body_sample=[공지]
+[국제교류팀] [하계 1차] 2026 해외단기파견 프로그램 참가자 모집 (3/20~3/25)
+2026년 하계 1차 해외단기파견 프로그램 참가자 모집
+▶[필독]
+학생 모집 공고문
+PDF
+파일
+을 꼭! 확인하여
+파견교별 과목, 어학성적 요건, 장학금 등에 대한 상세한 내용을 빠짐없이 읽어주세요.
+▶
+[일정]
+▷
+2026.3.20.(금) ~ 2026.3.25.(수) 15:00까지
+| 지원서 작성 (★
+★
+★
+아주포털 및 구글폼(지원동기) 꼭
+2개 모두
+작성!
+★
+★
+★
+)
+▷ 2026.3.30.(월) 18:00 이후 | 합격자 
+[2026-03-23 17:22:01,869] INFO - title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 17:22:01,869] INFO - period_texts=['2026.03.30.(월)~04.07.(화) 14:00']
+[2026-03-23 17:22:01,869] INFO - normalized_period=2026.03.30~04.07.
+[2026-03-23 17:22:01,869] INFO - normalized_title=[공지]2026-2학기 교환학생 및 복수학위 3차모집 예고
+[2026-03-23 17:22:01,869] INFO - deadline=2026-04-07
+[2026-03-23 17:22:01,869] INFO - clean_body_sample=[공지]
+2026-2학기 교환학생 및 복수학위 3차모집 예고
+2026-2학기 파견되는 교환학생 및 복수학위 3차모집
+을 아래와 같이 예고하오니
+관심 있는 학생들의 참고 바랍니다.
+3차모집 지원서 접수기간:
+2026.03.30.(월)~04.07.(화) 14:00
+[2026-03-23 17:22:02,367] INFO - title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:22:02,367] INFO - period_texts=[]
+[2026-03-23 17:22:02,370] INFO - normalized_title=[공지][재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:22:02,370] INFO - deadline=None
+[2026-03-23 17:22:02,370] INFO - clean_body_sample=[공지]
+[재공지] 2026-2학기 파견 학·석사 연계과정 추가모집 공고
+2026-2학기 파견 학·석사 연계과정 추가모집
+을 안내하오니, 붙임의 모집요강을 꼼꼼하게 참고하시어 관심 있는 학생들의 많은 지원 바랍니다.
+- 이전 선발 합격 후 파견 포기한 학생은 국제교류팀으로 문의(exch@ajou.ac.kr) 후 지원 가능합니다.
+- 지원 마감일 이후에는 어떠한 사유로도 지망대학 변경이 불가합니다.
+- 최종합격자 발표 이후에는 어떠한 서유로도 배정대학 변경이 불가합니다.
+- (학부 석사 연계과정)
+포털 지원 및 구글폼 작성
+모두 제출
+[2026-03-23 17:22:02,713] INFO - title=[공지][필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+[2026-03-23 17:22:02,713] INFO - period_texts=['[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)']
+[2026-03-23 17:22:02,715] INFO - normalized_period=[필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 17:22:02,715] INFO - normalized_title=[공지][필독][26.3. 업데이트] 학점이관 신청 방법 및 안내사항 총정리 2026.03. ver.
+[2026-03-23 17:22:02,716] INFO - deadline=None
+[2026-03-23 17:22:02,716] INFO - clean_body_sample=[공지]
+[필독][26.3월 업데이트] 학점이관 신청 방법 및 안내사항 총정리 (2026.03. ver.)
+※이메일 문의 전 반드시 안내사항을 꼼꼼하게 숙지하시기 바랍니다.
+학점이관 안내자료를 숙지하고 않고 문의하는 경우 답변이 어려움을 유의 바랍니다.
+예)
+몇 학점 이관되나요? / 전공 학점은 어떻게 인정 받나요? / 전공 아닌 수업을 수강해도 되나요? / 학점 이관 기한이 있나요? / 학점 이관은 필수인가요?
+▶
+학점이관 신청서 제출 FORM(클릭)
+안녕하세요, 국제교류팀 입니다.
+파견 프로그램을 이수함에 있어서 학점이관 절차와
+[2026-03-23 17:22:02,963] INFO - title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+[2026-03-23 17:22:02,963] INFO - period_texts=[]
+[2026-03-23 17:22:02,970] INFO - normalized_title=[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내 미국 Purdue University
+[2026-03-23 17:22:02,970] INFO - deadline=None
+[2026-03-23 17:22:02,970] INFO - clean_body_sample=[Outgoing]
+[국제교류팀] 2026-2학기 파견 학부·석사 연계과정 프로그램 설명회 안내(미국 Purdue University)
+일시:
+2026.03.19.(목) 20:00 KST
+, Online ZOOM 진행
+참가 신청서:
+https://forms.gle/Xh2moae1YjnNeTBM9
+[2026-03-23 17:22:03,224] INFO - title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 17:22:03,226] INFO - period_texts=[]
+[2026-03-23 17:22:03,227] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+[2026-03-23 17:22:03,227] INFO - deadline=None
+[2026-03-23 17:22:03,229] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 교환 및 복수학위 2차 모집 서류 합격자 공지
+*공통 유의사항(필독)
+1) 면접 대상자들에게는 면접 일정 및 ZOOM 링크가
+2026.03.10.(화) 18:00이내
+지원서 제출 시 기입했던 이메일로 일괄 발송 될 예정입니다.
+면접대상자 명단에 포함되었으나
+2026.03.10.(화) 18:00이내
+면접 안내 이메일을 수신하지 못한 경우 국제교류팀으로 연락 바랍니다.
+가산점 관련 서류는
+2026.03.16.(월) 12:00이내
+의 기한 내 제출 바라며, 제출자에 한하여 가산점 반영 예정임을 유
+[2026-03-23 17:22:03,445] INFO - title=2026-1학기 Global Creator(GC) 장학 대상자 모집
+[2026-03-23 17:22:03,445] INFO - period_texts=[]
+[2026-03-23 17:22:03,445] INFO - normalized_title=2026-1학기 Global Creator GC 장학 대상자 모집
+[2026-03-23 17:22:03,448] INFO - deadline=None
+[2026-03-23 17:22:03,448] INFO - clean_body_sample=[Outgoing]
+2026-1학기 Global Creator(GC) 장학 대상자 모집
+참고 사항:
+현재 접수 진행 중인
+Global Exchange(GE)
+장학과
+중복 지원 가능
+합니다.
+장학 금액이 더 큰 GE 장학을 우선 선발할 예정이며, 따라서 중복 지원자 중 GE 장학에 지원하였으나 미 선발된 학생들은 자동으로 본 GC 장학 심사 대상에 포함됨을 참고 바랍니다.
+[2026-03-23 17:22:03,767] INFO - title=2026-1학기 Global Exchange(GE) 장학 대상자 모집
+[2026-03-23 17:22:03,782] INFO - period_texts=[]
+[2026-03-23 17:22:03,786] INFO - normalized_title=2026-1학기 Global Exchange GE 장학 대상자 모집
+[2026-03-23 17:22:03,788] INFO - deadline=None
+[2026-03-23 17:22:03,788] INFO - clean_body_sample=[Outgoing]
+2026-1학기 Global Exchange(GE) 장학 대상자 모집
+참고사항:
+현재 접수 진행 중인
+Global Creator(GC)
+장학과
+중복 지원 가능
+합니다.
+장학 금액이 더 큰 GE 장학을 우선 선발할 예정이며, 따라서 중복 지원하였으나 GE장학에 선발된 학생들은 자동으로 GC 장학 심사 대상에 포함되지 않음을 참고 바랍니다.
+[2026-03-23 17:22:04,076] INFO - title=「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 17:22:04,076] INFO - period_texts=['- 수원시 청년 대사 뚜르시 방문 : 2026. 6. 26.(금) ~ 7. 5.(일)', '- 뚜르시 청년 대사 수원시 방문 : 2026. 10. 30.(금) ~ 11. 9.(월) ※변동 가능', '2026. 2. 19.(목) ~ 3. 18.(수) 18:00', ': 수원시 청년 2명 (만 19세 ~ 만 25세)', '- 2026. 6. 26.(금) ~ 7. 5.(일), 10일간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자']
+[2026-03-23 17:22:04,079] INFO - normalized_period=- 수원시 청. 대사 뚜르시 방문 : 2026. 6. 26 ~ 7. 5
+[2026-03-23 17:22:04,079] INFO - normalized_period=- 뚜르시 청. 대사 수원시 방문 : 2026. 10. 30 ~ 11. 9. ※변동 가능
+[2026-03-23 17:22:04,079] INFO - normalized_period=2026. 2. 19 ~ 3. 18.
+[2026-03-23 17:22:04,079] INFO - normalized_period=: 수원시 청. 2명 만 19세 ~ 만 25세
+[2026-03-23 17:22:04,079] INFO - normalized_period=- 2026. 6. 26 ~ 7. 5., 10간 뚜르시 홈스테이 가정에서 체류가 가능하고, 모든 프로그램에 적극적으로 참여할 수 있는 자
+[2026-03-23 17:22:04,079] INFO - normalized_title=「2026 수원-뚜르 청.대사 교류 프로그램」 참가자 모집 안내
+[2026-03-23 17:22:04,079] INFO - deadline=None
+[2026-03-23 17:22:04,079] INFO - clean_body_sample=[Student Life]
+「2026 수원-뚜르 청년대사 교류 프로그램」 참가자 모집 안내
+(재)수원시국제교류센터에서 아주대학교 및 대학원 재학생에게
+프랑스 뚜르
+청년과 교류할 수 있는 기회를 제공합니다.
+서로의 문화를 이해하며 국제적 감각과 소통능력을 기를 수 있는
+「2026 수원-뚜르 청년대사 교류 프로그램」
+에 많은 관심과 참여 바랍니다.
+<프로그램 개요>
+○ 프로그램명 : 2026 수원-뚜르 청년 대사 교류 프로그램 (Bilateral Youth Ambassador Exchange Program)
+○ 활동기간
+- 수원시 청년
+[2026-03-23 17:22:04,293] INFO - title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 17:22:04,293] INFO - period_texts=[]
+[2026-03-23 17:22:04,293] INFO - normalized_title=찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+[2026-03-23 17:22:04,293] INFO - deadline=None
+[2026-03-23 17:22:04,293] INFO - clean_body_sample=[Outgoing]
+찾아가는 학부·석사 연계과정 프로그램 설명회 신청 안내
+신청서 제출 (클릭)
+[2026-03-23 17:22:04,597] INFO - title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:22:04,597] INFO - period_texts=[]
+[2026-03-23 17:22:04,599] INFO - normalized_title=2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+[2026-03-23 17:22:04,601] INFO - deadline=None
+[2026-03-23 17:22:04,601] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 교환 및 복수학위 2차모집 및 학·석사 연계과정 추가모집 공고
+(붙임1) (2차모집) 2026-2학기 파견 교환학생 및 복수학위 지원 대학
+[2026-03-23 17:22:04,862] INFO - title=2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+[2026-03-23 17:22:04,863] INFO - period_texts=['2026.02.19.(목)~2026.03.18.(수) 17:00', "- 제출 증빙자료는 모집공고일 ('26.2.11.)이후 발급 서류여야 함"]
+[2026-03-23 17:22:04,863] INFO - normalized_period=2026.02.19~2026.03.18.
+[2026-03-23 17:22:04,864] INFO - normalized_period=- 제출 증빙자료는 모집공고 '26.2.11 이후 발급 서류여야 함
+[2026-03-23 17:22:04,864] INFO - normalized_title=2026. 상반기 한미대학생연수 WEST 참가자 모집 안내 중기/단기
+[2026-03-23 17:22:04,864] INFO - deadline=2026-03-18
+[2026-03-23 17:22:04,864] INFO - clean_body_sample=[Outgoing]
+2026년 상반기 한미대학생연수(WEST) 참가자 모집 안내(중기/단기)
+국립국제교육원에서 제공하는
+한미대학생연수(WEST)에 참가할 지원자를 모집합니다.
+첨부의 모집공고를 확인하시어 신청기간 내에 필요한 절차를 완료해주시길 바랍니다.
+서류 제출 희망자는
+국제교류팀 접수 기한을 준수
+하여 제출 할 것. (
+첨부의 모집 공고에 명시되어 있는 기한과 국제교류팀 접수 마감 기한이 상이함)
+1. 온라인 지원서 작성 및 제출 :
+2026.02.19.(목)~2026.03.18.(수) 17:00
+까지 원드잡플러스 홈페이지(
+
+[2026-03-23 17:22:05,129] INFO - title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 17:22:05,129] INFO - period_texts=['- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM']
+[2026-03-23 17:22:05,129] INFO - normalized_period=- 지원서 제출 기간: 2026.02.06~2026.02.09.
+[2026-03-23 17:22:05,129] INFO - normalized_title=2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+[2026-03-23 17:22:05,129] INFO - deadline=2026-02-09
+[2026-03-23 17:22:05,129] INFO - clean_body_sample=[Outgoing]
+2026-2학기 파견 학부·석사 연계과정 프로그램 2차모집 공고
+2026-2학기 파견 해외 우수대학 학부 및 해외석사 연계 과정생 2차모집 안내 주요 사항
+- 지원서 제출 기간: 2026.02.06.(금)~2026.02.09.(월) 23:59PM
+* 포털 지원 및 구글폼 작성
+모두 제출
+하여야 정상 접수되오니 이점 유의하시기 바랍니다.
+- 구글폼 링크:
+https://forms.gle/9s6xSSbd1VvuALCq7
+[2026-03-23 17:22:05,418] INFO - title=2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+[2026-03-23 17:22:05,418] INFO - period_texts=['2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)', '2026.02.03.(화)~', '2026학년도 가을학기 또는 2026학년도 가을학기~2027학년도 봄학기 파견 예정인 자', '2026.02.03.(화)~2026.03.06.(금) 18:00']
+[2026-03-23 17:22:05,418] INFO - normalized_period=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 17:22:05,418] INFO - normalized_period=2026.02.03~
+[2026-03-23 17:22:05,418] INFO - normalized_period=2026학.도 가을학기 또는 2026학.도 가을학기~2027학.도 봄학기 파견 예정인 자
+[2026-03-23 17:22:05,418] INFO - normalized_period=2026.02.03~2026.03.06.
+[2026-03-23 17:22:05,418] INFO - normalized_title=2026.도 한미 첨단분야 청.교류 지원사업 제5기 장학생 선발 공고 ~3/6
+[2026-03-23 17:22:05,418] INFO - deadline=2026-03-06
+[2026-03-23 17:22:05,418] INFO - clean_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 습득 기회를 제공하고,
+글로벌 인재 육성을 위해 美 대학에 교환학생 파견 예정인 이공계 청년인재를 다음과 같이 모집합니다.
+아래 사항과 붙임의 선발 공고문을 참고하시어 관심 있는 학생분들의 많은 지원 바랍니다.
+본교 국제교류팀 접수 기한:
+2026.02.03.(화)~
+2026.03.06.(금) 18:00
+(*기한 엄수)
+**
+붙임의 모집 공고 내 서류접수 기간이 아님. 본교 접수
+[2026-03-23 17:22:05,426] INFO - JSON saved: 16 items
+[2026-03-23 17:22:05,426] INFO - Run finished.
+[2026-03-23 17:22:05,426] INFO - raw_body_sample=[Outgoing]
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고(~3/6)
+국제교류팀
+국제교류팀
+작성일
+2026-02-03
+조회수
+12358
+2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
+참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
+“산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 

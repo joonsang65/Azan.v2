@@ -1,0 +1,284 @@
+[
+  {
+    "category": "토픽 IBT",
+    "round": "제16회",
+    "application_period": "2026.09.15 (화) ~ 2026.09.21 (월) 접수예정",
+    "exam_date_kr": "11.28 (토)",
+    "exam_date_other": "-",
+    "exam_date_asia": "11.28 (토)",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수예정",
+    "result_date": "12.18 (금) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 PBT",
+    "round": "제109회",
+    "application_period": "2026.09.01 (화) ~ 2026.09.07 (월) 접수예정",
+    "exam_date_kr": "11.15 (일)",
+    "exam_date_other": "-",
+    "exam_date_asia": "11.15 (일)",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수예정",
+    "result_date": "12.22 (화) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 IBT",
+    "round": "제15회",
+    "application_period": "2026.08.18 (화) ~ 2026.08.24 (월) 접수예정",
+    "exam_date_kr": "10.24 (토)",
+    "exam_date_other": "-",
+    "exam_date_asia": "10.24 (토)",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수예정",
+    "result_date": "11.13 (금) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 말하기평가",
+    "round": "제12회",
+    "application_period": "2026.08.18 (화) ~ 2026.08.24 (월) 접수예정",
+    "exam_date_kr": "10.24 (토)",
+    "exam_date_other": "-",
+    "exam_date_asia": "-",
+    "test_levels": [
+      "말하기 평가"
+    ],
+    "reception_status": "접수예정",
+    "result_date": "11.16 (월) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 PBT",
+    "round": "제108회",
+    "application_period": "2026.08.04 (화) ~ 2026.08.10 (월) 접수예정",
+    "exam_date_kr": "10.18 (일)",
+    "exam_date_other": "10.17 (토)",
+    "exam_date_asia": "10.18 (일)",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수예정",
+    "result_date": "12.10 (목) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 IBT",
+    "round": "제14회",
+    "application_period": "2026.07.07 (화) ~ 2026.07.13 (월) 접수예정",
+    "exam_date_kr": "09.12 (토)",
+    "exam_date_other": "-",
+    "exam_date_asia": "09.12 (토)",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수예정",
+    "result_date": "10.02 (금) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 PBT",
+    "round": "제107회",
+    "application_period": "2026.05.12 (화) ~ 2026.05.18 (월) 접수예정",
+    "exam_date_kr": "07.05 (일)",
+    "exam_date_other": "07.04 (토)",
+    "exam_date_asia": "07.05 (일)",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수예정",
+    "result_date": "08.13 (목) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 IBT",
+    "round": "제13회",
+    "application_period": "2026.04.07 (화) ~ 2026.04.13 (월) 접수예정",
+    "exam_date_kr": "06.13 (토)",
+    "exam_date_other": "-",
+    "exam_date_asia": "06.13 (토)",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수예정",
+    "result_date": "07.03 (금) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 말하기평가",
+    "round": "제11회",
+    "application_period": "2026.04.07 (화) ~ 2026.04.13 (월) 접수예정",
+    "exam_date_kr": "06.13 (토)",
+    "exam_date_other": "-",
+    "exam_date_asia": "-",
+    "test_levels": [
+      "말하기 평가"
+    ],
+    "reception_status": "접수예정",
+    "result_date": "07.06 (월) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 PBT",
+    "round": "제106회",
+    "application_period": "2026.03.10 (화) ~ 2026.03.16 (월) 국외 접수 안내 바로가기",
+    "exam_date_kr": "05.17 (일)",
+    "exam_date_other": "-",
+    "exam_date_asia": "05.17 (일)",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수마감",
+    "result_date": "06.25 (목) 15:00",
+    "notice_links": [
+      {
+        "label": "국외 접수 안내 바로가기",
+        "url": "https://www.topik.go.kr/TWINFO/TWINFO0011.do?bbsId=BBSMSTR00076&nttId=134595&nttClCode1=ALL&pageIndex=1"
+      }
+    ],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 PBT",
+    "round": "제105회",
+    "application_period": "2026.01.27 (화) ~ 2026.02.02 (월) 국외 접수 안내 바로가기",
+    "exam_date_kr": "04.12 (일)",
+    "exam_date_other": "04.11 (토)",
+    "exam_date_asia": "04.12 (일)",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수마감",
+    "result_date": "05.29 (금) 15:00",
+    "notice_links": [
+      {
+        "label": "국외 접수 안내 바로가기",
+        "url": "https://www.topik.go.kr/TWINFO/TWINFO0011.do?bbsId=BBSMSTR00076&nttId=134199&nttClCode1=ALL&pageIndex=1"
+      }
+    ],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 IBT",
+    "round": "제12회",
+    "application_period": "2026.01.13 (화) ~ 2026.01.19 (월) (IBT)국외 접수 안내 바로가기",
+    "exam_date_kr": "03.21 (토)",
+    "exam_date_other": "-",
+    "exam_date_asia": "03.21 (토)",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수마감",
+    "result_date": "04.10 (금) 15:00",
+    "notice_links": [
+      {
+        "label": "(IBT)국외 접수 안내 바로가기",
+        "url": "https://www.topik.go.kr/TWINFO/TWINFO0011.do?bbsId=BBSMSTR00076&nttId=134458&nttClCode1=ALL&pageIndex=1"
+      }
+    ],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 말하기평가",
+    "round": "제10회",
+    "application_period": "2026.01.13 (화) ~ 2026.01.19 (월)",
+    "exam_date_kr": "03.21 (토)",
+    "exam_date_other": "-",
+    "exam_date_asia": "-",
+    "test_levels": [
+      "말하기 평가"
+    ],
+    "reception_status": "접수마감",
+    "result_date": "04.13 (월) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 IBT",
+    "round": "제11회",
+    "application_period": "2025.12.16 (화) ~ 2025.12.22 (월)",
+    "exam_date_kr": "02.28 (토)",
+    "exam_date_other": "-",
+    "exam_date_asia": "-",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수마감",
+    "result_date": "03.20 (금) 15:00",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  },
+  {
+    "category": "토픽 PBT",
+    "round": "제104회",
+    "application_period": "2025.12.09 (화) ~ 2025.12.15 (월)",
+    "exam_date_kr": "01.11 (일)",
+    "exam_date_other": "-",
+    "exam_date_asia": "-",
+    "test_levels": [
+      "TOPIK Ⅰ",
+      "TOPIK Ⅱ"
+    ],
+    "reception_status": "접수마감",
+    "result_date": "02.12 (목) 15:45",
+    "notice_links": [],
+    "source": "topik_exam_schedule",
+    "url": "https://www.topik.go.kr/TWGUID/TWGUID0020.do",
+    "created_at": "2026-03-23T19:38:33+09:00"
+  }
+]

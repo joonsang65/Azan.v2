@@ -1,0 +1,3146 @@
+<div id="container">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 본문 시작 ------------------------------------------>
+
+	
+	
+		
+	
+
+
+
+
+
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		fnCommEtcNationChangeAjaxSync(jQuery('#searchAreaCode'), jQuery('#searchAreaSubCode'), jQuery('#searchAreaCode').val(), '전체');
+		jQuery("#searchAreaSubCode").val("");
+		if("01" == "01"){
+			jQuery("#DIV_areaSubCode").hide();
+		}else{
+			jQuery("#DIV_areaSubCode").show();
+		}
+	});
+
+	//페이지 이동
+	function fnSearch(){
+		jQuery("#form").attr("action","TWGUID0020.do");
+		jQuery("#form").submit();
+	}
+
+	function fnCommEtcNationChangeAjaxSync(sourceObj, targetObj, param, defOption) {
+		if(defOption == undefined) { defOption = "전체"; }
+
+		var options = '<option value="">' + defOption + '</option>';
+
+		if(!cfIsNull(param)){
+			jQuery.ajax({
+			    url: "/topik/cm/comm/selectNationChangeList.do?code="+param,
+			    data: null,
+			    dataType: "json",
+			    type: "POST",
+			    async: false,
+			    success: function (data) {
+					for(var i=0; i < data.length; i++) {
+						options = options + '<option value="' + data[i].code + '">' + data[i].codeNm + '</option>';
+					};
+					jQuery(targetObj).html(options);
+			    }
+			});
+		}else {
+			jQuery(targetObj).html(options);
+		}
+	}
+	
+	function receptGo(id,groupId) {
+		location.href="https://register.topik.go.kr/login.do";
+	}
+</script>
+
+<div class="tab_menu">
+	<div class="inner">
+		<a class="btns active" href="/TWGUID/TWGUID0020.do" title="시험일정 선택됨">시험일정</a>
+		<a title="이전 시험 회차" class="btns" href="/TWGUID/TWGUID0030.do" alt="이전 시험 회차">이전 시험 회차</a>
+	</div>
+</div>
+
+<form id="form" name="form" action="/TWGUID/TWGUID0020.do" method="post">
+
+<input id="searchOpertnTy" name="searchOpertnTy" type="hidden" value="">
+<input id="searchNationSe" name="searchNationSe" type="hidden" value="01">
+<input id="searchGubun" name="searchGubun" type="hidden" value="">
+
+<div class="body sub_body TWGUID0020">
+	<div class="inner pt50">
+		<div class="table_box">
+			<div class="table_category float_left">
+				<a href="/TWGUID/TWGUID0020.do?searchNationSe=01&amp;searchOpertnTy=" class="active" title="전체 선택됨">전체</a>
+				
+					
+						
+						
+							
+							
+						
+					
+								
+								
+										
+				
+					
+						
+						
+							
+							
+						
+					
+					
+						<a title="토픽 PBT" href="/TWGUID/TWGUID0020.do?searchNationSe=01&amp;searchOpertnTy=T">토픽 PBT</a>
+								
+								
+										
+				
+					
+						
+						
+							
+							
+						
+					
+								
+								
+					
+						<a title="토픽 IBT" href="/TWGUID/TWGUID0020.do?searchNationSe=01&amp;searchOpertnTy=I">토픽 IBT</a>
+										
+				
+					
+						
+						
+							
+							
+						
+					
+								
+					
+						<a title="토픽 말하기 평가" href="/TWGUID/TWGUID0020.do?searchNationSe=01&amp;searchOpertnTy=S">토픽 말하기평가</a>
+								
+										
+				
+			</div>
+			
+			<table class="basic_table table_list">
+				<caption>시험일정 안내 표로 구분, 회차, 점수기간(대한민국), 시험일, 시험수준, 접수, 성적발표일 정보 제공</caption>
+        		<colgroup>
+		        <col width="90px">
+		        <col width="85px">
+		        <col width="220px">
+		        <col width="110px">
+				<col width="105px">
+				<col width="110px">
+		        <col width="100px">
+		        <col width="116px">
+		        <col width="*">
+		        </colgroup>
+        		<thead>
+		          <tr>
+		            <th rowspan="2">구분</th>
+		            <th rowspan="2">회차</th>
+		            <th rowspan="2">접수기간 (대한민국)</th>
+		            <th colspan="3">시험일</th>
+		            <th rowspan="2">시험구분</th>
+		            <th rowspan="2">접수</th>
+		            <th rowspan="2">성적발표일</th>
+		          </tr>
+		          <tr>
+		            <th>한국</th>
+		            <th>미주·유럽·아프리카·오세아니아</th>
+		            <th class="th_r">아시아</th>
+		          </tr>
+        		</thead>
+		        <tbody>
+	        		
+			 			
+					          <tr>
+								
+									
+
+									
+										<td>토픽 IBT</td>
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제16회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.09.15
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.09.21
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+											<span class="badge">접수예정</span>
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												11.28
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(토)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		    -
+							            		
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+											
+												
+												
+													
+														
+													
+													
+														11.28
+														<!--  나중에 비교용 -->
+													
+								               		
+										               	
+															
+														
+														
+															(토)
+															<!--  나중에 비교용 -->
+														
+													
+																	            	
+							            	
+										
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+										<td><span class="btns btns_s btns_plan cursor_no">접수예정</span></td>
+									
+									
+									
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												12.18
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(금)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+										<td>토픽 PBT</td>
+									
+
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제109회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.09.01
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.09.07
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+											<span class="badge">접수예정</span>
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												11.15
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(일)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		    -
+							            		
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+											
+												
+												
+													
+														
+													
+													
+														11.15
+														<!--  나중에 비교용 -->
+													
+								               		
+										               	
+															
+														
+														
+															(일)
+															<!--  나중에 비교용 -->
+														
+													
+																	            	
+							            	
+										
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+										<td><span class="btns btns_s btns_plan cursor_no">접수예정</span></td>
+									
+									
+									
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												12.22
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(화)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+
+									
+										<td>토픽 IBT</td>
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제15회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.08.18
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.08.24
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+											<span class="badge">접수예정</span>
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												10.24
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(토)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		    -
+							            		
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+											
+												
+												
+													
+														
+													
+													
+														10.24
+														<!--  나중에 비교용 -->
+													
+								               		
+										               	
+															
+														
+														
+															(토)
+															<!--  나중에 비교용 -->
+														
+													
+																	            	
+							            	
+										
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+										<td><span class="btns btns_s btns_plan cursor_no">접수예정</span></td>
+									
+									
+									
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												11.13
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(금)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+
+									
+
+									
+										<td>토픽 <br>말하기평가</td>
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제12회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.08.18
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.08.24
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+											<span class="badge">접수예정</span>
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												10.24
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(토)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+					            		
+					            			-
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+					            		
+					            			-
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     말하기 평가<br>
+									
+					            </td>
+								
+									
+										<td><span class="btns btns_s btns_plan cursor_no">접수예정</span></td>
+									
+									
+									
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												11.16
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(월)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+										<td>토픽 PBT</td>
+									
+
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제108회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.08.04
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.08.10
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+											<span class="badge">접수예정</span>
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												10.18
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(일)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		
+								            		
+														
+													
+													
+														10.17
+														<!--  나중에 비교용 -->
+													
+								           		 	
+										               
+															
+														
+														
+															(토)
+															<!--  나중에 비교용 -->
+														
+													 
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+											
+												
+												
+													
+														
+													
+													
+														10.18
+														<!--  나중에 비교용 -->
+													
+								               		
+										               	
+															
+														
+														
+															(일)
+															<!--  나중에 비교용 -->
+														
+													
+																	            	
+							            	
+										
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+										<td><span class="btns btns_s btns_plan cursor_no">접수예정</span></td>
+									
+									
+									
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												12.10
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(목)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+
+									
+										<td>토픽 IBT</td>
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제14회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.07.07
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.07.13
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+											<span class="badge">접수예정</span>
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												09.12
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(토)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		    -
+							            		
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+											
+												
+												
+													
+														
+													
+													
+														09.12
+														<!--  나중에 비교용 -->
+													
+								               		
+										               	
+															
+														
+														
+															(토)
+															<!--  나중에 비교용 -->
+														
+													
+																	            	
+							            	
+										
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+										<td><span class="btns btns_s btns_plan cursor_no">접수예정</span></td>
+									
+									
+									
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												10.02
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(금)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+										<td>토픽 PBT</td>
+									
+
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제107회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.05.12
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.05.18
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+											<span class="badge">접수예정</span>
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												07.05
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(일)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		
+								            		
+														
+													
+													
+														07.04
+														<!--  나중에 비교용 -->
+													
+								           		 	
+										               
+															
+														
+														
+															(토)
+															<!--  나중에 비교용 -->
+														
+													 
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+											
+												
+												
+													
+														
+													
+													
+														07.05
+														<!--  나중에 비교용 -->
+													
+								               		
+										               	
+															
+														
+														
+															(일)
+															<!--  나중에 비교용 -->
+														
+													
+																	            	
+							            	
+										
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+										<td><span class="btns btns_s btns_plan cursor_no">접수예정</span></td>
+									
+									
+									
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												08.13
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(목)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+
+									
+										<td>토픽 IBT</td>
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제13회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.04.07
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.04.13
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+											<span class="badge">접수예정</span>
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												06.13
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(토)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		    -
+							            		
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+											
+												
+												
+													
+														
+													
+													
+														06.13
+														<!--  나중에 비교용 -->
+													
+								               		
+										               	
+															
+														
+														
+															(토)
+															<!--  나중에 비교용 -->
+														
+													
+																	            	
+							            	
+										
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+										<td><span class="btns btns_s btns_plan cursor_no">접수예정</span></td>
+									
+									
+									
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												07.03
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(금)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+
+									
+
+									
+										<td>토픽 <br>말하기평가</td>
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제11회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.04.07
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.04.13
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+											<span class="badge">접수예정</span>
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												06.13
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(토)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+					            		
+					            			-
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+					            		
+					            			-
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     말하기 평가<br>
+									
+					            </td>
+								
+									
+										<td><span class="btns btns_s btns_plan cursor_no">접수예정</span></td>
+									
+									
+									
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												07.06
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(월)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+										<td>토픽 PBT</td>
+									
+
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제106회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.03.10
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.03.16
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+										
+										
+									
+					                </div>
+					                
+										<div class="badge_box">
+					            			<a href="/TWINFO/TWINFO0011.do?bbsId=BBSMSTR00076&amp;nttId=134595&amp;nttClCode1=ALL&amp;pageIndex=1">
+					            			
+						            			
+						            			<span class="badge badge_new">
+						            			국외 접수 안내 바로가기
+						            			</span>
+						            			
+						            			
+					            			
+					            			</a>
+					            		</div>
+					            	
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												05.17
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(일)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		    -
+							            		
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+											
+												
+												
+													
+														
+													
+													
+														05.17
+														<!--  나중에 비교용 -->
+													
+								               		
+										               	
+															
+														
+														
+															(일)
+															<!--  나중에 비교용 -->
+														
+													
+																	            	
+							            	
+										
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+									
+									
+									
+										<td><a span="" class="btns btns_s btns_no cursor_no">접수마감</a></td>
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												06.25
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(목)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+										<td>토픽 PBT</td>
+									
+
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제105회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.01.27
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.02.02
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+										
+										
+									
+					                </div>
+					                
+										<div class="badge_box">
+					            			<a href="/TWINFO/TWINFO0011.do?bbsId=BBSMSTR00076&amp;nttId=134199&amp;nttClCode1=ALL&amp;pageIndex=1">
+					            			
+						            			
+						            			<span class="badge badge_new">
+						            			국외 접수 안내 바로가기
+						            			</span>
+						            			
+						            			
+					            			
+					            			</a>
+					            		</div>
+					            	
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												04.12
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(일)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		
+								            		
+														
+													
+													
+														04.11
+														<!--  나중에 비교용 -->
+													
+								           		 	
+										               
+															
+														
+														
+															(토)
+															<!--  나중에 비교용 -->
+														
+													 
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+											
+												
+												
+													
+														
+													
+													
+														04.12
+														<!--  나중에 비교용 -->
+													
+								               		
+										               	
+															
+														
+														
+															(일)
+															<!--  나중에 비교용 -->
+														
+													
+																	            	
+							            	
+										
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+									
+									
+									
+										<td><a span="" class="btns btns_s btns_no cursor_no">접수마감</a></td>
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												05.29
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(금)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+
+									
+										<td>토픽 IBT</td>
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제12회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.01.13
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.01.19
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+										
+										
+									
+					                </div>
+					                
+										<div class="badge_box">
+					            			<a href="/TWINFO/TWINFO0011.do?bbsId=BBSMSTR00076&amp;nttId=134458&amp;nttClCode1=ALL&amp;pageIndex=1">
+					            			
+						            			
+						            			
+						            			<span class="badge badge_newIbt">
+						            			(IBT)국외 접수 안내 바로가기
+						            			</span>
+						            			
+					            			
+					            			</a>
+					            		</div>
+					            	
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												03.21
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(토)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		    -
+							            		
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+											
+												
+												
+													
+														
+													
+													
+														03.21
+														<!--  나중에 비교용 -->
+													
+								               		
+										               	
+															
+														
+														
+															(토)
+															<!--  나중에 비교용 -->
+														
+													
+																	            	
+							            	
+										
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+									
+									
+									
+										<td><a span="" class="btns btns_s btns_no cursor_no">접수마감</a></td>
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												04.10
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(금)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+
+									
+
+									
+										<td>토픽 <br>말하기평가</td>
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제10회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2026.01.13
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2026.01.19
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												03.21
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(토)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+					            		
+					            			-
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					            
+					            
+					            	
+										
+					            		
+					            			-
+					            		
+					            	
+					            	
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     말하기 평가<br>
+									
+					            </td>
+								
+									
+									
+									
+									
+										<td><a span="" class="btns btns_s btns_no cursor_no">접수마감</a></td>
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												04.13
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(월)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+
+									
+										<td>토픽 IBT</td>
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제11회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2025.12.16
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2025.12.22
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												02.28
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(토)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		    -
+							            		
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					                -   
+					            
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+									
+									
+									
+										<td><a span="" class="btns btns_s btns_no cursor_no">접수마감</a></td>
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												03.20
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(금)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:00
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+					          <tr>
+								
+									
+										<td>토픽 PBT</td>
+									
+
+									
+
+									
+								
+								
+									
+					            	
+					            	
+					            		<td>제104회</td>
+					            	
+					            
+					            <td>
+					            	<div>
+					            	
+										
+									
+									
+										2025.12.09
+									
+									
+									
+										
+									
+									
+										(화)
+									
+					                ~
+					                
+										
+									
+									
+										2025.12.15
+									
+									
+						            
+										
+									
+									
+										(월)
+									
+					                </div>
+					                
+					                <div class="badge_box hide-on-mobile">
+									
+										
+										
+										
+									
+					                </div>
+					                
+					                
+					                
+					                
+					                
+					                <!-- 20240328 기준 토픽마당 공지사항 링크   -->
+					                
+					                <!-- 20240116 기준 토픽마당 공지사항 링크   -->
+					                
+					            	
+					            </td>
+					            <td>
+								
+					            		
+					            		
+							            	
+												
+											
+											
+												01.11
+												<!--  나중에 비교용 -->
+											
+											
+								             	
+													
+												
+												
+													(일)
+													<!--  나중에 비교용 -->
+												
+							                
+					            		
+					                         
+					            </td>
+					            <!-- IBT4회 미주 일정 DB 입력없이 임시로 입력 (요청게시판) -->
+					            <td>
+					            	
+										
+							            	
+							            	    
+							            	    
+							            		
+							            		    -
+							            		
+							            		
+							            	
+					            		
+					            		
+					            			
+					            </td>
+					            <!-- 시험일(아시아) -->
+					            <td>
+					            <!-- IBT시범시행 5,6회는 국외시행만 있어서 시험일 없애기 -->
+					            <!-- IBT 2,3,4회 아시아 시험일 제거요청(임성규) -->
+					            <!-- PBT98회 아시아 시험일 임시로 없애기 -->
+					            <!-- PBT103회 아시아 시험일 임시로 없애기 -->
+					            
+					            
+					                -   
+					            
+					            
+					            
+					            </td>
+					            <td>
+									
+									
+									     TOPIK Ⅰ<br>
+									
+									     TOPIK Ⅱ<br>
+									
+					            </td>
+								
+									
+									
+									
+									
+										<td><a span="" class="btns btns_s btns_no cursor_no">접수마감</a></td>
+									
+								
+					            <td>
+					            	
+					            		
+					            		
+							            	
+												
+											
+											
+												02.12
+												<!--  나중에 비교용 -->
+											
+											
+											
+												
+											
+											
+												(목)
+												<!--  나중에 비교용 -->
+											
+											
+												
+											
+											
+												15:45
+												<!--  나중에 비교용 -->
+											
+					            		
+					            	
+					            </td>
+					          </tr>
+			       		
+              		
+		              
+		        </tbody>
+      	</table>
+	      <div class="comment">
+	        <ul class="com">
+	          <li><b style="color : blue;">해외 지역의 경우, 상기 한국 접수 날짜와 다를 수 있으므로 해당 현지 접수기관으로 확인 필요함</b></li>
+	          <li><b style="color : blue;">시험 결과는 성적 발표일 15:00에 TOPIK 홈페이지(www.topik.go.kr)를 통해 발표됨</b></li>
+	          <li>결과 발표일은 사정에 따라 변동될 수 있음</li>
+	        </ul>
+	      </div>
+ 	 </div>
+</div>
+
+	</div></form>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer">
+	<div class="footer_menu">
+		<div class="inner">
+			<a href="http://www.niied.go.kr/user/nd52026.do" class="menu point" style="color: #0000cf;" title="개인정보처리방침" target="_blank">개인정보처리방침</a>
+			<a href="/TWETCS/TWETCS0020.do" class="menu" title="이용약관">이용약관</a>
+			<a href="/TWETCS/TWETCS0030.do" class="menu" title="이메일수집거부">이메일수집거부</a>
+			<a href="/TWETCS/TWETCS0040.do" class="menu" title="찾아오시는길">찾아오시는길</a>
+<!-- 			<a href="https://www.topik.go.kr/" class="menu mobile_view" title="PC 버전">PC 버전</a> -->
+		</div>
+	</div>
+    <div class="inner">
+    	<div class="footer_logo">
+    		<span class="sr_only">
+    			TOPCIT 한국어능력시험
+    		</span>
+    	</div>
+    	<div class="address">
+    	<div class="mobile_view address_title" onclick="address_view()">
+    		국립국제교육원 한국어능력시험 정보
+    		<span class="up"></span>
+    	</div>
+    	<div class="address_detail">
+    	13557 경기도 성남시 분당구 정자일로 191<br>
+		#191 Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi, Republic of Korea, 13557<br>
+		대표전화(Tel.): <a href="tel:02-3668-1331">02-3668-1331</a> 팩스(FAX):02-741-7408<br>
+		이메일(Email): (토픽 PBT) topik@korea.kr (토픽 IBT) itopik@korea.kr
+		</div>
+		<div class="copyright">
+			Copyright 2021NIIED. All Rights Reserved
+    	</div>
+        </div>  
+        <div class="footer_tool">
+        	<a href="http://as82.kr/topik/" target="_blank" class="romote_btn" title="원격지원 새창">
+        		원격지원
+        	</a>
+			  <div class="input-field form_inline">
+			  	<label for="dynamic_select" class="sr_only">관련 사이트</label>
+			    <select class="line_select" id="dynamic_select" title="관련 사이트">
+			      <option value="" disabled="" selected="">관련 사이트</option>
+			      <option value="http://www.moe.go.kr">Ministry of Education</option>
+			      <option value="http://www.studyinkorea.go.kr">StudyInKOREA</option>
+			      <option value="https://topik.neea.cn">중국 교육부고시중심 접수 홈페이지</option>
+			      <option value="https://www.kref.or.jp">일본 한국교육재단 접수 홈페이지</option>
+			    </select>
+			    <label>관련 사이트</label>
+			  </div> 
+			  <a href="#none" id="btnLocationSite" class="btns move_btn" target="_blank" title="이동 새창">이동</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+	
+jQuery(document).ready(function(){
+    // bind change event to select
+    jQuery('#btnLocationSite').on('click', function () {
+        var url = jQuery("#dynamic_select").val(); // get selected value      
+        if (url) { // require a URL
+        	 window.open(url, "_blank");  
+        }
+        return false;
+    });
+  });
+	
+	/*
+	function fnNotToday() {
+		var notToday =  fnGetCookie("notToday");
+		//alert(notToday);
+		if(notToday != ""){
+			fnComPwdExpireCommon('/TWMYPG/pop/TWMYPG0135.do','ifPwdExpire');
+		}
+		return;
+	}
+	*/
+	
+	
+	
+	//모달 공통
+	/*
+	function fnComPwdExpireCommon(src,id){
+		var ifHtml = '<iframe src="'+src+'" id="'+id+'" name="'+id+'" scrolling=\"no\"  class=\"full_layer_if\"" allowTransparency=\"true\"><p>현재 사용 중인 브라우저는 iframe 요소를 지원하지 않습니다!</p></iframe>';
+		jQuery("body").append(ifHtml);		
+			  
+	}
+	*/
+	
+</script>
+
+ 
+
+
+
+
+</div>
