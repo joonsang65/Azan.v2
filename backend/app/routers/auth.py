@@ -156,6 +156,30 @@ def me(user_uuid: UUIDType = Depends(_parse_user_id), db: Session = Depends(get_
     return {"id": str(current_user.id), "email": current_user.email, "full_name": current_user.full_name}
 
 
+class UpdateMeRequest(BaseModel):
+    full_name: Optional[str] = None
+
+
+@router.put("/me")
+# 입력: UpdateMeRequest, 인증된 사용자 UUID, DB 세션
+# 출력: dict (업데이트된 사용자 정보)
+def update_me(
+    body: UpdateMeRequest,
+    user_uuid: UUIDType = Depends(_parse_user_id),
+    db: Session = Depends(get_db),
+):
+    current_user = db.get(User, user_uuid)
+    if current_user is None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
+    
+    if body.full_name is not None:
+        current_user.full_name = body.full_name.strip()
+    
+    db.commit()
+    db.refresh(current_user)
+    return {"id": str(current_user.id), "email": current_user.email, "full_name": current_user.full_name}
+
+
 class PushTokenRequest(BaseModel):
     token: str
 
