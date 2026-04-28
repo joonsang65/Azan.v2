@@ -1,6 +1,6 @@
 # 파일 기능: 회원가입/로그인/JWT 인증 및 내 정보 조회 API를 제공한다.
 import os
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone, date
 from typing import Optional
 from uuid import UUID as UUIDType
 
@@ -146,6 +146,27 @@ def login(body: LoginRequest, db: Session = Depends(get_db)):
     return {"access_token": access_token, "token_type": "bearer"}
 
 
+def _user_to_dict(user: User) -> dict:
+    return {
+        "id": str(user.id),
+        "email": user.email,
+        "full_name": user.full_name,
+        "language_institute_status": user.language_institute_status,
+        "language_institute_term": user.language_institute_term,
+        "target_admission_term": user.target_admission_term,
+        "desired_major": user.desired_major,
+        "visa_type": user.visa_type,
+        "visa_expiry_date": user.visa_expiry_date.isoformat() if user.visa_expiry_date else None,
+        "visa_expiry_unknown": user.visa_expiry_unknown,
+        "topik_status": user.topik_status,
+        "topik_level": user.topik_level,
+        "topik_target_level": user.topik_target_level,
+        "topik_test_plan": user.topik_test_plan,
+        "preferred_language": user.preferred_language,
+        "residence_type": user.residence_type,
+    }
+
+
 @router.get("/me")
 # 입력: 인증된 사용자 UUID, DB 세션
 # 출력: dict (사용자 정보)
@@ -153,11 +174,24 @@ def me(user_uuid: UUIDType = Depends(_parse_user_id), db: Session = Depends(get_
     current_user = db.get(User, user_uuid)
     if current_user is None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
-    return {"id": str(current_user.id), "email": current_user.email, "full_name": current_user.full_name}
+    return _user_to_dict(current_user)
 
 
 class UpdateMeRequest(BaseModel):
     full_name: Optional[str] = None
+    language_institute_status: Optional[str] = None
+    language_institute_term: Optional[str] = None
+    target_admission_term: Optional[str] = None
+    desired_major: Optional[str] = None
+    visa_type: Optional[str] = None
+    visa_expiry_date: Optional[date] = None
+    visa_expiry_unknown: Optional[bool] = None
+    topik_status: Optional[str] = None
+    topik_level: Optional[str] = None
+    topik_target_level: Optional[str] = None
+    topik_test_plan: Optional[str] = None
+    preferred_language: Optional[str] = None
+    residence_type: Optional[str] = None
 
 
 @router.put("/me")
@@ -172,12 +206,17 @@ def update_me(
     if current_user is None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
     
-    if body.full_name is not None:
-        current_user.full_name = body.full_name.strip()
+    # 전달받은 필드가 있을 경우에만 업데이트
+    update_data = body.model_dump(exclude_unset=True)
+    for key, value in update_data.items():
+        if key == "full_name":
+            current_user.full_name = (value or "").strip()
+        else:
+            setattr(current_user, key, value)
     
     db.commit()
     db.refresh(current_user)
-    return {"id": str(current_user.id), "email": current_user.email, "full_name": current_user.full_name}
+    return _user_to_dict(current_user)
 
 
 class PushTokenRequest(BaseModel):

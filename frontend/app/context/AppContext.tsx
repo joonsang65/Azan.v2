@@ -52,11 +52,28 @@ export function AppProvider({ children }: { children: ReactNode }) {
       try {
         const me = await authService.getMe();
         if (me) {
-          setUserProfileStatus(prev => ({
-            ...prev,
+          const profileData: UserProfileStatus = {
+            ...initialUserProfileStatus,
             name: me.full_name,
-            email: me.email
-          }));
+            email: me.email,
+            // 백엔드 필드가 있을 경우 덮어씌우기
+            languageInstituteStatus: (me as any).language_institute_status || initialUserProfileStatus.languageInstituteStatus,
+            languageInstituteTerm: (me as any).language_institute_term || initialUserProfileStatus.languageInstituteTerm,
+            targetAdmissionTerm: (me as any).target_admission_term || initialUserProfileStatus.targetAdmissionTerm,
+            desiredMajor: (me as any).desired_major || initialUserProfileStatus.desiredMajor,
+            visaType: (me as any).visa_type || initialUserProfileStatus.visaType,
+            visaExpiryDate: (me as any).visa_expiry_date || initialUserProfileStatus.visaExpiryDate,
+            visaExpiryUnknown: (me as any).visa_expiry_unknown ?? initialUserProfileStatus.visaExpiryUnknown,
+            topikStatus: (me as any).topik_status || initialUserProfileStatus.topikStatus,
+            topikLevel: (me as any).topik_level || initialUserProfileStatus.topikLevel,
+            topikTargetLevel: (me as any).topik_target_level || initialUserProfileStatus.topikTargetLevel,
+            topikTestPlan: (me as any).topik_test_plan || initialUserProfileStatus.topikTestPlan,
+            preferredLanguage: (me as any).preferred_language || initialUserProfileStatus.preferredLanguage,
+            residenceType: (me as any).residence_type || initialUserProfileStatus.residenceType,
+          };
+
+          setUserProfileStatus(profileData);
+          setSelectedLanguage(profileData.preferredLanguage);
           
           // 사용자의 구독 키워드 가져오기
           const myKeys = await keywordService.getMyKeywords();

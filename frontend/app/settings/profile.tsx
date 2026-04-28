@@ -81,6 +81,12 @@ export default function ProfileScreen() {
 
   const [step, setStep] = useState<1 | 2>(1);
   const [form, setForm] = useState<UserProfileStatus>(userProfileStatus);
+
+  // 전역 상태가 변경되면 로컬 폼 상태 업데이트 (초기 로드 대응)
+  useMemo(() => {
+    setForm(userProfileStatus);
+  }, [userProfileStatus]);
+
   const [calendarMonth, setCalendarMonth] = useState(() =>
     getInitialCalendarMonth(userProfileStatus.visaExpiryDate)
   );
@@ -141,7 +147,7 @@ export default function ProfileScreen() {
 
   const handleSave = async () => {
     try {
-      await authService.updateMe(form.name);
+      await authService.updateMe(form);
       setUserProfileStatus(form);
       setSelectedLanguage(form.preferredLanguage);
       Alert.alert("성공", "프로필이 저장되었습니다.");
