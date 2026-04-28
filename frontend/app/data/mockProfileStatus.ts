@@ -17,6 +17,6 @@ export const mockProfileStatus: UserProfileStatus = {
   topikTargetLevel: 'Level 4',
   topikTestPlan: 'Scheduled',
   interests: ['Visa', 'TOPIK', 'Scholarship'],
-  preferredLanguage: 'English',
+  preferredLanguage: 'Korean',
   residenceType: 'Dormitory',
 };

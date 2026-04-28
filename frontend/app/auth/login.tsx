@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Alert,
-  Image,
   StyleSheet,
   Text,
   TextInput,
@@ -59,7 +58,7 @@ export default function LoginScreen() {
           <Text style={styles.buttonText}>{loading ? "Logging in..." : "Login"}</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => router.push("/auth/signup")}>
-          <Text style={styles.linkText}>Don't have an account? Sign up</Text>
+          <Text style={styles.linkText}>{"Don't have an account? Sign up"}</Text>
         </TouchableOpacity>
       </View>
     </View>

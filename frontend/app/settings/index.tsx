@@ -1,51 +1,61 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
-import { StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useAppContext } from '../context/AppContext';
+import { t } from '../i18n';
 import { authService } from '../services/auth';
 
 export default function SettingsScreen() {
   const router = useRouter();
+  const { selectedLanguage } = useAppContext();
 
   const handleLogout = () => {
-    Alert.alert("Logout", "Are you sure you want to logout?", [
-      { text: "Cancel", style: "cancel" },
-      { 
-        text: "Logout", 
-        style: "destructive",
-        onPress: async () => {
-          await authService.logout();
-          router.replace("/auth/login");
-        }
-      }
-    ]);
+    Alert.alert(
+      t(selectedLanguage, 'settings.logout.alertTitle'),
+      t(selectedLanguage, 'settings.logout.alertMessage'),
+      [
+        {
+          text: t(selectedLanguage, 'settings.logout.cancel'),
+          style: 'cancel',
+        },
+        {
+          text: t(selectedLanguage, 'settings.logout.title'),
+          style: 'destructive',
+          onPress: async () => {
+            await authService.logout();
+            router.replace('/auth/login');
+          },
+        },
+      ]
+    );
   };
 
   const menuItems = [
     {
       id: 'profile',
-      title: '내 프로필',
-      subtitle: '학적 및 개인 정보를 확인하고 수정해요',
+      title: t(selectedLanguage, 'settings.profile.title'),
+      subtitle: t(selectedLanguage, 'settings.profile.subtitle'),
       icon: 'person-outline',
       onPress: () => router.push('/settings/profile'),
     },
     {
       id: 'language',
-      title: '언어',
-      subtitle: '앱에서 사용할 언어를 선택해요',
+      title: t(selectedLanguage, 'settings.language.title'),
+      subtitle: t(selectedLanguage, 'settings.language.subtitle'),
       icon: 'language-outline',
       onPress: () => router.push('/settings/language'),
     },
     {
       id: 'notification',
-      title: '알림 설정',
-      subtitle: '중요 카테고리와 알림 빈도를 관리해요',
+      title: t(selectedLanguage, 'settings.notifications.title'),
+      subtitle: t(selectedLanguage, 'settings.notifications.subtitle'),
       icon: 'notifications-outline',
       onPress: () => router.push('/settings/notification-settings'),
     },
     {
       id: 'logout',
-      title: '로그아웃',
-      subtitle: '앱에서 로그아웃해요',
+      title: t(selectedLanguage, 'settings.logout.title'),
+      subtitle: t(selectedLanguage, 'settings.logout.subtitle'),
       icon: 'log-out-outline',
       onPress: handleLogout,
     },
@@ -53,9 +63,9 @@ export default function SettingsScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.headerTitle}>설정</Text>
+      <Text style={styles.headerTitle}>{t(selectedLanguage, 'settings.title')}</Text>
       <Text style={styles.headerSubtitle}>
-        프로필, 언어, 알림 설정을 관리해보세요
+        {t(selectedLanguage, 'settings.subtitle')}
       </Text>
 
       <View style={styles.menuContainer}>

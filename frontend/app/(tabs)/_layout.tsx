@@ -4,10 +4,13 @@ import React, { useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import SideMenu from '../components/common/SideMenu';
+import { useAppContext } from '../context/AppContext';
+import { t } from '../i18n';
 
 export default function TabsLayout() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { selectedLanguage } = useAppContext();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -74,7 +77,7 @@ export default function TabsLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: '홈',
+            title: t(selectedLanguage, 'tabs.home'),
             headerTitle: 'Ajou International',
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="home-outline" size={size} color={color} />
@@ -85,8 +88,8 @@ export default function TabsLayout() {
         <Tabs.Screen
           name="chat"
           options={{
-            title: '채팅',
-            headerTitle: '챗봇 상담',
+            title: t(selectedLanguage, 'tabs.chat'),
+            headerTitle: t(selectedLanguage, 'headers.chat'),
             tabBarIcon: ({ color, size }) => (
               <Ionicons
                 name="chatbubble-ellipses-outline"
@@ -100,8 +103,8 @@ export default function TabsLayout() {
         <Tabs.Screen
           name="notices"
           options={{
-            title: '공지',
-            headerTitle: '공지사항',
+            title: t(selectedLanguage, 'tabs.notices'),
+            headerTitle: t(selectedLanguage, 'headers.notices'),
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="document-text-outline" size={size} color={color} />
             ),
@@ -111,8 +114,8 @@ export default function TabsLayout() {
         <Tabs.Screen
           name="calendar"
           options={{
-            title: '캘린더',
-            headerTitle: '캘린더',
+            title: t(selectedLanguage, 'tabs.calendar'),
+            headerTitle: t(selectedLanguage, 'headers.calendar'),
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="calendar-outline" size={size} color={color} />
             ),

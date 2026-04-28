@@ -1,6 +1,7 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useAppContext } from '../context/AppContext';
+import { t } from '../i18n';
 import type { LanguageOption } from '../types';
 
 export default function LanguageSettingsScreen() {
@@ -10,7 +11,7 @@ export default function LanguageSettingsScreen() {
     setUserProfileStatus,
   } = useAppContext();
 
-  const languageOptions: LanguageOption[] = ['English', 'Korean'];
+  const languageOptions: LanguageOption[] = ['Korean', 'English'];
 
   const handleSelectLanguage = (language: LanguageOption) => {
     setSelectedLanguage(language);
@@ -22,14 +23,24 @@ export default function LanguageSettingsScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.headerTitle}>언어 설정</Text>
+      <Text style={styles.headerTitle}>
+        {t(selectedLanguage, 'settings.language.screenTitle')}
+      </Text>
       <Text style={styles.headerSubtitle}>
-        앱에서 사용할 언어를 선택해보세요
+        {t(selectedLanguage, 'settings.language.screenSubtitle')}
       </Text>
 
       <View style={styles.card}>
         {languageOptions.map((language) => {
           const isSelected = selectedLanguage === language;
+          const languageTitle =
+            language === 'Korean'
+              ? t(selectedLanguage, 'settings.language.korean')
+              : t(selectedLanguage, 'settings.language.english');
+          const languageSubtitle =
+            language === 'Korean'
+              ? t(selectedLanguage, 'settings.language.koreanSubtitle')
+              : t(selectedLanguage, 'settings.language.englishSubtitle');
 
           return (
             <TouchableOpacity
@@ -48,13 +59,9 @@ export default function LanguageSettingsScreen() {
                     isSelected && styles.selectedOptionTitle,
                   ]}
                 >
-                  {language === 'English' ? '영어' : '한국어'}
+                  {languageTitle}
                 </Text>
-                <Text style={styles.optionSubtitle}>
-                  {language === 'English'
-                    ? '앱 화면을 영어로 표시합니다.'
-                    : '앱 화면을 한국어로 표시합니다.'}
-                </Text>
+                <Text style={styles.optionSubtitle}>{languageSubtitle}</Text>
               </View>
 
               <View style={styles.iconSection}>
@@ -70,9 +77,13 @@ export default function LanguageSettingsScreen() {
       </View>
 
       <View style={styles.infoBox}>
-        <Text style={styles.infoTitle}>현재 언어</Text>
+        <Text style={styles.infoTitle}>
+          {t(selectedLanguage, 'settings.language.current')}
+        </Text>
         <Text style={styles.infoText}>
-          {selectedLanguage === 'English' ? '영어' : '한국어'}
+          {selectedLanguage === 'Korean'
+            ? t(selectedLanguage, 'settings.language.korean')
+            : t(selectedLanguage, 'settings.language.english')}
         </Text>
       </View>
     </View>

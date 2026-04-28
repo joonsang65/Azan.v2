@@ -28,7 +28,7 @@ const initialUserProfileStatus: UserProfileStatus = {
   topikTargetLevel: 'Level 4',
   topikTestPlan: 'Scheduled',
   interests: [],
-  preferredLanguage: 'English',
+  preferredLanguage: 'Korean',
   residenceType: 'Dormitory',
 };
 
@@ -36,7 +36,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [userProfileStatus, setUserProfileStatus] = useState<UserProfileStatus>(initialUserProfileStatus);
-  const [selectedLanguage, setSelectedLanguage] = useState<LanguageOption>('English');
+  const [selectedLanguage, setSelectedLanguage] = useState<LanguageOption>('Korean');
   const [selectedNoticeCategories, setSelectedNoticeCategories] = useState<NoticeCategory[]>([]);
   const [notificationFrequency, setNotificationFrequency] = useState<NotificationFrequency>('Medium');
   
@@ -81,7 +81,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
             setSelectedNoticeCategories(myKeys.enabled.map(id => mapIdToCategory(id)));
           }
         }
-      } catch (e) {
+      } catch {
         console.log("Session init failed or no user logged in");
       }
     }
@@ -103,14 +103,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }
 
   // 알림 토큰 업데이트 (로그인 후 호출 권장)
-  async function syncPushToken(token: string) {
-    try {
-      await authService.updatePushToken(token);
-    } catch (e) {
-      console.error("Failed to sync push token");
-    }
-  }
-
   // 키워드 업데이트 연동
   async function updateCategories(categoriesOrUpdater: NoticeCategory[] | ((prev: NoticeCategory[]) => NoticeCategory[])) {
     let nextCategories: NoticeCategory[];
@@ -127,7 +119,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         .filter(k => nextCategories.includes(k.keyword as NoticeCategory))
         .map(k => k.id);
       await keywordService.updateMyKeywords(enabledIds);
-    } catch (e) {
+    } catch {
       console.error("Failed to update keywords on server");
     }
   }

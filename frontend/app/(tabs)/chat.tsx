@@ -1,6 +1,15 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import React, { useState, useRef } from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, ActivityIndicator } from 'react-native';
+import React, { useEffect, useState, useRef } from 'react';
+import {
+  ActivityIndicator,
+  Keyboard,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { chatbotService } from '../services/chatbot';
 
@@ -23,7 +32,26 @@ export default function ChatScreen() {
   ]);
   const [inputText, setInputText] = useState('');
   const [loading, setLoading] = useState(false);
+  const [keyboardHeight, setKeyboardHeight] = useState(0);
   const scrollViewRef = useRef<ScrollView>(null);
+  const inputBottom = keyboardHeight > 0 ? keyboardHeight : 64 + insets.bottom;
+
+  useEffect(() => {
+    const showSubscription = Keyboard.addListener('keyboardDidShow', (event) => {
+      setKeyboardHeight(event.endCoordinates.height);
+      requestAnimationFrame(() => {
+        scrollViewRef.current?.scrollToEnd({ animated: true });
+      });
+    });
+    const hideSubscription = Keyboard.addListener('keyboardDidHide', () => {
+      setKeyboardHeight(0);
+    });
+
+    return () => {
+      showSubscription.remove();
+      hideSubscription.remove();
+    };
+  }, []);
 
   const handleSend = async (text: string = inputText) => {
     if (!text.trim() || loading) return;
@@ -48,7 +76,7 @@ export default function ChatScreen() {
         time: '방금',
       };
       setMessages((prev) => [...prev, botMsg]);
-    } catch (error) {
+    } catch {
       const errorMsg: Message = {
         id: (Date.now() + 1).toString(),
         text: '죄송합니다. 응답을 가져오는 중에 오류가 발생했습니다.',
@@ -69,7 +97,7 @@ export default function ChatScreen() {
         style={styles.messages}
         contentContainerStyle={[
           styles.content,
-          { paddingBottom: 100 + insets.bottom },
+          { paddingBottom: inputBottom + 84 },
         ]}
         showsVerticalScrollIndicator={false}
         onContentSizeChange={() => scrollViewRef.current?.scrollToEnd({ animated: true })}
@@ -109,13 +137,18 @@ export default function ChatScreen() {
         </View>
       </ScrollView>
 
-      <View style={[styles.inputBar, { bottom: 64 + insets.bottom }]}>
+      <View style={[styles.inputBar, { bottom: inputBottom }]}>
         <TextInput
           placeholder="질문을 입력하세요..."
           placeholderTextColor="#98A2B3"
           style={styles.input}
           value={inputText}
           onChangeText={setInputText}
+          onFocus={() =>
+            requestAnimationFrame(() => {
+              scrollViewRef.current?.scrollToEnd({ animated: true });
+            })
+          }
           onSubmitEditing={() => handleSend()}
         />
         <TouchableOpacity 
