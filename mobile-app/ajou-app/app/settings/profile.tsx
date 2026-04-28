@@ -1,6 +1,7 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useMemo, useState } from 'react';
 import {
+  Alert,
   ScrollView,
   StyleSheet,
   Text,
@@ -9,6 +10,7 @@ import {
   View,
 } from 'react-native';
 import { useAppContext } from '../context/AppContext';
+import { authService } from '../services/auth';
 import type {
   AjouAdmissionTarget,
   InterestCategory,
