@@ -11,25 +11,26 @@ class NoticeRow:
     source_notice_id: Optional[str]
     title: str
     body: str
-    published_at: Optional[str]
-    deadline_at: Optional[str]
-    dedupe_hash: str
-    is_processed: bool
-    is_embedded: bool
-    is_deleted: bool
-    created_at: str
-    updated_at: str
+    eng_body: Optional[str] = None
+    published_at: Optional[str] = None
+    deadline_at: Optional[str] = None
+    dedupe_hash: str = ""
+    is_processed: bool = False
+    is_embedded: bool = False
+    is_deleted: bool = False
+    created_at: str = ""
+    updated_at: str = ""
 
     # 정제 확장 컬럼
-    published_at_raw: Optional[str]
-    published_at_inferred: Optional[str]
-    published_at_final: Optional[str]
-    published_at_confidence: Optional[str]
-    notice_tag: Optional[str]
-    category_final: Optional[str]
-    category_reason: Optional[str]
-    deadline_text: Optional[str]
-    content_hash: Optional[str]
+    published_at_raw: Optional[str] = None
+    published_at_inferred: Optional[str] = None
+    published_at_final: Optional[str] = None
+    published_at_confidence: Optional[str] = None
+    notice_tag: Optional[str] = None
+    category_final: Optional[str] = None
+    category_reason: Optional[str] = None
+    deadline_text: Optional[str] = None
+    content_hash: Optional[str] = None
 
     def to_row(self) -> Dict[str, Any]:
         return {
@@ -40,6 +41,7 @@ class NoticeRow:
             "source_notice_id": self.source_notice_id,
             "title": self.title,
             "body": self.body,
+            "eng_body": self.eng_body,
             "published_at": self.published_at,
             "deadline_at": self.deadline_at,
             "dedupe_hash": self.dedupe_hash,
