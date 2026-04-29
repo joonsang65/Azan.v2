@@ -47,7 +47,7 @@ export default function SideMenu({ onClose }: SideMenuProps) {
             style={styles.menuItem}
             onPress={() => handlePress(item.key)}
           >
-            <Ionicons name={item.icon as any} size={22} color="#E85D4A" />
+            <Ionicons name={item.icon as any} size={22} color="#38BDF8" />
             <Text style={styles.menuText}>{t(selectedLanguage, item.labelKey)}</Text>
             <Ionicons name="chevron-forward-outline" size={18} color="#94A3B8" />
           </TouchableOpacity>

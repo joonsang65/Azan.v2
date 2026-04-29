@@ -24,11 +24,7 @@ export default function SettingsMenuItem({
     >
       <View style={styles.leftSection}>
         <View style={styles.iconBox}>
-          <Ionicons
-            name={icon}
-            size={22}
-            color={isDanger ? '#DC2626' : '#1E5AA8'}
-          />
+          <Ionicons name={icon} size={22} color="#005BAC" />
         </View>
 
         <View style={styles.textBox}>
@@ -62,7 +58,7 @@ const styles = StyleSheet.create({
     width: 42,
     height: 42,
     borderRadius: 12,
-    backgroundColor: '#FFF1EE',
+    backgroundColor: '#E0F7FF',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 14,
@@ -82,6 +78,6 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
   logoutText: {
-    color: '#DC2626',
+    color: '#005BAC',
   },
 });

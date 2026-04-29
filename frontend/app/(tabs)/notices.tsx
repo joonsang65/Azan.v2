@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   activeTab: {
-    backgroundColor: '#1E5AA8',
+    backgroundColor: '#005BAC',
   },
   tabText: {
     color: '#334155',
@@ -224,29 +224,29 @@ const styles = StyleSheet.create({
   category: {
     fontSize: 12,
     fontWeight: '700',
-    color: '#1E5AA8',
+    color: '#005BAC',
     marginRight: 12,
   },
   badge: {
-    backgroundColor: '#DBEAFE',
+    backgroundColor: '#DFF3FF',
     borderRadius: 999,
     paddingVertical: 4,
     paddingHorizontal: 10,
   },
   badgeText: {
     fontSize: 11,
-    color: '#1D4ED8',
+    color: '#005BAC',
     fontWeight: '700',
   },
   imageBadge: {
-    backgroundColor: '#DBEAFE',
+    backgroundColor: '#DFF3FF',
     borderRadius: 999,
     paddingVertical: 4,
     paddingHorizontal: 10,
   },
   imageBadgeText: {
     fontSize: 11,
-    color: '#1D4ED8',
+    color: '#005BAC',
     fontWeight: '700',
   },
   title: {
@@ -270,13 +270,13 @@ const styles = StyleSheet.create({
   },
   saveButton: {
     marginTop: 12,
-    backgroundColor: '#1E5AA8',
+    backgroundColor: '#005BAC',
     borderRadius: 10,
     paddingVertical: 12,
     alignItems: 'center',
   },
   savedButton: {
-    backgroundColor: '#2563EB',
+    backgroundColor: '#38BDF8',
   },
   saveButtonText: {
     color: '#FFFFFF',

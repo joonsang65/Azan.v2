@@ -47,7 +47,7 @@ export default function TabsLayout() {
               </Pressable>
             </View>
           ),
-          tabBarActiveTintColor: '#1E5AA8',
+          tabBarActiveTintColor: '#005BAC',
           tabBarInactiveTintColor: '#94A3B8',
           tabBarItemStyle: {
             paddingVertical: 4,

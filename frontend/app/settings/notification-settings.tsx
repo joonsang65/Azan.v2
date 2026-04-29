@@ -72,7 +72,7 @@ export default function NotificationSettingsScreen() {
                 </Text>
 
                 {isSelected ? (
-                  <Ionicons name="checkmark-circle" size={22} color="#1E5AA8" />
+                  <Ionicons name="checkmark-circle" size={22} color="#005BAC" />
                 ) : (
                   <Ionicons name="ellipse-outline" size={22} color="#CBD5E1" />
                 )}
@@ -181,8 +181,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   categoryItemSelected: {
-    backgroundColor: '#FFF7F5',
-    borderColor: '#F4B4AC',
+    backgroundColor: '#E0F7FF',
+    borderColor: '#38BDF8',
   },
   categoryText: {
     fontSize: 15,
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     color: '#0F172A',
   },
   categoryTextSelected: {
-    color: '#1E5AA8',
+    color: '#005BAC',
   },
   frequencyRow: {
     flexDirection: 'row',
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   frequencyButtonSelected: {
-    backgroundColor: '#1E5AA8',
+    backgroundColor: '#005BAC',
   },
   frequencyText: {
     fontSize: 14,

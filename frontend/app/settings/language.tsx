@@ -66,7 +66,7 @@ export default function LanguageSettingsScreen() {
 
               <View style={styles.iconSection}>
                 {isSelected ? (
-                  <Ionicons name="checkmark-circle" size={24} color="#1E5AA8" />
+                  <Ionicons name="checkmark-circle" size={24} color="#005BAC" />
                 ) : (
                   <Ionicons name="ellipse-outline" size={24} color="#CBD5E1" />
                 )}
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   selectedOptionRow: {
-    backgroundColor: '#FFF7F5',
+    backgroundColor: '#E0F7FF',
   },
   textSection: {
     flex: 1,
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   selectedOptionTitle: {
-    color: '#1E5AA8',
+    color: '#005BAC',
   },
   optionSubtitle: {
     fontSize: 13,

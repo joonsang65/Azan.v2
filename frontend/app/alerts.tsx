@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   chip: {
-    backgroundColor: '#FDE7E3',
+    backgroundColor: '#FFF4BF',
     paddingVertical: 8,
     paddingHorizontal: 12,
     borderRadius: 999,
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   chipText: {
-    color: '#B94E43',
+    color: '#8A6A00',
     fontSize: 13,
     fontWeight: '600',
   },
@@ -259,8 +259,8 @@ const styles = StyleSheet.create({
   },
   criticalCard: {
     borderWidth: 1,
-    borderColor: '#FCA5A5',
-    backgroundColor: '#FFF7F7',
+    borderColor: '#F3D76B',
+    backgroundColor: '#FFFBEA',
   },
   cardTopRow: {
     flexDirection: 'row',
@@ -276,28 +276,28 @@ const styles = StyleSheet.create({
   category: {
     fontSize: 12,
     fontWeight: '700',
-    color: '#1E5AA8',
+    color: '#005BAC',
   },
   badge: {
-    backgroundColor: '#DBEAFE',
+    backgroundColor: '#DFF3FF',
     borderRadius: 999,
     paddingVertical: 4,
     paddingHorizontal: 10,
   },
   badgeText: {
     fontSize: 11,
-    color: '#1D4ED8',
+    color: '#005BAC',
     fontWeight: '600',
   },
   imageBadge: {
-    backgroundColor: '#DBEAFE',
+    backgroundColor: '#DFF3FF',
     borderRadius: 999,
     paddingVertical: 4,
     paddingHorizontal: 10,
   },
   imageBadgeText: {
     fontSize: 11,
-    color: '#1D4ED8',
+    color: '#005BAC',
     fontWeight: '600',
   },
   cardTitle: {
@@ -319,13 +319,13 @@ const styles = StyleSheet.create({
   },
   saveButton: {
     marginTop: 12,
-    backgroundColor: '#1E5AA8',
+    backgroundColor: '#005BAC',
     borderRadius: 10,
     paddingVertical: 12,
     alignItems: 'center',
   },
   savedButton: {
-    backgroundColor: '#2563EB',
+    backgroundColor: '#38BDF8',
   },
   saveButtonText: {
     color: '#FFFFFF',

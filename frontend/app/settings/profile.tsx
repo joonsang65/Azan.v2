@@ -844,7 +844,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   activeStepButton: {
-    backgroundColor: '#1E5AA8',
+    backgroundColor: '#005BAC',
   },
   stepText: {
     fontSize: 14,
@@ -860,7 +860,7 @@ const styles = StyleSheet.create({
     color: '#475569',
   },
   activeStepSubText: {
-    color: '#FFF7F5',
+    color: '#E0F7FF',
   },
   card: {
     backgroundColor: '#FFFFFF',
@@ -924,9 +924,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   unknownButtonSelected: {
-    backgroundColor: '#FFF1EE',
+    backgroundColor: '#E0F7FF',
     borderWidth: 1,
-    borderColor: '#F4B4AC',
+    borderColor: '#38BDF8',
   },
   unknownButtonText: {
     fontSize: 13,
@@ -934,7 +934,7 @@ const styles = StyleSheet.create({
     color: '#475569',
   },
   unknownButtonTextSelected: {
-    color: '#1E5AA8',
+    color: '#005BAC',
   },
   calendarCard: {
     marginTop: 14,
@@ -1020,9 +1020,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
   },
   optionButtonSelected: {
-    backgroundColor: '#FFF1EE',
+    backgroundColor: '#E0F7FF',
     borderWidth: 1,
-    borderColor: '#F4B4AC',
+    borderColor: '#38BDF8',
   },
   optionButtonText: {
     fontSize: 13,
@@ -1030,7 +1030,7 @@ const styles = StyleSheet.create({
     color: '#475569',
   },
   optionButtonTextSelected: {
-    color: '#1E5AA8',
+    color: '#005BAC',
   },
   dropdownButton: {
     minHeight: 48,
@@ -1064,7 +1064,7 @@ const styles = StyleSheet.create({
     borderTopColor: '#E2E8F0',
   },
   dropdownItemSelected: {
-    backgroundColor: '#FFF1EE',
+    backgroundColor: '#E0F7FF',
   },
   dropdownItemText: {
     fontSize: 14,
@@ -1072,10 +1072,10 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   dropdownItemTextSelected: {
-    color: '#1E5AA8',
+    color: '#005BAC',
   },
   nextButton: {
-    backgroundColor: '#1E5AA8',
+    backgroundColor: '#005BAC',
     borderRadius: 12,
     paddingVertical: 14,
     alignItems: 'center',
@@ -1105,7 +1105,7 @@ const styles = StyleSheet.create({
   },
   primaryButton: {
     flex: 1,
-    backgroundColor: '#1E5AA8',
+    backgroundColor: '#005BAC',
     borderRadius: 12,
     paddingVertical: 14,
     alignItems: 'center',

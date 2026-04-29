@@ -173,28 +173,28 @@ const styles = StyleSheet.create({
   category: {
     fontSize: 13,
     fontWeight: '700',
-    color: '#1E5AA8',
+    color: '#005BAC',
   },
   badge: {
-    backgroundColor: '#DBEAFE',
+    backgroundColor: '#DFF3FF',
     borderRadius: 999,
     paddingVertical: 4,
     paddingHorizontal: 10,
   },
   badgeText: {
     fontSize: 11,
-    color: '#1D4ED8',
+    color: '#005BAC',
     fontWeight: '600',
   },
   imageBadge: {
-    backgroundColor: '#DBEAFE',
+    backgroundColor: '#DFF3FF',
     borderRadius: 999,
     paddingVertical: 4,
     paddingHorizontal: 10,
   },
   imageBadgeText: {
     fontSize: 11,
-    color: '#1D4ED8',
+    color: '#005BAC',
     fontWeight: '600',
   },
   title: {
@@ -214,13 +214,13 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   primaryActionButton: {
-    backgroundColor: '#1E5AA8',
+    backgroundColor: '#005BAC',
     borderRadius: 12,
     paddingVertical: 14,
     alignItems: 'center',
   },
   primaryActionButtonSaved: {
-    backgroundColor: '#2563EB',
+    backgroundColor: '#38BDF8',
   },
   primaryActionText: {
     color: '#FFFFFF',
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontSize: 14,
-    color: '#2563EB',
+    color: '#38BDF8',
     lineHeight: 22,
     textDecorationLine: 'underline',
   },
@@ -267,7 +267,7 @@ const styles = StyleSheet.create({
     marginTop: 6,
   },
   backButton: {
-    backgroundColor: '#1E5AA8',
+    backgroundColor: '#005BAC',
     borderRadius: 12,
     paddingVertical: 14,
     alignItems: 'center',

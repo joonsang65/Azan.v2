@@ -81,7 +81,7 @@ export default function SettingsScreen() {
                 <Ionicons
                   name={item.icon}
                   size={22}
-                  color={item.id === 'logout' ? '#DC2626' : '#1E5AA8'}
+                  color="#005BAC"
                 />
               </View>
 
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     width: 42,
     height: 42,
     borderRadius: 12,
-    backgroundColor: '#FFF1EE',
+    backgroundColor: '#E0F7FF',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 14,
@@ -164,6 +164,6 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
   logoutText: {
-    color: '#DC2626',
+    color: '#005BAC',
   },
 });
