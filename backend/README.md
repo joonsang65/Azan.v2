@@ -20,6 +20,7 @@ Edit `.env` and set at least:
 ```env
 DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5432/azan
 JWT_SECRET=dev-secret
+GEMINI_API_KEY=your-gemini-api-key-here  # Required for English translation in workers
 ```
 
 If you want Postgres via docker-compose (from repo root):
@@ -54,7 +55,7 @@ Create a revision:
 ```bash
 cd backend
 source .venv/bin/activate
-alembic revision --autogenerate -m "init schema"
+alembic revision --autogenerate -m "add eng_body to notices"
 ```
 
 Apply migrations:
@@ -99,6 +100,16 @@ Keywords:
 
 ```bash
 curl http://localhost:8000/keywords
+```
+
+Notices & English Translation:
+
+```bash
+# List notices
+curl http://localhost:8000/notices?keyword_id=13
+
+# Get notice detail (Check if 'eng_body' is included)
+curl http://localhost:8000/notices/<NOTICE_UUID_HERE>
 ```
 
 ## iPhone (Expo Go)

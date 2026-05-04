@@ -19,17 +19,16 @@ workers/
 
 | 디렉토리 | 역할 |
 |----------|------|
-| `crawlers/` | 아주대 공지사항 게시판을 주기적으로 크롤링하여 DB에 저장 |
-| `rag/` | 공지 데이터를 벡터 인덱싱하고 챗봇 쿼리에 응답 |
+| `crawlers/` | 아주대 공지사항 게시판 크롤링 및 **Gemini 2.5 Flash를 이용한 자동 영어 번역** 저장 |
+| `rag/` | 공지 데이터를 벡터 인덱싱하고 **Gemini 모델**을 활용한 챗봇 응답 제공 |
 | `alarm/` | `alert_outbox` 테이블의 `pending` 항목을 처리하여 사용자에게 알림 발송 |
 
-## 기술 스택
+## 주요 기술
 
-| 항목 | 버전 |
-|------|------|
-| Python | 3.11+ |
-| SQLAlchemy | 2.x |
-| psycopg2-binary | 2.9+ |
+- **LLM**: Gemini 2.5 Flash (번역 및 챗봇)
+- **Vector DB**: pgvector (PostgreSQL 확장)
+- **Crawler**: BeautifulSoup4, HTTPX
+- **Database**: PostgreSQL (Neon 클라우드), SQLAlchemy ORM
 
 ## 실행 방법
 

@@ -23,6 +23,7 @@ class NoticeCreateRequest(BaseModel):
     keyword_id: Optional[int] = None
     title: str
     body: str
+    eng_body: Optional[str] = None
     preview: Optional[str] = None
     source: Optional[str] = None
     url: Optional[str] = None
@@ -151,6 +152,7 @@ def create_notice(body: NoticeCreateRequest, db: Session = Depends(get_db)):
             title=body.title.strip(),
             preview=preview,
             body=body.body,
+            eng_body=body.eng_body,
             source=body.source,
             url=body.url,
             hash=body.hash,
@@ -199,6 +201,7 @@ def get_notice(notice_id: UUIDType, db: Session = Depends(get_db)):
         "id": str(notice.id),
         "title": notice.title,
         "body": notice.body,
+        "eng_body": notice.eng_body,
         "preview": notice.preview,
         "url": notice.url,
         "keyword_id": notice.keyword_id,

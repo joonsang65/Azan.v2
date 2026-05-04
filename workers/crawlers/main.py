@@ -16,9 +16,10 @@ from .csv_store import ensure_csv_exists, upsert_by_url
 from .cleaner import normalize_text, remove_title_echo
 from .categorize import categorize
 from .db_insert import upsert_notices  
+from .translate import translate_body_to_english
 from .parser_topik_pbt import crawl_topik_pbt
 from .parser_topik_speaking import crawl_topik_speaking
-from .parser_topik_schedule import parse_schedule_table
+from .parser_topik_schedule import parse_topik_schedule as parse_schedule_table
 from .db_insert import upsert_topik_schedules
 
 TOPIK_SCHEDULE_URL = "https://www.topik.go.kr/TWGUID/TWGUID0020.do" 
@@ -144,6 +145,9 @@ def run() -> None:
         source_notice_id = extract_article_no(url)
         dedupe_hash = make_dedupe_hash(url)
         content_hash = make_content_hash(title, body)
+        
+        # 번역 수행 (Gemini 2.5 Flash)
+        eng_body = translate_body_to_english(body)
 
         notice = NoticeRow(
             source_type="university_portal",
@@ -152,6 +156,7 @@ def run() -> None:
             source_notice_id=source_notice_id,
             title=title,
             body=body,
+            eng_body=eng_body,
             published_at=published_at_final,
             deadline_at=deadline_at,
             dedupe_hash=dedupe_hash,

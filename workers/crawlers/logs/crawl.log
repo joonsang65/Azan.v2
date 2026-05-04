@@ -2255,3 +2255,109 @@ https://forms.gle/9s6xSSbd1VvuALCq7
 2026년도 한미 첨단분야 청년교류 지원사업 제5기 장학생 선발 공고문.hwpx
 참고. 한미 첨단분야 청년교류 지원사업 FAQ.hwpx
 “산업통상자원부”에서는 미국 첨단산업 분야의 기술·경험 
+[2026-04-28 14:28:27,191] INFO - Run started (KST): 2026-04-28T14:28:27+09:00
+[2026-04-28 14:28:27,191] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-04-28 14:28:27,947] INFO - List parsed: 11 items
+[2026-04-28 14:28:34,601] INFO - CSV updated: inserted=10, updated=1, total=32, path=C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\notices.csv
+[2026-04-28 14:28:43,426] WARNING - Neon DB upsert failed: column "source_type" of relation "notices" does not exist
+LINE 3:       source_type, source_name, source_url, source_notice_id...
+              ^
+[2026-04-28 14:28:43,428] INFO - TOPIK schedule sample HTML loaded: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_schedule_sample.html
+[2026-04-28 14:28:43,428] INFO - 'table_list' in html: True
+[2026-04-28 14:28:43,456] INFO - TOPIK schedule parsed: 15 rows
+[2026-04-28 14:28:43,456] INFO - TOPIK first row: {'category': '토픽 IBT', 'round': '제16회', 'application_period': '2026.09.15 (화) ~ 2026.09.21 (월) 접수예정', 'exam_date_kr': '11.28 (토)', 'exam_date_other': '-', 'exam_date_asia': '11.28 (토)', 'test_levels': ['TOPIK Ⅰ', 'TOPIK Ⅱ'], 'reception_status': '접수예정', 'result_date': '12.18 (금) 15:00', 'notice_links': []}
+[2026-04-28 14:28:44,150] WARNING - TOPIK schedule pipeline failed: 'dict' object has no attribute 'category'
+[2026-04-28 14:28:49,356] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-04-28 14:28:49,383] INFO - TOPIK speaking JSON saved: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_speaking.json
+[2026-04-28 14:28:49,383] INFO - Run finished.
+[2026-04-28 14:38:26,122] INFO - Run started (KST): 2026-04-28T14:38:26+09:00
+[2026-04-28 14:38:26,122] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-04-28 14:38:26,846] INFO - List parsed: 11 items
+[2026-04-28 14:38:33,529] INFO - CSV updated: inserted=0, updated=11, total=32, path=C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\notices.csv
+[2026-04-28 14:38:42,846] WARNING - Neon DB upsert failed: null value in column "id" of relation "notices" violates not-null constraint
+DETAIL:  Failing row contains (null, 322173, [공지][필독][26.3월 업데이트] 학점이관 신청 방..., [필독][26.3월 업데이트] 학점이관 신청 방법 및 ..., [필독][26.3월 업데이트] 학점이관 신청 방법 및 ..., null, 4de0799f40afa6757f75bf3e33088bcf1d512c6d578a9d6164bd8360fb6ad5e8, f, null, https://www.ajou.ac.kr/oia/notice/notice.do?mode=view&articleNo=..., 2030-06-30 00:00:00+00, 2026-04-28 05:38:41.432231+00, 13, [-0.004822347,-0.0062269443,0.022691928,-0.030632438,-0.00347090...).
+[2026-04-28 14:38:42,848] INFO - TOPIK schedule sample HTML loaded: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_schedule_sample.html
+[2026-04-28 14:38:42,848] INFO - 'table_list' in html: True
+[2026-04-28 14:38:42,876] INFO - TOPIK schedule parsed: 15 rows
+[2026-04-28 14:38:42,877] INFO - TOPIK first row: {'category': '토픽 IBT', 'round': '제16회', 'application_period': '2026.09.15 (화) ~ 2026.09.21 (월) 접수예정', 'exam_date_kr': '11.28 (토)', 'exam_date_other': '-', 'exam_date_asia': '11.28 (토)', 'test_levels': ['TOPIK Ⅰ', 'TOPIK Ⅱ'], 'reception_status': '접수예정', 'result_date': '12.18 (금) 15:00', 'notice_links': []}
+[2026-04-28 14:38:43,941] WARNING - TOPIK schedule pipeline failed: relation "topik_schedules" does not exist
+LINE 2:     INSERT INTO topik_schedules (
+                        ^
+[2026-04-28 14:38:48,110] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-04-28 14:38:48,143] INFO - TOPIK speaking JSON saved: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_speaking.json
+[2026-04-28 14:38:48,143] INFO - Run finished.
+[2026-04-28 14:41:46,662] INFO - Run started (KST): 2026-04-28T14:41:46+09:00
+[2026-04-28 14:41:46,662] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-04-28 14:41:47,365] INFO - List parsed: 11 items
+[2026-04-28 14:41:54,079] INFO - CSV updated: inserted=0, updated=11, total=32, path=C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\notices.csv
+[2026-04-28 14:42:02,118] WARNING - Neon DB upsert failed: name 'deadline' is not defined
+[2026-04-28 14:42:02,120] INFO - TOPIK schedule sample HTML loaded: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_schedule_sample.html
+[2026-04-28 14:42:02,120] INFO - 'table_list' in html: True
+[2026-04-28 14:42:02,148] INFO - TOPIK schedule parsed: 15 rows
+[2026-04-28 14:42:02,149] INFO - TOPIK first row: {'category': '토픽 IBT', 'round': '제16회', 'application_period': '2026.09.15 (화) ~ 2026.09.21 (월) 접수예정', 'exam_date_kr': '11.28 (토)', 'exam_date_other': '-', 'exam_date_asia': '11.28 (토)', 'test_levels': ['TOPIK Ⅰ', 'TOPIK Ⅱ'], 'reception_status': '접수예정', 'result_date': '12.18 (금) 15:00', 'notice_links': []}
+[2026-04-28 14:42:03,537] WARNING - TOPIK schedule pipeline failed: relation "topik_schedules" does not exist
+LINE 2:     INSERT INTO topik_schedules (
+                        ^
+[2026-04-28 14:42:05,436] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-04-28 14:42:05,466] INFO - TOPIK speaking JSON saved: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_speaking.json
+[2026-04-28 14:42:05,468] INFO - Run finished.
+[2026-04-28 14:45:16,234] INFO - Run started (KST): 2026-04-28T14:45:16+09:00
+[2026-04-28 14:45:16,235] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-04-28 14:45:17,015] INFO - List parsed: 11 items
+[2026-04-28 14:45:24,244] INFO - CSV updated: inserted=0, updated=11, total=32, path=C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\notices.csv
+[2026-04-28 14:45:34,068] INFO - Neon DB upserted: processed=11, success=11
+[2026-04-28 14:45:34,070] INFO - TOPIK schedule sample HTML loaded: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_schedule_sample.html
+[2026-04-28 14:45:34,070] INFO - 'table_list' in html: True
+[2026-04-28 14:45:34,103] INFO - TOPIK schedule parsed: 15 rows
+[2026-04-28 14:45:34,104] INFO - TOPIK first row: {'category': '토픽 IBT', 'round': '제16회', 'application_period': '2026.09.15 (화) ~ 2026.09.21 (월) 접수예정', 'exam_date_kr': '11.28 (토)', 'exam_date_other': '-', 'exam_date_asia': '11.28 (토)', 'test_levels': ['TOPIK Ⅰ', 'TOPIK Ⅱ'], 'reception_status': '접수예정', 'result_date': '12.18 (금) 15:00', 'notice_links': []}
+[2026-04-28 14:45:35,241] WARNING - TOPIK schedule pipeline failed: relation "topik_schedules" does not exist
+LINE 2:     INSERT INTO topik_schedules (
+                        ^
+[2026-04-28 14:45:37,372] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-04-28 14:45:37,405] INFO - TOPIK speaking JSON saved: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_speaking.json
+[2026-04-28 14:45:37,405] INFO - Run finished.
+[2026-04-29 13:40:55,542] INFO - Run started (KST): 2026-04-29T13:40:55+09:00
+[2026-04-29 13:40:55,542] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-04-29 13:40:56,122] INFO - List parsed: 12 items
+[2026-04-29 13:43:20,457] INFO - CSV updated: inserted=1, updated=11, total=33, path=C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\notices.csv
+[2026-04-29 13:43:28,249] INFO - Neon DB upserted: processed=12, success=12
+[2026-04-29 13:43:28,327] INFO - TOPIK schedule sample HTML loaded: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_schedule_sample.html
+[2026-04-29 13:43:28,327] INFO - 'table_list' in html: True
+[2026-04-29 13:43:28,356] INFO - TOPIK schedule parsed: 15 rows
+[2026-04-29 13:43:28,356] INFO - TOPIK first row: {'category': '토픽 IBT', 'round': '제16회', 'application_period': '2026.09.15 (화) ~ 2026.09.21 (월) 접수예정', 'exam_date_kr': '11.28 (토)', 'exam_date_other': '-', 'exam_date_asia': '11.28 (토)', 'test_levels': ['TOPIK Ⅰ', 'TOPIK Ⅱ'], 'reception_status': '접수예정', 'result_date': '12.18 (금) 15:00', 'notice_links': []}
+[2026-04-29 13:43:29,073] WARNING - TOPIK schedule pipeline failed: relation "topik_schedules" does not exist
+LINE 2:     INSERT INTO topik_schedules (
+                        ^
+[2026-04-29 13:43:30,060] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-04-29 13:43:30,157] INFO - TOPIK speaking JSON saved: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_speaking.json
+[2026-04-29 13:43:30,157] INFO - Run finished.
+[2026-04-29 13:53:31,835] INFO - Run started (KST): 2026-04-29T13:53:31+09:00
+[2026-04-29 13:53:31,836] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-04-29 13:53:32,367] INFO - List parsed: 12 items
+[2026-04-29 13:56:09,043] INFO - CSV updated: inserted=0, updated=12, total=33, path=C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\notices.csv
+[2026-04-29 13:56:16,083] INFO - Neon DB upserted: processed=12, success=12
+[2026-04-29 13:56:16,085] INFO - TOPIK schedule sample HTML loaded: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_schedule_sample.html
+[2026-04-29 13:56:16,085] INFO - 'table_list' in html: True
+[2026-04-29 13:56:16,110] INFO - TOPIK schedule parsed: 15 rows
+[2026-04-29 13:56:16,110] INFO - TOPIK first row: {'category': '토픽 IBT', 'round': '제16회', 'application_period': '2026.09.15 (화) ~ 2026.09.21 (월) 접수예정', 'exam_date_kr': '11.28 (토)', 'exam_date_other': '-', 'exam_date_asia': '11.28 (토)', 'test_levels': ['TOPIK Ⅰ', 'TOPIK Ⅱ'], 'reception_status': '접수예정', 'result_date': '12.18 (금) 15:00', 'notice_links': []}
+[2026-04-29 13:56:16,796] WARNING - TOPIK schedule pipeline failed: relation "topik_schedules" does not exist
+LINE 2:     INSERT INTO topik_schedules (
+                        ^
+[2026-04-29 13:56:19,864] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-04-29 13:56:19,896] INFO - TOPIK speaking JSON saved: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_speaking.json
+[2026-04-29 13:56:19,897] INFO - Run finished.
+[2026-04-29 14:01:56,083] INFO - Run started (KST): 2026-04-29T14:01:56+09:00
+[2026-04-29 14:01:56,083] INFO - List URL: https://www.ajou.ac.kr/oia/notice/notice.do
+[2026-04-29 14:01:56,622] INFO - List parsed: 12 items
+[2026-04-29 14:04:15,436] INFO - CSV updated: inserted=0, updated=12, total=33, path=C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\notices.csv
+[2026-04-29 14:04:22,798] INFO - Neon DB upserted: processed=12, success=12
+[2026-04-29 14:04:22,798] INFO - TOPIK schedule sample HTML loaded: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_schedule_sample.html
+[2026-04-29 14:04:22,798] INFO - 'table_list' in html: True
+[2026-04-29 14:04:22,830] INFO - TOPIK schedule parsed: 15 rows
+[2026-04-29 14:04:22,830] INFO - TOPIK first row: {'category': '토픽 IBT', 'round': '제16회', 'application_period': '2026.09.15 (화) ~ 2026.09.21 (월) 접수예정', 'exam_date_kr': '11.28 (토)', 'exam_date_other': '-', 'exam_date_asia': '11.28 (토)', 'test_levels': ['TOPIK Ⅰ', 'TOPIK Ⅱ'], 'reception_status': '접수예정', 'result_date': '12.18 (금) 15:00', 'notice_links': []}
+[2026-04-29 14:04:23,546] WARNING - TOPIK schedule pipeline failed: relation "topik_schedules" does not exist
+LINE 2:     INSERT INTO topik_schedules (
+                        ^
+[2026-04-29 14:04:26,571] WARNING - TOPIK PBT crawl failed: TOPIK 본문 루트를 찾지 못했습니다.
+[2026-04-29 14:04:26,580] INFO - TOPIK speaking JSON saved: C:\Users\user\Desktop\4-2\test\Ajou-International\workers\crawlers\data\topik_speaking.json
+[2026-04-29 14:04:26,580] INFO - Run finished.
