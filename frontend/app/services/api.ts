@@ -44,6 +44,10 @@ export async function apiRequest<T>(
     }
 
     if (!response.ok) {
+      if (response.status === 401) {
+        await clearToken();
+        throw new Error('Invalid or expired token');
+      }
       const errorData = await response.json().catch(() => ({}));
       throw new Error(errorData.detail || `API Request Failed: ${response.status}`);
     }

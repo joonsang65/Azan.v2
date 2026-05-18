@@ -21,12 +21,17 @@ class VectorStore:
             self.embeddings = Embedder().get_embedding_function()
             # 클래스 레벨에서 커넥션 풀 초기화 (싱글톤 패턴과 유사하게 동작)
             if VectorStore._pool is None:
+                # SSL 설정 추가: Neon DB 등 클라우드 DB는 필수인 경우가 많음
+                db_params = settings.DB_PARAMS.copy()
+                if "host" in db_params and "localhost" not in db_params["host"]:
+                    db_params["sslmode"] = "require"
+                
                 VectorStore._pool = pool.SimpleConnectionPool(
                     minconn=1,
-                    maxconn=20,  # 데모 부하를 고려하여 최대 20개로 설정
-                    **settings.DB_PARAMS
+                    maxconn=20,
+                    **db_params
                 )
-                logger.info("DB Connection Pool initialized (max_conn=20)")
+                logger.info(f"DB Connection Pool initialized (max_conn=20, sslmode={db_params.get('sslmode', 'none')})")
         except Exception as e:
             logger.error("초기화 실패: %s", e)
             raise

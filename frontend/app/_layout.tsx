@@ -4,30 +4,26 @@ import { AppProvider, useAppContext } from './context/AppContext';
 import { getToken } from './services/api';
 
 function RootLayoutNav() {
-  const { userProfileStatus } = useAppContext();
+  const { userProfileStatus, isAuthInitialized } = useAppContext();
   const segments = useSegments();
   const router = useRouter();
-  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    async function checkAuth() {
-      const token = await getToken();
-      const inAuthGroup = segments[0] === 'auth';
+    if (!isAuthInitialized) return;
 
-      if (!token && !inAuthGroup) {
-        // 토큰이 없고 인증 페이지가 아니면 로그인 페이지로 리다이렉트
-        router.replace('/auth/login');
-      } else if (token && inAuthGroup) {
-        // 토큰이 있고 인증 페이지면 메인 페이지로 리다이렉트
-        router.replace('/(tabs)');
-      }
-      setIsReady(true);
+    const inAuthGroup = segments[0] === 'auth';
+    const isAuthenticated = !!userProfileStatus.email;
+
+    if (!isAuthenticated && !inAuthGroup) {
+      // 인증되지 않았는데 인증 페이지가 아니면 로그인으로
+      router.replace('/auth/login');
+    } else if (isAuthenticated && inAuthGroup) {
+      // 인증되었는데 인증 페이지에 있으면 메인으로
+      router.replace('/(tabs)');
     }
+  }, [isAuthInitialized, userProfileStatus.email, segments]);
 
-    checkAuth();
-  }, [userProfileStatus.email, segments]);
-
-  if (!isReady) return null;
+  if (!isAuthInitialized) return null;
 
   return (
     <Stack screenOptions={{ headerShown: false }}>

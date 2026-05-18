@@ -140,4 +140,5 @@ export type AppContextType = {
 
   tasks: Task[];
   setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+  isAuthInitialized: boolean;
 };

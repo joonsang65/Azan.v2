@@ -9,9 +9,11 @@ import {
 } from "react-native";
 import { useRouter } from "expo-router";
 import { authService } from "../services/auth";
+import { useAppContext } from "../context/AppContext";
 
 export default function LoginScreen() {
   const router = useRouter();
+  const { setUserProfileStatus } = useAppContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -24,6 +26,18 @@ export default function LoginScreen() {
     setLoading(true);
     try {
       await authService.login(email, password);
+      
+      // 로그인 성공 후 유저 정보 즉시 로드하여 전역 상태 업데이트
+      const me = await authService.getMe();
+      if (me) {
+        setUserProfileStatus(prev => ({
+          ...prev,
+          name: me.full_name,
+          email: me.email,
+          preferredLanguage: (me as any).preferred_language || prev.preferredLanguage,
+        }));
+      }
+      
       router.replace("/(tabs)");
     } catch (error: any) {
       Alert.alert("Login Failed", error.message || "Unknown error occurred.");

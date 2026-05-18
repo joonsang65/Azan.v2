@@ -45,6 +45,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [noticesError, setNoticesError] = useState<string | null>(null);
   const [savedNoticeReminders, setSavedNoticeReminders] = useState<SavedNoticeReminder[]>([]);
   const [tasks, setTasks] = useState<Task[]>([]);
+  const [isAuthInitialized, setIsAuthInitialized] = useState(false);
 
   // 1. 초기 데이터 로드 (프로필 & 키워드)
   useEffect(() => {
@@ -56,33 +57,26 @@ export function AppProvider({ children }: { children: ReactNode }) {
             ...initialUserProfileStatus,
             name: me.full_name,
             email: me.email,
-            // 백엔드 필드가 있을 경우 덮어씌우기
-            languageInstituteStatus: (me as any).language_institute_status || initialUserProfileStatus.languageInstituteStatus,
-            languageInstituteTerm: (me as any).language_institute_term || initialUserProfileStatus.languageInstituteTerm,
-            targetAdmissionTerm: (me as any).target_admission_term || initialUserProfileStatus.targetAdmissionTerm,
-            desiredMajor: (me as any).desired_major || initialUserProfileStatus.desiredMajor,
-            visaType: (me as any).visa_type || initialUserProfileStatus.visaType,
-            visaExpiryDate: (me as any).visa_expiry_date || initialUserProfileStatus.visaExpiryDate,
-            visaExpiryUnknown: (me as any).visa_expiry_unknown ?? initialUserProfileStatus.visaExpiryUnknown,
-            topikStatus: (me as any).topik_status || initialUserProfileStatus.topikStatus,
-            topikLevel: (me as any).topik_level || initialUserProfileStatus.topikLevel,
-            topikTargetLevel: (me as any).topik_target_level || initialUserProfileStatus.topikTargetLevel,
-            topikTestPlan: (me as any).topik_test_plan || initialUserProfileStatus.topikTestPlan,
             preferredLanguage: (me as any).preferred_language || initialUserProfileStatus.preferredLanguage,
-            residenceType: (me as any).residence_type || initialUserProfileStatus.residenceType,
+            // 다른 필드들도 필요시 업데이트
           };
 
           setUserProfileStatus(profileData);
           setSelectedLanguage(profileData.preferredLanguage);
           
-          // 사용자의 구독 키워드 가져오기
-          const myKeys = await keywordService.getMyKeywords();
-          if (myKeys?.enabled) {
-            setSelectedNoticeCategories(myKeys.enabled.map(id => mapIdToCategory(id)));
+          try {
+            const myKeys = await keywordService.getMyKeywords();
+            if (myKeys?.enabled) {
+              setSelectedNoticeCategories(myKeys.enabled.map(id => mapIdToCategory(id)));
+            }
+          } catch (e) {
+            console.error("Failed to load keywords", e);
           }
         }
-      } catch {
+      } catch (e) {
         console.log("Session init failed or no user logged in");
+      } finally {
+        setIsAuthInitialized(true);
       }
     }
     initSession();
@@ -167,6 +161,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         toggleNoticeReminderDone: (id) => setSavedNoticeReminders(p => p.map(i => i.id === id ? {...i, isDone: !i.isDone} : i)),
         tasks,
         setTasks,
+        isAuthInitialized,
       }}
     >
       {children}
