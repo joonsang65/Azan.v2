@@ -17,11 +17,8 @@ logger = logging.getLogger("AzanService")
 
 class AzanChatbotService:
     def __init__(self):
-        """챗봇 서비스 초기화 (VectorStore, LLM, Memory 설정)"""
+        """챗봇 서비스 초기화 (VectorStore, LLM, 세션 메모리 저장소 설정)"""
         try:
-            # 마지막 호출에 대한 메트릭 저장용
-            self.last_metrics: Dict[str, Any] | None = None
-
             self.vector_store = VectorStore()
             self.llm = ChatGoogleGenerativeAI(
                 model=settings.GENERATION_MODEL,
@@ -29,17 +26,23 @@ class AzanChatbotService:
                 temperature=settings.TEMPERATURE,
             )
 
-            # 최신 표준(langchain_core) 메모리 사용
-            self.memory = InMemoryChatMessageHistory()
+            # 세션별 메모리를 저장할 딕셔너리 (메모리 릭 방지를 위해 실제 상용에서는 Redis/DB 권장)
+            self.sessions: Dict[str, InMemoryChatMessageHistory] = {}
 
             self.condense_prompt = ChatPromptTemplate.from_template(CONDENSE_QUESTION_PROMPT)
             self.answer_prompt = ChatPromptTemplate.from_template(USER_PROMPT_TEMPLATE)
 
-            logger.info("[System] Azan Service with Modern Memory Initialized.")
+            logger.info("[System] Azan Service with Session-based Memory Initialized.")
 
         except Exception as e:
             logger.error(f"Initialization Failed: {e}")
             raise e
+
+    def _get_session_memory(self, session_id: str) -> InMemoryChatMessageHistory:
+        """세션 ID에 해당하는 메모리 객체 반환 (없으면 생성)"""
+        if session_id not in self.sessions:
+            self.sessions[session_id] = InMemoryChatMessageHistory()
+        return self.sessions[session_id]
 
     def _format_to_toon(self, docs):
         """
@@ -62,18 +65,17 @@ class AzanChatbotService:
 
         return toon_text
 
-    async def aget_response(self, question: str) -> str:
+    async def aget_response(self, question: str, session_id: str = "default_session") -> str:
         """
-        비동기 버전 응답 함수.
-        FastAPI 등에서 await으로 직접 호출하는 용도.
-        호출당 메트릭은 self.last_metrics에 저장된다.
+        비동기 버전 응답 함수. 세션 ID별로 독립된 대화 기록을 유지함.
         """
         try:
             loop = asyncio.get_running_loop()
             started = loop.time()
 
-            # 1. 대화 기록 추출
-            messages = self.memory.messages
+            # 1. 세션 전용 메모리 추출
+            memory = self._get_session_memory(session_id)
+            messages = memory.messages
             chat_history = "\n".join(
                 [f"{'User' if msg.type == 'human' else 'Azan'}: {msg.content}" for msg in messages]
             )
@@ -86,13 +88,13 @@ class AzanChatbotService:
                     {"chat_history": chat_history, "question": question}
                 )
                 standalone_question = getattr(condense_result, "content", str(condense_result))
-                logger.info(f"[Step 1] Condensing: '{question}' -> '{standalone_question}'")
+                logger.info(f"[Session: {session_id}] [Step 1] Condensing: '{question}' -> '{standalone_question}'")
             else:
                 standalone_question = question
-                logger.info(f"[Step 1] No chat history. Using original question: '{standalone_question}'")
+                logger.info(f"[Session: {session_id}] [Step 1] No chat history. Using original question.")
             t_condense = loop.time() - t0
 
-            # 3. DB 검색 (Retrieval) - 동기 코드를 별도 스레드에서 실행
+            # 3. DB 검색 (Retrieval)
             t1 = loop.time()
             retrieved_docs = await asyncio.to_thread(
                 self.vector_store.similarity_search,
@@ -100,17 +102,6 @@ class AzanChatbotService:
                 settings.RETRIEVER_TOP_K,
             )
             t_search = loop.time() - t1
-
-            # Log retrieved docs for demo
-            if retrieved_docs:
-                logger.info(f"[Step 2] Similarity Search Result ({len(retrieved_docs)} docs):")
-                for i, doc in enumerate(retrieved_docs):
-                    score = doc.metadata.get("score", "N/A")
-                    title = doc.metadata.get("title", "No Title")
-                    formatted_score = f"{score:.4f}" if isinstance(score, float) else score
-                    logger.info(f"  - Doc {i+1}: [{title}] (Score: {formatted_score})")
-            else:
-                logger.info("[Step 2] No relevant documents found.")
 
             context_text = self._format_to_toon(retrieved_docs) if retrieved_docs else "정보 없음"
 
@@ -127,66 +118,24 @@ class AzanChatbotService:
             )
             t_answer = loop.time() - t2
 
-            # answer_result에서 텍스트와 usage 메타데이터 추출
-            response_text = getattr(answer_result, "content", None)
-            if response_text is None:
-                response_text = str(answer_result)
-
-            usage: Dict[str, Any] | None = None
-            for key in ("usage_metadata", "response_metadata"):
-                meta = getattr(answer_result, key, None)
-                if meta:
-                    usage = meta
-                    break
-
-            # retrieval 메트릭 계산
-            scores: List[float] = []
-            for d in retrieved_docs or []:
-                score = d.metadata.get("score")
-                if isinstance(score, (int, float)):
-                    scores.append(float(score))
-            docs_count = len(retrieved_docs or [])
-            top_score = max(scores) if scores else None
-            avg_score = sum(scores) / len(scores) if scores else None
+            response_text = getattr(answer_result, "content", str(answer_result))
 
             total_elapsed = loop.time() - started
 
-            # 메트릭 저장
-            self.last_metrics = {
-                "question": question,
-                "standalone_question": standalone_question,
-                "docs_count": docs_count,
-                "top_score": top_score,
-                "avg_score": avg_score,
-                "llm_usage": usage,
-                "context_text": context_text,
-                "t_condense_ms": t_condense * 1000,
-                "t_search_ms": t_search * 1000,
-                "t_answer_ms": t_answer * 1000,
-                "t_total_ms": total_elapsed * 1000,
-            }
-
+            # 메트릭 로깅 (멤버 변수가 아닌 로컬 변수로 로그만 남김)
             logger.info(
-                "chat metrics | condense=%.1fms search=%.1fms answer=%.1fms total=%.1fms "
-                "docs=%d top_score=%s avg_score=%s",
-                self.last_metrics["t_condense_ms"],
-                self.last_metrics["t_search_ms"],
-                self.last_metrics["t_answer_ms"],
-                self.last_metrics["t_total_ms"],
-                docs_count,
-                top_score,
-                avg_score,
+                "[Session: %s] total=%.1fms (condense=%.1fms search=%.1fms answer=%.1fms) docs=%d",
+                session_id, total_elapsed * 1000, t_condense * 1000, t_search * 1000, t_answer * 1000, len(retrieved_docs or [])
             )
 
             # 5. 메모리에 현재 대화 저장
-            self.memory.add_user_message(question)
-            self.memory.add_ai_message(response_text)
+            memory.add_user_message(question)
+            memory.add_ai_message(response_text)
 
             return response_text
 
         except Exception as e:
-            logger.error(f"Error: {e}")
-            self.last_metrics = None
+            logger.error(f"[Session: {session_id}] Error: {e}")
             return "오류가 발생했습니다."
 
     def get_response(self, question: str) -> str:

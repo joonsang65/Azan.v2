@@ -24,6 +24,10 @@ interface Message {
 export default function ChatScreen() {
   const insets = useSafeAreaInsets();
   const tabBarHeight = useBottomTabBarHeight();
+  
+  // 세션 ID 초기화 (화면 진입 시마다 새로운 세션 생성)
+  const [sessionId] = useState(() => `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
+
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -73,7 +77,7 @@ export default function ChatScreen() {
     setLoading(true);
 
     try {
-      const response = await chatbotService.sendMessage(text.trim());
+      const response = await chatbotService.sendMessage(text.trim(), sessionId);
       const botMsg: Message = {
         id: (Date.now() + 1).toString(),
         text: response.answer,

@@ -20,11 +20,14 @@ chatbot_service = AzanChatbotService()
 async def get_chatbot_response(request: ChatbotRequest):
     """
     챗봇에게 질문하고 답변을 받습니다.
-    입력 : request (사용자가 입력한 요청 - 질문)
+    입력 : request (사용자가 입력한 요청 - 질문, 세션 ID)
     출력 : answer (사용자 요청에 대한 답변)
     """
     try:
-        answer = await chatbot_service.aget_response(request.question)
+        answer = await chatbot_service.aget_response(
+            question=request.question, 
+            session_id=request.session_id
+        )
         return ChatbotResponse(answer=answer)
     except Exception as e:
         logger.error(f"Chatbot error: {e}")
