@@ -1,4 +1,5 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { useRouter } from 'expo-router';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useAppContext } from '../context/AppContext';
 import { getCategoryLabel, t } from '../i18n';
@@ -12,19 +13,23 @@ type HomeReminderItem = {
   isDone: boolean;
   isUrgent: boolean;
   isCritical: boolean;
+  noticeId: string;
 };
 
 export default function HomeScreen() {
+  const router = useRouter();
   const {
     notices,
     savedNoticeReminders,
     selectedLanguage,
     toggleNoticeReminderDone,
+    noticesError,
+    statusCheckedAt,
   } = useAppContext();
 
   const todayKey = new Date().toISOString().slice(0, 10);
-  const weekStartKey = getPastDateKey(6);
-  const weekEndKey = getFutureDateKey(6);
+  const recentStartKey = getPastDateKey(6);
+  const { weekStartKey, weekEndKey } = getCurrentWeekBounds();
   const urgentKey = getFutureDateKey(2);
 
   const noticeMap = new Map(notices.map((notice) => [notice.id, notice]));
@@ -32,24 +37,25 @@ export default function HomeScreen() {
   const weeklyNotices = notices
     .filter((notice) => {
       const noticeDate = normalizeDateKey(notice.date);
-      return noticeDate >= weekStartKey && noticeDate <= todayKey;
+      return noticeDate >= recentStartKey && noticeDate <= todayKey;
     })
     .sort((a, b) => normalizeDateKey(b.date).localeCompare(normalizeDateKey(a.date)));
 
   const todayDeadlines = savedNoticeReminders.filter(
-    (item) => !item.isDone && item.dueDate === todayKey
+    (item) => item.dueDate === todayKey
   );
 
   const weeklyTasks: HomeReminderItem[] = savedNoticeReminders
-    .filter((item) => item.dueDate >= todayKey && item.dueDate <= weekEndKey)
+    .filter((item) => item.dueDate >= weekStartKey && item.dueDate <= weekEndKey)
     .map((item) => {
       const sourceNotice = noticeMap.get(item.noticeId);
       const isCritical = Boolean(sourceNotice?.isCritical);
-      const isUrgent = item.dueDate <= urgentKey;
+      const isUrgent = !item.isDone && item.dueDate <= urgentKey;
 
       return {
         id: item.id,
         title: item.title,
+        noticeId: item.noticeId,
         category: item.category,
         dueDate: item.dueDate,
         isDone: item.isDone,
@@ -57,7 +63,6 @@ export default function HomeScreen() {
         isCritical,
       };
     })
-    .filter((item) => item.isCritical || item.isUrgent)
     .sort((a, b) => {
       if (a.isDone !== b.isDone) return a.isDone ? 1 : -1;
       if (a.dueDate !== b.dueDate) return a.dueDate.localeCompare(b.dueDate);
@@ -81,18 +86,24 @@ export default function HomeScreen() {
             todayDeadlines.map((reminder) => (
               <TouchableOpacity
                 key={reminder.id}
-                style={styles.taskRow}
-                onPress={() => toggleNoticeReminderDone(reminder.id)}
+                style={[styles.taskRow, styles.todayDeadlineRow, reminder.isDone && styles.todayDeadlineRowDone]}
+                onPress={() => router.push({ pathname: '/notices/[id]', params: { id: reminder.noticeId } })}
                 activeOpacity={0.8}
               >
                 <View style={styles.checkBox}>
-                  <Ionicons name="alarm-outline" size={24} color="#005BAC" />
+                  <Ionicons
+                    name={reminder.isDone ? 'checkmark-circle' : 'alarm-outline'}
+                    size={24}
+                    color={reminder.isDone ? '#7C6F3A' : '#8A6F00'}
+                  />
                 </View>
 
                 <View style={styles.rowTextWrap}>
-                  <Text style={styles.taskTitle}>{reminder.title}</Text>
-                  <Text style={styles.taskDate}>
-                    {getCategoryLabel(selectedLanguage, reminder.category)} ·{' '}
+                  <Text style={[styles.taskTitle, reminder.isDone && styles.taskTitleDone]}>
+                    {reminder.title}
+                  </Text>
+                  <Text style={[styles.taskDate, reminder.isDone && styles.taskDateDone]}>
+                    {getCategoryLabel(selectedLanguage, reminder.category)} -{' '}
                     {t(selectedLanguage, 'notices.deadline')} {reminder.dueDate}
                   </Text>
                 </View>
@@ -112,7 +123,12 @@ export default function HomeScreen() {
 
           {weeklyNotices.length > 0 ? (
             weeklyNotices.map((item) => (
-              <View key={item.id} style={styles.noticeItem}>
+              <TouchableOpacity
+                key={item.id}
+                style={styles.noticeItem}
+                onPress={() => router.push({ pathname: '/notices/[id]', params: { id: item.id } })}
+                activeOpacity={0.82}
+              >
                 <View style={styles.noticeHeaderRow}>
                   <Text style={styles.noticeCategory}>
                     {getCategoryLabel(selectedLanguage, item.category)}
@@ -133,7 +149,7 @@ export default function HomeScreen() {
                     ? `${t(selectedLanguage, 'notices.deadline')} ${item.deadline}`
                     : `${t(selectedLanguage, 'notices.posted')} ${item.date}`}
                 </Text>
-              </View>
+              </TouchableOpacity>
             ))
           ) : (
             <Text style={styles.emptyText}>
@@ -143,30 +159,49 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.card}>
-          <Text style={styles.sectionTitle}>
-            {t(selectedLanguage, 'home.weeklyTasks')}
-          </Text>
+          <View style={styles.sectionHeaderRow}>
+            <Text style={styles.sectionTitle}>
+              {t(selectedLanguage, 'home.weeklyTasks')}
+            </Text>
+          </View>
           <Text style={styles.sectionHint}>
             {t(selectedLanguage, 'home.weeklyTasksHint')}
           </Text>
+          <Text style={styles.statusLine}>
+            {t(selectedLanguage, 'home.completed')} {doneCount} -{' '}
+            {t(selectedLanguage, 'home.remaining')} {totalCount - doneCount}
+          </Text>
+          <Text style={styles.statusLine}>
+            {t(selectedLanguage, 'home.lastChecked')}:{' '}
+            {statusCheckedAt
+              ? new Date(statusCheckedAt).toLocaleString()
+              : t(selectedLanguage, 'home.neverChecked')}
+          </Text>
+          {noticesError ? (
+            <Text style={styles.statusError}>
+              {t(selectedLanguage, 'home.errorLoading')}: {noticesError}
+            </Text>
+          ) : null}
 
           {weeklyTasks.length > 0 ? (
             weeklyTasks.map((item) => (
               <TouchableOpacity
                 key={item.id}
                 style={[styles.taskRow, item.isDone && styles.taskRowDone]}
-                onPress={() => toggleNoticeReminderDone(item.id)}
+                onPress={() => router.push({ pathname: '/notices/[id]', params: { id: item.noticeId } })}
                 activeOpacity={0.8}
               >
-                <View style={styles.checkBox}>
-                  {item.isDone ? (
-                    <Ionicons name="checkmark-circle" size={24} color="#38BDF8" />
-                  ) : item.isUrgent ? (
-                    <Ionicons name="alarm-outline" size={24} color="#005BAC" />
-                  ) : (
-                    <Ionicons name="ellipse-outline" size={24} color="#C0C7D1" />
-                  )}
-                </View>
+                <TouchableOpacity
+                  style={styles.checkBoxButton}
+                  onPress={() => toggleNoticeReminderDone(item.id)}
+                  activeOpacity={0.85}
+                >
+                  <Ionicons
+                    name={item.isDone ? 'checkbox' : 'square-outline'}
+                    size={26}
+                    color={item.isDone ? '#38BDF8' : '#64748B'}
+                  />
+                </TouchableOpacity>
 
                 <View style={styles.rowTextWrap}>
                   <View style={styles.taskBadgeRow}>
@@ -199,7 +234,7 @@ export default function HomeScreen() {
                     {item.title}
                   </Text>
                   <Text style={[styles.taskDate, item.isDone && styles.taskDateDone]}>
-                    {getCategoryLabel(selectedLanguage, item.category)} ·{' '}
+                    {getCategoryLabel(selectedLanguage, item.category)} -{' '}
                     {t(selectedLanguage, 'notices.deadline')} {item.dueDate}
                   </Text>
                 </View>
@@ -223,7 +258,7 @@ export default function HomeScreen() {
           </View>
 
           <Text style={styles.progressText}>
-            {t(selectedLanguage, 'home.completed')} {doneCount} ·{' '}
+            {t(selectedLanguage, 'home.completed')} {doneCount} -{' '}
             {t(selectedLanguage, 'home.remaining')} {totalCount - doneCount}
           </Text>
         </View>
@@ -242,6 +277,22 @@ function getPastDateKey(daysBeforeToday: number) {
   const date = new Date();
   date.setDate(date.getDate() - daysBeforeToday);
   return date.toISOString().slice(0, 10);
+}
+
+function getCurrentWeekBounds() {
+  const today = new Date();
+  const day = today.getDay();
+  const diffToMonday = day === 0 ? -6 : 1 - day;
+  const monday = new Date(today);
+  monday.setDate(today.getDate() + diffToMonday);
+
+  const sunday = new Date(monday);
+  sunday.setDate(monday.getDate() + 6);
+
+  return {
+    weekStartKey: monday.toISOString().slice(0, 10),
+    weekEndKey: sunday.toISOString().slice(0, 10),
+  };
 }
 
 function normalizeDateKey(dateText: string) {
@@ -276,7 +327,15 @@ const styles = StyleSheet.create({
     marginBottom: 14,
   },
   noticeItem: {
-    marginBottom: 14,
+    marginBottom: 12,
+    borderRadius: 14,
+    backgroundColor: '#FFFFFF',
+    padding: 14,
+    shadowColor: '#0F172A',
+    shadowOpacity: 0.06,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 5 },
+    elevation: 1,
   },
   noticeHeaderRow: {
     flexDirection: 'row',
@@ -328,6 +387,13 @@ const styles = StyleSheet.create({
     color: '#111827',
     marginBottom: 8,
   },
+  sectionHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
+    marginBottom: 8,
+  },
   sectionHint: {
     fontSize: 13,
     color: '#64748B',
@@ -337,13 +403,26 @@ const styles = StyleSheet.create({
   taskRow: {
     flexDirection: 'row',
     alignItems: 'flex-start',
-    marginBottom: 16,
+    marginBottom: 12,
     borderRadius: 14,
-    padding: 10,
-    marginHorizontal: -10,
+    backgroundColor: '#FFFFFF',
+    padding: 12,
+    shadowColor: '#0F172A',
+    shadowOpacity: 0.06,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 5 },
+    elevation: 1,
   },
   taskRowDone: {
     backgroundColor: '#F0FAFF',
+  },
+  todayDeadlineRow: {
+    backgroundColor: '#FFF8D8',
+    shadowColor: '#7C6F3A',
+    shadowOpacity: 0.08,
+  },
+  todayDeadlineRowDone: {
+    backgroundColor: '#FFF4BF',
   },
   checkBox: {
     marginRight: 12,
@@ -398,15 +477,14 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   taskTitleDone: {
-    textDecorationLine: 'line-through',
-    color: '#6B7280',
+    color: '#64748B',
   },
   taskDate: {
     fontSize: 13,
     color: '#64748B',
   },
   taskDateDone: {
-    color: '#94A3B8',
+    color: '#7FA7B8',
   },
   progressLabel: {
     fontSize: 15,
@@ -437,6 +515,20 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: '#4B5563',
     fontWeight: '500',
+  },
+  checkBoxButton: {
+    marginRight: 12,
+    marginTop: 1,
+  },
+  statusLine: {
+    fontSize: 14,
+    color: '#4B5563',
+    marginBottom: 4,
+  },
+  statusError: {
+    fontSize: 13,
+    color: '#B91C1C',
+    marginTop: 8,
   },
   emptyText: {
     fontSize: 14,

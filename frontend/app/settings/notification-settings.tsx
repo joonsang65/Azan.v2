@@ -1,10 +1,14 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAppContext } from '../context/AppContext';
+import { getCategoryLabel } from '../i18n';
 import type { NoticeCategory, NotificationFrequency } from '../types';
 
 export default function NotificationSettingsScreen() {
+  const insets = useSafeAreaInsets();
   const {
+    selectedLanguage,
     selectedNoticeCategories,
     setSelectedNoticeCategories,
     notificationFrequency,
@@ -36,7 +40,17 @@ export default function NotificationSettingsScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={[
+        styles.content,
+        {
+          paddingTop: insets.top + 18,
+          paddingBottom: insets.bottom + 32,
+        },
+      ]}
+      showsVerticalScrollIndicator={false}
+    >
       <Text style={styles.headerTitle}>알림 설정</Text>
       <Text style={styles.headerSubtitle}>
         중요한 공지 카테고리와 받고 싶은 알림 빈도를 선택해보세요
@@ -68,7 +82,7 @@ export default function NotificationSettingsScreen() {
                     isSelected && styles.categoryTextSelected,
                   ]}
                 >
-                  {category}
+                  {getCategoryLabel(selectedLanguage, category)}
                 </Text>
 
                 {isSelected ? (
@@ -119,15 +133,16 @@ export default function NotificationSettingsScreen() {
       <View style={styles.summaryCard}>
         <Text style={styles.summaryTitle}>현재 설정</Text>
         <Text style={styles.summaryText}>
-          카테고리: {selectedNoticeCategories.length > 0
-            ? selectedNoticeCategories.join(', ')
+          카테고리:{' '}
+          {selectedNoticeCategories.length > 0
+            ? selectedNoticeCategories
+                .map((category) => getCategoryLabel(selectedLanguage, category))
+                .join(', ')
             : '없음'}
         </Text>
-        <Text style={styles.summaryText}>
-          알림 빈도: {notificationFrequency}
-        </Text>
+        <Text style={styles.summaryText}>알림 빈도: {notificationFrequency}</Text>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -135,6 +150,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F4F7FB',
+  },
+  content: {
     padding: 16,
   },
   headerTitle: {

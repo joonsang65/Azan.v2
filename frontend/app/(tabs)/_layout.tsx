@@ -21,12 +21,17 @@ export default function TabsLayout() {
           headerTitleAlign: 'center',
           headerStyle: {
             backgroundColor: '#FFFFFF',
+            height: 64 + insets.top,
+          },
+          headerTitleStyle: {
+            fontSize: 21,
+            fontWeight: '800',
           },
           headerShadowVisible: false,
           headerLeft: () => (
             <Pressable
               onPress={() => setMenuOpen(true)}
-              style={{ marginLeft: 16 }}
+              style={{ marginLeft: 16, padding: 8 }}
             >
               <Ionicons name="menu-outline" size={26} color="#0F172A" />
             </Pressable>
@@ -37,12 +42,12 @@ export default function TabsLayout() {
             >
               <Pressable
                 onPress={() => router.push('/alerts')}
-                style={{ marginRight: 14 }}
+                style={{ marginRight: 10, padding: 8 }}
               >
                 <Ionicons name="notifications-outline" size={22} color="#0F172A" />
               </Pressable>
 
-              <Pressable onPress={() => router.push('/settings')}>
+              <Pressable onPress={() => router.push('/settings')} style={{ padding: 8 }}>
                 <Ionicons name="settings-outline" size={22} color="#0F172A" />
               </Pressable>
             </View>

@@ -45,6 +45,9 @@ export const authService = {
       topik_test_plan: profile.topikTestPlan,
       preferred_language: profile.preferredLanguage,
       residence_type: profile.residenceType,
+      nationality: profile.nationality,
+      current_status: profile.currentStatus,
+      language_school_semester: profile.languageSchoolSemester,
     };
 
     return await apiRequest<UserProfile>('/auth/me', {

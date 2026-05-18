@@ -1,5 +1,6 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAppContext } from '../context/AppContext';
 import { t } from '../i18n';
 import type { LanguageOption } from '../types';
@@ -10,6 +11,7 @@ export default function LanguageSettingsScreen() {
     setSelectedLanguage,
     setUserProfileStatus,
   } = useAppContext();
+  const insets = useSafeAreaInsets();
 
   const languageOptions: LanguageOption[] = ['Korean', 'English'];
 
@@ -22,7 +24,7 @@ export default function LanguageSettingsScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { paddingTop: insets.top + 18 }]}>
       <Text style={styles.headerTitle}>
         {t(selectedLanguage, 'settings.language.screenTitle')}
       </Text>

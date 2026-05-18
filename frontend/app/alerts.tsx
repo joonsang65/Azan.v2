@@ -1,10 +1,12 @@
 import { useRouter } from 'expo-router';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAppContext } from './context/AppContext';
 import type { InterestCategory, NoticeCategory } from './types';
 
 export default function AlertsScreen() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const {
     notices,
     selectedNoticeCategories,
@@ -32,7 +34,10 @@ export default function AlertsScreen() {
   };
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.content}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={[styles.content, { paddingTop: insets.top + 18 }]}
+    >
       <Text style={styles.screenTitle}>알림</Text>
       <Text style={styles.screenSubtitle}>
         선택한 카테고리에 맞는 공지를 모아볼 수 있어요.

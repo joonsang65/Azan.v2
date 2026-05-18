@@ -43,7 +43,22 @@ function RootLayoutNav() {
 export default function RootLayout() {
   return (
     <AppProvider>
+<<<<<<< HEAD
       <RootLayoutNav />
+=======
+      <Stack initialRouteName="auth/login" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="auth/login" />
+        <Stack.Screen name="auth/signup" />
+        <Stack.Screen name="auth/profile" />
+        <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="alerts" />
+        <Stack.Screen name="notices/[id]" />
+        <Stack.Screen name="settings/index" />
+        <Stack.Screen name="settings/profile" />
+        <Stack.Screen name="settings/language" />
+        <Stack.Screen name="settings/notification-settings" />
+      </Stack>
+>>>>>>> fe77fbc2 (feat: update frontend)
     </AppProvider>
   );
 }

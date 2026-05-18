@@ -1,6 +1,7 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAppContext } from '../../context/AppContext';
 import { t } from '../../i18n';
 
@@ -18,6 +19,7 @@ const menuItems = [
 
 export default function SideMenu({ onClose }: SideMenuProps) {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const { selectedLanguage } = useAppContext();
 
   const handlePress = (key: string) => {
@@ -32,7 +34,7 @@ export default function SideMenu({ onClose }: SideMenuProps) {
     <View style={styles.overlay}>
       <TouchableOpacity style={styles.dim} onPress={onClose} />
 
-      <View style={styles.menu}>
+      <View style={[styles.menu, { paddingTop: insets.top + 28 }]}>
         <View style={styles.header}>
           <Text style={styles.title}>{t(selectedLanguage, 'menu.information')}</Text>
 
@@ -73,7 +75,6 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     width: 270,
-    paddingTop: 60,
     paddingHorizontal: 18,
     backgroundColor: '#FFFFFF',
     shadowColor: '#000',

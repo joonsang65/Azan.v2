@@ -1,205 +1,308 @@
 import type { LanguageOption, NoticeCategory } from './types';
 
-type TranslationKey =
-  | 'tabs.home'
-  | 'tabs.chat'
-  | 'tabs.notices'
-  | 'tabs.calendar'
-  | 'headers.chat'
-  | 'headers.notices'
-  | 'headers.calendar'
-  | 'settings.title'
-  | 'settings.subtitle'
-  | 'settings.profile.title'
-  | 'settings.profile.subtitle'
-  | 'settings.language.title'
-  | 'settings.language.subtitle'
-  | 'settings.notifications.title'
-  | 'settings.notifications.subtitle'
-  | 'settings.logout.title'
-  | 'settings.logout.subtitle'
-  | 'settings.logout.alertTitle'
-  | 'settings.logout.alertMessage'
-  | 'settings.logout.cancel'
-  | 'settings.language.screenTitle'
-  | 'settings.language.screenSubtitle'
-  | 'settings.language.korean'
-  | 'settings.language.english'
-  | 'settings.language.koreanSubtitle'
-  | 'settings.language.englishSubtitle'
-  | 'settings.language.current'
-  | 'menu.information'
-  | 'menu.visa'
-  | 'menu.topik'
-  | 'menu.register'
-  | 'menu.scholarship'
-  | 'menu.life'
-  | 'category.all'
-  | 'category.Visa'
-  | 'category.TOPIK'
-  | 'category.Academic'
-  | 'category.Events'
-  | 'category.Scholarship'
-  | 'category.Dormitory'
-  | 'notices.imageAttachment'
-  | 'notices.important'
-  | 'notices.deadline'
-  | 'notices.posted'
-  | 'notices.saveDeadline'
-  | 'notices.removeFromCalendar'
-  | 'notices.emptyTitle'
-  | 'notices.emptyDescription'
-  | 'home.todayNotices'
-  | 'home.todayNoticesEmpty'
-  | 'home.todayDeadlines'
-  | 'home.todayDeadlinesEmpty'
-  | 'home.weeklyTasks'
-  | 'home.weeklyTasksHint'
-  | 'home.weeklyTasksEmpty'
-  | 'home.progress'
-  | 'home.completed'
-  | 'home.remaining'
-  | 'home.urgent'
-  | 'home.done';
+export type TranslationKey = string;
 
-const translations: Record<LanguageOption, Record<TranslationKey, string>> = {
+export const translations: Record<LanguageOption, Record<TranslationKey, string>> = {
   Korean: {
     'tabs.home': '홈',
     'tabs.chat': '채팅',
     'tabs.notices': '공지',
     'tabs.calendar': '캘린더',
-    'headers.chat': '챗봇 상담',
-    'headers.notices': '공지사항',
+    'headers.chat': '채팅',
+    'headers.notices': '공지',
     'headers.calendar': '캘린더',
-    'settings.title': '설정',
-    'settings.subtitle': '프로필, 언어, 알림 설정을 관리해보세요.',
-    'settings.profile.title': '내 프로필',
-    'settings.profile.subtitle': '입학 및 개인 정보를 확인하고 수정해요',
-    'settings.language.title': '언어',
-    'settings.language.subtitle': '앱에서 사용할 언어를 선택해요',
-    'settings.notifications.title': '알림 설정',
-    'settings.notifications.subtitle': '중요 카테고리와 알림 빈도를 관리해요',
-    'settings.logout.title': '로그아웃',
-    'settings.logout.subtitle': '앱에서 로그아웃해요',
-    'settings.logout.alertTitle': '로그아웃',
-    'settings.logout.alertMessage': '정말 로그아웃할까요?',
-    'settings.logout.cancel': '취소',
-    'settings.language.screenTitle': '언어 설정',
-    'settings.language.screenSubtitle': '앱에서 사용할 언어를 선택해보세요',
-    'settings.language.korean': '한국어',
-    'settings.language.english': '영어',
-    'settings.language.koreanSubtitle': '앱 화면을 한국어로 표시합니다.',
-    'settings.language.englishSubtitle': '앱 화면을 영어로 표시합니다.',
-    'settings.language.current': '현재 언어',
-    'menu.information': '정보',
+
+    'menu.information': '정보 메뉴',
     'menu.visa': '비자',
     'menu.topik': 'TOPIK',
-    'menu.register': '입학',
+    'menu.register': '입학 등록',
     'menu.scholarship': '장학금',
-    'menu.life': '생활',
-    'category.all': '전체',
-    'category.Visa': '비자',
-    'category.TOPIK': 'TOPIK',
-    'category.Academic': '입학',
-    'category.Events': '행사',
-    'category.Scholarship': '장학금',
-    'category.Dormitory': '기숙사',
-    'notices.imageAttachment': '이미지 첨부',
-    'notices.important': '중요',
-    'notices.deadline': '마감일',
-    'notices.posted': '게시일',
-    'notices.saveDeadline': '마감일 저장',
-    'notices.removeFromCalendar': '캘린더에서 제거',
-    'notices.emptyTitle': '공지사항이 없습니다',
-    'notices.emptyDescription': '선택한 카테고리에 표시할 공지가 없습니다.',
-    'home.todayNotices': '이번주 공지',
-    'home.todayNoticesEmpty': '최근 일주일 동안 올라온 공지가 없습니다.',
-    'home.todayDeadlines': '오늘 마감 공지',
-    'home.todayDeadlinesEmpty': '오늘 마감으로 저장된 공지가 없습니다.',
+    'menu.life': '생활 정보',
+
+    'home.currentStatus': '현재 상태',
+    'home.checkStatus': '상태 갱신',
+    'home.checkingNow': '갱신 중...',
+    'home.noticeCount': '공지 수',
+    'home.lastChecked': '마지막 확인',
+    'home.neverChecked': '아직 확인 전',
+    'home.errorLoading': '불러오기 오류',
+    'home.todayDeadlines': '오늘 마감',
+    'home.todayDeadlinesEmpty': '오늘 마감인 일정이 없습니다.',
+    'home.todayNotices': '최근 공지',
+    'home.todayNoticesEmpty': '최근 공지가 없습니다.',
     'home.weeklyTasks': '이번 주 할 일',
-    'home.weeklyTasksHint':
-      '캘린더에 저장한 공지 중 이번 주까지 처리해야 할 중요한 일정입니다.',
-    'home.weeklyTasksEmpty': '이번 주까지 처리할 저장 공지가 없습니다.',
+    'home.weeklyTasksHint': '중요하거나 곧 마감되는 일정을 확인하세요.',
+    'home.weeklyTasksEmpty': '이번 주 확인할 중요한 일정이 없습니다.',
     'home.progress': '진행률',
     'home.completed': '완료',
     'home.remaining': '남음',
     'home.urgent': '긴급',
     'home.done': '완료',
+
+    'notices.imageAttachment': '이미지 첨부',
+    'notices.important': '중요',
+    'notices.deadline': '마감',
+    'notices.posted': '게시',
+    'notices.removeFromCalendar': '캘린더에서 제거',
+    'notices.saveDeadline': '마감일 저장',
+    'notices.emptyTitle': '공지 없음',
+    'notices.emptyDescription': '선택한 카테고리에 표시할 공지가 없습니다.',
+
+    'settings.title': '설정',
+    'settings.subtitle': '앱 사용 환경과 개인정보를 관리하세요.',
+    'settings.profile.title': '개인정보',
+    'settings.profile.subtitle': '학사, 비자, TOPIK 정보를 수정합니다.',
+    'settings.language.title': '언어 설정',
+    'settings.language.subtitle': '앱에서 사용할 언어를 선택합니다.',
+    'settings.notifications.title': '알림 설정',
+    'settings.notifications.subtitle': '공지와 마감 알림 방식을 관리합니다.',
+    'settings.logout.title': '로그아웃',
+    'settings.logout.subtitle': '현재 계정에서 로그아웃합니다.',
+    'settings.logout.alertTitle': '로그아웃',
+    'settings.logout.alertMessage': '정말 로그아웃하시겠습니까?',
+    'settings.logout.cancel': '취소',
+    'settings.language.korean': '한국어',
+    'settings.language.english': '영어',
+    'settings.language.screenTitle': '언어 설정',
+    'settings.language.screenSubtitle': '원하는 표시 언어를 선택하세요.',
+    'settings.language.koreanSubtitle': '한국어로 앱을 사용합니다.',
+    'settings.language.englishSubtitle': 'Use the app in English.',
+    'settings.language.current': '현재 언어',
+
+    'auth.login.brandTitle': 'Ajou University International Student Support',
+    'auth.login.brandSubtitle': '중요한 학사·체류 정보를 놓치지 않도록 안내합니다',
+    'auth.login.title': '로그인',
+    'auth.login.description': '이메일과 비밀번호로 안전하게 로그인하세요.',
+    'auth.login.emailPlaceholder': 'example@ajou.ac.kr',
+    'auth.login.passwordPlaceholder': '비밀번호 입력',
+    'auth.login.button': '로그인',
+    'auth.login.loading': '로그인 중...',
+    'auth.login.signUpLink': '회원가입',
+    'auth.login.errorTitle': '입력 오류',
+    'auth.login.errorMessage': '이메일과 비밀번호를 모두 입력해주세요.',
+    'auth.login.failedTitle': '로그인 실패',
+    'auth.login.failedMessage': '알 수 없는 오류가 발생했습니다.',
+
+    'auth.signup.brandTitle': '계정 생성',
+    'auth.signup.brandSubtitle': 'Ajou International에 오신 것을 환영합니다.',
+    'auth.signup.title': '계정 생성',
+    'auth.signup.description': '이메일과 비밀번호를 입력하여 새로운 계정을 만드세요.',
+    'auth.signup.emailPlaceholder': 'example@ajou.ac.kr',
+    'auth.signup.passwordPlaceholder': '비밀번호 입력',
+    'auth.signup.confirmPasswordPlaceholder': '비밀번호 확인',
+    'auth.signup.button': '다음 단계',
+    'auth.signup.loading': '진행 중...',
+    'auth.signup.loginLink': '이미 계정이 있으신가요? 로그인',
+    'auth.signup.errorTitle': '입력 오류',
+    'auth.signup.errorMessage': '이메일과 비밀번호를 모두 입력해주세요.',
+    'auth.signup.failedTitle': '회원가입 실패',
+    'auth.signup.failedMessage': '알 수 없는 오류가 발생했습니다.',
+
+    'auth.profile.title': '개인정보 입력',
+    'auth.profile.subtitle': '학사, 비자, TOPIK 정보를 입력하면 필요한 공지를 더 정확히 볼 수 있습니다.',
+    'auth.profile.stepLabel': '단계',
+    'auth.profile.step1': '기본 정보',
+    'auth.profile.step2': '비자 정보',
+    'auth.profile.step3': 'TOPIK 정보',
+    'auth.profile.step4': '관심 정보',
+    'auth.profile.sectionBasicInfo': '기본 정보 및 학업 상태',
+    'auth.profile.namePlaceholder': '이름',
+    'auth.profile.nationalityPlaceholder': '국적',
+    'auth.profile.statusLabel': '현재 상태',
+    'auth.profile.statusPlanned': '입학 예정',
+    'auth.profile.statusLanguageSchool': '어학원 재학 중',
+    'auth.profile.admissionTargetLabel': '입학 목표 시기',
+    'auth.profile.languageSemesterLabel': '현재 어학원 학기',
+    'auth.profile.desiredMajorPlaceholder': '희망 전공을 입력하세요.',
+    'auth.profile.sectionVisaInfo': '비자 정보',
+    'auth.profile.visaTypeLabel': '비자 유형',
+    'auth.profile.visaExpiryPlaceholder': '비자 만료일 YYYY-MM-DD',
+    'auth.profile.sectionTopikInfo': 'TOPIK 정보',
+    'auth.profile.topikStatusLabel': 'TOPIK 상태',
+    'auth.profile.topikNone': '없음',
+    'auth.profile.topikPassed': '취득 완료',
+    'auth.profile.currentLevelLabel': '현재 TOPIK 급수',
+    'auth.profile.targetLevelLabel': '목표 TOPIK 급수',
+    'auth.profile.sectionInterests': '관심 정보',
+    'auth.profile.interestsDescription': '받고 싶은 공지 분야를 선택하세요.',
+    'auth.profile.previous': '이전',
+    'auth.profile.next': '다음',
+    'auth.profile.save': '저장',
+    'auth.profile.saving': '저장 중...',
+    'auth.profile.errorTitle': '입력 오류',
+    'auth.profile.errorMessage': '필수 정보를 입력해주세요.',
+    'auth.profile.failedTitle': '저장 실패',
+    'auth.profile.failedMessage': '프로필 저장 중 오류가 발생했습니다.',
   },
   English: {
     'tabs.home': 'Home',
     'tabs.chat': 'Chat',
     'tabs.notices': 'Notices',
     'tabs.calendar': 'Calendar',
-    'headers.chat': 'Chatbot',
+    'headers.chat': 'Chat',
     'headers.notices': 'Notices',
     'headers.calendar': 'Calendar',
-    'settings.title': 'Settings',
-    'settings.subtitle': 'Manage your profile, language, and notifications.',
-    'settings.profile.title': 'My Profile',
-    'settings.profile.subtitle': 'Check and edit your admission and personal information.',
-    'settings.language.title': 'Language',
-    'settings.language.subtitle': 'Choose the language used in the app.',
-    'settings.notifications.title': 'Notifications',
-    'settings.notifications.subtitle': 'Manage important categories and notification frequency.',
-    'settings.logout.title': 'Logout',
-    'settings.logout.subtitle': 'Sign out of the app.',
-    'settings.logout.alertTitle': 'Logout',
-    'settings.logout.alertMessage': 'Are you sure you want to logout?',
-    'settings.logout.cancel': 'Cancel',
-    'settings.language.screenTitle': 'Language Settings',
-    'settings.language.screenSubtitle': 'Choose the language used in the app.',
-    'settings.language.korean': 'Korean',
-    'settings.language.english': 'English',
-    'settings.language.koreanSubtitle': 'Display the app in Korean.',
-    'settings.language.englishSubtitle': 'Display the app in English.',
-    'settings.language.current': 'Current Language',
+
     'menu.information': 'Information',
     'menu.visa': 'Visa',
     'menu.topik': 'TOPIK',
-    'menu.register': 'Register',
+    'menu.register': 'Registration',
     'menu.scholarship': 'Scholarship',
     'menu.life': 'Life',
-    'category.all': 'All',
-    'category.Visa': 'Visa',
-    'category.TOPIK': 'TOPIK',
-    'category.Academic': 'Academic',
-    'category.Events': 'Events',
-    'category.Scholarship': 'Scholarship',
-    'category.Dormitory': 'Dormitory',
-    'notices.imageAttachment': 'Image attached',
-    'notices.important': 'Important',
-    'notices.deadline': 'Deadline',
-    'notices.posted': 'Posted',
-    'notices.saveDeadline': 'Save deadline',
-    'notices.removeFromCalendar': 'Remove from calendar',
-    'notices.emptyTitle': 'No notices',
-    'notices.emptyDescription': 'There are no notices in the selected category.',
-    'home.todayNotices': "This Week's Notices",
-    'home.todayNoticesEmpty': 'No notices posted in the last week.',
+
+    'home.currentStatus': 'Current Status',
+    'home.checkStatus': 'Refresh Status',
+    'home.checkingNow': 'Refreshing...',
+    'home.noticeCount': 'Notice count',
+    'home.lastChecked': 'Last checked',
+    'home.neverChecked': 'Never checked',
+    'home.errorLoading': 'Loading error',
     'home.todayDeadlines': "Today's Deadlines",
-    'home.todayDeadlinesEmpty': 'No saved notices due today.',
-    'home.weeklyTasks': 'This Week',
-    'home.weeklyTasksHint':
-      'Important saved notices that should be handled by the end of this week.',
-    'home.weeklyTasksEmpty': 'No saved notices to handle this week.',
+    'home.todayDeadlinesEmpty': 'No deadlines today.',
+    'home.todayNotices': 'Recent Notices',
+    'home.todayNoticesEmpty': 'No recent notices.',
+    'home.weeklyTasks': "This Week's Tasks",
+    'home.weeklyTasksHint': 'Check important or upcoming deadlines.',
+    'home.weeklyTasksEmpty': 'No important tasks this week.',
     'home.progress': 'Progress',
     'home.completed': 'Completed',
     'home.remaining': 'Remaining',
     'home.urgent': 'Urgent',
     'home.done': 'Done',
+
+    'notices.imageAttachment': 'Image attached',
+    'notices.important': 'Important',
+    'notices.deadline': 'Deadline',
+    'notices.posted': 'Posted',
+    'notices.removeFromCalendar': 'Remove from calendar',
+    'notices.saveDeadline': 'Save deadline',
+    'notices.emptyTitle': 'No notices',
+    'notices.emptyDescription': 'There are no notices in this category.',
+
+    'settings.title': 'Settings',
+    'settings.subtitle': 'Manage your app preferences and profile.',
+    'settings.profile.title': 'Profile',
+    'settings.profile.subtitle': 'Edit academic, visa, and TOPIK information.',
+    'settings.language.title': 'Language',
+    'settings.language.subtitle': 'Choose the language used in the app.',
+    'settings.notifications.title': 'Notifications',
+    'settings.notifications.subtitle': 'Manage notice and deadline alerts.',
+    'settings.logout.title': 'Log out',
+    'settings.logout.subtitle': 'Sign out of the current account.',
+    'settings.logout.alertTitle': 'Log out',
+    'settings.logout.alertMessage': 'Are you sure you want to log out?',
+    'settings.logout.cancel': 'Cancel',
+    'settings.language.korean': 'Korean',
+    'settings.language.english': 'English',
+    'settings.language.screenTitle': 'Language',
+    'settings.language.screenSubtitle': 'Choose your preferred display language.',
+    'settings.language.koreanSubtitle': 'Use the app in Korean.',
+    'settings.language.englishSubtitle': 'Use the app in English.',
+    'settings.language.current': 'Current language',
+
+    'auth.login.brandTitle': 'Ajou University International Student Support',
+    'auth.login.brandSubtitle': 'Important academic and visa information for international students.',
+    'auth.login.title': 'Log In',
+    'auth.login.description': 'Securely sign in with your email and password.',
+    'auth.login.emailPlaceholder': 'example@ajou.ac.kr',
+    'auth.login.passwordPlaceholder': 'Enter your password',
+    'auth.login.button': 'Log In',
+    'auth.login.loading': 'Logging in...',
+    'auth.login.signUpLink': 'Sign Up',
+    'auth.login.errorTitle': 'Input Error',
+    'auth.login.errorMessage': 'Please enter both email and password.',
+    'auth.login.failedTitle': 'Login Failed',
+    'auth.login.failedMessage': 'An unexpected error occurred.',
+
+    'auth.signup.brandTitle': 'Create your account',
+    'auth.signup.brandSubtitle': 'Welcome to Ajou International.',
+    'auth.signup.title': 'Create account',
+    'auth.signup.description': 'Enter your email and password to register.',
+    'auth.signup.emailPlaceholder': 'example@ajou.ac.kr',
+    'auth.signup.passwordPlaceholder': 'Enter your password',
+    'auth.signup.confirmPasswordPlaceholder': 'Confirm your password',
+    'auth.signup.button': 'Next Step',
+    'auth.signup.loading': 'Processing...',
+    'auth.signup.loginLink': 'Already have an account? Log in',
+    'auth.signup.errorTitle': 'Input Error',
+    'auth.signup.errorMessage': 'Please enter both email and password.',
+    'auth.signup.failedTitle': 'Sign Up Failed',
+    'auth.signup.failedMessage': 'An unexpected error occurred.',
+
+    'auth.profile.title': 'Profile Setup',
+    'auth.profile.subtitle': 'Enter academic, visa, and TOPIK information to see more relevant notices.',
+    'auth.profile.stepLabel': 'Step',
+    'auth.profile.step1': 'Basic Information',
+    'auth.profile.step2': 'Visa Information',
+    'auth.profile.step3': 'TOPIK Information',
+    'auth.profile.step4': 'Interests',
+    'auth.profile.sectionBasicInfo': 'Basic Information and Status',
+    'auth.profile.namePlaceholder': 'Full name',
+    'auth.profile.nationalityPlaceholder': 'Nationality',
+    'auth.profile.statusLabel': 'Current status',
+    'auth.profile.statusPlanned': 'Planning admission',
+    'auth.profile.statusLanguageSchool': 'Language school student',
+    'auth.profile.admissionTargetLabel': 'Target admission term',
+    'auth.profile.languageSemesterLabel': 'Current language school semester',
+    'auth.profile.desiredMajorPlaceholder': 'Enter your desired major.',
+    'auth.profile.sectionVisaInfo': 'Visa Information',
+    'auth.profile.visaTypeLabel': 'Visa type',
+    'auth.profile.visaExpiryPlaceholder': 'Visa expiry date YYYY-MM-DD',
+    'auth.profile.sectionTopikInfo': 'TOPIK Information',
+    'auth.profile.topikStatusLabel': 'TOPIK status',
+    'auth.profile.topikNone': 'None',
+    'auth.profile.topikPassed': 'Passed',
+    'auth.profile.currentLevelLabel': 'Current TOPIK level',
+    'auth.profile.targetLevelLabel': 'Target TOPIK level',
+    'auth.profile.sectionInterests': 'Interests',
+    'auth.profile.interestsDescription': 'Choose notice areas you want to follow.',
+    'auth.profile.previous': 'Previous',
+    'auth.profile.next': 'Next',
+    'auth.profile.save': 'Save',
+    'auth.profile.saving': 'Saving...',
+    'auth.profile.errorTitle': 'Input Error',
+    'auth.profile.errorMessage': 'Please enter the required information.',
+    'auth.profile.failedTitle': 'Save Failed',
+    'auth.profile.failedMessage': 'An error occurred while saving your profile.',
   },
 };
 
 export function t(language: LanguageOption, key: TranslationKey) {
-  return translations[language][key];
+  return translations[language][key] || key;
 }
+
+export const useI18n = (language: LanguageOption = 'Korean') => {
+  const translate = (key: TranslationKey): string => {
+    return t(language, key);
+  };
+
+  return { translate, language };
+};
 
 export function getCategoryLabel(
   language: LanguageOption,
   category: NoticeCategory | 'All'
 ) {
-  return category === 'All'
-    ? t(language, 'category.all')
-    : t(language, `category.${category}` as TranslationKey);
+  const labels: Record<LanguageOption, Record<NoticeCategory | 'All', string>> = {
+    Korean: {
+      All: '전체',
+      Visa: '비자',
+      TOPIK: 'TOPIK',
+      Academic: '학사',
+      Events: '행사',
+      Scholarship: '장학금',
+      Dormitory: '기숙사',
+    },
+    English: {
+      All: 'All',
+      Visa: 'Visa',
+      TOPIK: 'TOPIK',
+      Academic: 'Academic',
+      Events: 'Events',
+      Scholarship: 'Scholarship',
+      Dormitory: 'Dormitory',
+    },
+  };
+
+  return labels[language][category] || category;
 }

@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAppContext } from '../context/AppContext';
 import { authService } from '../services/auth';
 import type {
@@ -17,6 +18,7 @@ import type {
   LanguageInstituteStatus,
   LanguageInstituteTerm,
   LanguageOption,
+  NoticeCategory,
   ResidenceType,
   TopikLevel,
   TopikStatus,
@@ -76,8 +78,14 @@ const WEEK_DAYS = ['일', '월', '화', '수', '목', '금', '토'];
 type DropdownKey = 'currentTopik' | 'targetTopik' | null;
 
 export default function ProfileScreen() {
-  const { userProfileStatus, setUserProfileStatus, setSelectedLanguage } =
+  const {
+    userProfileStatus,
+    setUserProfileStatus,
+    setSelectedLanguage,
+    setSelectedNoticeCategories,
+  } =
     useAppContext();
+  const insets = useSafeAreaInsets();
 
   const [step, setStep] = useState<1 | 2>(1);
   const [form, setForm] = useState<UserProfileStatus>(userProfileStatus);
@@ -150,6 +158,7 @@ export default function ProfileScreen() {
       await authService.updateMe(form);
       setUserProfileStatus(form);
       setSelectedLanguage(form.preferredLanguage);
+      setSelectedNoticeCategories(mapInterestsToNoticeCategories(form.interests));
       Alert.alert("성공", "프로필이 저장되었습니다.");
     } catch (e: any) {
       Alert.alert("저장 실패", e.message || "프로필 저장 중 오류가 발생했습니다.");
@@ -157,7 +166,10 @@ export default function ProfileScreen() {
   };
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.content}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={[styles.content, { paddingTop: insets.top + 18 }]}
+    >
       <Text style={styles.headerTitle}>내 프로필</Text>
       <Text style={styles.headerSubtitle}>
         어학당, 비자, TOPIK 정보를 입력하면 필요한 공지를 더 정확히 볼 수 있어요.
@@ -808,6 +820,23 @@ function getInterestLabel(value: InterestCategory) {
     case 'Life':
       return '생활';
   }
+}
+
+function mapInterestsToNoticeCategories(interests: InterestCategory[]): NoticeCategory[] {
+  return Array.from(
+    new Set(
+      interests.map((interest) => {
+        switch (interest) {
+          case 'Admission':
+            return 'Academic';
+          case 'Life':
+            return 'Dormitory';
+          default:
+            return interest;
+        }
+      })
+    )
+  );
 }
 
 const styles = StyleSheet.create({
