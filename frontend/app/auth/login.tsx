@@ -10,18 +10,6 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-<<<<<<< HEAD
-} from "react-native";
-import { useRouter } from "expo-router";
-import { authService } from "../services/auth";
-import { useAppContext } from "../context/AppContext";
-
-export default function LoginScreen() {
-  const router = useRouter();
-  const { setUserProfileStatus } = useAppContext();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-=======
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -39,10 +27,9 @@ const LANGUAGE_DETAILS: Record<LanguageOption, { label: string; flag: string }> 
 export default function LoginScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { selectedLanguage, setSelectedLanguage } = useAppContext();
+  const { selectedLanguage, setSelectedLanguage, setUserProfileStatus } = useAppContext();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
->>>>>>> fe77fbc2 (feat: update frontend)
   const [loading, setLoading] = useState(false);
   const [secureText, setSecureText] = useState(true);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
@@ -59,23 +46,18 @@ export default function LoginScreen() {
     setLoading(true);
     try {
       await authService.login(email, password);
-<<<<<<< HEAD
-      
-      // 로그인 성공 후 유저 정보 즉시 로드하여 전역 상태 업데이트
+
       const me = await authService.getMe();
       if (me) {
-        setUserProfileStatus(prev => ({
+        setUserProfileStatus((prev) => ({
           ...prev,
           name: me.full_name,
           email: me.email,
           preferredLanguage: (me as any).preferred_language || prev.preferredLanguage,
         }));
       }
-      
-      router.replace("/(tabs)");
-=======
+
       router.replace('/(tabs)');
->>>>>>> fe77fbc2 (feat: update frontend)
     } catch (error: any) {
       Alert.alert(
         t(selectedLanguage, 'auth.login.failedTitle'),
@@ -239,7 +221,6 @@ export default function LoginScreen() {
           resizeMode="contain"
         />
       </View>
-
     </KeyboardAvoidingView>
   );
 }

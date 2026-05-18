@@ -1,7 +1,6 @@
 import { Stack, useRouter, useSegments } from 'expo-router';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { AppProvider, useAppContext } from './context/AppContext';
-import { getToken } from './services/api';
 
 function RootLayoutNav() {
   const { userProfileStatus, isAuthInitialized } = useAppContext();
@@ -21,7 +20,7 @@ function RootLayoutNav() {
       // 인증되었는데 인증 페이지에 있으면 메인으로
       router.replace('/(tabs)');
     }
-  }, [isAuthInitialized, userProfileStatus.email, segments]);
+  }, [isAuthInitialized, userProfileStatus.email, segments, router]);
 
   if (!isAuthInitialized) return null;
 
@@ -30,6 +29,7 @@ function RootLayoutNav() {
       <Stack.Screen name="(tabs)" />
       <Stack.Screen name="auth/login" />
       <Stack.Screen name="auth/signup" />
+      <Stack.Screen name="auth/profile" />
       <Stack.Screen name="alerts" />
       <Stack.Screen name="notices/[id]" />
       <Stack.Screen name="settings/index" />
@@ -43,22 +43,7 @@ function RootLayoutNav() {
 export default function RootLayout() {
   return (
     <AppProvider>
-<<<<<<< HEAD
       <RootLayoutNav />
-=======
-      <Stack initialRouteName="auth/login" screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="auth/login" />
-        <Stack.Screen name="auth/signup" />
-        <Stack.Screen name="auth/profile" />
-        <Stack.Screen name="(tabs)" />
-        <Stack.Screen name="alerts" />
-        <Stack.Screen name="notices/[id]" />
-        <Stack.Screen name="settings/index" />
-        <Stack.Screen name="settings/profile" />
-        <Stack.Screen name="settings/language" />
-        <Stack.Screen name="settings/notification-settings" />
-      </Stack>
->>>>>>> fe77fbc2 (feat: update frontend)
     </AppProvider>
   );
 }

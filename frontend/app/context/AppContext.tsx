@@ -55,11 +55,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [noticesError, setNoticesError] = useState<string | null>(null);
   const [savedNoticeReminders, setSavedNoticeReminders] = useState<SavedNoticeReminder[]>([]);
   const [tasks, setTasks] = useState<Task[]>([]);
-<<<<<<< HEAD
   const [isAuthInitialized, setIsAuthInitialized] = useState(false);
-=======
   const [statusCheckedAt, setStatusCheckedAt] = useState<string | null>(null);
->>>>>>> fe77fbc2 (feat: update frontend)
 
   // 1. 초기 데이터 로드 (프로필 & 키워드)
   useEffect(() => {
@@ -76,35 +73,46 @@ export function AppProvider({ children }: { children: ReactNode }) {
             ...initialUserProfileStatus,
             name: me.full_name,
             email: me.email,
+            languageInstituteStatus: (me as any).language_institute_status || initialUserProfileStatus.languageInstituteStatus,
+            languageInstituteTerm: (me as any).language_institute_term || initialUserProfileStatus.languageInstituteTerm,
+            targetAdmissionTerm: (me as any).target_admission_term || initialUserProfileStatus.targetAdmissionTerm,
+            desiredMajor: (me as any).desired_major || initialUserProfileStatus.desiredMajor,
+            visaType: (me as any).visa_type || initialUserProfileStatus.visaType,
+            visaExpiryDate: (me as any).visa_expiry_date || initialUserProfileStatus.visaExpiryDate,
+            visaExpiryUnknown: (me as any).visa_expiry_unknown ?? initialUserProfileStatus.visaExpiryUnknown,
+            topikStatus: (me as any).topik_status || initialUserProfileStatus.topikStatus,
+            topikLevel: (me as any).topik_level || initialUserProfileStatus.topikLevel,
+            topikTargetLevel: (me as any).topik_target_level || initialUserProfileStatus.topikTargetLevel,
+            topikTestPlan: (me as any).topik_test_plan || initialUserProfileStatus.topikTestPlan,
+            nationality: (me as any).nationality || initialUserProfileStatus.nationality,
+            currentStatus: (me as any).current_status || initialUserProfileStatus.currentStatus,
+            languageSchoolSemester:
+              (me as any).language_school_semester || initialUserProfileStatus.languageSchoolSemester,
             preferredLanguage: (me as any).preferred_language || initialUserProfileStatus.preferredLanguage,
+            residenceType: (me as any).residence_type || initialUserProfileStatus.residenceType,
             // 다른 필드들도 필요시 업데이트
           };
 
           setUserProfileStatus(profileData);
           setSelectedLanguage(profileData.preferredLanguage);
           
-<<<<<<< HEAD
           try {
             const myKeys = await keywordService.getMyKeywords();
             if (myKeys?.enabled) {
-              setSelectedNoticeCategories(myKeys.enabled.map(id => mapIdToCategory(id)));
+              const categories = myKeys.enabled.map(id => mapIdToCategory(id));
+              setSelectedNoticeCategories(categories);
+              setUserProfileStatus((prev) => ({
+                ...prev,
+                interests: categories.map(mapCategoryToInterest),
+              }));
             }
           } catch (e) {
             console.error("Failed to load keywords", e);
-=======
           // 사용자의 구독 키워드 가져오기
-          const myKeys = await keywordService.getMyKeywords();
-          if (myKeys?.enabled) {
-            const categories = myKeys.enabled.map(id => mapIdToCategory(id));
-            setSelectedNoticeCategories(categories);
-            setUserProfileStatus((prev) => ({
-              ...prev,
-              interests: categories.map(mapCategoryToInterest),
-            }));
->>>>>>> fe77fbc2 (feat: update frontend)
+          // 사용자의 구독 키워드 가져오기
           }
         }
-      } catch (e) {
+      } catch {
         console.log("Session init failed or no user logged in");
       } finally {
         setIsAuthInitialized(true);
