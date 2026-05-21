@@ -90,7 +90,7 @@ def main() -> None:
         # ── 3. 메시지 빌드 ────────────────────────────────────────────────────
         HELLO_BODY: dict[str, str] = {
             "Korean": "안녕! 난 AZAN 이야!",
-            "English": MESSAGE,
+            "English": "Hello, I'm AZAN! How can I help you?",
         }
         valid_users, messages = [], []
         for u in users:

@@ -2,6 +2,7 @@ import React, { createContext, ReactNode, useContext, useEffect, useState } from
 import { Platform } from 'react-native';
 import * as Device from 'expo-device';
 import * as Notifications from 'expo-notifications';
+import Constants from 'expo-constants';
 import { fetchNotices } from '../services/notices';
 import { authService } from '../services/auth';
 import { getToken } from '../services/api';
@@ -40,16 +41,6 @@ const initialUserProfileStatus: UserProfileStatus = {
   residenceType: 'Dormitory',
 };
 
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    shouldShowAlert: true,
-    shouldPlaySound: true,
-    shouldSetBadge: false,
-    shouldShowBanner: true,
-    shouldShowList: true,
-  }),
-});
-
 async function registerPushToken(): Promise<void> {
   if (!Device.isDevice) return;
 
@@ -67,7 +58,8 @@ async function registerPushToken(): Promise<void> {
     });
   }
 
-  const { data: token } = await Notifications.getExpoPushTokenAsync();
+  const projectId = Constants.expoConfig?.extra?.eas?.projectId ?? Constants.easConfig?.projectId;
+  const { data: token } = await Notifications.getExpoPushTokenAsync(projectId ? { projectId } : undefined);
   console.log('[PushToken]', token);
   await authService.updatePushToken(token);
 }

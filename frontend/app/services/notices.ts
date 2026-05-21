@@ -1,4 +1,5 @@
 import type { Notice, NoticeCategory } from '../types';
+import { apiRequest } from './api';
 
 const seedNotices: Notice[] = [
   {
@@ -394,45 +395,19 @@ function loadBundledCrawlerNotices(): Notice[] {
   return items.map(normalizeNotice);
 }
 
-async function fetchEndpoint(endpoint: string): Promise<Notice[]> {
-  const response = await fetch(endpoint);
-
-  if (!response.ok) {
-    throw new Error(`Failed to load notices: ${response.status}`);
-  }
-
-  const payload = (await response.json()) as RemotePayload;
-  const items = flattenPayload(payload);
-
-  if (!Array.isArray(items)) {
-    throw new Error('Invalid notices response');
-  }
-
-  return items.map(normalizeNotice);
-}
 
 async function fetchRemoteNotices(): Promise<Notice[]> {
   if (process.env.EXPO_PUBLIC_USE_LOCAL_CRAWLER_JSON === 'true') {
     return loadBundledCrawlerNotices();
   }
 
-  const endpoints = [
-    process.env.EXPO_PUBLIC_NOTICES_API_URL,
-    process.env.EXPO_PUBLIC_OIA_NOTICES_API_URL,
-    process.env.EXPO_PUBLIC_TOPIK_NOTICES_API_URL,
-  ].filter((value): value is string => Boolean(value));
-
-  if (endpoints.length === 0) {
-    return seedNotices;
-  }
-
-  const results = await Promise.all(endpoints.map(fetchEndpoint));
-  const merged = results.flat();
+  const payload = await apiRequest<RemotePayload>('/notices?limit=200');
+  const items = flattenPayload(payload);
   const deduped = new Map<string, Notice>();
 
-  for (const notice of merged) {
+  items.map(normalizeNotice).forEach((notice) => {
     deduped.set(notice.id, notice);
-  }
+  });
 
   return [...deduped.values()].sort((a, b) => b.date.localeCompare(a.date));
 }

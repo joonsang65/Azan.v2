@@ -70,13 +70,13 @@ def _queue_alerts_for_notice(db: Session, notice_uuid: UUIDType) -> int:
 def list_notices(
     keyword_id: Optional[int] = Query(default=None),
     q: Optional[str] = Query(default=None),
-    limit: int = Query(default=20, ge=1, le=100),
+    limit: int = Query(default=20, ge=1, le=200),
     offset: int = Query(default=0, ge=0),
     db: Session = Depends(get_db),
 ):
     query = (
         db.query(Notice)
-        .join(Keyword, Keyword.id == Notice.keyword_id)
+        .outerjoin(Keyword, Keyword.id == Notice.keyword_id)
         .filter(Notice.notice_id.isnot(None))
     )
 
@@ -209,7 +209,7 @@ def create_notice(body: NoticeCreateRequest, db: Session = Depends(get_db)):
 def get_notice(notice_id: UUIDType, db: Session = Depends(get_db)):
     notice_row = (
         db.query(Notice, Keyword)
-        .join(Keyword, Keyword.id == Notice.keyword_id)
+        .outerjoin(Keyword, Keyword.id == Notice.keyword_id)
         .filter(Notice.id == notice_id)
         .one_or_none()
     )
@@ -228,6 +228,6 @@ def get_notice(notice_id: UUIDType, db: Session = Depends(get_db)):
         "deadline": notice.deadline,
         "image_urls": notice.image_urls or [],
         "keyword_id": notice.keyword_id,
-        "keyword": keyword_row.keyword,
+        "keyword": keyword_row.keyword if keyword_row else None,
         "published_at": notice.published_at,
     }

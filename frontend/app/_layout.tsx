@@ -1,6 +1,18 @@
 import { Stack, useRouter, useSegments } from 'expo-router';
 import React, { useEffect } from 'react';
+import * as Notifications from 'expo-notifications';
 import { AppProvider, useAppContext } from './context/AppContext';
+
+// Must be at module level (outside any component) so it fires before any notification arrives.
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: true,
+    shouldShowBanner: true,
+    shouldShowList: true,
+  }),
+});
 
 function RootLayoutNav() {
   const { userProfileStatus, isAuthInitialized } = useAppContext();
