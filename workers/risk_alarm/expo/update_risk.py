@@ -217,8 +217,8 @@ def main() -> None:
                     "topik_risk": topik_risk,
                 })
 
-            # Bulk UPDATE risk scores
-            if user_risk_updates:
+            # Bulk UPDATE risk scores (skipped in FORCE_SEND / test mode)
+            if user_risk_updates and not FORCE_SEND:
                 conn.execute(
                     text("""
                         UPDATE users
@@ -229,6 +229,8 @@ def main() -> None:
                     user_risk_updates,
                 )
                 log.info("Updated risk scores for %d user(s).", len(user_risk_updates))
+            elif FORCE_SEND:
+                log.info("FORCE_SEND=true — skipping visa_risk/topik_risk column update.")
 
             # Bulk INSERT outbox rows for users that meet send threshold
             if outbox_inserts:

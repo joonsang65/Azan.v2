@@ -1,15 +1,18 @@
 """
-workers/risk/expo/send_risk_alerts.py
+workers/risk_alarm/expo/send_risk_alerts.py
 
 Reads pending risk-alert rows from alert_outbox (notice_id IS NULL)
 and delivers them via the Expo Push API in batches of 100.
 
-On success: status → 'sent', sent_at = now, user.{visa,topik}_last_notified_at = today
+On success: status → 'sent', sent_at = now
+  - Normal mode:    visa_last_notified_at / topik_last_notified_at also updated
+  - FORCE_SEND=true (test mode): last_notified_at columns NOT touched
 On failure: status → 'failed', try_count += 1
 
 Env vars:
   DATABASE_URL       — Neon/PostgreSQL connection string
   EXPO_ACCESS_TOKEN  — (optional) Expo access token for enhanced delivery
+  FORCE_SEND         — set "true" to skip last_notified_at updates (test mode)
 """
 
 import logging
@@ -28,6 +31,7 @@ log = logging.getLogger(__name__)
 
 EXPO_PUSH_URL = "https://exp.host/--/api/v2/push/send"
 EXPO_BATCH_SIZE = 100
+FORCE_SEND: bool = os.environ.get("FORCE_SEND", "").lower() in ("1", "true", "yes")
 
 
 def _get_engine():
@@ -130,27 +134,30 @@ def main() -> None:
                     [{"now": now, "id": r.outbox_id} for r in sent_rows],
                 )
 
-                visa_updates = [
-                    {"today": today, "uid": str(r.user_id)}
-                    for r in sent_rows
-                    if r.payload["alert_type"] == "visa"
-                ]
-                if visa_updates:
-                    conn.execute(
-                        text("UPDATE users SET visa_last_notified_at = :today WHERE id = :uid::uuid"),
-                        visa_updates,
-                    )
+                if FORCE_SEND:
+                    log.info("FORCE_SEND=true — skipping visa_last_notified_at / topik_last_notified_at update.")
+                else:
+                    visa_updates = [
+                        {"today": today, "uid": str(r.user_id)}
+                        for r in sent_rows
+                        if r.payload["alert_type"] == "visa"
+                    ]
+                    if visa_updates:
+                        conn.execute(
+                            text("UPDATE users SET visa_last_notified_at = :today WHERE id = :uid::uuid"),
+                            visa_updates,
+                        )
 
-                topik_updates = [
-                    {"today": today, "uid": str(r.user_id)}
-                    for r in sent_rows
-                    if r.payload["alert_type"] == "topik"
-                ]
-                if topik_updates:
-                    conn.execute(
-                        text("UPDATE users SET topik_last_notified_at = :today WHERE id = :uid::uuid"),
-                        topik_updates,
-                    )
+                    topik_updates = [
+                        {"today": today, "uid": str(r.user_id)}
+                        for r in sent_rows
+                        if r.payload["alert_type"] == "topik"
+                    ]
+                    if topik_updates:
+                        conn.execute(
+                            text("UPDATE users SET topik_last_notified_at = :today WHERE id = :uid::uuid"),
+                            topik_updates,
+                        )
 
                 log.info("Sent %d alert(s) successfully.", len(sent_rows))
 
