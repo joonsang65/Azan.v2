@@ -144,7 +144,7 @@ def main() -> None:
                     ]
                     if visa_updates:
                         conn.execute(
-                            text("UPDATE users SET visa_last_notified_at = :today WHERE id = :uid::uuid"),
+                            text("UPDATE users SET visa_last_notified_at = :today WHERE id = CAST(:uid AS uuid)"),
                             visa_updates,
                         )
 
@@ -155,7 +155,7 @@ def main() -> None:
                     ]
                     if topik_updates:
                         conn.execute(
-                            text("UPDATE users SET topik_last_notified_at = :today WHERE id = :uid::uuid"),
+                            text("UPDATE users SET topik_last_notified_at = :today WHERE id = CAST(:uid AS uuid)"),
                             topik_updates,
                         )
 

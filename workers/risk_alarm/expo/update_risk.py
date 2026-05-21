@@ -224,7 +224,7 @@ def main() -> None:
                         UPDATE users
                         SET visa_risk  = :visa_risk,
                             topik_risk = :topik_risk
-                        WHERE id = :id::uuid
+                        WHERE id = CAST(:id AS uuid)
                     """),
                     user_risk_updates,
                 )
@@ -237,7 +237,7 @@ def main() -> None:
                 conn.execute(
                     text("""
                         INSERT INTO alert_outbox (user_id, status, try_count, payload)
-                        VALUES (:user_id::uuid, 'pending', 0, :payload::jsonb)
+                        VALUES (CAST(:user_id AS uuid), 'pending', 0, CAST(:payload AS jsonb))
                     """),
                     outbox_inserts,
                 )
