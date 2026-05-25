@@ -1,9 +1,7 @@
-name: Crawl Ajou Notices
+name: Crawl Ajou Notices (NEON_DEV/수동)
 
 on:
-  schedule:
-    - cron: "0 23 * * *"   # 08:00 KST (UTC+9) daily
-  workflow_dispatch:
+  workflow_dispatch:   # 수동 트리거만
 
 jobs:
   crawl:
@@ -25,7 +23,7 @@ jobs:
       - name: Run crawler
         working-directory: workers/
         env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_URL: ${{ secrets.NEON_DEV_DATABASE_URL }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}

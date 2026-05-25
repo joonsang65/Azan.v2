@@ -164,6 +164,8 @@ def _user_to_dict(user: User) -> dict:
         "topik_test_plan": user.topik_test_plan,
         "preferred_language": user.preferred_language,
         "residence_type": user.residence_type,
+        "visa_risk": user.visa_risk,
+        "topik_risk": user.topik_risk,
     }
 
 

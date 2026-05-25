@@ -12,7 +12,7 @@ module.exports = defineConfig([
       'import/no-unresolved': [
         'error',
         {
-          ignore: ['^expo-secure-store$'],
+          ignore: ['^expo-device$', '^expo-notifications$', '^expo-secure-store$'],
         },
       ],
     },
