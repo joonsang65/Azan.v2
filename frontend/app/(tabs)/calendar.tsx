@@ -3,20 +3,227 @@ import { useMemo, useState } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useAppContext } from '../context/AppContext';
 
-type CalendarMode = 'Monthly' | 'Weekly';
+type CalendarMode = 'Academic' | 'Deadlines';
+
+type AcademicEvent = {
+  id: string;
+  date: string;
+  term: string;
+  title: string;
+  description: string;
+  kind: 'apply' | 'test' | 'orientation' | 'start' | 'end';
+};
 
 const WEEK_DAYS = ['일', '월', '화', '수', '목', '금', '토'];
 
+const ACADEMIC_EVENTS: AcademicEvent[] = [
+  {
+    id: 'spring-apply-start',
+    date: '2025-11-10',
+    term: '26-봄',
+    title: '신청 시작',
+    description: '2026 봄학기 한국어과정 신청기간 시작',
+    kind: 'apply',
+  },
+  {
+    id: 'spring-apply-end',
+    date: '2025-12-26',
+    term: '26-봄',
+    title: '신청 마감',
+    description: '2026 봄학기 한국어과정 신청기간 마감',
+    kind: 'apply',
+  },
+  {
+    id: 'spring-level-test',
+    date: '2026-02-11',
+    term: '26-봄',
+    title: '레벨테스트',
+    description: '2026 봄학기 레벨테스트',
+    kind: 'test',
+  },
+  {
+    id: 'spring-orientation',
+    date: '2026-02-27',
+    term: '26-봄',
+    title: '신입생설명회',
+    description: '2026 봄학기 신입생설명회',
+    kind: 'orientation',
+  },
+  {
+    id: 'spring-start',
+    date: '2026-03-03',
+    term: '26-봄',
+    title: '개강',
+    description: '2026 봄학기 개강일',
+    kind: 'start',
+  },
+  {
+    id: 'spring-end',
+    date: '2026-05-12',
+    term: '26-봄',
+    title: '수료',
+    description: '2026 봄학기 수료일',
+    kind: 'end',
+  },
+  {
+    id: 'summer-apply-start',
+    date: '2026-02-09',
+    term: '26-여름',
+    title: '신청 시작',
+    description: '2026 여름학기 한국어과정 신청기간 시작',
+    kind: 'apply',
+  },
+  {
+    id: 'summer-apply-end',
+    date: '2026-03-27',
+    term: '26-여름',
+    title: '신청 마감',
+    description: '2026 여름학기 한국어과정 신청기간 마감',
+    kind: 'apply',
+  },
+  {
+    id: 'summer-level-test',
+    date: '2026-05-13',
+    term: '26-여름',
+    title: '레벨테스트',
+    description: '2026 여름학기 레벨테스트',
+    kind: 'test',
+  },
+  {
+    id: 'summer-orientation',
+    date: '2026-05-29',
+    term: '26-여름',
+    title: '신입생설명회',
+    description: '2026 여름학기 신입생설명회',
+    kind: 'orientation',
+  },
+  {
+    id: 'summer-start',
+    date: '2026-06-01',
+    term: '26-여름',
+    title: '개강',
+    description: '2026 여름학기 개강일',
+    kind: 'start',
+  },
+  {
+    id: 'summer-end',
+    date: '2026-08-11',
+    term: '26-여름',
+    title: '수료',
+    description: '2026 여름학기 수료일',
+    kind: 'end',
+  },
+  {
+    id: 'fall-apply-start',
+    date: '2026-05-11',
+    term: '26-가을',
+    title: '신청 시작',
+    description: '2026 가을학기 한국어과정 신청기간 시작',
+    kind: 'apply',
+  },
+  {
+    id: 'fall-apply-end',
+    date: '2026-07-10',
+    term: '26-가을',
+    title: '신청 마감',
+    description: '2026 가을학기 한국어과정 신청기간 마감',
+    kind: 'apply',
+  },
+  {
+    id: 'fall-level-test',
+    date: '2026-08-12',
+    term: '26-가을',
+    title: '레벨테스트',
+    description: '2026 가을학기 레벨테스트',
+    kind: 'test',
+  },
+  {
+    id: 'fall-orientation',
+    date: '2026-09-04',
+    term: '26-가을',
+    title: '신입생설명회',
+    description: '2026 가을학기 신입생설명회',
+    kind: 'orientation',
+  },
+  {
+    id: 'fall-start',
+    date: '2026-09-07',
+    term: '26-가을',
+    title: '개강',
+    description: '2026 가을학기 개강일',
+    kind: 'start',
+  },
+  {
+    id: 'fall-end',
+    date: '2026-11-19',
+    term: '26-가을',
+    title: '수료',
+    description: '2026 가을학기 수료일',
+    kind: 'end',
+  },
+  {
+    id: 'winter-apply-start',
+    date: '2026-08-10',
+    term: '26-겨울',
+    title: '신청 시작',
+    description: '2026 겨울학기 한국어과정 신청기간 시작',
+    kind: 'apply',
+  },
+  {
+    id: 'winter-apply-end',
+    date: '2026-09-25',
+    term: '26-겨울',
+    title: '신청 마감',
+    description: '2026 겨울학기 한국어과정 신청기간 마감',
+    kind: 'apply',
+  },
+  {
+    id: 'winter-level-test',
+    date: '2026-11-20',
+    term: '26-겨울',
+    title: '레벨테스트',
+    description: '2026 겨울학기 레벨테스트',
+    kind: 'test',
+  },
+  {
+    id: 'winter-orientation',
+    date: '2026-11-27',
+    term: '26-겨울',
+    title: '신입생설명회',
+    description: '2026 겨울학기 신입생설명회',
+    kind: 'orientation',
+  },
+  {
+    id: 'winter-start',
+    date: '2026-12-04',
+    term: '26-겨울',
+    title: '개강',
+    description: '2026 겨울학기 개강일',
+    kind: 'start',
+  },
+  {
+    id: 'winter-end',
+    date: '2027-02-17',
+    term: '26-겨울',
+    title: '수료',
+    description: '2026 겨울학기 수료일',
+    kind: 'end',
+  },
+];
+
 export default function CalendarScreen() {
   const today = new Date();
-  const [mode, setMode] = useState<CalendarMode>('Monthly');
+  const [mode, setMode] = useState<CalendarMode>('Academic');
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDateKey, setSelectedDateKey] = useState(formatDateKey(today));
   const {
     savedNoticeReminders,
+    selectedLanguage,
     toggleNoticeReminderDone,
     removeNoticeReminder,
   } = useAppContext();
+
+  const academicEventsByDate = useMemo(() => groupAcademicEventsByDate(), []);
 
   const remindersByDate = useMemo(() => {
     return savedNoticeReminders.reduce<Record<string, typeof savedNoticeReminders>>(
@@ -33,65 +240,70 @@ export default function CalendarScreen() {
   }, [savedNoticeReminders]);
 
   const monthCells = useMemo(() => getMonthCells(currentDate), [currentDate]);
-  const weekDates = useMemo(() => getWeekDates(currentDate), [currentDate]);
+  const selectedAcademicEvents = academicEventsByDate[selectedDateKey] ?? [];
   const selectedReminders = remindersByDate[selectedDateKey] ?? [];
-
-  const headerLabel = useMemo(() => {
-    if (mode === 'Monthly') {
-      return `${currentDate.getFullYear()}.${String(
-        currentDate.getMonth() + 1
-      ).padStart(2, '0')}`;
-    }
-
-    const week = getWeekDates(currentDate);
-    const start = week[0];
-    const end = week[6];
-
-    return `${formatShortDate(start)} - ${formatShortDate(end)}`;
-  }, [currentDate, mode]);
+  const isKorean = selectedLanguage === 'Korean';
+  const headerLabel = `${currentDate.getFullYear()}.${String(
+    currentDate.getMonth() + 1
+  ).padStart(2, '0')}`;
 
   const handlePrev = () => {
-    const next = new Date(currentDate);
-    next.setDate(next.getDate() + (mode === 'Monthly' ? -30 : -7));
-    setCurrentDate(next);
+    setCurrentDate((prev) => new Date(prev.getFullYear(), prev.getMonth() - 1, 1));
   };
 
   const handleNext = () => {
-    const next = new Date(currentDate);
-    next.setDate(next.getDate() + (mode === 'Monthly' ? 30 : 7));
-    setCurrentDate(next);
+    setCurrentDate((prev) => new Date(prev.getFullYear(), prev.getMonth() + 1, 1));
+  };
+
+  const getCountForDate = (date: Date | null) => {
+    if (!date) return 0;
+
+    const dateKey = formatDateKey(date);
+    return mode === 'Academic'
+      ? academicEventsByDate[dateKey]?.length ?? 0
+      : remindersByDate[dateKey]?.length ?? 0;
   };
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <View style={styles.modeSwitch}>
         <TouchableOpacity
-          style={[styles.modeButton, mode === 'Weekly' && styles.activeModeButton]}
-          onPress={() => setMode('Weekly')}
+          style={[styles.modeButton, mode === 'Academic' && styles.activeModeButton]}
+          onPress={() => setMode('Academic')}
           activeOpacity={0.85}
         >
+          <Ionicons
+            name="school-outline"
+            size={17}
+            color={mode === 'Academic' ? '#FFFFFF' : '#475569'}
+          />
           <Text
             style={[
               styles.modeButtonText,
-              mode === 'Weekly' && styles.activeModeButtonText,
+              mode === 'Academic' && styles.activeModeButtonText,
             ]}
           >
-            주간
+            {isKorean ? '학사일정' : 'Academic'}
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.modeButton, mode === 'Monthly' && styles.activeModeButton]}
-          onPress={() => setMode('Monthly')}
+          style={[styles.modeButton, mode === 'Deadlines' && styles.activeModeButton]}
+          onPress={() => setMode('Deadlines')}
           activeOpacity={0.85}
         >
+          <Ionicons
+            name="notifications-outline"
+            size={17}
+            color={mode === 'Deadlines' ? '#FFFFFF' : '#475569'}
+          />
           <Text
             style={[
               styles.modeButtonText,
-              mode === 'Monthly' && styles.activeModeButtonText,
+              mode === 'Deadlines' && styles.activeModeButtonText,
             ]}
           >
-            월간
+            {isKorean ? '저장한 마감일' : 'Saved Deadlines'}
           </Text>
         </TouchableOpacity>
       </View>
@@ -117,86 +329,107 @@ export default function CalendarScreen() {
           ))}
         </View>
 
-        {mode === 'Monthly' ? (
-          <View style={styles.monthGrid}>
-            {monthCells.map((cell, index) => (
-              <CalendarDay
-                key={`${cell.label}-${index}`}
-                date={cell.date}
-                label={cell.label}
-                isCurrentMonth={cell.isCurrentMonth}
-                selectedDateKey={selectedDateKey}
-                reminderCount={
-                  cell.date ? remindersByDate[formatDateKey(cell.date)]?.length ?? 0 : 0
-                }
-                onSelect={setSelectedDateKey}
-              />
-            ))}
-          </View>
-        ) : (
-          <View style={styles.weekRow}>
-            {weekDates.map((date) => (
-              <CalendarDay
-                key={date.toISOString()}
-                date={date}
-                label={String(date.getDate())}
-                isCurrentMonth
-                selectedDateKey={selectedDateKey}
-                reminderCount={remindersByDate[formatDateKey(date)]?.length ?? 0}
-                onSelect={setSelectedDateKey}
-                weekly
-              />
-            ))}
-          </View>
-        )}
+        <View style={styles.monthGrid}>
+          {monthCells.map((cell, index) => (
+            <CalendarDay
+              key={`${cell.label}-${index}`}
+              date={cell.date}
+              label={cell.label}
+              isCurrentMonth={cell.isCurrentMonth}
+              selectedDateKey={selectedDateKey}
+              markerCount={getCountForDate(cell.date)}
+              markerColor={mode === 'Academic' ? '#2563EB' : '#005BAC'}
+              onSelect={setSelectedDateKey}
+            />
+          ))}
+        </View>
       </View>
 
-      <View style={styles.card}>
-        <Text style={styles.sectionTitle}>선택한 날짜의 공지 마감</Text>
-        <Text style={styles.sectionSubtitle}>{selectedDateKey}</Text>
+      {mode === 'Academic' ? (
+        <View style={styles.card}>
+          <Text style={styles.sectionTitle}>
+            {isKorean ? '선택한 날짜의 학사일정' : 'Academic Schedule'}
+          </Text>
+          <Text style={styles.sectionSubtitle}>{selectedDateKey}</Text>
 
-        {selectedReminders.length > 0 ? (
-          selectedReminders.map((reminder) => (
-            <View key={reminder.id} style={styles.reminderRow}>
-              <TouchableOpacity
-                style={styles.reminderMainAction}
-                onPress={() => toggleNoticeReminderDone(reminder.id)}
-                activeOpacity={0.85}
-              >
-                <View style={styles.reminderTextWrap}>
-                  <Text
-                    style={[
-                      styles.reminderTitle,
-                      reminder.isDone && styles.reminderTitleDone,
-                    ]}
-                  >
-                    {reminder.title}
-                  </Text>
-                  <Text style={styles.reminderMeta}>
-                    {reminder.category} · 마감 {reminder.dueDate}
-                  </Text>
+          {selectedAcademicEvents.length > 0 ? (
+            selectedAcademicEvents.map((event) => (
+              <View key={event.id} style={styles.academicRow}>
+                <View style={[styles.eventIcon, styles[`${event.kind}Icon`]]}>
+                  <Ionicons name={getAcademicIcon(event.kind)} size={16} color="#FFFFFF" />
                 </View>
+                <View style={styles.eventTextWrap}>
+                  <Text style={styles.eventTitle}>
+                    {event.term} · {event.title}
+                  </Text>
+                  <Text style={styles.eventDescription}>{event.description}</Text>
+                </View>
+              </View>
+            ))
+          ) : (
+            <Text style={styles.emptyText}>
+              {isKorean
+                ? '이 날짜에 등록된 학사일정이 없습니다.'
+                : 'No academic schedule is saved for this date.'}
+            </Text>
+          )}
+        </View>
+      ) : (
+        <View style={styles.card}>
+          <Text style={styles.sectionTitle}>
+            {isKorean ? '선택한 날짜의 공지 마감' : 'Saved Notice Deadlines'}
+          </Text>
+          <Text style={styles.sectionSubtitle}>{selectedDateKey}</Text>
 
-                <Ionicons
-                  name={reminder.isDone ? 'checkmark-circle' : 'ellipse-outline'}
-                  size={22}
-                  color={reminder.isDone ? '#38BDF8' : '#CBD5E1'}
-                />
-              </TouchableOpacity>
+          {selectedReminders.length > 0 ? (
+            selectedReminders.map((reminder) => (
+              <View key={reminder.id} style={styles.reminderRow}>
+                <TouchableOpacity
+                  style={styles.reminderMainAction}
+                  onPress={() => toggleNoticeReminderDone(reminder.id)}
+                  activeOpacity={0.85}
+                >
+                  <View style={styles.reminderTextWrap}>
+                    <Text
+                      style={[
+                        styles.reminderTitle,
+                        reminder.isDone && styles.reminderTitleDone,
+                      ]}
+                    >
+                      {reminder.title}
+                    </Text>
+                    <Text style={styles.reminderMeta}>
+                      {reminder.category} · {isKorean ? '마감' : 'Due'} {reminder.dueDate}
+                    </Text>
+                  </View>
 
-              <TouchableOpacity
-                style={styles.removeButton}
-                onPress={() => removeNoticeReminder(reminder.noticeId)}
-                activeOpacity={0.85}
-              >
-                <Text style={styles.removeButtonText}>삭제</Text>
-              </TouchableOpacity>
-            </View>
-          ))
-        ) : (
-          <Text style={styles.emptyText}>이 날짜에 저장된 공지 마감이 없습니다.</Text>
-        )}
-      </View>
+                  <Ionicons
+                    name={reminder.isDone ? 'checkmark-circle' : 'ellipse-outline'}
+                    size={22}
+                    color={reminder.isDone ? '#38BDF8' : '#CBD5E1'}
+                  />
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={styles.removeButton}
+                  onPress={() => removeNoticeReminder(reminder.noticeId)}
+                  activeOpacity={0.85}
+                >
+                  <Text style={styles.removeButtonText}>
+                    {isKorean ? '삭제' : 'Delete'}
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            ))
+          ) : (
+            <Text style={styles.emptyText}>
+              {isKorean
+                ? '이 날짜에 저장한 공지 마감일이 없습니다.'
+                : 'No saved notice deadline for this date.'}
+            </Text>
+          )}
+        </View>
+      )}
     </ScrollView>
   );
 }
@@ -206,17 +439,17 @@ function CalendarDay({
   label,
   isCurrentMonth,
   selectedDateKey,
-  reminderCount,
+  markerCount,
+  markerColor,
   onSelect,
-  weekly = false,
 }: {
   date: Date | null;
   label: string;
   isCurrentMonth: boolean;
   selectedDateKey: string;
-  reminderCount: number;
+  markerCount: number;
+  markerColor: string;
   onSelect: (dateKey: string) => void;
-  weekly?: boolean;
 }) {
   const todayKey = formatDateKey(new Date());
   const dateKey = date ? formatDateKey(date) : null;
@@ -225,7 +458,7 @@ function CalendarDay({
 
   return (
     <TouchableOpacity
-      style={weekly ? styles.weekDayCell : styles.dayCell}
+      style={styles.dayCell}
       onPress={() => {
         if (dateKey) {
           onSelect(dateKey);
@@ -252,16 +485,37 @@ function CalendarDay({
         </Text>
       </View>
 
-      {reminderCount > 0 ? (
+      {markerCount > 0 ? (
         <View style={styles.markerWrap}>
-          <View style={styles.markerDot} />
-          {reminderCount > 1 ? (
-            <Text style={styles.markerCount}>{reminderCount}</Text>
+          <View style={[styles.markerDot, { backgroundColor: markerColor }]} />
+          {markerCount > 1 ? (
+            <Text style={[styles.markerCount, { color: markerColor }]}>{markerCount}</Text>
           ) : null}
         </View>
-      ) : null}
+      ) : (
+        <View style={styles.emptyMarkerSpace} />
+      )}
     </TouchableOpacity>
   );
+}
+
+function groupAcademicEventsByDate() {
+  return ACADEMIC_EVENTS.reduce<Record<string, AcademicEvent[]>>((acc, event) => {
+    if (!acc[event.date]) {
+      acc[event.date] = [];
+    }
+
+    acc[event.date].push(event);
+    return acc;
+  }, {});
+}
+
+function getAcademicIcon(kind: AcademicEvent['kind']) {
+  if (kind === 'apply') return 'create-outline';
+  if (kind === 'test') return 'clipboard-outline';
+  if (kind === 'orientation') return 'people-outline';
+  if (kind === 'start') return 'flag-outline';
+  return 'checkmark-done-outline';
 }
 
 function formatDateKey(date: Date) {
@@ -269,13 +523,6 @@ function formatDateKey(date: Date) {
     2,
     '0'
   )}-${String(date.getDate()).padStart(2, '0')}`;
-}
-
-function formatShortDate(date: Date) {
-  return `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(
-    2,
-    '0'
-  )}.${String(date.getDate()).padStart(2, '0')}`;
 }
 
 function getMonthCells(baseDate: Date) {
@@ -315,18 +562,6 @@ function getMonthCells(baseDate: Date) {
   return cells;
 }
 
-function getWeekDates(baseDate: Date) {
-  const date = new Date(baseDate);
-  const start = new Date(date);
-  start.setDate(date.getDate() - date.getDay());
-
-  return Array.from({ length: 7 }, (_, index) => {
-    const day = new Date(start);
-    day.setDate(start.getDate() + index);
-    return day;
-  });
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -345,8 +580,13 @@ const styles = StyleSheet.create({
   },
   modeButton: {
     flex: 1,
-    paddingVertical: 12,
+    minHeight: 44,
+    flexDirection: 'row',
+    gap: 6,
+    paddingVertical: 10,
+    paddingHorizontal: 8,
     alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: 10,
   },
   activeModeButton: {
@@ -404,15 +644,7 @@ const styles = StyleSheet.create({
     width: '14.2857%',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 10,
-  },
-  weekRow: {
-    flexDirection: 'row',
-  },
-  weekDayCell: {
-    flex: 1,
-    alignItems: 'center',
-    paddingVertical: 14,
+    paddingVertical: 8,
   },
   dayCircle: {
     width: 36,
@@ -444,20 +676,22 @@ const styles = StyleSheet.create({
   markerWrap: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
     marginTop: 4,
     minHeight: 14,
+  },
+  emptyMarkerSpace: {
+    height: 18,
   },
   markerDot: {
     width: 6,
     height: 6,
     borderRadius: 3,
-    backgroundColor: '#005BAC',
   },
   markerCount: {
     marginLeft: 4,
     fontSize: 10,
     fontWeight: '700',
-    color: '#005BAC',
   },
   sectionTitle: {
     fontSize: 16,
@@ -469,6 +703,50 @@ const styles = StyleSheet.create({
     color: '#64748B',
     marginTop: 4,
     marginBottom: 14,
+  },
+  academicRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 12,
+    borderTopWidth: 1,
+    borderTopColor: '#E2E8F0',
+  },
+  eventIcon: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 12,
+  },
+  applyIcon: {
+    backgroundColor: '#64748B',
+  },
+  testIcon: {
+    backgroundColor: '#7C3AED',
+  },
+  orientationIcon: {
+    backgroundColor: '#0891B2',
+  },
+  startIcon: {
+    backgroundColor: '#2563EB',
+  },
+  endIcon: {
+    backgroundColor: '#16A34A',
+  },
+  eventTextWrap: {
+    flex: 1,
+  },
+  eventTitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#0F172A',
+    marginBottom: 4,
+  },
+  eventDescription: {
+    fontSize: 12,
+    color: '#64748B',
+    lineHeight: 18,
   },
   reminderRow: {
     flexDirection: 'row',
