@@ -2,7 +2,8 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import React, { useState, useRef } from 'react';
 import {
   ActivityIndicator,
-  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -38,29 +39,8 @@ export default function ChatScreen() {
   ]);
   const [inputText, setInputText] = useState('');
   const [loading, setLoading] = useState(false);
-  const [keyboardVisible, setKeyboardVisible] = useState(false);
-  const [keyboardHeight, setKeyboardHeight] = useState(0);
+  const [inputFocused, setInputFocused] = useState(false);
   const scrollViewRef = useRef<ScrollView>(null);
-  const inputBottom = keyboardVisible ? keyboardHeight : tabBarHeight;
-
-  React.useEffect(() => {
-    const showSubscription = Keyboard.addListener('keyboardDidShow', (event) => {
-      setKeyboardVisible(true);
-      setKeyboardHeight(event.endCoordinates.height);
-      requestAnimationFrame(() => {
-        scrollViewRef.current?.scrollToEnd({ animated: true });
-      });
-    });
-    const hideSubscription = Keyboard.addListener('keyboardDidHide', () => {
-      setKeyboardVisible(false);
-      setKeyboardHeight(0);
-    });
-
-    return () => {
-      showSubscription.remove();
-      hideSubscription.remove();
-    };
-  }, []);
 
   const handleSend = async (text: string = inputText) => {
     if (!text.trim() || loading) return;
@@ -100,14 +80,19 @@ export default function ChatScreen() {
   };
 
   return (
-    <View style={styles.screen}>
+    <KeyboardAvoidingView
+      style={styles.screen}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : tabBarHeight}
+    >
       <ScrollView
         ref={scrollViewRef}
         style={styles.messages}
         contentContainerStyle={[
           styles.content,
-          { paddingBottom: 110 + inputBottom },
+          { paddingBottom: 18 },
         ]}
+        keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
         onContentSizeChange={() => scrollViewRef.current?.scrollToEnd({ animated: true })}
       >
@@ -151,7 +136,7 @@ export default function ChatScreen() {
           styles.inputBar,
           {
             paddingBottom: Math.max(insets.bottom, 10),
-            bottom: inputBottom,
+            marginBottom: inputFocused ? 0 : tabBarHeight,
           },
         ]}
       >
@@ -161,11 +146,13 @@ export default function ChatScreen() {
           style={styles.input}
           value={inputText}
           onChangeText={setInputText}
-          onFocus={() =>
+          onFocus={() => {
+            setInputFocused(true);
             requestAnimationFrame(() => {
               scrollViewRef.current?.scrollToEnd({ animated: true });
-            })
-          }
+            });
+          }}
+          onBlur={() => setInputFocused(false)}
           onSubmitEditing={() => handleSend()}
         />
         <TouchableOpacity 
@@ -176,7 +163,7 @@ export default function ChatScreen() {
           <Ionicons name="send" size={18} color="#FFFFFF" />
         </TouchableOpacity>
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -214,7 +201,7 @@ const styles = StyleSheet.create({
   topicGrid: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' },
   topicButton: { width: '48%', backgroundColor: '#F7F8FF', borderWidth: 1, borderColor: '#D9E1FF', borderRadius: 18, paddingVertical: 14, paddingHorizontal: 12, marginBottom: 10, flexDirection: 'row', alignItems: 'center' },
   topicText: { marginLeft: 8, fontSize: 13, color: '#4C5678', fontWeight: '600', flexShrink: 1 },
-  inputBar: { position: 'absolute', left: 0, right: 0, flexDirection: 'row', alignItems: 'center', backgroundColor: '#FFFFFF', borderTopWidth: 1, borderColor: '#E7E7F2', paddingHorizontal: 16, paddingTop: 10, zIndex: 20, elevation: 20 },
+  inputBar: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#FFFFFF', borderTopWidth: 1, borderColor: '#E7E7F2', paddingHorizontal: 16, paddingTop: 10, zIndex: 20, elevation: 20 },
   input: { flex: 1, backgroundColor: '#F4F6FB', borderRadius: 22, paddingHorizontal: 16, paddingVertical: 10, fontSize: 15, color: '#334155' },
   sendCircle: { width: 40, height: 40, borderRadius: 20, backgroundColor: '#5B6FB8', alignItems: 'center', justifyContent: 'center', marginLeft: 10 },
 });
