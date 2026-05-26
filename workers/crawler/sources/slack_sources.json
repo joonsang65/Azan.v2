@@ -1,0 +1,8 @@
+[
+  {
+    "channel_id": "SLACK_CHANNEL_ID_PLACEHOLDER",
+    "channel_name": "ajou-전체공지방",
+    "source_label": "slack",
+    "lookback_hours": 25
+  }
+]

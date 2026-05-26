@@ -1,0 +1,28 @@
+name: Slack Notice Crawler
+
+on:
+  schedule:
+    - cron: '0 23 * * *'  # UTC 23:00 = KST 08:00 next day
+  workflow_dispatch:        # allow manual trigger
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        working-directory: workers/
+        run: pip install .
+
+      - name: Run Slack crawler
+        run: python workers/crawler/slack_main.py
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          DATABASE_URL: ${{ secrets.NEON_PROD_DATABASE_URL }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}

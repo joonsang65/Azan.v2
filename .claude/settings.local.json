@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m alembic heads)",
+      "Bash(python3 -m alembic check)",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('/Users/seonghobae/Desktop/01_Ajou/07th/01_AI융합캡스톤2/01_src/azan/backend/alembic/versions/b3c4d5e6f7a8_add_risk_msg_table.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('/Users/seonghobae/Desktop/01_Ajou/07th/01_AI융합캡스톤2/01_src/azan/backend/app/models.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('/Users/seonghobae/Desktop/01_Ajou/07th/01_AI융합캡스톤2/01_src/azan/workers/risk_alarm/expo/msg_templates.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('/Users/seonghobae/Desktop/01_Ajou/07th/01_AI융합캡스톤2/01_src/azan/workers/risk_alarm/expo/update_risk.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(git -C /Users/seonghobae/Desktop/01_Ajou/07th/01_AI융합캡스톤2/01_src/azan status)",
+      "Bash(git -C /Users/seonghobae/Desktop/01_Ajou/07th/01_AI융합캡스톤2/01_src/azan diff --stat HEAD)",
+      "Bash(git -C /Users/seonghobae/Desktop/01_Ajou/07th/01_AI융합캡스톤2/01_src/azan add backend/app/models.py backend/alembic/versions/b3c4d5e6f7a8_add_risk_msg_table.py frontend/app/notices/[id].tsx workers/risk_alarm/expo/msg_templates.py workers/risk_alarm/expo/update_risk.py)",
+      "Bash(git -C /Users/seonghobae/Desktop/01_Ajou/07th/01_AI융합캡스톤2/01_src/azan commit -m ' *)"
+    ]
+  }
+}
