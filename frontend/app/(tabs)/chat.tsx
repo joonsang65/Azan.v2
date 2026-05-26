@@ -139,10 +139,10 @@ export default function ChatScreen() {
 
         <Text style={styles.topicTitle}>자주 찾는 주제</Text>
         <View style={styles.topicGrid}>
-          <TopicButton icon="card-outline" label="비자 신청" onPress={() => handleSend("비자 신청 방법 알려줘")} />
-          <TopicButton icon="school-outline" label="TOPIK 시험" onPress={() => handleSend("TOPIK 시험 일정 알려줘")} />
-          <TopicButton icon="reader-outline" label="수강신청" onPress={() => handleSend("수강신청 기간이 언제야?")} />
-          <TopicButton icon="briefcase-outline" label="아르바이트" onPress={() => handleSend("유학생 아르바이트 규칙 알려줘")} />
+          <TopicButton icon="school-outline" label="TOPIK 시험 일정" onPress={() => handleSend("TOPIK 시험 일정 알려줘")} />
+          <TopicButton icon="card-outline" label="비자 연장" onPress={() => handleSend("비자 연장 방법 알려줘")} />
+          <TopicButton icon="home-outline" label="기숙사 신청" onPress={() => handleSend("기숙사 신청 방법 알려줘")} />
+          <TopicButton icon="ribbon-outline" label="장학금" onPress={() => handleSend("장학금 정보 알려줘")} />
         </View>
       </ScrollView>
 

@@ -14,7 +14,7 @@ import { TOPIC_DATA } from '../data/topicData';
 
 type TopicKey = keyof typeof TOPIC_DATA;
 type VisaTabKey = 'overview' | 'extension' | 'change' | 'work' | 'links';
-type TopikTabKey = 'pbt' | 'ibt' | 'speaking';
+type TopikTabKey = 'pbt' | 'ibt' | 'speaking' | 'schedule';
 type RegisterTabKey = 'steps' | 'info' | 'documents' | 'schedule';
 type RegisterDocumentTabKey = 'd4' | 'china' | 'resident';
 type ScholarshipTabKey = 'korean' | 'gks' | 'achievement' | 'etc';
@@ -40,6 +40,7 @@ const TOPIK_TABS: { key: TopikTabKey; label: string }[] = [
   { key: 'pbt', label: 'PBT' },
   { key: 'ibt', label: 'IBT' },
   { key: 'speaking', label: '말하기 평가' },
+  { key: 'schedule', label: '시험 일정' },
 ];
 
 const REGISTER_TABS: { key: RegisterTabKey; label: string }[] = [
@@ -722,6 +723,55 @@ const TOPIK_CONTENT: Record<TopikTabKey, TextSection[]> = {
         '시험시간 도중 질병 등의 사유로 퇴실 및 재입실 시, 별도 감독관에게 확인받아야 합니다.',
         '시험 종료 후 시험실 감독관의 지시가 있을 때까지 퇴실할 수 없습니다.',
         '토픽 말하기 평가는 시험 중간에 휴식 시간이 없습니다.',
+      ],
+    },
+  ],
+  schedule: [
+    {
+      title: '2026년 TOPIK PBT 일정',
+      variant: 'table',
+      items: [],
+      tableColumns: ['접수기간', '시험일', '성적발표일'],
+      tableRows: [
+        ['2025.12.09 ~ 2025.12.15', '2026.01.11', '2026.02.12 15:45'],
+        ['2026.01.27 ~ 2026.02.02', '2026.04.12', '2026.05.29 15:00'],
+        ['2026.03.10 ~ 2026.03.16', '2026.05.17', '2026.06.25 15:00'],
+        ['2026.05.12 ~ 2026.05.18', '2026.07.05', '2026.08.13 15:00'],
+        ['2026.08.04 ~ 2026.08.10', '2026.10.18', '2026.12.10 15:00'],
+        ['2026.09.01 ~ 2026.09.07', '2026.11.15', '2026.12.22 15:00'],
+      ],
+    },
+    {
+      title: '2026년 TOPIK IBT 일정',
+      variant: 'table',
+      items: [],
+      tableColumns: ['접수기간', '시험일', '성적발표일'],
+      tableRows: [
+        ['2025.12.16 ~ 2025.12.22', '2026.02.28', '2026.03.20 15:00'],
+        ['2026.01.13 ~ 2026.01.19', '2026.03.21', '2026.04.10 15:00'],
+        ['2026.04.07 ~ 2026.04.13', '2026.06.13', '2026.07.03 15:00'],
+        ['2026.07.07 ~ 2026.07.13', '2026.09.12', '2026.10.02 15:00'],
+        ['2026.08.18 ~ 2026.08.24', '2026.10.24', '2026.11.13 15:00'],
+        ['2026.09.15 ~ 2026.09.21', '2026.11.28', '2026.12.18 15:00'],
+      ],
+    },
+    {
+      title: '2026년 TOPIK 말하기 평가 일정',
+      variant: 'table',
+      items: [],
+      tableColumns: ['접수기간', '시험일', '성적발표일'],
+      tableRows: [
+        ['2026.01.13 ~ 2026.01.19', '2026.03.21', '2026.04.13 15:00'],
+        ['2026.04.07 ~ 2026.04.13', '2026.06.13', '2026.07.06 15:00'],
+        ['2026.08.18 ~ 2026.08.24', '2026.10.24', '2026.11.16 15:00'],
+      ],
+    },
+    {
+      title: '확인 안내',
+      items: [
+        '시험 일정은 TOPIK 공식 홈페이지 공지를 기준으로 확인해야 합니다.',
+        '접수기간과 성적발표일은 시험 운영 상황에 따라 변경될 수 있습니다.',
+        '지역별 시험일이 다른 경우 한국 시험일을 우선 표시했습니다.',
       ],
     },
   ],
