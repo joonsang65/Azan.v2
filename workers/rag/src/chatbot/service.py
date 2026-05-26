@@ -45,26 +45,37 @@ class AzanChatbotService:
         return self.sessions[session_id]
 
     def _format_to_toon(self, docs):
-        """
-        검색된 문서들을 LLM이 이해하기 쉬운 Table(TOON) 형식으로 변환
-        """
+        """Format retrieved documents without truncating structured information."""
         if not docs:
             return "관련된 정보가 없습니다."
 
-        toon_text = "| Type | Title | Deadline | Content Summary |\n"
-        toon_text += "|---|---|---|---|\n"
+        blocks = []
 
         for doc in docs:
             meta = doc.metadata
             source_type = meta.get("source_type", "N/A")
             title = meta.get("title", "No Title")
             deadline = meta.get("deadline_at") or meta.get("deadline") or "N/A"
+<<<<<<< HEAD
             content = doc.page_content.replace("\n", " ")
+=======
+            content = doc.page_content.strip()
+            if source_type == "Notice":
+                content = content[:1200]
+>>>>>>> 02f56883346b77f751a942cf0472b037cddb2a8f
 
-            row = f"| {source_type} | {title} | {deadline} | {content}... |\n"
-            toon_text += row
+            blocks.append(
+                "\n".join(
+                    [
+                        f"[{source_type}] {title}",
+                        f"Deadline: {deadline}",
+                        "Content:",
+                        content,
+                    ]
+                )
+            )
 
-        return toon_text
+        return "\n\n---\n\n".join(blocks)
 
     async def aget_response(self, question: str, session_id: str = "default_session") -> str:
         """
@@ -102,6 +113,7 @@ class AzanChatbotService:
                 standalone_question,
                 settings.RETRIEVER_TOP_K,
             )
+            retrieved_docs = self._prioritize_intent_docs(standalone_question, retrieved_docs)
             t_search = loop.time() - t1
 
             # 검색 결과 상세 로깅
@@ -157,3 +169,18 @@ class AzanChatbotService:
         (CLI 테스트 등에서는 이 함수를 그대로 사용)
         """
         return asyncio.run(self.aget_response(question))
+
+    def _prioritize_intent_docs(self, question: str, docs: List[Any]) -> List[Any]:
+        if not docs:
+            return docs
+
+        normalized = question.lower()
+        schedule_terms = ("일정", "시험일", "접수기간", "성적발표", "성적 발표", "schedule", "date")
+        is_schedule_question = any(term in normalized for term in schedule_terms)
+        if not is_schedule_question:
+            return docs
+
+        schedule_docs = [
+            doc for doc in docs if "schedule" in (doc.metadata.get("title") or "").lower()
+        ]
+        return schedule_docs or docs
