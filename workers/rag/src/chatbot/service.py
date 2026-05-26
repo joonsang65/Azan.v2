@@ -56,13 +56,7 @@ class AzanChatbotService:
             source_type = meta.get("source_type", "N/A")
             title = meta.get("title", "No Title")
             deadline = meta.get("deadline_at") or meta.get("deadline") or "N/A"
-<<<<<<< HEAD
             content = doc.page_content.replace("\n", " ")
-=======
-            content = doc.page_content.strip()
-            if source_type == "Notice":
-                content = content[:1200]
->>>>>>> 02f56883346b77f751a942cf0472b037cddb2a8f
 
             blocks.append(
                 "\n".join(
