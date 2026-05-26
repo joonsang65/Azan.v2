@@ -104,6 +104,18 @@ class AzanChatbotService:
             )
             t_search = loop.time() - t1
 
+            # 검색 결과 상세 로깅
+            if retrieved_docs:
+                logger.info(f"[Session: {session_id}] [Step 2] Retrieval Success: {len(retrieved_docs)} docs found.")
+                for i, doc in enumerate(retrieved_docs):
+                    meta = doc.metadata
+                    snippet = doc.page_content.replace("\n", " ")[:100]
+                    logger.info(
+                        f"  - Doc {i+1} [{meta.get('source_type')}]: {meta.get('title')} (Score: {meta.get('score', 'N/A'):.4f}) | Snippet: {snippet}..."
+                    )
+            else:
+                logger.warning(f"[Session: {session_id}] [Step 2] Retrieval Failed: No documents found.")
+
             context_text = self._format_to_toon(retrieved_docs) if retrieved_docs else "정보 없음"
 
             # 4. 최종 답변 생성 (Generation)
