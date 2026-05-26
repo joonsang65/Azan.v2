@@ -41,7 +41,11 @@ python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 Health check:
 
 ```bash
+# Quick health check (local)
 curl http://localhost:8000/health
+
+# Quick health check (production)
+curl https://ajou-international-2phq.onrender.com/health
 ```
 
 ## DB Migrations (Alembic)
@@ -69,7 +73,11 @@ alembic upgrade head
 ## Backend Smoke Test (Mac)
 
 ```bash
+# Quick health check (local)
 curl http://localhost:8000/health
+
+# Quick health check (production)
+curl https://ajou-international-2phq.onrender.com/health
 curl http://localhost:8000/db/ping
 ```
 
@@ -114,8 +122,9 @@ curl http://localhost:8000/notices/<NOTICE_UUID_HERE>
 
 ## iPhone (Expo Go)
 
-- Confirm `frontend/src/config.js` uses your Mac LAN IP, for example:
+- Confirm `frontend/.env` uses your Mac LAN IP (for local) or the production URL, for example:
   - `http://172.30.1.51:8000`
+  - `https://ajou-international-2phq.onrender.com`
 - In the app: Signup -> Login -> Home.
 - Home should show your `email` and `full_name` from `/auth/me`.
 
