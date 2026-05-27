@@ -5,22 +5,14 @@ import sys
 import uuid
 from datetime import datetime
 from pathlib import Path
-from sqlalchemy import create_engine, event
-from sqlalchemy.orm import sessionmaker, Session
-from sqlalchemy.pool import StaticPool
 
-# Add project root to sys.path
-PROJECT_ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(PROJECT_ROOT))
-
-from backend.app.database import Base, get_db
-from backend.app.models import User, Notice, Keyword, UserKeyword, AlertOutbox
-
-# Mock Vector for SQLite
-from sqlalchemy.types import TypeDecorator, Text
+# Mock PostgreSQL types for SQLite BEFORE importing models
+from sqlalchemy.types import TypeDecorator, Text, JSON
 class MockVector(TypeDecorator):
     impl = Text
     cache_ok = True
+    def load_dialect_impl(self, dialect):
+        return dialect.type_descriptor(Text())
     def process_bind_param(self, value, dialect):
         if value is not None:
             return json.dumps(value)
@@ -30,10 +22,37 @@ class MockVector(TypeDecorator):
             return json.loads(value)
         return value
 
-# Patch pgvector.sqlalchemy.Vector if possible or just models
-import backend.app.models as models
-from pgvector.sqlalchemy import Vector
-models.Vector = MockVector
+class MockArray(TypeDecorator):
+    impl = JSON
+    cache_ok = True
+    def __init__(self, item_type, **kwargs):
+        super().__init__(**kwargs)
+    def load_dialect_impl(self, dialect):
+        return dialect.type_descriptor(JSON())
+
+# Monkeypatch sqlalchemy.dialects.postgresql
+import sqlalchemy.dialects.postgresql as postgresql
+postgresql.ARRAY = MockArray
+postgresql.JSONB = JSON
+
+# Monkeypatch pgvector
+import sys
+from unittest.mock import MagicMock
+mock_pgvector = MagicMock()
+mock_pgvector.sqlalchemy.Vector = MockVector
+sys.modules["pgvector"] = mock_pgvector
+sys.modules["pgvector.sqlalchemy"] = mock_pgvector.sqlalchemy
+
+# Add project root to sys.path
+PROJECT_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
+from backend.app.database import Base, get_db
+from backend.app.models import User, Notice, Keyword, UserKeyword, AlertOutbox
+
+from sqlalchemy import create_engine, event
+from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.pool import StaticPool
 
 # SQLite in-memory for testing
 SQLALCHEMY_DATABASE_URL = "sqlite:///:memory:"

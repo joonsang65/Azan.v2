@@ -203,3 +203,18 @@ class RiskMsg(Base):
     risk_level: Mapped[int] = mapped_column(SmallInteger, nullable=False)  # visa: 1~5, topik: 1~3
     lang: Mapped[str] = mapped_column(String(10), nullable=False)          # 'Korean' | 'English'
     message: Mapped[str] = mapped_column(Text, nullable=False)
+
+
+class UserNoticeRead(Base):
+    # 사용자의 공지사항 조회/클릭 이력 테이블 모델
+    __tablename__ = "user_notice_reads"
+    __table_args__ = (
+        Index("ix_user_notice_reads_user_notice", "user_id", "notice_id"),
+    )
+
+    id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    user_id: Mapped[Uuid] = mapped_column(Uuid(as_uuid=True), ForeignKey("users.id"), nullable=False)
+    notice_id: Mapped[Uuid] = mapped_column(Uuid(as_uuid=True), ForeignKey("notices.id"), nullable=False)
+    read_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
