@@ -71,7 +71,12 @@ class AzanChatbotService:
 
         return "\n\n---\n\n".join(blocks)
 
-    async def aget_response(self, question: str, session_id: str = "default_session") -> str:
+    async def aget_response(
+        self, 
+        question: str, 
+        session_id: str = "default_session",
+        user_info: str = "비공개"
+    ) -> str:
         """
         비동기 버전 응답 함수. 세션 ID별로 독립된 대화 기록을 유지함.
         """
@@ -130,6 +135,7 @@ class AzanChatbotService:
             answer_result = await answer_chain.ainvoke(
                 {
                     "system_instruction": SYSTEM_PROMPT,
+                    "user_info": user_info,
                     "chat_history": chat_history,
                     "context": context_text,
                     "question": question,
@@ -157,12 +163,12 @@ class AzanChatbotService:
             logger.error(f"[Session: {session_id}] Error: {e}")
             return "오류가 발생했습니다."
 
-    def get_response(self, question: str) -> str:
+    def get_response(self, question: str, user_info: str = "비공개") -> str:
         """
         기존 동기 인터페이스 유지용 래퍼.
         (CLI 테스트 등에서는 이 함수를 그대로 사용)
         """
-        return asyncio.run(self.aget_response(question))
+        return asyncio.run(self.aget_response(question, user_info=user_info))
 
     def _prioritize_intent_docs(self, question: str, docs: List[Any]) -> List[Any]:
         if not docs:

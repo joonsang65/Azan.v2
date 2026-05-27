@@ -61,6 +61,9 @@ Before generating the final response, you must strictly follow these steps inter
 USER_PROMPT_TEMPLATE = """
 {system_instruction}
 
+[사용자 프로필]
+{user_info}
+
 [이전 대화 기록]
 {chat_history}
 
