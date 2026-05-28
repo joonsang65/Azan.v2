@@ -14,14 +14,13 @@ from sqlalchemy.orm import Session
 from ..database import get_db
 from ..models import User
 
+from ..core.config import settings
+
 router = APIRouter(prefix="/auth", tags=["auth"])
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-JWT_ALGORITHM = "HS256"
-JWT_EXPIRE_DAYS = 7
-JWT_SECRET = os.getenv("JWT_SECRET")
-
-if not JWT_SECRET:
-    raise RuntimeError("JWT_SECRET is missing. Set JWT_SECRET in backend/.env or container env.")
+JWT_ALGORITHM = settings.JWT_ALGORITHM
+JWT_EXPIRE_DAYS = settings.JWT_EXPIRE_DAYS
+JWT_SECRET = settings.JWT_SECRET
 
 
 class RegisterRequest(BaseModel):

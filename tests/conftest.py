@@ -43,9 +43,19 @@ mock_pgvector.sqlalchemy.Vector = MockVector
 sys.modules["pgvector"] = mock_pgvector
 sys.modules["pgvector.sqlalchemy"] = mock_pgvector.sqlalchemy
 
+# Mock AzanChatbotService to prevent real DB connection during test collection
+mock_chatbot_service = MagicMock()
+sys.modules["workers.rag.src.chatbot.service"] = MagicMock()
+# We don't need to patch the actual class because we mocked the module,
+# but chatbot.py might still try to instantiate it.
+
 # Add project root to sys.path
 PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
+
+# Provide dummy environment variables for Pydantic Settings validation
+os.environ.setdefault("DATABASE_URL", "postgresql://user:pass@localhost/db")
+os.environ.setdefault("JWT_SECRET", "test_jwt_secret_for_unit_tests")
 
 from backend.app.database import Base, get_db
 from backend.app.models import User, Notice, Keyword, UserKeyword, AlertOutbox
