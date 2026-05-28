@@ -22,6 +22,10 @@ JWT_ALGORITHM = settings.JWT_ALGORITHM
 JWT_EXPIRE_DAYS = settings.JWT_EXPIRE_DAYS
 JWT_SECRET = settings.JWT_SECRET
 
+if not JWT_SECRET:
+    # App-level check to ensure JWT_SECRET is provided when starting the actual server
+    raise RuntimeError("JWT_SECRET is missing. Set JWT_SECRET in environment variables.")
+
 
 class RegisterRequest(BaseModel):
     # 회원가입 요청 바디 모델

@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     DB_POOL_TIMEOUT: int = 30
 
     # JWT Settings
-    JWT_SECRET: str
+    JWT_SECRET: Optional[str] = None
     JWT_ALGORITHM: str = "HS256"
     JWT_EXPIRE_DAYS: int = 7
 
