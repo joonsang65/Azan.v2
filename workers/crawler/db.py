@@ -16,9 +16,10 @@ db.py — Ajou 공지 크롤러의 데이터베이스 상호작용 계층.
 """
 
 from __future__ import annotations
+from datetime import date, timedelta
 from typing import Optional
 
-from sqlalchemy import select
+from sqlalchemy import delete, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import Session
 
@@ -31,6 +32,28 @@ def get_session() -> Session:
     SQLAlchemy SessionLocal 을 사용하여 새로운 DB 세션을 반환한다.
     """
     return SessionLocal()
+
+
+def delete_old_notices_by_deadline(session: Session, days_offset: int = 7) -> int:
+    """
+    마감일(deadline)이 현재 날짜 기준 일정 기간(기본 7일) 이상 지난 공지를 삭제한다.
+
+    Input:
+        session     — SQLAlchemy Session
+        days_offset — 며칠 전 마감된 공지까지 남겨둘지 결정 (기본 7일)
+
+    Output: 삭제된 행의 개수
+    """
+    cutoff_date = date.today() - timedelta(days=days_offset)
+    stmt = delete(Notice).where(Notice.deadline < cutoff_date)
+    
+    try:
+        result = session.execute(stmt)
+        session.commit()
+        return result.rowcount
+    except Exception:
+        session.rollback()
+        raise
 
 
 def notice_exists(session: Session, notice_id: str) -> bool:

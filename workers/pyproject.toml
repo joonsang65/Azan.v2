@@ -7,7 +7,7 @@ name = "azan-worker"
 version = "0.1.0"
 description = "Minimal worker service for azan"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
   "sqlalchemy>=2.0,<3.0",
   "psycopg2-binary>=2.9,<3.0",

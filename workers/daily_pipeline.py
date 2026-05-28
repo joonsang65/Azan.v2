@@ -13,12 +13,17 @@ import sys
 from pathlib import Path
 
 # 프로젝트 루트를 sys.path에 추가
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
+# .env 로드
+from dotenv import load_dotenv
+load_dotenv(PROJECT_ROOT / "backend" / ".env")
+
 # 각 모듈 임포트
 from workers.crawler.main import main as run_crawler
+from workers.crawler.db import get_session, delete_old_notices_by_deadline
 from workers.crawler.processor import NoticeProcessor
 from backend.app.services.embedding_service import update_missing_embeddings
 from workers.alarm.keyword_match.send_notifications import main as send_notifications
@@ -36,6 +41,15 @@ logger = logging.getLogger("DailyPipeline")
 
 def run_pipeline():
     logger.info("=== Starting Daily Pipeline ===")
+
+    # 0. 데이터 정리 (마감일 지난 공지 삭제)
+    try:
+        logger.info("[Step 0] Cleaning up old notices (deadline < today - 7 days)...")
+        with get_session() as session:
+            deleted_count = delete_old_notices_by_deadline(session)
+            logger.info(f"[Step 0] Deleted {deleted_count} old notices.")
+    except Exception as e:
+        logger.error(f"[Step 0] Cleanup failed: {e}")
 
     # 1. 크롤링
     try:

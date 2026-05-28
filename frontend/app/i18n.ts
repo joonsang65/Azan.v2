@@ -38,6 +38,7 @@ export const translations: Record<LanguageOption, Record<TranslationKey, string>
     'home.remaining': '남음',
     'home.urgent': '긴급',
     'home.done': '완료',
+    'home.more': '더보기',
 
     'notices.imageAttachment': '이미지 첨부',
     'notices.important': '중요',
@@ -182,6 +183,7 @@ export const translations: Record<LanguageOption, Record<TranslationKey, string>
     'home.remaining': 'Remaining',
     'home.urgent': 'Urgent',
     'home.done': 'Done',
+    'home.more': 'More',
 
     'notices.imageAttachment': 'Image attached',
     'notices.important': 'Important',

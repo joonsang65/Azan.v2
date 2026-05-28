@@ -89,12 +89,20 @@ export default function HomeScreen() {
     <View style={styles.screen}>
       <ScrollView style={styles.container} contentContainerStyle={styles.content}>
         <View style={styles.highlightCard}>
-          <Text style={styles.sectionLabel}>
-            {t(selectedLanguage, 'home.todayDeadlines')}
-          </Text>
+          <View style={styles.sectionHeaderRow}>
+            <Text style={styles.sectionLabel}>
+              {t(selectedLanguage, 'home.todayDeadlines')}
+            </Text>
+            <TouchableOpacity 
+              onPress={() => router.push('/notices')}
+              hitSlop={{ top: 15, bottom: 15, left: 15, right: 15 }}
+            >
+              <Text style={styles.moreText}>{t(selectedLanguage, 'home.more')}</Text>
+            </TouchableOpacity>
+          </View>
 
           {weeklyDeadlineNotices.length > 0 ? (
-            weeklyDeadlineNotices.map((notice) => (
+            weeklyDeadlineNotices.slice(0, 3).map((notice) => (
               <TouchableOpacity
                 key={notice.id}
                 style={[styles.taskRow, styles.weeklyDeadlineRow]}
@@ -128,12 +136,20 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.card}>
-          <Text style={styles.sectionTitle}>
-            {t(selectedLanguage, 'home.todayNotices')}
-          </Text>
+          <View style={styles.sectionHeaderRow}>
+            <Text style={styles.sectionTitle}>
+              {t(selectedLanguage, 'home.todayNotices')}
+            </Text>
+            <TouchableOpacity 
+              onPress={() => router.push('/notices')}
+              hitSlop={{ top: 15, bottom: 15, left: 15, right: 15 }}
+            >
+              <Text style={styles.moreText}>{t(selectedLanguage, 'home.more')}</Text>
+            </TouchableOpacity>
+          </View>
 
           {weeklyNotices.length > 0 ? (
-            weeklyNotices.map((item) => (
+            weeklyNotices.slice(0, 3).map((item) => (
               <TouchableOpacity
                 key={item.id}
                 style={styles.noticeItem}
@@ -342,7 +358,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '700',
     color: '#2B2B2B',
-    marginBottom: 14,
+    marginBottom: 0,
+  },
+  moreText: {
+    fontSize: 14,
+    color: '#64748B',
+    fontWeight: '500',
   },
   noticeItem: {
     marginBottom: 12,

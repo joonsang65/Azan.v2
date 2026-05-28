@@ -25,6 +25,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from sqlalchemy import select
 from backend.app.database import SessionLocal
 from backend.app.models import Notice, Keyword
+from backend.app.services.alert_service import queue_alerts_for_notice
 
 # 로깅 설정
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
@@ -94,6 +95,11 @@ class NoticeProcessor:
             
             # JSON 파싱
             raw_text = response.content
+            
+            # Ensure raw_text is a string (handle list content from newer Gemini/LangChain)
+            if isinstance(raw_text, list):
+                raw_text = "".join([part.get("text", "") if isinstance(part, dict) else str(part) for part in raw_text])
+                
             if "```json" in raw_text:
                 raw_text = raw_text.split("```json")[1].split("```")[0]
             data = json.loads(raw_text.strip())
@@ -116,7 +122,10 @@ class NoticeProcessor:
                 notice.keyword_id = self.keyword_map.get("Academic", 1)
 
             notice.is_processed = True
-            logger.info(f"Successfully processed notice: {notice.notice_id} ({cat_name})")
+            
+            # 알림 큐 적재 (키워드 매칭된 유저들에게 알림 전송 대기)
+            queued_count = queue_alerts_for_notice(self.db, notice.id)
+            logger.info(f"Successfully processed notice: {notice.notice_id} ({cat_name}), queued {queued_count} alerts.")
 
         except Exception as e:
             logger.error(f"Gemini processing failed for {notice.notice_id}: {e}")

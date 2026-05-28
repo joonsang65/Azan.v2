@@ -103,6 +103,8 @@ class AzanChatbotService:
                     {"chat_history": chat_history, "question": question}
                 )
                 standalone_question = getattr(condense_result, "content", str(condense_result))
+                if isinstance(standalone_question, list):
+                    standalone_question = "".join([part.get("text", "") if isinstance(part, dict) else str(part) for part in standalone_question])
                 logger.info(f"[Session: {session_id}] [Step 1] Condensing: '{question}' -> '{standalone_question}'")
             else:
                 standalone_question = question
@@ -148,6 +150,8 @@ class AzanChatbotService:
             t_answer = loop.time() - t2
 
             response_text = getattr(answer_result, "content", str(answer_result))
+            if isinstance(response_text, list):
+                response_text = "".join([part.get("text", "") if isinstance(part, dict) else str(part) for part in response_text])
 
             total_elapsed = loop.time() - started
 
