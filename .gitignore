@@ -19,6 +19,6 @@ build/
 .expo/
 .next/
 workers/rag/benchmark_result/
-
+allure-results/
 # 프로젝트 가이드라인 제외
 GEMINI.md
