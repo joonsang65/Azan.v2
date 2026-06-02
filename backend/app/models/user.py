@@ -12,7 +12,7 @@ from sqlalchemy import (
     String,
     Uuid,
     func,
-    BigInteger,
+    Integer,
 )
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from ..database import Base
@@ -65,7 +65,7 @@ class UserNoticeRead(Base):
         Index("ix_user_notice_reads_user_notice", "user_id", "notice_id"),
     )
 
-    id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     user_id: Mapped[Uuid] = mapped_column(Uuid(as_uuid=True), ForeignKey("users.id"), nullable=False)
     notice_id: Mapped[Uuid] = mapped_column(Uuid(as_uuid=True), ForeignKey("notices.id"), nullable=False)
     read_at: Mapped[datetime] = mapped_column(

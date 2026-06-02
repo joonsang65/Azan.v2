@@ -4,7 +4,7 @@ from typing import Optional
 from uuid import UUID as UUIDType
 from uuid import uuid4
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, Header, HTTPException, Query
 from pydantic import BaseModel
 from sqlalchemy import func, or_
 from sqlalchemy.dialects.postgresql import insert as pg_insert
@@ -12,13 +12,37 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from ..database import get_db
-from ..models import AlertOutbox, Keyword, Notice, UserKeyword
+from ..models import AlertOutbox, Keyword, Notice, UserKeyword, UserNoticeRead
 from ..services.alert_service import queue_alerts_for_notice
+from .auth import _parse_user_id, _decode_bearer_token
 
 router = APIRouter(tags=["notices"])
 
 
+def get_optional_user_id(
+    authorization: Optional[str] = Header(default=None),
+) -> Optional[UUIDType]:
+    """
+    Optional user_id dependency. Returns UUID if token is valid, else None.
+    Does NOT raise 401 if header is missing.
+    """
+    if not authorization or not authorization.startswith("Bearer "):
+        return None
+    try:
+        # Reuse logic from auth.py but handle exceptions
+        token = authorization[len("Bearer ") :].strip()
+        from ..core.config import settings
+        import jwt
+        payload = jwt.decode(token, settings.JWT_SECRET, algorithms=[settings.JWT_ALGORITHM])
+        user_id_str = payload.get("sub")
+        return UUIDType(user_id_str) if user_id_str else None
+    except Exception:
+        return None
+
+
+
 class NoticeCreateRequest(BaseModel):
+
     # 공지 생성 요청 바디 모델
     notice_id: Optional[str] = None
     keyword_id: Optional[int] = None
@@ -184,7 +208,11 @@ def create_notice(body: NoticeCreateRequest, db: Session = Depends(get_db)):
 @router.get("/notices/{notice_id}")
 # 입력: notice_id, DB 세션
 # 출력: dict (공지 상세)
-def get_notice(notice_id: UUIDType, db: Session = Depends(get_db)):
+def get_notice(
+    notice_id: UUIDType,
+    user_uuid: Optional[UUIDType] = Depends(get_optional_user_id),
+    db: Session = Depends(get_db),
+):
     notice_row = (
         db.query(Notice, Keyword)
         .outerjoin(Keyword, Keyword.id == Notice.keyword_id)
@@ -196,6 +224,18 @@ def get_notice(notice_id: UUIDType, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Notice not found")
 
     notice, keyword_row = notice_row
+
+    # 사용자 조회 이력 기록
+    if user_uuid:
+        try:
+            read_event = UserNoticeRead(user_id=user_uuid, notice_id=notice.id)
+            db.add(read_event)
+            db.commit()
+        except Exception:
+            db.rollback()
+            # 조회 이력 기록 실패가 공지 상세 반환을 막아서는 안 됨
+            pass
+
     return {
         "id": str(notice.id),
         "title": notice.title,
@@ -209,3 +249,4 @@ def get_notice(notice_id: UUIDType, db: Session = Depends(get_db)):
         "keyword": keyword_row.keyword if keyword_row else None,
         "published_at": notice.published_at,
     }
+
