@@ -239,6 +239,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }
 
   function toggleNoticeReminder(notice: Notice) {
+    // If deadline is missing, do not allow adding to reminders
+    if (!notice.deadline) {
+      return;
+    }
+
     setSavedNoticeReminders((prev) => {
       const isExist = prev.some((item) => item.noticeId === notice.id);
       if (isExist) return prev.filter((item) => item.noticeId !== notice.id);
@@ -247,7 +252,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         id: `reminder-${notice.id}`,
         noticeId: notice.id,
         title: notice.title,
-        dueDate: notice.deadline || notice.date,
+        dueDate: notice.deadline, // notice.date removed since notice.deadline is guaranteed here
         category: notice.category,
         summary: notice.summary,
         link: notice.link,

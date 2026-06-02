@@ -136,9 +136,14 @@ export default function NoticesScreen() {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                  style={[styles.saveButton, isSaved && styles.savedButton]}
+                  style={[
+                    styles.saveButton,
+                    isSaved && styles.savedButton,
+                    !notice.deadline && styles.saveButtonDisabled,
+                  ]}
                   onPress={() => toggleNoticeReminder(notice)}
                   activeOpacity={0.85}
+                  disabled={!notice.deadline}
                 >
                   <Text style={styles.saveButtonText}>
                     {isSaved
@@ -295,6 +300,9 @@ const styles = StyleSheet.create({
   },
   savedButton: {
     backgroundColor: '#38BDF8',
+  },
+  saveButtonDisabled: {
+    backgroundColor: '#CBD5E1',
   },
   saveButtonText: {
     color: '#FFFFFF',

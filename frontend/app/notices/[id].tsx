@@ -83,9 +83,11 @@ export default function NoticeDetailScreen() {
           style={[
             styles.primaryActionButton,
             savedReminder && styles.primaryActionButtonSaved,
+            !notice.deadline && styles.primaryActionButtonDisabled,
           ]}
           onPress={() => toggleNoticeReminder(notice)}
           activeOpacity={0.85}
+          disabled={!notice.deadline}
         >
           <Text style={styles.primaryActionText}>
             {savedReminder
@@ -254,6 +256,9 @@ const styles = StyleSheet.create({
   },
   primaryActionButtonSaved: {
     backgroundColor: '#38BDF8',
+  },
+  primaryActionButtonDisabled: {
+    backgroundColor: '#CBD5E1',
   },
   primaryActionText: {
     color: '#FFFFFF',
