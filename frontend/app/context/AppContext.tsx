@@ -118,9 +118,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
           setSelectedLanguage(profileData.preferredLanguage);
           
           try {
-            const myKeys = await keywordService.getMyKeywords();
-            if (myKeys?.enabled) {
-              const categories = myKeys.enabled.map(id => mapIdToCategory(id));
+            const [myKeys, allKeys] = await Promise.all([
+              keywordService.getMyKeywords(),
+              keywordService.getAllKeywords(),
+            ]);
+            if (myKeys?.enabled && allKeys) {
+              const idToName: Record<number, string> = Object.fromEntries(allKeys.map(k => [k.id, k.keyword]));
+              const categories = [...new Set(
+                myKeys.enabled
+                  .map(id => mapKeywordNameToCategory(idToName[id] || ''))
+                  .filter((c): c is NoticeCategory => c !== null)
+              )];
               setSelectedNoticeCategories(categories);
               setUserProfileStatus((prev) => ({
                 ...prev,
@@ -220,7 +228,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
     try {
       const allKeys = await keywordService.getAllKeywords();
       const enabledIds = allKeys
-        .filter(k => nextCategories.includes(k.keyword as NoticeCategory))
+        .filter(k => nextCategories.some(cat =>
+          categoryToKeywordNames(cat).includes(k.keyword.toLowerCase())
+        ))
         .map(k => k.id);
       await keywordService.updateMyKeywords(enabledIds);
     } catch {
@@ -281,17 +291,27 @@ export function AppProvider({ children }: { children: ReactNode }) {
   );
 }
 
-function mapIdToCategory(id: number): NoticeCategory {
-  // Temporary mapping for backend keyword IDs.
-  const map: Record<number, NoticeCategory> = {
-    1: 'Visa',
-    2: 'TOPIK',
-    3: 'Academic',
-    4: 'Events',
-    5: 'Scholarship',
-    6: 'Dormitory'
-  };
-  return map[id] || 'Academic';
+function mapKeywordNameToCategory(keyword: string): NoticeCategory | null {
+  const lower = (keyword || '').toLowerCase();
+  if (lower === 'visa') return 'Visa';
+  if (lower === 'topik') return 'TOPIK';
+  if (lower === 'scholarship') return 'Scholarship';
+  if (lower === 'undergrad_register' || lower === 'grad_register' || lower === 'academic') return 'Academic';
+  if (lower === 'life' || lower === 'events') return 'Events';
+  if (lower === 'dormitory' || lower === 'dorm') return 'Dormitory';
+  return null;
+}
+
+function categoryToKeywordNames(cat: NoticeCategory): string[] {
+  switch (cat) {
+    case 'Visa': return ['visa'];
+    case 'TOPIK': return ['topik'];
+    case 'Scholarship': return ['scholarship'];
+    case 'Academic': return ['academic', 'undergrad_register', 'grad_register'];
+    case 'Events': return ['events', 'life'];
+    case 'Dormitory': return ['dormitory', 'dorm'];
+    default: return [];
+  }
 }
 
 function mapCategoryToInterest(category: NoticeCategory): InterestCategory {
