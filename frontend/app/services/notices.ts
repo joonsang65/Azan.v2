@@ -80,6 +80,7 @@ type AppNoticeShape = Partial<Notice> & {
 type WorkerNoticeShape = {
   bbs_id?: string | number | null;
   body?: string | null;
+  eng_body?: string | null;
   category?: string | null;
   category_final?: string | null;
   created_at?: string | null;
@@ -328,6 +329,7 @@ function normalizeWorkerNotice(raw: WorkerNoticeShape, index: number): Notice {
       raw.body?.trim() ||
       raw.raw_body?.trim() ||
       undefined,
+    engBody: raw.eng_body?.trim() || undefined,
     link: raw.link?.trim() || raw.source_url?.trim() || raw.url?.trim() || undefined,
     imageUrls,
   };

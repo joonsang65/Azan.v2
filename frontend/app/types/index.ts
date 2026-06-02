@@ -62,6 +62,7 @@ export type Notice = {
   hasAttachmentOnly?: boolean;
   isCritical?: boolean;
   description?: string;
+  engBody?: string;
   link?: string;
   imageUrls?: string[];
 };
