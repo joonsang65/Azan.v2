@@ -126,7 +126,10 @@ class NoticeProcessor:
                 notice.keyword_id = self.keyword_map.get("Academic", 1)
 
             notice.is_processed = True
-            
+
+            # autoflush=False 세션이므로 keyword_id가 SELECT에 반영되도록 명시적 flush
+            self.db.flush()
+
             # 알림 큐 적재 (키워드 매칭된 유저들에게 알림 전송 대기)
             queued_count = queue_alerts_for_notice(self.db, notice.id)
             logger.info(f"Successfully processed notice: {notice.notice_id} ({cat_name}), queued {queued_count} alerts.")
