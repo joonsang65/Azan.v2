@@ -192,6 +192,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         };
 
         setUserProfileStatus(profileData);
+        setSelectedLanguage(profileData.preferredLanguage);
       }
 
       setStatusCheckedAt(new Date().toISOString());

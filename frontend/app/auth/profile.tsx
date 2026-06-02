@@ -140,6 +140,7 @@ export default function ProfileSetupScreen() {
           topikTargetLevel,
           interests,
           residenceType,
+          preferredLanguage: selectedLanguage,
         };
         await authService.updateMe(profileUpdate as any);
         setUserProfileStatus((prev) => ({
@@ -158,6 +159,7 @@ export default function ProfileSetupScreen() {
           topikTargetLevel,
           interests,
           residenceType,
+          preferredLanguage: selectedLanguage,
         } as any));
         setSelectedNoticeCategories(mapInterestsToNoticeCategories(interests));
         router.replace('/(tabs)');

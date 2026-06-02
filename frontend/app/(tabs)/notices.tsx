@@ -114,7 +114,11 @@ export default function NoticesScreen() {
 
                   <Text style={styles.title}>{notice.title}</Text>
                   <Text style={styles.summary} numberOfLines={3}>
-                    {notice.summary}
+                    {selectedLanguage === 'English' && notice.engBody
+                      ? notice.engBody.length > 42
+                        ? `${notice.engBody.slice(0, 39).trim()}...`
+                        : notice.engBody
+                      : notice.summary}
                   </Text>
                   {notice.imageUrls?.[0] ? (
                     <NoticeImage

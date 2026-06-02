@@ -40,10 +40,11 @@ export default function NoticeDetailScreen() {
     );
   }
 
-  const formattedDescription = formatNoticeDescription(
-    notice.description,
-    notice.hasAttachmentOnly
-  );
+  const bodyToShow =
+    selectedLanguage === 'English' && notice.engBody
+      ? notice.engBody
+      : notice.description;
+  const formattedDescription = formatNoticeDescription(bodyToShow, notice.hasAttachmentOnly);
 
   return (
     <ScrollView

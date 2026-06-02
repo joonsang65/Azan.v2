@@ -225,7 +225,7 @@ def main() -> None:
                         UPDATE users
                         SET visa_risk  = :visa_risk,
                             topik_risk = :topik_risk
-                        WHERE id = CAST(:id AS uuid)
+                        WHERE id = :id
                     """),
                     user_risk_updates,
                 )
