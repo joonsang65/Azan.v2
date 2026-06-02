@@ -40,18 +40,46 @@ def fetch_users_with_keywords(conn):
         return cur.fetchall()
 
 
-def fetch_random_notices(conn, keyword_id, limit=NOTICES_PER_KEYWORD):
+def fetch_random_notices(conn, keyword_id, prefer_english=False, limit=NOTICES_PER_KEYWORD):
     """키워드 ID에 해당하는 공지 랜덤 N개 조회 (eng_body 포함)"""
     with conn.cursor(cursor_factory=RealDictCursor) as cur:
-        cur.execute("""
-            SELECT id, title, preview, eng_body
-            FROM notices
-            WHERE keyword_id = %s
-              AND title IS NOT NULL
-              AND body IS NOT NULL
-            ORDER BY RANDOM()
-            LIMIT %s
-        """, (keyword_id, limit))
+        if prefer_english:
+            # eng_body 있는 공지 우선, 부족하면 나머지로 채움
+            cur.execute("""
+                (
+                    SELECT id, title, preview, eng_body
+                    FROM notices
+                    WHERE keyword_id = %s
+                      AND title IS NOT NULL
+                      AND body IS NOT NULL
+                      AND eng_body IS NOT NULL
+                      AND eng_body != ''
+                    ORDER BY RANDOM()
+                    LIMIT %s
+                )
+                UNION ALL
+                (
+                    SELECT id, title, preview, eng_body
+                    FROM notices
+                    WHERE keyword_id = %s
+                      AND title IS NOT NULL
+                      AND body IS NOT NULL
+                      AND (eng_body IS NULL OR eng_body = '')
+                    ORDER BY RANDOM()
+                    LIMIT %s
+                )
+                LIMIT %s
+            """, (keyword_id, limit, keyword_id, limit, limit))
+        else:
+            cur.execute("""
+                SELECT id, title, preview, eng_body
+                FROM notices
+                WHERE keyword_id = %s
+                  AND title IS NOT NULL
+                  AND body IS NOT NULL
+                ORDER BY RANDOM()
+                LIMIT %s
+            """, (keyword_id, limit))
         return cur.fetchall()
 
 
@@ -70,13 +98,12 @@ def build_messages(rows, conn):
         token = row["expo_push_token"]
         keyword = row["keyword"]
         keyword_id = row["keyword_id"]
+        is_english = (row.get("preferred_language") or "").lower() == "english"
 
-        notices = fetch_random_notices(conn, keyword_id)
+        notices = fetch_random_notices(conn, keyword_id, prefer_english=is_english)
         if not notices:
             print(f"  [{keyword}] 해당 공지 없음, 건너뜀")
             continue
-
-        is_english = (row.get("preferred_language") or "").lower() == "english"
 
         for notice in notices:
             title_text = (notice["title"] or "새 공지사항")[:60]
