@@ -4,6 +4,11 @@
   },
   "build": {
     "preview": {
+      "env": {
+        "EXPO_PUBLIC_API_BASE_URL": "https://ajou-international-2phq.onrender.com",
+        "EXPO_PUBLIC_NOTICES_API_URL": "https://ajou-international-2phq.onrender.com/notices",
+        "EXPO_PUBLIC_USE_LOCAL_CRAWLER_JSON": "false"
+      },
       "distribution": "internal",
       "android": {
         "buildType": "apk"

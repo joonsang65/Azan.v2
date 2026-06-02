@@ -1,4 +1,5 @@
 from uuid import UUID as UUIDType
+from sqlalchemy import text
 from sqlalchemy.orm import Session
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 from ..models import AlertOutbox, Notice, UserKeyword
@@ -24,6 +25,9 @@ def queue_alerts_for_notice(db: Session, notice_uuid: UUIDType) -> int:
     stmt = pg_insert(AlertOutbox).values(
         [{"user_id": user_id, "notice_id": notice_uuid, "status": "pending", "try_count": 0} for user_id in user_ids]
     )
-    stmt = stmt.on_conflict_do_nothing(index_elements=["user_id", "notice_id"])
+    stmt = stmt.on_conflict_do_nothing(
+        index_elements=["user_id", "notice_id"],
+        index_where=text("notice_id IS NOT NULL"),
+    )
     result = db.execute(stmt)
     return int(result.rowcount or 0)
