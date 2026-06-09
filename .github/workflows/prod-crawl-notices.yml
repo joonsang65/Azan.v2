@@ -22,8 +22,9 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        working-directory: workers/
-        run: pip install .
+        run: |
+          pip install -r requirements.txt
+          pip install -e workers/
 
       - name: Run crawler
         working-directory: workers/
