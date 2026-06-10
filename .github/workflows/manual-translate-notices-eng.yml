@@ -1,0 +1,47 @@
+name: Manual Translate Notices to English
+
+on:
+  workflow_dispatch:
+    inputs:
+      delay_seconds:
+        description: "Seconds to wait between Gemini API calls (increase if you hit rate limits)"
+        required: false
+        default: "1.0"
+        type: string
+      dry_run:
+        description: "Dry run — log which notices would be translated without writing to DB"
+        required: false
+        default: false
+        type: boolean
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  translate:
+    name: Translate notices (title_eng + eng_body)
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e workers/
+
+      - name: Run translation
+        env:
+          DATABASE_URL: ${{ secrets.NEON_PROD_DATABASE_URL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          REQUEST_DELAY_SECONDS: ${{ inputs.delay_seconds }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: python workers/manual_trans_notice_Eng.py

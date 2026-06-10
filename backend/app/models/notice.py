@@ -44,6 +44,7 @@ class Notice(Base):
     preview: Mapped[str] = mapped_column(String, nullable=False)
     body: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     eng_body: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    title_eng: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     source: Mapped[Optional[str]] = mapped_column(String, nullable=True)
     hash: Mapped[Optional[str]] = mapped_column(String, nullable=True)
     is_processed: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False, server_default="false")

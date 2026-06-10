@@ -71,7 +71,11 @@ export default function NoticeDetailScreen() {
         </View>
       </View>
 
-      <Text style={styles.title}>{notice.title}</Text>
+      <Text style={styles.title}>
+        {selectedLanguage === 'English' && notice.titleEng
+          ? notice.titleEng
+          : notice.title}
+      </Text>
       <Text style={styles.date}>
         {notice.deadline
           ? `${t(selectedLanguage, 'notices.deadline')} ${notice.deadline}`

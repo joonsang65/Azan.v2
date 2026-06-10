@@ -81,6 +81,7 @@ type WorkerNoticeShape = {
   bbs_id?: string | number | null;
   body?: string | null;
   eng_body?: string | null;
+  title_eng?: string | null;
   category?: string | null;
   category_final?: string | null;
   created_at?: string | null;
@@ -318,6 +319,7 @@ function normalizeWorkerNotice(raw: WorkerNoticeShape, index: number): Notice {
         `notice-${index}`
     ),
     title: raw.title?.trim() || 'Untitled notice',
+    titleEng: raw.title_eng?.trim() || undefined,
     category: normalizeWorkerCategory(raw),
     summary: pickSummary(raw),
     date: pickDate(raw),

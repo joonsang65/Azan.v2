@@ -144,7 +144,13 @@ def send_messages(messages):
                 timeout=15,
             )
             resp.raise_for_status()
-            print(f"[Batch {i // 100 + 1}] {len(batch)}개 발송 완료")
+            result = resp.json()
+            tickets = result.get("data", [])
+            errors = [(j, t) for j, t in enumerate(tickets) if t.get("status") == "error"]
+            ok_count = len(tickets) - len(errors)
+            print(f"[Batch {i // 100 + 1}] 성공: {ok_count}개, 실패: {len(errors)}개")
+            for j, ticket in errors:
+                print(f"  ❌ [{j}] {ticket.get('message')} | details: {ticket.get('details')}")
         except Exception as exc:
             print(f"[Batch {i // 100 + 1}] 발송 실패: {exc}")
 

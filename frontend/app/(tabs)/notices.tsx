@@ -112,7 +112,11 @@ export default function NoticesScreen() {
                     </View>
                   </View>
 
-                  <Text style={styles.title}>{notice.title}</Text>
+                  <Text style={styles.title}>
+                    {selectedLanguage === 'English' && notice.titleEng
+                      ? notice.titleEng
+                      : notice.title}
+                  </Text>
                   <Text style={styles.summary} numberOfLines={3}>
                     {selectedLanguage === 'English' && notice.engBody
                       ? notice.engBody.length > 42

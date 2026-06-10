@@ -55,6 +55,7 @@ export type NotificationFrequency = 'Low' | 'Medium' | 'High';
 export type Notice = {
   id: string;
   title: string;
+  titleEng?: string;
   category: NoticeCategory;
   summary: string;
   date: string;

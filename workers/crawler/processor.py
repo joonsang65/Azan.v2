@@ -81,12 +81,13 @@ class NoticeProcessor:
         prompt = ChatPromptTemplate.from_template("""
         You are an assistant for Ajou University International Students.
         Analyze the following notice and provide:
-        1. English Translation of the body (naturally for students).
-        2. Deadline in YYYY-MM-DD format (if multiple, use the main application deadline. If none, return null).
-        3. Category (Must be one of: {categories}).
+        1. English translation of the title (concise, natural English).
+        2. English Translation of the body (naturally for students).
+        3. Deadline in YYYY-MM-DD format (if multiple, use the main application deadline. If none, return null).
+        4. Category (Must be one of: {categories}).
 
-        Return ONLY a JSON object with keys: "translation", "deadline", "category".
-        
+        Return ONLY a JSON object with keys: "title_translation", "translation", "deadline", "category".
+
         Notice Content:
         {content}
         """)
@@ -110,6 +111,7 @@ class NoticeProcessor:
             data = json.loads(raw_text.strip())
 
             # 정보 업데이트
+            notice.title_eng = data.get("title_translation")
             notice.eng_body = data.get("translation")
             
             deadline_str = data.get("deadline")

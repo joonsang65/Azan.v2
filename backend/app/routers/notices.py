@@ -101,6 +101,7 @@ def list_notices(
         query.with_entities(
             Notice.id,
             Notice.title,
+            Notice.title_eng,
             Notice.preview,
             Notice.body,
             Notice.eng_body,
@@ -124,6 +125,7 @@ def list_notices(
                 "keyword_id": keyword_id,
                 "keyword": keyword,
                 "title": title,
+                "title_eng": title_eng,
                 "preview": preview,
                 "body": body,
                 "eng_body": eng_body,
@@ -135,6 +137,7 @@ def list_notices(
             for (
                 item_id,
                 title,
+                title_eng,
                 preview,
                 body,
                 eng_body,
@@ -242,6 +245,7 @@ def get_notice(
     return {
         "id": str(notice.id),
         "title": notice.title,
+        "title_eng": notice.title_eng,
         "body": notice.body,
         "eng_body": notice.eng_body,
         "preview": notice.preview,
