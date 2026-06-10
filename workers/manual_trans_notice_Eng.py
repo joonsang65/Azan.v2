@@ -26,8 +26,9 @@ GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 GENERATION_MODEL = os.environ.get("GENERATION_MODEL", "gemini-2.5-flash")
 REQUEST_DELAY = float(os.environ.get("REQUEST_DELAY_SECONDS", "1.0"))
 DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
+BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "50"))
 
-_PROMPT = ChatPromptTemplate.from_template("""
+_PROMPT_BOTH = ChatPromptTemplate.from_template("""
 You are a translator for Ajou University International Students.
 Translate the following Korean notice into natural English.
 
@@ -40,6 +41,88 @@ Korean Title: {title}
 Korean Body: {body}
 """)
 
+_PROMPT_TITLE_ONLY = ChatPromptTemplate.from_template("""
+You are a translator for Ajou University International Students.
+Translate the following Korean notice title into concise, natural English.
+
+Return ONLY a valid JSON object with exactly one key:
+- "title_eng": English translation of the title.
+
+Korean Title: {title}
+""")
+
+_PROMPT_BODY_ONLY = ChatPromptTemplate.from_template("""
+You are a translator for Ajou University International Students.
+Translate the following Korean notice body into natural, student-friendly English.
+
+Return ONLY a valid JSON object with exactly one key:
+- "eng_body": English translation of the body.
+  If the body is empty, return an empty string for "eng_body".
+
+Korean Body: {body}
+""")
+
+
+# ── DB helpers ────────────────────────────────────────────────────────────────
+
+def _make_conn() -> psycopg2.extensions.connection:
+    conn = psycopg2.connect(DATABASE_URL)
+    conn.autocommit = False
+    return conn
+
+
+def _reconnect(conn: psycopg2.extensions.connection) -> psycopg2.extensions.connection:
+    logger.warning("DB connection lost — reconnecting...")
+    try:
+        conn.close()
+    except Exception:
+        pass
+    return _make_conn()
+
+
+def _safe_rollback(conn: psycopg2.extensions.connection) -> None:
+    if conn.closed != 0:
+        return
+    try:
+        conn.rollback()
+    except Exception as e:
+        logger.warning(f"Rollback failed (ignored): {e}")
+
+
+def _save(
+    conn: psycopg2.extensions.connection,
+    row_id,
+    title_eng: str | None,
+    eng_body: str | None,
+) -> psycopg2.extensions.connection:
+    """UPDATE the notice row, reconnecting once on OperationalError."""
+    for attempt in range(2):
+        try:
+            if conn.closed != 0:
+                conn = _reconnect(conn)
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    UPDATE notices
+                    SET
+                        title_eng = COALESCE(title_eng, %s),
+                        eng_body  = COALESCE(eng_body,  %s)
+                    WHERE id = %s
+                    """,
+                    (title_eng, eng_body, row_id),
+                )
+            conn.commit()
+            return conn
+        except psycopg2.OperationalError as e:
+            if attempt == 0:
+                logger.warning(f"OperationalError — reconnecting and retrying: {e}")
+                conn = _reconnect(conn)
+                continue
+            raise
+    return conn
+
+
+# ── Gemini helpers ────────────────────────────────────────────────────────────
 
 def _parse_response(raw) -> dict:
     if isinstance(raw, list):
@@ -52,15 +135,35 @@ def _parse_response(raw) -> dict:
     return json.loads(raw.strip())
 
 
-def translate(llm, title: str, body: str) -> tuple[str | None, str | None]:
-    chain = _PROMPT | llm
+def _str_or_none(value) -> str | None:
+    return (value or "").strip() or None
+
+
+def translate_both(llm, title: str, body: str) -> tuple[str | None, str | None]:
+    """title_eng AND eng_body 둘 다 NULL일 때 — Gemini 1회 호출."""
+    chain = _PROMPT_BOTH | llm
     response = chain.invoke({"title": title, "body": body or ""})
     data = _parse_response(response.content)
+    return _str_or_none(data.get("title_eng")), _str_or_none(data.get("eng_body"))
 
-    title_eng = (data.get("title_eng") or "").strip() or None
-    eng_body = (data.get("eng_body") or "").strip() or None
-    return title_eng, eng_body
 
+def translate_title(llm, title: str) -> str | None:
+    """title_eng 만 NULL일 때 — body 번역 생략."""
+    chain = _PROMPT_TITLE_ONLY | llm
+    response = chain.invoke({"title": title})
+    data = _parse_response(response.content)
+    return _str_or_none(data.get("title_eng"))
+
+
+def translate_body(llm, body: str) -> str | None:
+    """eng_body 만 NULL일 때 — title 번역 생략."""
+    chain = _PROMPT_BODY_ONLY | llm
+    response = chain.invoke({"body": body or ""})
+    data = _parse_response(response.content)
+    return _str_or_none(data.get("eng_body"))
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
     if DRY_RUN:
@@ -70,11 +173,10 @@ def main():
         model=GENERATION_MODEL,
         google_api_key=GEMINI_API_KEY,
         temperature=0.1,
-        request_timeout=60,
+        request_timeout=120,  # increased from 60 → 120 to handle slow Gemini responses
     )
 
-    conn = psycopg2.connect(DATABASE_URL)
-    conn.autocommit = False
+    conn = _make_conn()
 
     try:
         with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
@@ -84,12 +186,14 @@ def main():
                 FROM notices
                 WHERE title_eng IS NULL OR eng_body IS NULL
                 ORDER BY published_at DESC
-                """
+                LIMIT %s
+                """,
+                (BATCH_SIZE,),
             )
             rows = cur.fetchall()
 
         total = len(rows)
-        logger.info(f"Found {total} notices to translate.")
+        logger.info(f"Found {total} notices to translate (batch limit: {BATCH_SIZE}).")
 
         if total == 0:
             logger.info("Nothing to do. Exiting.")
@@ -116,27 +220,31 @@ def main():
                     logger.info("  [dry-run] skipping API call and DB update.")
                     success += 1
                 else:
-                    title_eng, eng_body = translate(llm, title, body)
+                    need_title = existing_title_eng is None
+                    need_body = existing_eng_body is None
 
-                    with conn.cursor() as cur:
-                        # COALESCE keeps any pre-existing value; only fills NULLs
-                        cur.execute(
-                            """
-                            UPDATE notices
-                            SET
-                                title_eng = COALESCE(title_eng, %s),
-                                eng_body  = COALESCE(eng_body,  %s)
-                            WHERE id = %s
-                            """,
-                            (title_eng, eng_body, row["id"]),
-                        )
-                    conn.commit()
+                    # 필요한 필드만 Gemini 호출
+                    if need_title and need_body:
+                        title_eng, eng_body = translate_both(llm, title, body)
+                        logger.info("  translated: title + body")
+                    elif need_title:
+                        title_eng = translate_title(llm, title)
+                        eng_body = existing_eng_body   # 기존 값 유지
+                        logger.info("  translated: title only (body already exists)")
+                    else:
+                        eng_body = translate_body(llm, body)
+                        title_eng = existing_title_eng  # 기존 값 유지
+                        logger.info("  translated: body only (title already exists)")
 
+                    conn = _save(conn, row["id"], title_eng, eng_body)
                     logger.info(f"  EN title: {(title_eng or '')[:80]}")
                     success += 1
 
             except Exception as exc:
-                conn.rollback()
+                _safe_rollback(conn)
+                # reconnect so the next iteration has a live connection
+                if conn.closed != 0:
+                    conn = _reconnect(conn)
                 logger.error(f"  FAILED: {exc}")
                 failed += 1
 
@@ -156,7 +264,8 @@ def main():
             raise SystemExit(1)
 
     finally:
-        conn.close()
+        if conn.closed == 0:
+            conn.close()
 
 
 if __name__ == "__main__":
