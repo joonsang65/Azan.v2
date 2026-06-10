@@ -64,13 +64,20 @@ Korean Body: {body}
 
 _PROMPT_DEADLINE = ChatPromptTemplate.from_template("""
 You are an assistant for Ajou University International Students.
-Analyze the following Korean notice and extract the main application/submission deadline.
+Analyze the following Korean notice and extract the most important date, if one clearly exists.
 
-Look for phrases indicating a deadline such as:
-- 마감, 제출 기한, 신청 기간, 접수 기간, ~까지, 모집 기간, 지원 기간
+What counts as a deadline:
+- Application / submission deadline: 신청 마감, 제출 기한, 접수 기간, 모집 기간, ~까지 등
+- Event date: 행사 일시, 시행일, 개최일, 설명회 날짜 등 — if the notice is about an event on a specific date, use that date.
+- In general, any explicitly stated date that a student should be aware of or act by.
+
+Rules:
+- Only return a date if it is EXPLICITLY written in the text. Do NOT guess or infer.
+- If the notice contains both an application deadline and an event date, prefer the application deadline.
+- If there is no explicit date at all, return null.
 
 Return ONLY a valid JSON object with exactly one key:
-- "deadline": the deadline date in YYYY-MM-DD format, or null if no clear deadline is found.
+- "deadline": the date in YYYY-MM-DD format, or null if no explicit date is found.
 
 Korean Title: {title}
 Korean Body: {body}
@@ -204,105 +211,133 @@ def main():
     )
 
     conn = _make_conn()
+    grand_success = 0
+    grand_failed = 0
+    batch_num = 0
+    # IDs where Gemini confirmed no deadline exists — excluded from future batches
+    # to prevent infinite loops on notices that genuinely have no deadline.
+    no_deadline_ids: set = set()
 
     try:
-        with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
-            cur.execute(
-                """
-                SELECT id, title, body, title_eng, eng_body, deadline
-                FROM notices
-                WHERE title_eng IS NULL OR eng_body IS NULL OR deadline IS NULL
-                ORDER BY published_at DESC
-                LIMIT %s
-                """,
-                (BATCH_SIZE,),
-            )
-            rows = cur.fetchall()
-
-        total = len(rows)
-        logger.info(f"Found {total} notices to process (batch limit: {BATCH_SIZE}).")
-
-        if total == 0:
-            logger.info("Nothing to do. Exiting.")
-            return
-
-        success = 0
-        failed = 0
-
-        for i, row in enumerate(rows, start=1):
-            notice_id = str(row["id"])
-            title = row["title"] or ""
-            body = row["body"] or ""
-            existing_title_eng = row["title_eng"]
-            existing_eng_body = row["eng_body"]
-            existing_deadline = row["deadline"]
-
-            need_title = existing_title_eng is None
-            need_body = existing_eng_body is None
-            need_deadline = existing_deadline is None
-
-            logger.info(
-                f"[{i}/{total}] {notice_id} | "
-                f"needs: title_eng={need_title}, eng_body={need_body}, deadline={need_deadline}"
-            )
-            logger.info(f"  KR title: {title[:80]}")
-
-            try:
-                if DRY_RUN:
-                    logger.info("  [dry-run] skipping API call and DB update.")
-                    success += 1
+        while True:
+            batch_num += 1
+            with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
+                if no_deadline_ids:
+                    # Exclude notices already confirmed to have no deadline
+                    cur.execute(
+                        """
+                        SELECT id, title, body, title_eng, eng_body, deadline
+                        FROM notices
+                        WHERE (title_eng IS NULL OR eng_body IS NULL)
+                           OR (deadline IS NULL AND id != ALL(%s))
+                        ORDER BY published_at DESC
+                        LIMIT %s
+                        """,
+                        (list(no_deadline_ids), BATCH_SIZE),
+                    )
                 else:
-                    # ── Translation ───────────────────────────────────────────
-                    if need_title and need_body:
-                        title_eng, eng_body = translate_both(llm, title, body)
-                        logger.info("  translated: title + body")
-                    elif need_title:
-                        title_eng = translate_title(llm, title)
-                        eng_body = existing_eng_body
-                        logger.info("  translated: title only (body already exists)")
-                    elif need_body:
-                        eng_body = translate_body(llm, body)
-                        title_eng = existing_title_eng
-                        logger.info("  translated: body only (title already exists)")
-                    else:
-                        title_eng = existing_title_eng
-                        eng_body = existing_eng_body
+                    cur.execute(
+                        """
+                        SELECT id, title, body, title_eng, eng_body, deadline
+                        FROM notices
+                        WHERE title_eng IS NULL OR eng_body IS NULL OR deadline IS NULL
+                        ORDER BY published_at DESC
+                        LIMIT %s
+                        """,
+                        (BATCH_SIZE,),
+                    )
+                rows = cur.fetchall()
 
-                    # ── Deadline extraction ───────────────────────────────────
-                    if need_deadline:
-                        deadline = extract_deadline(llm, title, body)
-                        if deadline:
-                            logger.info(f"  extracted deadline: {deadline}")
+            total = len(rows)
+            logger.info(f"[Batch {batch_num}] Found {total} notices to process (batch size: {BATCH_SIZE}).")
+
+            if total == 0:
+                logger.info("Nothing left to process. Done.")
+                break
+
+            success = 0
+            failed = 0
+
+            for i, row in enumerate(rows, start=1):
+                notice_id = str(row["id"])
+                title = row["title"] or ""
+                body = row["body"] or ""
+                existing_title_eng = row["title_eng"]
+                existing_eng_body = row["eng_body"]
+                existing_deadline = row["deadline"]
+
+                need_title = existing_title_eng is None
+                need_body = existing_eng_body is None
+                need_deadline = existing_deadline is None
+
+                logger.info(
+                    f"[{i}/{total}] {notice_id} | "
+                    f"needs: title_eng={need_title}, eng_body={need_body}, deadline={need_deadline}"
+                )
+                logger.info(f"  KR title: {title[:80]}")
+
+                try:
+                    if DRY_RUN:
+                        logger.info("  [dry-run] skipping API call and DB update.")
+                        success += 1
+                    else:
+                        # ── Translation ───────────────────────────────────────
+                        if need_title and need_body:
+                            title_eng, eng_body = translate_both(llm, title, body)
+                            logger.info("  translated: title + body")
+                        elif need_title:
+                            title_eng = translate_title(llm, title)
+                            eng_body = existing_eng_body
+                            logger.info("  translated: title only (body already exists)")
+                        elif need_body:
+                            eng_body = translate_body(llm, body)
+                            title_eng = existing_title_eng
+                            logger.info("  translated: body only (title already exists)")
                         else:
-                            logger.info("  no deadline found in notice")
-                    else:
-                        deadline = None  # COALESCE will keep the existing DB value
+                            title_eng = existing_title_eng
+                            eng_body = existing_eng_body
 
-                    conn = _save(conn, row["id"], title_eng, eng_body, deadline)
-                    logger.info(f"  EN title: {(title_eng or '')[:80]}")
-                    success += 1
+                        # ── Deadline extraction ───────────────────────────────
+                        if need_deadline:
+                            deadline = extract_deadline(llm, title, body)
+                            if deadline:
+                                logger.info(f"  extracted deadline: {deadline}")
+                            else:
+                                logger.info("  no deadline found in notice — skipping in future batches")
+                                no_deadline_ids.add(row["id"])
+                        else:
+                            deadline = None  # COALESCE will keep the existing DB value
 
-            except Exception as exc:
-                _safe_rollback(conn)
-                # reconnect so the next iteration has a live connection
-                if conn.closed != 0:
-                    conn = _reconnect(conn)
-                logger.error(f"  FAILED: {exc}")
-                failed += 1
+                        conn = _save(conn, row["id"], title_eng, eng_body, deadline)
+                        logger.info(f"  EN title: {(title_eng or '')[:80]}")
+                        success += 1
 
-            if i < total:
-                time.sleep(REQUEST_DELAY)
+                except Exception as exc:
+                    _safe_rollback(conn)
+                    if conn.closed != 0:
+                        conn = _reconnect(conn)
+                    logger.error(f"  FAILED: {exc}")
+                    failed += 1
+
+                if i < total:
+                    time.sleep(REQUEST_DELAY)
+
+            grand_success += success
+            grand_failed += failed
+            logger.info(
+                f"[Batch {batch_num}] done — success: {success}, failed: {failed}"
+            )
 
         logger.info(
             f"\n{'='*60}\n"
-            f"Translation complete.\n"
-            f"  Total  : {total}\n"
-            f"  Success: {success}\n"
-            f"  Failed : {failed}\n"
+            f"All batches complete.\n"
+            f"  Total processed : {grand_success + grand_failed}\n"
+            f"  Success         : {grand_success}\n"
+            f"  Failed          : {grand_failed}\n"
             f"{'='*60}"
         )
 
-        if failed > 0:
+        if grand_failed > 0:
             raise SystemExit(1)
 
     finally:
