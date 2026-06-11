@@ -62,6 +62,27 @@ Return ONLY a valid JSON object with exactly one key:
 Korean Body: {body}
 """)
 
+_PROMPT_CATEGORY = ChatPromptTemplate.from_template("""
+You are a classifier for Ajou University International Students notice board.
+Read the following Korean notice and classify it into exactly one of the given categories.
+
+Available categories: {categories}
+
+Category descriptions:
+- visa: Notices about visa application, extension, D-4, D-2, alien registration card, immigration office
+- topik: Notices about TOPIK Korean language proficiency test, registration, exam schedule, results
+- scholarship: Notices about scholarships, financial support, tuition fee reduction, grants
+- grad_register: Notices about graduate school admission, application, graduate course registration
+- undergrad_register: Notices about undergraduate admission, course add/drop, undergraduate registration
+- life: General campus life, events, dormitory, clubs, cultural activities, announcements not fitting other categories
+
+Return ONLY a valid JSON object with exactly one key:
+- "category": one of the exact category names listed above (copy exactly as given).
+
+Korean Title: {title}
+Korean Body: {body}
+""")
+
 _PROMPT_DEADLINE = ChatPromptTemplate.from_template("""
 You are an assistant for Ajou University International Students.
 Analyze the following Korean notice and extract the most important date, if one clearly exists.
@@ -85,6 +106,16 @@ Korean Body: {body}
 
 
 # ── DB helpers ────────────────────────────────────────────────────────────────
+
+def _load_keywords(conn) -> dict:
+    """keywords 테이블에서 {keyword_name: id} 매핑을 로드합니다."""
+    with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
+        cur.execute("SELECT id, keyword FROM keywords ORDER BY id")
+        rows = cur.fetchall()
+    keyword_map = {row["keyword"]: row["id"] for row in rows}
+    logger.info(f"Loaded {len(keyword_map)} keywords: {list(keyword_map.keys())}")
+    return keyword_map
+
 
 def _make_conn() -> psycopg2.extensions.connection:
     conn = psycopg2.connect(DATABASE_URL)
@@ -116,6 +147,7 @@ def _save(
     title_eng: str | None,
     eng_body: str | None,
     deadline: str | None = None,
+    keyword_id: int | None = None,
 ) -> psycopg2.extensions.connection:
     """UPDATE the notice row, reconnecting once on OperationalError."""
     for attempt in range(2):
@@ -127,12 +159,13 @@ def _save(
                     """
                     UPDATE notices
                     SET
-                        title_eng = COALESCE(title_eng, %s),
-                        eng_body  = COALESCE(eng_body,  %s),
-                        deadline  = COALESCE(deadline,  %s::date)
+                        title_eng  = COALESCE(title_eng,  %s),
+                        eng_body   = COALESCE(eng_body,   %s),
+                        deadline   = COALESCE(deadline,   %s::date),
+                        keyword_id = COALESCE(keyword_id, %s)
                     WHERE id = %s
                     """,
-                    (title_eng, eng_body, deadline, row_id),
+                    (title_eng, eng_body, deadline, keyword_id, row_id),
                 )
             conn.commit()
             return conn
@@ -186,6 +219,26 @@ def translate_body(llm, body: str) -> str | None:
     return _str_or_none(data.get("eng_body"))
 
 
+def classify_category(llm, keyword_map: dict, title: str, body: str) -> int | None:
+    """keyword_id 가 NULL일 때 — notice를 분류하여 keyword_id를 반환."""
+    chain = _PROMPT_CATEGORY | llm
+    response = chain.invoke({
+        "categories": ", ".join(keyword_map.keys()),
+        "title": title,
+        "body": body or "",
+    })
+    data = _parse_response(response.content)
+    category_name = (data.get("category") or "").strip()
+    if category_name in keyword_map:
+        return keyword_map[category_name]
+    # Case-insensitive fallback
+    for name, kid in keyword_map.items():
+        if name.lower() == category_name.lower():
+            return kid
+    logger.warning(f"  Unknown category '{category_name}' returned by Gemini")
+    return None
+
+
 def extract_deadline(llm, title: str, body: str) -> str | None:
     """deadline 이 NULL일 때 — title+body에서 마감일 추출."""
     chain = _PROMPT_DEADLINE | llm
@@ -211,41 +264,32 @@ def main():
     )
 
     conn = _make_conn()
+    keyword_map = _load_keywords(conn)
     grand_success = 0
     grand_failed = 0
     batch_num = 0
-    # IDs where Gemini confirmed no deadline exists — excluded from future batches
-    # to prevent infinite loops on notices that genuinely have no deadline.
-    no_deadline_ids: set = set()
+    no_deadline_ids: set = set()   # confirmed no deadline — skip in future batches
+    no_category_ids: set = set()   # Gemini returned unknown category — skip in future batches
 
     try:
         while True:
             batch_num += 1
             with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
-                if no_deadline_ids:
-                    # Exclude notices already confirmed to have no deadline
-                    cur.execute(
-                        """
-                        SELECT id, title, body, title_eng, eng_body, deadline
-                        FROM notices
-                        WHERE (title_eng IS NULL OR eng_body IS NULL)
-                           OR (deadline IS NULL AND id != ALL(%s))
-                        ORDER BY published_at DESC
-                        LIMIT %s
-                        """,
-                        (list(no_deadline_ids), BATCH_SIZE),
-                    )
-                else:
-                    cur.execute(
-                        """
-                        SELECT id, title, body, title_eng, eng_body, deadline
-                        FROM notices
-                        WHERE title_eng IS NULL OR eng_body IS NULL OR deadline IS NULL
-                        ORDER BY published_at DESC
-                        LIMIT %s
-                        """,
-                        (BATCH_SIZE,),
-                    )
+                # id != ALL(ARRAY[]) is TRUE for any id when array is empty,
+                # so this single query form works correctly even with empty exclusion sets.
+                cur.execute(
+                    """
+                    SELECT id, title, body, title_eng, eng_body, deadline, keyword_id
+                    FROM notices
+                    WHERE title_eng IS NULL
+                       OR eng_body IS NULL
+                       OR (deadline   IS NULL AND id != ALL(%s))
+                       OR (keyword_id IS NULL AND id != ALL(%s))
+                    ORDER BY published_at DESC
+                    LIMIT %s
+                    """,
+                    (list(no_deadline_ids), list(no_category_ids), BATCH_SIZE),
+                )
                 rows = cur.fetchall()
 
             total = len(rows)
@@ -265,14 +309,17 @@ def main():
                 existing_title_eng = row["title_eng"]
                 existing_eng_body = row["eng_body"]
                 existing_deadline = row["deadline"]
+                existing_keyword_id = row["keyword_id"]
 
-                need_title = existing_title_eng is None
-                need_body = existing_eng_body is None
+                need_title    = existing_title_eng is None
+                need_body     = existing_eng_body is None
                 need_deadline = existing_deadline is None
+                need_category = existing_keyword_id is None
 
                 logger.info(
                     f"[{i}/{total}] {notice_id} | "
-                    f"needs: title_eng={need_title}, eng_body={need_body}, deadline={need_deadline}"
+                    f"needs: title_eng={need_title}, eng_body={need_body}, "
+                    f"deadline={need_deadline}, category={need_category}"
                 )
                 logger.info(f"  KR title: {title[:80]}")
 
@@ -308,7 +355,18 @@ def main():
                         else:
                             deadline = None  # COALESCE will keep the existing DB value
 
-                        conn = _save(conn, row["id"], title_eng, eng_body, deadline)
+                        # ── Category classification ───────────────────────────
+                        if need_category:
+                            keyword_id = classify_category(llm, keyword_map, title, body)
+                            if keyword_id:
+                                logger.info(f"  classified category: keyword_id={keyword_id}")
+                            else:
+                                logger.info("  category classification failed — skipping in future batches")
+                                no_category_ids.add(row["id"])
+                        else:
+                            keyword_id = None  # COALESCE will keep the existing DB value
+
+                        conn = _save(conn, row["id"], title_eng, eng_body, deadline, keyword_id)
                         logger.info(f"  EN title: {(title_eng or '')[:80]}")
                         success += 1
 
