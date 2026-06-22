@@ -15,10 +15,28 @@ from ..rag.vectorstore import VectorStore
 logger = logging.getLogger("AzanService")
 
 
+def _ensure_langchain_global_compatibility() -> None:
+    """Provide globals expected by older langchain-core compatibility code."""
+    try:
+        import langchain
+    except Exception:
+        return
+
+    defaults = {
+        "verbose": False,
+        "debug": False,
+        "llm_cache": None,
+    }
+    for name, value in defaults.items():
+        if not hasattr(langchain, name):
+            setattr(langchain, name, value)
+
+
 class AzanChatbotService:
     def __init__(self):
         """챗봇 서비스 초기화 (VectorStore, LLM, 세션 메모리 저장소 설정)"""
         try:
+            _ensure_langchain_global_compatibility()
             self.vector_store = VectorStore()
             self.llm = ChatGoogleGenerativeAI(
                 model=settings.GENERATION_MODEL,
