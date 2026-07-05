@@ -21,3 +21,5 @@ build/
 workers/rag/benchmark_result/
 tests/workers/rag/benchmark_result/
 allure-results/
+docs/*
+!docs/project_structure.md
